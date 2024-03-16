@@ -361,8 +361,8 @@ Sig=mc4_system_ready unsigned 1
 Sig=mc4_warning unsigned 1
 Sig=accel_implausible bit
 Sig=brake_implausible bit
-Sig=accel_percent unsigned 8 /min:0 /max:100
-Sig=brake_percent unsigned 8 /min:0 /max:100
+Sig=accel_percent unsigned 8 /max:100
+Sig=brake_percent unsigned 8 /max:100
 Sig=sab_pot_3 unsigned 16
 Sig=sab_pot_4 unsigned 16
 Sig=sab_load_cell_rl unsigned 16
@@ -1142,3 +1142,31 @@ Sig=RL_load_cell 32
 ID=0E8h
 Len=8
 Sig=shutdown_status 0
+
+[VN_VEL]
+ID=0D0h
+Len=8
+
+[VN_LINEAR_ACCEL]
+ID=0D1h
+Len=8
+
+[VN_LINEAR_ACCEL_UNCOMP]
+ID=0D2h
+Len=8
+
+[VN_YPR]
+ID=0D3h
+Len=8
+
+[VN_LAT_LON_ALT]
+ID=0D4h
+Len=8
+
+[VN_GPS_TIME]
+ID=0E0h
+Len=8
+
+[VN_STATUS]
+ID=0E1h
+Len=8

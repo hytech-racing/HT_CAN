@@ -115,14 +115,11 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
 
 # load dbc file from the package location
 
-# if(len (sys.argv) > 1):
-#     path_to_dbc = sys.argv[1]
-# else:
-    # path_to_dbc = os.environ.get('DBC_PATH')
-#full_path = os.path.join("./", "hytech.dbc")
-
-#TESTING. COMMENT OUT
-full_path = "/Users/mrinalijain/src/enum_integration/hytech.dbc"
+if(len (sys.argv) > 1):
+    path_to_dbc = sys.argv[1]
+else:
+    path_to_dbc = os.environ.get('DBC_PATH')
+full_path = os.path.join(path_to_dbc, "hytech.dbc")
 db = cantools.database.load_file(full_path)
 with open("hytech.proto", "w+") as proto_file:
     proto_file.write('syntax = "proto3";\n\n')

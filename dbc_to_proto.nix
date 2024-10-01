@@ -8,5 +8,5 @@ python311Packages.buildPythonApplication {
   propagatedBuildInputs = [ (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
                             python311Packages.protobuf python311Packages.requests ];
 
-  src = ./py_dbc_proto_gen;
+  src = ./dbc_to_proto;
 }

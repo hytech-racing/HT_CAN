@@ -14,6 +14,7 @@
       };
       ht_can_dbc_overlay = final: prev: {
         ht_can_pkg = final.callPackage ./default.nix { };
+        py_dbc_proto_gen_pkg = final.callPackage ./dbc_to_proto.nix { };
       };
       my_overlays = [
         ht_can_dbc_overlay
@@ -58,6 +59,7 @@
           # Development Tools
           python311Packages.cantools
           # ht_can_pkg 
+          py_dbc_proto_gen_pkg
         ];
 
       };

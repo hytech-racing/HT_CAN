@@ -14,7 +14,7 @@ pkgs.stdenv.mkDerivation rec {
     #   };
     #   doCheck = false;
     # }))
-    cantools
+    python311Packages.cantools
   ]; # Python as a build dependency
 
   propagatedBuildInputs = buildInputs;

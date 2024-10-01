@@ -11,13 +11,22 @@
     let
     makePackageSet = pkgs: {
         default = pkgs.ht_can_pkg;
+        py_dbc_proto_gen_pkg = pkgs.py_dbc_proto_gen_pkg;
+        proto_gen_pkg = pkgs.proto_gen_pkg;
       };
       ht_can_dbc_overlay = final: prev: {
         ht_can_pkg = final.callPackage ./default.nix { };
+      };
+      py_dbc_proto_gen_overlay = final: prev: {
         py_dbc_proto_gen_pkg = final.callPackage ./dbc_to_proto.nix { };
+      };
+      proto_gen_overlay = final: prev: {
+        proto_gen_pkg = final.callPackage ./dbc_to_proto_bin.nix { };
       };
       my_overlays = [
         ht_can_dbc_overlay
+        py_dbc_proto_gen_overlay
+        proto_gen_overlay
       ];
       system = builtins.currentSystem;
       x86_pkgs = import nixpkgs {
@@ -60,6 +69,7 @@
           python311Packages.cantools
           # ht_can_pkg 
           py_dbc_proto_gen_pkg
+          proto_gen_pkg
         ];
 
       };
@@ -71,6 +81,8 @@
           # Development Tools
           python311Packages.cantools
           # ht_can_pkg 
+          py_dbc_proto_gen_pkg
+          proto_gen_pkg
         ];
 
       };
@@ -83,6 +95,8 @@
           #https://discourse.nixos.org/t/overriding-docheck-doesnt-work-with-python-package/14674
           (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
           # ht_can_pkg 
+          py_dbc_proto_gen_pkg
+          proto_gen_pkg
         ];
 
       };
@@ -94,6 +108,8 @@
           # Development Tools
           (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
           # ht_can_pkg 
+          py_dbc_proto_gen_pkg
+          proto_gen_pkg
         ];
 
       };

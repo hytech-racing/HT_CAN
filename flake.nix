@@ -20,13 +20,17 @@
       py_dbc_proto_gen_overlay = final: prev: {
         py_dbc_proto_gen_pkg = final.callPackage ./dbc_to_proto.nix { };
       };
-      proto_gen_overlay = final: prev: {
-        proto_gen_pkg = final.callPackage ./dbc_to_proto_bin.nix { };
+      # proto_gen_overlay = final: prev: {
+      #   proto_gen_pkg = final.callPackage ./dbc_to_proto_bin.nix { };
+      # };
+      pkgs = import nixpkgs {
+        overlays = my_overlays;
+        inherit system;
       };
       my_overlays = [
         ht_can_dbc_overlay
         py_dbc_proto_gen_overlay
-        proto_gen_overlay
+        # proto_gen_overlay
       ];
       system = builtins.currentSystem;
       x86_pkgs = import nixpkgs {
@@ -68,8 +72,8 @@
           # Development Tools
           python311Packages.cantools
           # ht_can_pkg 
-          py_dbc_proto_gen_pkg
-          proto_gen_pkg
+          pkgs.py_dbc_proto_gen_pkg
+          # proto_gen_pkg
         ];
 
       };
@@ -82,7 +86,7 @@
           python311Packages.cantools
           # ht_can_pkg 
           py_dbc_proto_gen_pkg
-          proto_gen_pkg
+          # proto_gen_pkg
         ];
 
       };
@@ -96,7 +100,7 @@
           (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
           # ht_can_pkg 
           py_dbc_proto_gen_pkg
-          proto_gen_pkg
+          # proto_gen_pkg
         ];
 
       };
@@ -109,7 +113,7 @@
           (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
           # ht_can_pkg 
           py_dbc_proto_gen_pkg
-          proto_gen_pkg
+          # proto_gen_pkg
         ];
 
       };

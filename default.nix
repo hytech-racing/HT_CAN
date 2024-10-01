@@ -6,14 +6,15 @@ pkgs.stdenv.mkDerivation rec {
   src = ./PCAN_project;
 
   buildInputs = [
-    (python311Packages.cantools.overridePythonAttrs (old: {
-      src = fetchPypi {
-        pname = "cantools";
-        version = "39.4.4";
-        hash = "sha256-bo6Ri2ZxpiqfOZBUbs5WI+Hetx3vsc74WplVrDAdqZ4=";
-      };
-      doCheck = false;
-    }))
+    # (python311Packages.cantools.overridePythonAttrs (old: {
+    #   src = fetchPypi {
+    #     pname = "cantools";
+    #     version = "39.4.4";
+    #     hash = "sha256-bo6Ri2ZxpiqfOZBUbs5WI+Hetx3vsc74WplVrDAdqZ4=";
+    #   };
+    #   doCheck = false;
+    # }))
+    cantools
   ]; # Python as a build dependency
 
   propagatedBuildInputs = buildInputs;

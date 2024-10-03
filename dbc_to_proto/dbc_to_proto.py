@@ -12,7 +12,7 @@ class HyTechCANmsg:
         self.sender_name = ""
         self.packing_type = ""
         self.signals = [can.signal.Signal]
-# 
+ 
 def create_field_name(name: str) -> str:
     replaced_text = name.replace(" ", "_")
     replaced_text = replaced_text.replace("(", "")
@@ -31,7 +31,7 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
             enum_def += (f" {{")
             enum_def += ("\n")
 
-            field_name = "test"
+            field_name = sig.name + "_value"
 
             for choice_value, choice_name in sig.choices.items():
                 choice_name_enum = create_field_name(str(choice_name).upper())
@@ -42,7 +42,7 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
         
 
     for enum_def in enum_definitions:
-            file.write(enum_def)
+        file.write(enum_def)
 
 
     msgname = can_msg.name
@@ -72,8 +72,8 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
             )
 
         elif sig.choices != None and sig.length != 1:
-            enum_name = f"{can_msg.name.lower()}_{field_name}_enum"
-            file.write(f"    {enum_name} {field_name} = {line_index};\n")
+            enum_name = f"{can_msg.name.lower()}_{create_field_name(sig.name)}_enum"
+            line = f"    {enum_name} {create_field_name(sig.name)} = {line_index};"
             
         elif sig.length == 1:
             line = (

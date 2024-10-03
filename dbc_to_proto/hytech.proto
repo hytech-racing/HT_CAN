@@ -157,13 +157,6 @@ message charger_data {
     int32 input_ac_voltage_low = 7;
 }
 
-enum em_measurement_em_voltage_enum {
-     = 0;
-     = 1;
-     = 2;
-     = 3;
-}
-
 message em_measurement {
     float em_current = 1;
     float em_voltage = 2;
@@ -399,8 +392,7 @@ message mcu_status {
     bool bspd_brake_high = 14;
     bool no_accel_or_brake_implausibility = 15;
     bool drive_buzzer = 16;
-    mcu_status_test_enum test = 17;
-    bool drive_buzzer = 16;
+    mcu_status_ecu_state_enum ecu_state = 17;
     bool inverter_error = 18;
     bool energy_meter_present = 19;
     bool software_ok = 20;
@@ -435,8 +427,7 @@ message dashboard_state {
     bool ssok_above_threshold = 11;
     bool drive_buzzer = 12;
     int32 tcu_recording_state = 13;
-    dashboard_state_test_enum test = 14;
-    int32 tcu_recording_state = 13;
+    dashboard_state_dial_state_enum dial_state = 14;
 }
 
 enum dashboard_mcu_state_dial_state_enum {
@@ -462,8 +453,7 @@ message dashboard_mcu_state {
     bool drive_buzzer = 11;
     int32 glv_led = 12;
     int32 pack_charge_led = 13;
-    dashboard_mcu_state_test_enum test = 14;
-    int32 pack_charge_led = 13;
+    dashboard_mcu_state_dial_state_enum dial_state = 14;
 }
 
 message tcu_lap_times {
@@ -784,8 +774,7 @@ enum vn_status_vn_gps_status_enum {
 }
 
 message vn_status {
-    vn_status_test_enum test = 1;
-
+    vn_status_vn_gps_status_enum vn_gps_status = 1;
 }
 
 message drivetrain_torque_telem {
@@ -1065,31 +1054,28 @@ enum mcu_error_states_torque_controller_mux_status_enum {
 }
 
 message mcu_error_states {
-    mcu_error_states_test_enum test = 1;
-
+    mcu_error_states_torque_controller_mux_status_enum torque_controller_mux_status = 1;
 }
 
 enum steering_system_report_steering_system_status_enum {
-     = 0;
-     = 1;
-     = 2;
-     = 3;
+    NOMINAL = 0;
+    MAGINAL = 1;
+    DEGRADED = 2;
+    ERROR = 3;
 }
 
 enum steering_system_report_steering_encoder_status_enum {
-     = 0;
-     = 1;
-     = 2;
+    NOMINAL = 0;
+    MARGINAL = 1;
+    ERROR = 2;
 }
 
 message steering_system_report {
     float steering_system_angle = 1;
     float steering_encoder_angle = 2;
     float steering_analog_angle = 3;
-    steering_system_report_test_enum test = 4;
-    float steering_analog_angle = 3;
-    steering_system_report_test_enum test = 5;
-    float steering_analog_angle = 3;
+    steering_system_report_steering_system_status_enum steering_system_status = 4;
+    steering_system_report_steering_encoder_status_enum steering_encoder_status = 5;
     bool steering_analog_status = 6;
 }
 

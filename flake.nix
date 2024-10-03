@@ -9,15 +9,19 @@
 
   outputs = { self, nixpkgs, utils }@inputs:
     let
-    makePackageSet = pkgs: {
+      makePackageSet = pkgs: {
         default = pkgs.ht_can_pkg;
       };
       ht_can_dbc_overlay = final: prev: {
-        ht_can_pkg = final.callPackage ./default.nix { };
+        ht_can_pkg = final.callPackage ./default.nix { }; # has the dbc file in it
       };
-      my_overlays = [
-        ht_can_dbc_overlay
-      ];
+      dbc_to_proto_overlay = final: prev: {
+        py_dbc_proto_gen_pkg = final.callPackage ./dbc_to_proto.nix { };
+      };
+      proto_file_gen_overlay = final: prev: {
+        ht_proto_def = final.callPackage ./proto_gen.nix { };
+      };
+      my_overlays = [ ht_can_dbc_overlay dbc_to_proto_overlay proto_file_gen_overlay ];
       system = builtins.currentSystem;
       x86_pkgs = import nixpkgs {
         system = "x86_64-linux";
@@ -59,7 +63,6 @@
           python311Packages.cantools
           # ht_can_pkg 
         ];
-
       };
 
       devShells.aarch64-linux.default = arm_pkgs.mkShell rec {

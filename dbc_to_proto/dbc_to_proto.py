@@ -4,6 +4,7 @@ from cantools.database import *
 # import pkg_resources
 import sys
 
+enum_definitions = {}
 
 class HyTechCANmsg:
     def __init__(self):
@@ -22,11 +23,11 @@ def create_field_name(name: str) -> str:
 def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
     # if the msg has a conversion, we know that the value with be a float
 
-    enum_definitions = []
+    
 
     for sig in can_msg.signals:
         if sig.choices != None and sig.length != 1:
-            enum_name = can_msg.name.lower() + "_" + create_field_name(sig.name) + "_enum"
+            enum_name = create_field_name(sig.name)
             enum_def = (f"enum {enum_name}")
             enum_def += (f" {{")
             enum_def += ("\n")
@@ -38,11 +39,7 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
                 enum_def += (f"    {choice_name_enum} = {choice_value};\n")
             enum_def += ("}\n\n")
 
-            enum_definitions.append(enum_def)
-        
-
-    for enum_def in enum_definitions:
-        file.write(enum_def)
+            enum_definitions[enum_name] = enum_def
 
 
     msgname = can_msg.name
@@ -72,7 +69,7 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
             )
 
         elif sig.choices != None and sig.length != 1:
-            enum_name = f"{can_msg.name.lower()}_{create_field_name(sig.name)}_enum"
+            enum_name = f"{create_field_name(sig.name)}"
             line = f"    {enum_name} {create_field_name(sig.name)} = {line_index};"
             
         elif sig.length == 1:
@@ -121,8 +118,17 @@ else:
     path_to_dbc = os.environ.get('DBC_PATH')
 full_path = os.path.join(path_to_dbc, "hytech.dbc")
 db = cantools.database.load_file(full_path)
+content = ""
 with open("hytech.proto", "w+") as proto_file:
-    proto_file.write('syntax = "proto3";\n\n')
-    proto_file.write('package hytech;\n\n')
     for msg in db.messages:
         proto_file = append_proto_message_from_CAN_message(proto_file, msg)
+    proto_file.seek(0)
+    content = proto_file.read()
+
+with open("hytech.proto", "w+") as proto_file:  
+    proto_file.write('syntax = "proto3";\n\n')
+    proto_file.write('package hytech;\n\n')  
+    for key in enum_definitions:
+        proto_file.write(enum_definitions[key])
+    proto_file.write(content)
+    

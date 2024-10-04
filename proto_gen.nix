@@ -10,13 +10,14 @@ pkgs.stdenv.mkDerivation rec {
   # Define the build phase to execute the scripts
   buildPhase = ''
     # Run the Python script
-    python3 dbc_to_proto.py ${ht_can_pkg}
+    echo "Running dbc_to_proto.py"
+    dbc_to_proto.py ${ht_can_pkg}
   '';
 
   # Specify the output of the build process
   # In this case, it will be the generated file
   installPhase = ''
-    mkdir -p ${ht_can_pkg}/proto
-    cp hytech.proto ${ht_can_pkg}/proto
+    mkdir -p $out/proto
+    cp hytech.proto $out/proto
   '';
 }

@@ -32,7 +32,7 @@
               name = "hytech_np";
               buildInputs = [ ht-proto-gen ];
               src = ht-proto-gen.out + "/proto";
-              version = "1.0.0";
+              version = self.rev;
             };
         };
       my_overlays = [ ht_can_dbc_overlay dbc_to_proto_overlay proto_file_gen_overlay ] ++ nix-proto.lib.overlayToList nix_protos_overlays;

@@ -22,7 +22,6 @@ pkgs.stdenv.mkDerivation rec {
 
   # Define the build phase to execute the scripts
   buildPhase = ''
-    cantools convert hytech.sym hytech.dbc
     python3 -m cantools convert hytech.sym hytech.dbc
   '';
 

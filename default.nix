@@ -16,9 +16,9 @@ pkgs.stdenv.mkDerivation rec {
     }))
   ]; # Python as a build dependency
 
-  propagatedBuildInputs = [ python3 ] ++ buildInputs;
+  propagatedBuildInputs = buildInputs;
 
-  nativeBuildInputs = buildInputs;
+  nativeBuildInputs = [ python3 ] ++ buildInputs;
 
   # Define the build phase to execute the scripts
   buildPhase = ''

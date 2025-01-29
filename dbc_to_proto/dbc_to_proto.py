@@ -20,7 +20,7 @@ def create_field_name(name: str) -> str:
     replaced_text = replaced_text.replace(")", "")
     return replaced_text
 
-def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
+def append_proto_message_from_CAN_message(file, can_msg: can.message.Message, mcomment):
     # if the msg has a conversion, we know that the value with be a float
 
     
@@ -44,12 +44,18 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
 
     msgname = can_msg.name
     line = ""
+    if mcomment != None:
+        file.write("/*\n * " + mcomment + "\n*/\n")
     # type and then name
     file.write("message " + msgname.lower() + " {\n")
     line_index = 0
 
+
     for sig in can_msg.signals:
         line_index += 1
+        scomment = sig.comment
+        if scomment == None:
+            scomment = ""
         
         if sig.is_float or ((sig.scale is not None) and (sig.scale != 1.0)) or (
             type(sig.conversion)
@@ -66,6 +72,8 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
                 + " = "
                 + str(line_index)
                 + ";"
+                + (" // " if scomment != "" else "")
+                + scomment
             )
 
         elif sig.choices != None and sig.length != 1:
@@ -79,6 +87,8 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
                 + " = "
                 + str(line_index)
                 + ";"
+                + (" // " if scomment != "" else "")
+                + scomment
             )
 
         elif (sig.length > 1 and sig.length <=32):
@@ -88,6 +98,8 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
                 + " = "
                 + str(line_index)
                 + ";"
+                + (" // " if scomment != "" else "")
+                + scomment
             )
         elif (sig.length >= 32 and not sig.is_signed):
             line = (
@@ -96,6 +108,8 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
                 + " = "
                 + str(line_index)
                 + ";"
+                + (" // " if scomment != "" else "")
+                + scomment
             )
         else:
             line = (
@@ -104,8 +118,10 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message):
                 + " = "
                 + str(line_index)
                 + ";"
+                + (" // " if scomment != "" else "")
+                + scomment
             )
-            
+        
         file.write(line + "\n")
     file.write("}\n\n")
     return file
@@ -121,7 +137,8 @@ db = cantools.database.load_file(full_path)
 content = ""
 with open("hytech.proto", "w+") as proto_file:
     for msg in db.messages:
-        proto_file = append_proto_message_from_CAN_message(proto_file, msg)
+        mcomment = msg.comment
+        proto_file = append_proto_message_from_CAN_message(proto_file, msg, mcomment)
     proto_file.seek(0)
     content = proto_file.read()
 
@@ -132,3 +149,7 @@ with open("hytech.proto", "w+") as proto_file:
         proto_file.write(enum_definitions[key])
     proto_file.write(content)
     
+for message in db.messages:
+    print(f"Message: {message.name}, Comment: {message.comment}")
+    for signal in message.signals:
+        print(f"  Signal: {signal.name}, Comment: {signal.comment}")

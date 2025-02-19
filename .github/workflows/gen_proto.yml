@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'  # Specify the Python version
       
@@ -22,7 +22,7 @@ jobs:
         run: python -m pip install cantools  # Install cantools library
 
       - name: Download dbc artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v8
         with:
           workflow: ${{ github.event.workflow_run.workflow_id }}
           workflow_conclusion: success
@@ -30,20 +30,12 @@ jobs:
           path: .
       
       - name: Download tag name artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v8
         with:
           workflow: ${{ github.event.workflow_run.workflow_id }}
           workflow_conclusion: success
           name: tag-name-artifact
-      
-      - name: Download upload_url artifact
-        uses: dawidd6/action-download-artifact@v2
-        with:
-          workflow: ${{ github.event.workflow_run.workflow_id }}
-          workflow_conclusion: success
-          name: upload-url-artifact
         
-
       - name: Convert DBC to PROTO
         run: |
           python dbc_to_proto/dbc_to_proto.py ./ hytech.proto
@@ -73,9 +65,9 @@ jobs:
           protoc -I=./. -I=proto/nanopb --doc_out=./docs --doc_opt=html,${{ env.tag_name }}.html hytech.proto
 
       - name: Upload to existing release
-        uses: actions/upload-release-asset@v1
+        uses: actions/upload-release-asset@v1.0.2
         env:
-          GITHUB_TOKEN: ${{ secrets.TESTING_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ env.upload_url }}
           asset_path: ./docs/${{ env.tag_name }}.html

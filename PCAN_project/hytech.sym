@@ -2051,7 +2051,7 @@ Sig=fr_shock_pot 48
 
 [INV1_CONTROL_WORD]
 ID=090h
-Len=8
+Len=2
 Sig=inverter_enable 8
 Sig=hv_enable 9
 Sig=driver_enable 10
@@ -2059,7 +2059,7 @@ Sig=remove_error 11
 
 [INV2_CONTROL_WORD]
 ID=091h
-Len=8
+Len=2
 Sig=inverter_enable 8
 Sig=hv_enable 9
 Sig=driver_enable 10
@@ -2067,7 +2067,7 @@ Sig=remove_error 11
 
 [INV3_CONTROL_WORD]
 ID=092h
-Len=8
+Len=2
 Sig=inverter_enable 8
 Sig=hv_enable 9
 Sig=driver_enable 10
@@ -2075,7 +2075,7 @@ Sig=remove_error 11
 
 [INV4_CONTROL_WORD]
 ID=093h
-Len=8
+Len=2
 Sig=inverter_enable 8
 Sig=hv_enable 9
 Sig=driver_enable 10

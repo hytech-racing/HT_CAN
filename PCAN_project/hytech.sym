@@ -627,6 +627,8 @@ Sig=fl_shock_pot unsigned 16 /ln:"Front Left Shock Pot"
 Sig=fr_shock_pot unsigned 16 /ln:"Front Right Shock Pot"
 Sig=fr_load_cell unsigned 16 /ln:"Front Right Load Cell"
 Sig=torque_setpoint signed 16
+Sig=preset_button unsigned 1
+Sig=data_button_is_pressed unsigned 1
 
 {SENDRECEIVE}
 
@@ -813,183 +815,6 @@ Len=8
 Sig=dc_bus_voltage 0
 Sig=motor_power 16
 Sig=feedback_torque 48
-
-[MC1_SETPOINTS_COMMAND]
-ID=0A0h
-Len=8
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-Sig=speed_setpoint_rpm 16
-Sig=positive_torque_limit 32
-Sig=negative_torque_limit 48
-
-[MC1_STATUS]
-ID=0B0h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=speed_rpm 16
-Sig=torque_current 32
-Sig=magnetizing_current 48
-
-[MC1_TEMPS]
-ID=0B4h
-Len=8
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=diagnostic_number 32
-Sig=igbt_temp 48
-
-[MC1_TORQUE_COMMAND]
-ID=0A4h
-Len=2
-Sig=torque_command 0
-
-[MC2_ENERGY]
-ID=0B9h
-Len=8
-Sig=dc_bus_voltage 0
-Sig=motor_power 16
-Sig=feedback_torque 48
-
-[MC2_SETPOINTS_COMMAND]
-ID=0A1h
-Len=8
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-Sig=speed_setpoint_rpm 16
-Sig=positive_torque_limit 32
-Sig=negative_torque_limit 48
-
-[MC2_STATUS]
-ID=0B1h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=speed_rpm 16
-Sig=torque_current 32
-Sig=magnetizing_current 48
-
-[MC2_TEMPS]
-ID=0B5h
-Len=8
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=diagnostic_number 32
-Sig=igbt_temp 48
-
-[MC2_TORQUE_COMMAND]
-ID=0A5h
-Len=2
-Sig=torque_command 0
-
-[MC3_ENERGY]
-ID=0BAh
-Len=8
-Sig=dc_bus_voltage 0
-Sig=motor_power 16
-Sig=feedback_torque 48
-
-[MC3_SETPOINTS_COMMAND]
-ID=0A2h
-Len=8
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-Sig=speed_setpoint_rpm 16
-Sig=positive_torque_limit 32
-Sig=negative_torque_limit 48
-
-[MC3_STATUS]
-ID=0B2h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=speed_rpm 16
-Sig=torque_current 32
-Sig=magnetizing_current 48
-
-[MC3_TEMPS]
-ID=0B6h
-Len=8
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=diagnostic_number 32
-Sig=igbt_temp 48
-
-[MC3_TORQUE_COMMAND]
-ID=0A6h
-Len=2
-Sig=torque_command 0
-
-[MC4_ENERGY]
-ID=0BBh
-Len=8
-Sig=dc_bus_voltage 0
-Sig=motor_power 16
-Sig=feedback_torque 48
-
-[MC4_SETPOINTS_COMMAND]
-ID=0A3h
-Len=8
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-Sig=speed_setpoint_rpm 16
-Sig=positive_torque_limit 32
-Sig=negative_torque_limit 48
-
-[MC4_STATUS]
-ID=0B3h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=speed_rpm 16
-Sig=torque_current 32
-Sig=magnetizing_current 48
-
-[MC4_TEMPS]
-ID=0B7h
-Len=8
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=diagnostic_number 32
-Sig=igbt_temp 48
-
-[MC4_TORQUE_COMMAND]
-ID=0A7h
-Len=2
-Sig=torque_command 0
 
 [MCU_ANALOG_READINGS]
 ID=0CCh
@@ -1880,7 +1705,7 @@ Sig=diagnostic_number 32
 
 [INV1_TEMPS]
 ID=071h
-Len=8
+Len=6
 Sig=motor_temp 0
 Sig=inverter_temp 16
 Sig=igbt_temp 32
@@ -1921,7 +1746,7 @@ Sig=diagnostic_number 32
 
 [INV2_TEMPS]
 ID=076h
-Len=8
+Len=6
 Sig=motor_temp 0
 Sig=inverter_temp 16
 Sig=igbt_temp 32
@@ -1962,7 +1787,7 @@ Sig=diagnostic_number 32
 
 [INV3_TEMPS]
 ID=081h
-Len=8
+Len=6
 Sig=motor_temp 0
 Sig=inverter_temp 16
 Sig=igbt_temp 32
@@ -2003,7 +1828,7 @@ Sig=diagnostic_number 32
 
 [INV4_TEMPS]
 ID=086h
-Len=8
+Len=6
 Sig=motor_temp 0
 Sig=inverter_temp 16
 Sig=igbt_temp 32
@@ -2136,3 +1961,16 @@ Len=8
 Sig=speed_control_kp 0
 Sig=speed_control_ki 16
 Sig=speed_control_kd 32
+
+[DASH_INPUT]
+ID=300h
+Len=2
+Sig=led_dimmer_button 0
+Sig=preset_button 1
+Sig=motor_controller_cycle_button 2
+Sig=mode_button 3
+Sig=start_button 4
+Sig=data_button_is_pressed 5
+Sig=left_shifter_button 6
+Sig=right_shifter_button 7
+Sig=dash_dial_mode 8

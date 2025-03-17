@@ -629,6 +629,7 @@ Sig=fr_load_cell unsigned 16 /ln:"Front Right Load Cell"
 Sig=torque_setpoint signed 16
 Sig=preset_button unsigned 1
 Sig=data_button_is_pressed unsigned 1
+Sig=dash_buzzer_flag bit
 
 {SENDRECEIVE}
 
@@ -884,10 +885,10 @@ Sig=motor_controller_cycle_button 3
 Sig=launch_ctrl_button 4
 Sig=torque_mode_button 5
 Sig=led_dimmer_button 6
-Sig=dial_state 16
 Sig=left_shifter_button 7
 Sig=right_shifter_button 8
 Sig=tcu_recording_state 12
+Sig=dial_state 16
 
 [DASHBOARD_MCU_STATE]
 ID=0EBh
@@ -1974,3 +1975,8 @@ Sig=data_button_is_pressed 5
 Sig=left_shifter_button 6
 Sig=right_shifter_button 7
 Sig=dash_dial_mode 8
+
+[DASHBOARD_BUZZER_CONTROL]
+ID=7F1h
+Len=1
+Sig=dash_buzzer_flag 0

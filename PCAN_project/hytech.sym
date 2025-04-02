@@ -619,12 +619,9 @@ Sig="dash_buzzer_flag" bit 1 /max:1 /min:0
 Sig="Broadcast_rate" unsigned 3 /max:7 /min:0 /e:Broadcast_rateE
 Sig="CAN_Termination_Setting_Bus_1" bit 1 /max:1 /min:0 /e:CAN_Termination_Setting_Bus_1E
 Sig="CAN_Termination_Setting_Bus_2" bit 1 /max:1 /min:0 /e:CAN_Termination_Setting_Bus_2E
-Sig="Height_Offset" signed 8 /u:"cm" /f:0.5 /max:63.5 /min:-64 // This value will be SUBTRACTED from the height. 
-So if you mount the sensor at 40cm, and you want that to read as 20cm, set this value to 20cm
-Sig="Sensor_X_Location" signed 12 /u:"m" /f:0.01 /max:20.47 /min:-20.48 // This is the X position of the center of the sensor, with ISO signedness (positive is forward, negative is rearward)
-This is used to generate the CG_Corrected velocities
-Sig="Sensor_Y_Location" signed 12 /u:"m" /f:0.01 /max:20.47 /min:-20.48 // This is the Y position of the center of the sensor, with ISO signedness (positive is left (driver side in US) negative is right (passenger)
-This is used to generate the CG_Corrected velocities
+Sig="Height_Offset" signed 8 /u:"cm" /f:0.5 /max:63.5 /min:-64 // This value will be SUBTRACTED from the height.  So if you mount the sensor at 40cm, and you want that to read as 20cm, set this value to 20cm
+Sig="Sensor_X_Location" signed 12 /u:"m" /f:0.01 /max:20.47 /min:-20.48 // This is the X position of the center of the sensor, with ISO signedness (positive is forward, negative is rearward) This is used to generate the CG_Corrected velocities
+Sig="Sensor_Y_Location" signed 12 /u:"m" /f:0.01 /max:20.47 /min:-20.48 // This is the Y position of the center of the sensor, with ISO signedness (positive is left (driver side in US) negative is right (passenger) This is used to generate the CG_Corrected velocities
 Sig="Attitude_Filtering" unsigned 3 /max:7 /min:0 /e:Attitude_FilteringE
 Sig="IMU_Filtering" unsigned 3 /max:7 /min:0 /e:IMU_FilteringE
 Sig="Velocity_Filtering" unsigned 3 /max:7 /min:0 /e:Velocity_FilteringE

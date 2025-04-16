@@ -1099,7 +1099,7 @@ Sig=Velocity_Filtering 40
 ID=7F1h
 Len=1
 Sig=dash_buzzer_flag 0
-Sig=in_pedal_calibration_state 8
+Sig=in_pedal_calibration_state 1
 
 [DASHBOARD_MCU_STATE]
 ID=0EBh

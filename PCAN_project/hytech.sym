@@ -625,6 +625,7 @@ Sig=negative_torque_limit signed 16 /u:Mn /f:0.0097999999999549 // AMK made up u
 Sig=preset_button unsigned 1
 Sig=data_button_is_pressed unsigned 1
 Sig=dash_buzzer_flag bit
+Sig=in_pedal_calibration_state bit
 Sig=Broadcast_rate unsigned 3 /e:Broadcast_rateE
 Sig=CAN_Termination_Setting_Bus_1 bit /e:CAN_Termination_Setting_Bus_1E
 Sig=CAN_Termination_Setting_Bus_2 bit /e:CAN_Termination_Setting_Bus_2E
@@ -1098,6 +1099,7 @@ Sig=Velocity_Filtering 40
 ID=7F1h
 Len=1
 Sig=dash_buzzer_flag 0
+Sig=in_pedal_calibration_state 8
 
 [DASHBOARD_MCU_STATE]
 ID=0EBh

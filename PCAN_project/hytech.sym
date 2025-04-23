@@ -626,6 +626,7 @@ Sig=preset_button unsigned 1
 Sig=data_button_is_pressed unsigned 1
 Sig=dash_buzzer_flag bit
 Sig=in_pedal_calibration_state bit
+Sig=torque_limit_enum_value unsigned 8
 Sig=Broadcast_rate unsigned 3 /e:Broadcast_rateE
 Sig=CAN_Termination_Setting_Bus_1 bit /e:CAN_Termination_Setting_Bus_1E
 Sig=CAN_Termination_Setting_Bus_2 bit /e:CAN_Termination_Setting_Bus_2E
@@ -1097,9 +1098,10 @@ Sig=Velocity_Filtering 40
 
 [DASHBOARD_BUZZER_CONTROL]
 ID=7F1h
-Len=1
+Len=2
 Sig=dash_buzzer_flag 0
 Sig=in_pedal_calibration_state 1
+Sig=torque_limit_enum_value 8
 
 [DASHBOARD_MCU_STATE]
 ID=0EBh

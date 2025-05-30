@@ -663,7 +663,7 @@ Sig=Velocity_z_CGCorrected signed 9 /u:m/s /f:0.025 // ISO Standard Sign, Positi
 Sig=bms_ok bit
 Sig=imd_ok bit
 Sig=drivebrain_in_control bit
-Sig=vehicle_state unsigned 8 /e:vehicle_stateE
+Sig=drivetrain_state unsigned 8 /e:vehicle_stateE
 
 {RECEIVE}
 
@@ -2101,4 +2101,4 @@ Sig=drivebrain_in_control 8
 [VEHICLE_STATE]
 ID=207h
 Len=1
-Sig=vehicle_state 0
+Sig=drivetrain_state 0

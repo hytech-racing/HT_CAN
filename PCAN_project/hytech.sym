@@ -2,8 +2,6 @@ FormatVersion=6.0 // Do not edit this line!
 Title="SYM Database"
 
 {ENUMS}
-Enum=ecu_stateE(0="STARTUP", 1="TRACTIVE_SYSTEM_NOT_ACTIVE", 2="TRACTIVE_SYSTEM_ACTIVE", 3="ENABLING_INVERTER",
-  4="WAITING_READY_TO_DRIVE_SOUND", 5="READY_TO_DRIVE")
 Enum=dial_stateE(0="MODE_0", 1="MODE_1", 2="MODE_2", 3="MODE_3", 4="MODE_4", 5="MODE_5")
 Enum=vn_gps_statusE(0="NO_FIX", 1="TIME_ONLY", 2="FIX_2D", 3="FIX_3D")
 Enum=torque_controller_mux_statusE(0="NO_ERROR", 1="ERROR_SPEED_DIFF_TOO_HIGH", 2="ERROR_TORQUE_DIFF_TOO_HIGH",
@@ -175,7 +173,7 @@ Sig=bspd_current_high unsigned 1
 Sig=bspd_brake_high unsigned 1
 Sig=no_accel_or_brake_implausibility unsigned 1
 Sig=drive_buzzer unsigned 1
-Sig=ecu_state unsigned 3 /e:ecu_stateE
+Sig=ecu_state unsigned 3
 Sig=inverter_error unsigned 1
 Sig=energy_meter_present unsigned 1
 Sig=software_ok unsigned 1
@@ -665,7 +663,7 @@ Sig=Velocity_z_CGCorrected signed 9 /u:m/s /f:0.025 // ISO Standard Sign, Positi
 Sig=bms_ok bit
 Sig=imd_ok bit
 Sig=drivebrain_in_control bit
-Sig=vehicle_state unsigned 8 /e:vehicle_stateE
+Sig=drivetrain_state unsigned 8 /e:vehicle_stateE
 
 {RECEIVE}
 
@@ -2103,4 +2101,4 @@ Sig=drivebrain_in_control 8
 [VEHICLE_STATE]
 ID=207h
 Len=1
-Sig=vehicle_state 0
+Sig=drivetrain_state 0

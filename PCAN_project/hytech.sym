@@ -28,6 +28,8 @@ Enum=SpeedBeam_HealthE(0="SENSOR_HEALTHY", 1="NON_MEASUREMENT_MODE", 2="DATA_OPT
   3="TEMPERATURE_TOO_HIGH", 4="SAVING_CALIBRATION", 5="SENSOR_COMMUNICATION_ERROR", 6="SPEED_TOO_HIGH")
 Enum=CAN_Termination_State_Bus_1E(0="CAN_BUS_UNTERMINATED_CAN1_STATUS", 1="CAN_BUS_TERMINATED_CAN1_STATUS")
 Enum=CAN_Termination_State_Bus_2E(0="CAN_BUS_UNTERMINATED_CAN2_STATUS", 1="CAN_BUS_TERMINATED_CAN2_STATUS")
+Enum=vehicle_stateE(0="TRACTIVE_SYSTEM_NOT_ACTIVE", 1="TRACTIVE_SYSTEM_ACTIVE", 2="WANTING_READY_TO_DRIVE",
+  3="READY_TO_DRIVE", 4="WANTING_RECALIBRATE_PEDALS", 5="RECALIBRATING_PEDALS")
 
 {SIGNALS}
 Sig=izze_brake_IR_temp_1 unsigned 16 -m
@@ -391,7 +393,7 @@ Sig=vn_roll signed 16 /u:deg /f:0.01
 Sig=vn_gps_lat signed 32 /u:deg /f:1E-006
 Sig=vn_gps_lon signed 32 /u:deg /f:1E-006
 Sig=vn_gps_time unsigned 64 /u:ns // time since start of epoch 1980
-Sig=vn_gps_status unsigned 16 /e:vn_gps_statusE // GPS fix status
+Sig=vn_gps_status unsigned 8 /e:vn_gps_statusE // GPS fix status
 Sig=fl_motor_torque signed 16 /u:nm
 Sig=fr_motor_torque signed 16 /u:nm
 Sig=rl_motor_torque signed 16 /u:nm
@@ -662,6 +664,8 @@ Sig=Velocity_y_CGCorrected signed 10 /u:m/s /f:0.03 // ISO Standard Sign, Positi
 Sig=Velocity_z_CGCorrected signed 9 /u:m/s /f:0.025 // ISO Standard Sign, Positive is Vehicle Moving Up
 Sig=bms_ok bit
 Sig=imd_ok bit
+Sig=drivebrain_in_control bit
+Sig=vehicle_state unsigned 8 /e:vehicle_stateE
 
 {RECEIVE}
 
@@ -2089,3 +2093,14 @@ ID=500h
 Len=1
 Sig=bms_ok 0
 Sig=imd_ok 1
+
+[DRIVEBRAIN_STATE_DATA]
+ID=229h
+Len=2
+Sig=vn_gps_status 0
+Sig=drivebrain_in_control 8
+
+[VEHICLE_STATE]
+ID=207h
+Len=1
+Sig=vehicle_state 0

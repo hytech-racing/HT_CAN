@@ -2095,7 +2095,7 @@ Sig=bms_ok 0
 Sig=imd_ok 1
 
 [DRIVEBRAIN_STATE_DATA]
-ID=0F4h
+ID=229h
 Len=2
 Sig=vn_gps_status 0
 Sig=drivebrain_in_control 8

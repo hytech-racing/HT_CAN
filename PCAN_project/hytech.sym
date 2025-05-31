@@ -106,9 +106,9 @@ Sig=voltage_1 unsigned 16 /f:0.0001
 Sig=voltage_2 unsigned 16 /f:0.0001
 Sig=temp_0 signed 16 /u:"Deg C" /f:0.01
 Sig=temp_1 signed 16 /u:"Deg C" /f:0.01
-Sig=average_temp signed 16 /u:"Deg C" /f:0.01
-Sig=low_temp signed 16 /f:0.01
-Sig=high_temp signed 16 /u:"deg C" /f:0.01
+Sig=max_board_temp signed 16 /u:"Deg C" /f:0.01
+Sig=low_cell_temp signed 16 /u:"Deg C" /f:0.01
+Sig=high_cell_temp signed 16 /u:"Deg C" /f:0.01
 Sig=state unsigned 8
 Sig=overvoltage_error unsigned 1 /u:none // Whether or not the energy meter is reading an over-voltage error.
 Sig=undervoltage_error unsigned 1
@@ -790,9 +790,9 @@ Sig=temp_1 24
 [BMS_ONBOARD_TEMPS]
 ID=0D5h
 Len=6
-Sig=average_temp 0
-Sig=low_temp 16
-Sig=high_temp 32
+Sig=max_board_temp 0
+Sig=low_cell_temp 16
+Sig=high_cell_temp 32
 
 [BMS_STATUS]
 ID=0DBh
@@ -814,9 +814,9 @@ Sig=shutdown_h_above_threshold_error 41
 [BMS_TEMPS]
 ID=0D9h
 Len=6
-Sig=average_temp 0
-Sig=low_temp 16
-Sig=high_temp 32
+Sig=max_board_temp 0
+Sig=low_cell_temp 16
+Sig=high_cell_temp 32
 
 [BMS_VOLTAGES]
 ID=0D7h

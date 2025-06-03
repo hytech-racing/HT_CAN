@@ -30,71 +30,7 @@ Enum=vehicle_stateE(0="TRACTIVE_SYSTEM_NOT_ACTIVE", 1="TRACTIVE_SYSTEM_ACTIVE", 
   3="READY_TO_DRIVE", 4="WANTING_RECALIBRATE_PEDALS", 5="RECALIBRATING_PEDALS")
 
 {SIGNALS}
-Sig=izze_brake_IR_temp_1 unsigned 16 -m
-Sig=izze_brake_IR_temp_2 unsigned 16 -m
-Sig=izze_brake_IR_temp_3 unsigned 16 -m
-Sig=izze_brake_IR_temp_4 unsigned 16 -m
 Sig=group_id unsigned 4
-Sig=cell_1_balancing_status unsigned 1
-Sig=cell_2_balancing_status unsigned 1
-Sig=cell_3_balancing_status unsigned 1
-Sig=cell_4_balancing_status unsigned 1
-Sig=cell_5_balancing_status unsigned 1
-Sig=cell_6_balancing_status unsigned 1
-Sig=cell_7_balancing_status unsigned 1
-Sig=cell_8_balancing_status unsigned 1
-Sig=cell_9_balancing_status unsigned 1
-Sig=cell_10_balancing_status unsigned 1
-Sig=cell_11_balancing_status unsigned 1
-Sig=cell_12_balancing_status unsigned 1
-Sig=cell_13_balancing_status unsigned 1
-Sig=cell_14_balancing_status unsigned 1
-Sig=cell_15_balancing_status unsigned 1
-Sig=cell_16_balancing_status unsigned 1
-Sig=cell_17_balancing_status unsigned 1
-Sig=cell_18_balancing_status unsigned 1
-Sig=cell_19_balancing_status unsigned 1
-Sig=cell_20_balancing_status unsigned 1
-Sig=cell_21_balancing_status unsigned 1
-Sig=cell_22_balancing_status unsigned 1
-Sig=cell_23_balancing_status unsigned 1
-Sig=cell_24_balancing_status unsigned 1
-Sig=cell_25_balancing_status unsigned 1
-Sig=cell_26_balancing_status unsigned 1
-Sig=cell_27_balancing_status unsigned 1
-Sig=cell_28_balancing_status unsigned 1
-Sig=cell_29_balancing_status unsigned 1
-Sig=cell_30_balancing_status unsigned 1
-Sig=cell_31_balancing_status unsigned 1
-Sig=cell_32_balancing_status unsigned 1
-Sig=cell_33_balancing_status unsigned 1
-Sig=cell_34_balancing_status unsigned 1
-Sig=cell_35_balancing_status unsigned 1
-Sig=cell_36_balancing_status unsigned 1
-Sig=cell_37_balancing_status unsigned 1
-Sig=cell_38_balancing_status unsigned 1
-Sig=cell_39_balancing_status unsigned 1
-Sig=cell_40_balancing_status unsigned 1
-Sig=cell_41_balancing_status unsigned 1
-Sig=cell_42_balancing_status unsigned 1
-Sig=cell_43_balancing_status unsigned 1
-Sig=cell_44_balancing_status unsigned 1
-Sig=cell_45_balancing_status unsigned 1
-Sig=cell_46_balancing_status unsigned 1
-Sig=cell_47_balancing_status unsigned 1
-Sig=cell_48_balancing_status unsigned 1
-Sig=cell_49_balancing_status unsigned 1
-Sig=cell_50_balancing_status unsigned 1
-Sig=cell_51_balancing_status unsigned 1
-Sig=cell_52_balancing_status unsigned 1
-Sig=cell_53_balancing_status unsigned 1
-Sig=cell_54_balancing_status unsigned 1
-Sig=cell_55_balancing_status unsigned 1
-Sig=cell_56_balancing_status unsigned 1
-Sig=cell_57_balancing_status unsigned 1
-Sig=cell_58_balancing_status unsigned 1
-Sig=cell_59_balancing_status unsigned 1
-Sig=cell_60_balancing_status unsigned 1
 Sig=total_charge unsigned 32 /u:Coulombs /f:0.0001 // UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage.
 Sig=total_discharge unsigned 32 /u:Coulombs /f:0.0001 // UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage.
 Sig=ic_id unsigned 4
@@ -664,16 +600,23 @@ Sig=bms_ok bit
 Sig=imd_ok bit
 Sig=drivebrain_in_control bit
 Sig=drivetrain_state unsigned 8 /e:vehicle_stateE
-
-{RECEIVE}
-
-[IZZE_IR_TEMPS]
-ID=4C4h
-Len=8
-Sig=izze_brake_IR_temp_1 0
-Sig=izze_brake_IR_temp_2 16
-Sig=izze_brake_IR_temp_3 32
-Sig=izze_brake_IR_temp_4 48
+Sig=brake_temp_channel_1 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_2 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_3 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_4 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_5 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_6 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_7 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_8 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_9 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_10 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_11 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_12 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_13 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_14 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_15 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_temp_channel_16 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
+Sig=brake_rotor_sensor_temp unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // temperature internal to the sensor degrees C
 
 {SENDRECEIVE}
 
@@ -690,71 +633,6 @@ Len=6
 Sig=Height 0
 Sig=Pitch_angle 16
 Sig=Roll_angle 32
-
-[BMS_BALANCING_STATUS]
-ID=0DEh
-Len=8
-Sig=group_id 0
-Sig=cell_1_balancing_status 4
-Sig=cell_2_balancing_status 5
-Sig=cell_3_balancing_status 6
-Sig=cell_4_balancing_status 7
-Sig=cell_5_balancing_status 8
-Sig=cell_6_balancing_status 9
-Sig=cell_7_balancing_status 10
-Sig=cell_8_balancing_status 11
-Sig=cell_9_balancing_status 12
-Sig=cell_10_balancing_status 13
-Sig=cell_11_balancing_status 14
-Sig=cell_12_balancing_status 15
-Sig=cell_13_balancing_status 16
-Sig=cell_14_balancing_status 17
-Sig=cell_15_balancing_status 18
-Sig=cell_16_balancing_status 19
-Sig=cell_17_balancing_status 20
-Sig=cell_18_balancing_status 21
-Sig=cell_19_balancing_status 22
-Sig=cell_20_balancing_status 23
-Sig=cell_21_balancing_status 24
-Sig=cell_22_balancing_status 25
-Sig=cell_23_balancing_status 26
-Sig=cell_24_balancing_status 27
-Sig=cell_25_balancing_status 28
-Sig=cell_26_balancing_status 29
-Sig=cell_27_balancing_status 30
-Sig=cell_28_balancing_status 31
-Sig=cell_29_balancing_status 32
-Sig=cell_30_balancing_status 33
-Sig=cell_31_balancing_status 34
-Sig=cell_32_balancing_status 35
-Sig=cell_33_balancing_status 36
-Sig=cell_34_balancing_status 37
-Sig=cell_35_balancing_status 38
-Sig=cell_36_balancing_status 39
-Sig=cell_37_balancing_status 40
-Sig=cell_38_balancing_status 41
-Sig=cell_39_balancing_status 42
-Sig=cell_40_balancing_status 43
-Sig=cell_41_balancing_status 44
-Sig=cell_42_balancing_status 45
-Sig=cell_43_balancing_status 46
-Sig=cell_44_balancing_status 47
-Sig=cell_45_balancing_status 48
-Sig=cell_46_balancing_status 49
-Sig=cell_47_balancing_status 50
-Sig=cell_48_balancing_status 51
-Sig=cell_49_balancing_status 52
-Sig=cell_50_balancing_status 53
-Sig=cell_51_balancing_status 54
-Sig=cell_52_balancing_status 55
-Sig=cell_53_balancing_status 56
-Sig=cell_54_balancing_status 57
-Sig=cell_55_balancing_status 58
-Sig=cell_56_balancing_status 59
-Sig=cell_57_balancing_status 60
-Sig=cell_58_balancing_status 61
-Sig=cell_59_balancing_status 62
-Sig=cell_60_balancing_status 63
 
 [BMS_COULOMB_COUNTS]
 ID=0E2h // UNUSED message to send data on the BMS current draw.
@@ -2102,3 +1980,77 @@ Sig=drivebrain_in_control 8
 ID=207h
 Len=1
 Sig=drivetrain_state 0
+
+[FL_BRAKE_ROTOR_TEMP_CH1_CH4]
+ID=4C4h
+Len=8
+Sig=brake_temp_channel_1 0
+Sig=brake_temp_channel_2 16
+Sig=brake_temp_channel_3 32
+Sig=brake_temp_channel_4 48
+
+[FL_BRAKE_ROTOR_TEMP_CH5_CH8]
+ID=4C5h
+Len=8
+Sig=brake_temp_channel_5 0
+Sig=brake_temp_channel_6 16
+Sig=brake_temp_channel_7 32
+Sig=brake_temp_channel_8 48
+
+[FL_BRAKE_ROTOR_TEMP_CH9_CH12]
+ID=4C6h
+Len=8
+Sig=brake_temp_channel_9 0
+Sig=brake_temp_channel_10 16
+Sig=brake_temp_channel_11 32
+Sig=brake_temp_channel_12 48
+
+[FL_BRAKE_ROTOR_SENSOR_TEMP]
+ID=4C8h
+Len=8
+Sig=brake_rotor_sensor_temp 0
+
+[FL_BRAKE_ROTOR_TEMP_CH13_CH16]
+ID=4C7h
+Len=8
+Sig=brake_temp_channel_13 0
+Sig=brake_temp_channel_14 16
+Sig=brake_temp_channel_15 32
+Sig=brake_temp_channel_16 48
+
+[FR_BRAKE_ROTOR_TEMP_CH1_CH4]
+ID=4C9h
+Len=8
+Sig=brake_temp_channel_1 0
+Sig=brake_temp_channel_2 16
+Sig=brake_temp_channel_3 32
+Sig=brake_temp_channel_4 48
+
+[FR_BRAKE_ROTOR_TEMP_CH5_CH8]
+ID=4CAh
+Len=8
+Sig=brake_temp_channel_5 0
+Sig=brake_temp_channel_6 16
+Sig=brake_temp_channel_7 32
+Sig=brake_temp_channel_8 48
+
+[FR_BRAKE_ROTOR_TEMP_CH9_CH12]
+ID=4CBh
+Len=8
+Sig=brake_temp_channel_9 0
+Sig=brake_temp_channel_10 16
+Sig=brake_temp_channel_11 32
+Sig=brake_temp_channel_12 48
+
+[FR_BRAKE_ROTOR_SENSOR_TEMP]
+ID=4CDh
+Len=8
+Sig=brake_rotor_sensor_temp 0
+
+[FR_BRAKE_ROTOR_TEMP_CH13_CH16]
+ID=4CCh
+Len=8
+Sig=brake_temp_channel_13 0
+Sig=brake_temp_channel_14 16
+Sig=brake_temp_channel_15 32
+Sig=brake_temp_channel_16 48

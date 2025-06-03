@@ -28,6 +28,9 @@ Enum=CAN_Termination_State_Bus_1E(0="CAN_BUS_UNTERMINATED_CAN1_STATUS", 1="CAN_B
 Enum=CAN_Termination_State_Bus_2E(0="CAN_BUS_UNTERMINATED_CAN2_STATUS", 1="CAN_BUS_TERMINATED_CAN2_STATUS")
 Enum=vehicle_stateE(0="TRACTIVE_SYSTEM_NOT_ACTIVE", 1="TRACTIVE_SYSTEM_ACTIVE", 2="WANTING_READY_TO_DRIVE",
   3="READY_TO_DRIVE", 4="WANTING_RECALIBRATE_PEDALS", 5="RECALIBRATING_PEDALS")
+Enum=brake_sensor_bit_rateE(1="BAUDRATE_1M", 2="BAUDRATE_500K", 3="BAUDRATE_250K", 4="BAUDRATE_100K")
+Enum=brake_sensor_channel_settingE(40="CH_SETTING_4", 80="CH_SETTING_8", 160="CH_SETTING_16")
+Enum=brake_sampling_settingsE(5="HZ_1", 2="HZ_2", 3="HZ_4", 4="HZ_8", 5="HZ_16", 6="HZ_32", 7="HZ_64", 8="HZ_100")
 
 {SIGNALS}
 Sig=group_id unsigned 4
@@ -617,6 +620,12 @@ Sig=brake_temp_channel_14 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake roto
 Sig=brake_temp_channel_15 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
 Sig=brake_temp_channel_16 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
 Sig=brake_rotor_sensor_temp unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // temperature internal to the sensor degrees C
+Sig=brake_temp_sensor_can_bitrate unsigned 8 -m /max:1 /e:brake_sensor_bit_rateE // bitrate setting for CAN on the brake temp sensor
+Sig=brake_temp_sensor_base_can_id unsigned 16 -m /min:1 /max:2047
+Sig=brake_temp_sensor_emissivity unsigned 8 -m /f:0.01 // emissivity of the material (0 to 1)
+Sig=brake_temp_sensor_prog_const unsigned 16 -m /min:30000 /max:30000 // programming constant, should be set to 30000
+Sig=brake_temp_sensor_sampling_freq unsigned 8 -m /max:1 /e:brake_sampling_settingsE
+Sig=brake_temp_sensor_ch_setting unsigned 8 -m /max:1 /e:brake_sensor_channel_settingE
 
 {SENDRECEIVE}
 
@@ -1960,10 +1969,6 @@ Sig=Velocity_x_CGCorrected 31
 Sig=Velocity_y_CGCorrected 43
 Sig=Velocity_z_CGCorrected 53
 
-[brake_temps]
-ID=000h
-Len=8
-
 [ACU_OK]
 ID=500h
 Len=1
@@ -2054,3 +2059,13 @@ Sig=brake_temp_channel_13 0
 Sig=brake_temp_channel_14 16
 Sig=brake_temp_channel_15 32
 Sig=brake_temp_channel_16 48
+
+[BRAKE_ROTOR_SENSOR_COMMAND]
+ID=4C3h
+Len=8
+Sig=brake_temp_sensor_prog_const 0
+Sig=brake_temp_sensor_base_can_id 16
+Sig=brake_temp_sensor_emissivity 32
+Sig=brake_temp_sensor_sampling_freq 40
+Sig=brake_temp_sensor_ch_setting 48
+Sig=brake_temp_sensor_can_bitrate 56

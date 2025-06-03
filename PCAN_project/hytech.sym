@@ -623,6 +623,14 @@ Sig=brake_temp_sensor_emissivity unsigned 8 -m /f:0.01 // emissivity of the mate
 Sig=brake_temp_sensor_prog_const unsigned 16 -m /min:30000 /max:30000 // programming constant, should be set to 30000
 Sig=brake_temp_sensor_sampling_freq unsigned 8 -m // 1 = 1 hz, 2 = 2hz, 3 = 4hz, 4 = 8 hz, 5=16 hz, 6=32 hz, 7 = 64hz, 8 = 100hz
 Sig=brake_temp_sensor_ch_setting unsigned 8 -m // 40 = 4 Channels, 80 = 8 channels, 160 = 16 channels
+Sig=aero_channel_1 unsigned 16 -m /u:uBar /f:7 /o:-53000
+Sig=aero_channel_2 unsigned 16 -m /u:uBar /f:7 /o:-53000
+Sig=aero_channel_3 unsigned 16 -m /u:uBar /f:7 /o:-53000
+Sig=aero_channel_4 unsigned 16 -m /u:uBar /f:7 /o:-53000
+Sig=aero_channel_5 unsigned 16 -m /u:uBar /f:7 /o:-53000
+Sig=aero_channel_6 unsigned 16 -m /u:uBar /f:7 /o:-53000
+Sig=aero_channel_7 unsigned 16 -m /u:uBar /f:7 /o:-53000
+Sig=aero_channel_0 unsigned 16 -m /u:uBar /f:7 /o:-53000
 
 {SENDRECEIVE}
 
@@ -2066,3 +2074,67 @@ Sig=brake_temp_sensor_emissivity 32
 Sig=brake_temp_sensor_sampling_freq 40
 Sig=brake_temp_sensor_ch_setting 48
 Sig=brake_temp_sensor_can_bitrate 56
+
+[AERO_PRESSURE_SENSOR_11]
+ID=610h
+Len=8
+Sig=aero_channel_1 16
+Sig=aero_channel_2 32
+Sig=aero_channel_3 48
+Sig=aero_channel_0 0
+
+[AERO_PRESSURE_SENSOR_31]
+ID=630h
+Len=8
+Sig=aero_channel_1 16
+Sig=aero_channel_2 32
+Sig=aero_channel_3 48
+Sig=aero_channel_0 0
+
+[AERO_PRESSURE_SENSOR_41]
+ID=640h
+Len=8
+Sig=aero_channel_1 16
+Sig=aero_channel_2 32
+Sig=aero_channel_3 48
+Sig=aero_channel_0 0
+
+[AERO_PRESSURE_SENSOR_21]
+ID=620h
+Len=8
+Sig=aero_channel_1 16
+Sig=aero_channel_2 32
+Sig=aero_channel_3 48
+Sig=aero_channel_0 0
+
+[AERO_PRESSURE_SENSOR_12]
+ID=310h
+Len=8
+Sig=aero_channel_4 0
+Sig=aero_channel_5 16
+Sig=aero_channel_6 32
+Sig=aero_channel_7 48
+
+[AERO_PRESSURE_SENSOR_22]
+ID=320h
+Len=8
+Sig=aero_channel_4 0
+Sig=aero_channel_5 16
+Sig=aero_channel_6 32
+Sig=aero_channel_7 48
+
+[AERO_PRESSURE_SENSOR_32]
+ID=330h
+Len=8
+Sig=aero_channel_4 0
+Sig=aero_channel_5 16
+Sig=aero_channel_6 32
+Sig=aero_channel_7 48
+
+[AERO_PRESSURE_SENSOR_42]
+ID=340h
+Len=8
+Sig=aero_channel_4 0
+Sig=aero_channel_5 16
+Sig=aero_channel_6 32
+Sig=aero_channel_7 48

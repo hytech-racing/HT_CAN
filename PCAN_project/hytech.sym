@@ -30,7 +30,7 @@ Enum=vehicle_stateE(0="TRACTIVE_SYSTEM_NOT_ACTIVE", 1="TRACTIVE_SYSTEM_ACTIVE", 
   3="READY_TO_DRIVE", 4="WANTING_RECALIBRATE_PEDALS", 5="RECALIBRATING_PEDALS")
 Enum=brake_sensor_bit_rateE(1="BAUDRATE_1M", 2="BAUDRATE_500K", 3="BAUDRATE_250K", 4="BAUDRATE_100K")
 Enum=brake_sensor_channel_settingE(40="CH_SETTING_4", 80="CH_SETTING_8", 160="CH_SETTING_16")
-Enum=brake_sampling_settingsE(1="HZ_1", 2="HZ_2", 3="HZ_4", 4="HZ_8", 5="HZ_16", 6="HZ_32", 7="HZ_64", 8="HZ_100")
+Enum=brake_sampling_settingsE(1="SENSE_HZ_1", 2="SENSE_HZ_2", 3="SENSE_HZ_4", 4="SENSE_HZ_8", 5="SENSE_HZ_16", 6="SENSE_HZ_32", 7="SENSE_HZ_64", 8="SENSE_HZ_100")
 
 {SIGNALS}
 Sig=group_id unsigned 4

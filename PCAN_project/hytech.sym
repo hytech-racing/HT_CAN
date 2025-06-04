@@ -631,6 +631,9 @@ Sig=aero_channel_5 unsigned 16 -m /u:uBar /f:0.14285714285 /o:-53000
 Sig=aero_channel_6 unsigned 16 -m /u:uBar /f:0.14285714285 /o:-53000
 Sig=aero_channel_7 unsigned 16 -m /u:uBar /f:0.14285714285 /o:-53000
 Sig=aero_channel_0 unsigned 16 -m /u:uBar /f:0.14285714285 /o:-53000
+Sig=inverter_overload_percentage unsigned 16 /f:0.1 // the current overload of the inverter according to the i2t calc
+Sig=motor_overload_percentage unsigned 16 /f:0.1 // the current overload of the motor according to the i2t calc
+Sig=torque_setpoint_nm signed 16 /f:0.0097999999999549
 
 {SENDRECEIVE}
 
@@ -1191,10 +1194,11 @@ Sig=Pitch_Rate 52
 
 [INV1_CONTROL_INPUT]
 ID=097h
-Len=6
+Len=8
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
+Sig=torque_setpoint_nm 48
 
 [INV1_CONTROL_PARAMETER]
 ID=103h
@@ -1254,10 +1258,11 @@ Sig=igbt_temp 32
 
 [INV2_CONTROL_INPUT]
 ID=098h
-Len=6
+Len=8
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
+Sig=torque_setpoint_nm 48
 
 [INV2_CONTROL_PARAMETER]
 ID=104h
@@ -1317,10 +1322,11 @@ Sig=igbt_temp 32
 
 [INV3_CONTROL_INPUT]
 ID=099h
-Len=6
+Len=8
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
+Sig=torque_setpoint_nm 48
 
 [INV3_CONTROL_PARAMETER]
 ID=105h
@@ -1380,10 +1386,11 @@ Sig=igbt_temp 32
 
 [INV4_CONTROL_INPUT]
 ID=102h
-Len=6
+Len=8
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
+Sig=torque_setpoint_nm 48
 
 [INV4_CONTROL_PARAMETER]
 ID=106h
@@ -2138,3 +2145,27 @@ Sig=aero_channel_4 0
 Sig=aero_channel_5 16
 Sig=aero_channel_6 32
 Sig=aero_channel_7 48
+
+[INV1_OVERLOAD]
+ID=136h
+Len=8
+Sig=inverter_overload_percentage 0
+Sig=motor_overload_percentage 16
+
+[INV2_OVERLOAD]
+ID=140h
+Len=4
+Sig=inverter_overload_percentage 0
+Sig=motor_overload_percentage 16
+
+[INV3_OVERLOAD]
+ID=14Ah
+Len=4
+Sig=inverter_overload_percentage 0
+Sig=motor_overload_percentage 16
+
+[INV4_OVERLOAD]
+ID=154h
+Len=4
+Sig=inverter_overload_percentage 0
+Sig=motor_overload_percentage 16

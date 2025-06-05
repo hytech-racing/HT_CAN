@@ -1194,11 +1194,10 @@ Sig=Pitch_Rate 52
 
 [INV1_CONTROL_INPUT]
 ID=097h
-Len=8
+Len=6
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
-Sig=torque_setpoint_nm 48
 
 [INV1_CONTROL_PARAMETER]
 ID=103h
@@ -1258,11 +1257,10 @@ Sig=igbt_temp 32
 
 [INV2_CONTROL_INPUT]
 ID=098h
-Len=8
+Len=6
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
-Sig=torque_setpoint_nm 48
 
 [INV2_CONTROL_PARAMETER]
 ID=104h
@@ -1322,11 +1320,10 @@ Sig=igbt_temp 32
 
 [INV3_CONTROL_INPUT]
 ID=099h
-Len=8
+Len=6
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
-Sig=torque_setpoint_nm 48
 
 [INV3_CONTROL_PARAMETER]
 ID=105h
@@ -1386,11 +1383,10 @@ Sig=igbt_temp 32
 
 [INV4_CONTROL_INPUT]
 ID=102h
-Len=8
+Len=6
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
-Sig=torque_setpoint_nm 48
 
 [INV4_CONTROL_PARAMETER]
 ID=106h
@@ -1997,14 +1993,6 @@ Sig=drivebrain_in_control 8
 ID=207h
 Len=1
 Sig=drivetrain_state 0
-
-[FL_BRAKE_ROTOR_TEMP_CH1_CH4]
-ID=4C4h
-Len=8
-Sig=brake_temp_channel_1 0
-Sig=brake_temp_channel_2 16
-Sig=brake_temp_channel_3 32
-Sig=brake_temp_channel_4 48
 
 [FL_BRAKE_ROTOR_TEMP_CH5_CH8]
 ID=4C5h

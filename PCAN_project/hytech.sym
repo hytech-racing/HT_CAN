@@ -28,6 +28,8 @@ Enum=CAN_Termination_State_Bus_1E(0="CAN_BUS_UNTERMINATED_CAN1_STATUS", 1="CAN_B
 Enum=CAN_Termination_State_Bus_2E(0="CAN_BUS_UNTERMINATED_CAN2_STATUS", 1="CAN_BUS_TERMINATED_CAN2_STATUS")
 Enum=vehicle_stateE(0="TRACTIVE_SYSTEM_NOT_ACTIVE", 1="TRACTIVE_SYSTEM_ACTIVE", 2="WANTING_READY_TO_DRIVE",
   3="READY_TO_DRIVE", 4="WANTING_RECALIBRATE_PEDALS", 5="RECALIBRATING_PEDALS")
+Enum=drivetrain_stateE(0="NOT_CONNECTED", 1="NOT_ENABLED_NO_HV_PRESENT", 2="NOT_ENABLED_HV_PRESENT",
+  3="INVERTERS_READY", 4="INVERTERS_HV_ENABLED", 5="ENABLED_DRIVE_MODE", 6="ERROR", 7="CLEARING_ERRORS")
 
 {SIGNALS}
 Sig=group_id unsigned 4
@@ -599,7 +601,7 @@ Sig=Velocity_z_CGCorrected signed 9 /u:m/s /f:0.025 // ISO Standard Sign, Positi
 Sig=bms_ok bit
 Sig=imd_ok bit
 Sig=drivebrain_in_control bit
-Sig=drivetrain_state unsigned 8 /e:vehicle_stateE
+Sig=vehicle_state unsigned 8 /e:vehicle_stateE
 Sig=brake_temp_channel_1 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
 Sig=brake_temp_channel_2 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
 Sig=brake_temp_channel_3 unsigned 16 -m /u:"deg C" /f:0.1 /o:-100 // brake rotor temp sensor channel reading in degrees C
@@ -634,6 +636,7 @@ Sig=aero_channel_0 unsigned 16 -m /u:uBar /f:0.14285714285 /o:-53000
 Sig=inverter_overload_percentage unsigned 16 /f:0.1 // the current overload of the inverter according to the i2t calc
 Sig=motor_overload_percentage unsigned 16 /f:0.1 // the current overload of the motor according to the i2t calc
 Sig=torque_setpoint_nm signed 16 /f:0.0097999999999549
+Sig=drivetrain_state unsigned 8 /e:drivetrain_stateE
 
 {SENDRECEIVE}
 
@@ -1989,10 +1992,12 @@ Len=2
 Sig=vn_gps_status 0
 Sig=drivebrain_in_control 8
 
-[VEHICLE_STATE]
+[CAR_STATES]
 ID=207h
-Len=1
-Sig=drivetrain_state 0
+Len=3
+Sig=vehicle_state 0
+Sig=drivebrain_in_control 16
+Sig=drivetrain_state 8
 
 [FL_BRAKE_ROTOR_TEMP_CH5_CH8]
 ID=4C5h

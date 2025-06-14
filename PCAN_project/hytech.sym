@@ -1998,6 +1998,15 @@ Sig=vehicle_state 0
 Sig=drivebrain_in_control 16
 Sig=drivetrain_state 8
 
+[FL_BRAKE_ROTOR_TEMP_CH1_CH4]
+ID=4C4h
+Len=8
+Sig=brake_temp_channel_1 0
+Sig=brake_temp_channel_2 16
+Sig=brake_temp_channel_3 32
+Sig=brake_temp_channel_4 48
+
+
 [FL_BRAKE_ROTOR_TEMP_CH5_CH8]
 ID=4C5h
 Len=8

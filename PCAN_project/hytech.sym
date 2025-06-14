@@ -1988,9 +1988,8 @@ Sig=imd_ok 1
 
 [DRIVEBRAIN_STATE_DATA]
 ID=229h
-Len=2
+Len=1
 Sig=vn_gps_status 0
-Sig=drivebrain_in_control 8
 
 [CAR_STATES]
 ID=207h

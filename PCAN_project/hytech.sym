@@ -637,6 +637,7 @@ Sig=inverter_overload_percentage unsigned 16 /f:0.1 // the current overload of t
 Sig=motor_overload_percentage unsigned 16 /f:0.1 // the current overload of the motor according to the i2t calc
 Sig=torque_setpoint_nm signed 16 /f:0.0097999999999549
 Sig=drivetrain_state unsigned 8 /e:drivetrain_stateE
+Sig=latch_ok bit
 
 {SENDRECEIVE}
 
@@ -1985,6 +1986,7 @@ ID=500h
 Len=1
 Sig=bms_ok 0
 Sig=imd_ok 1
+Sig=latch_ok 2
 
 [DRIVEBRAIN_STATE_DATA]
 ID=229h

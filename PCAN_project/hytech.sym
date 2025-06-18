@@ -638,6 +638,20 @@ Sig=motor_overload_percentage unsigned 16 /f:0.1 // the current overload of the 
 Sig=torque_setpoint_nm signed 16 /f:0.0097999999999549
 Sig=drivetrain_state unsigned 8 /e:drivetrain_stateE
 Sig=latch_ok bit
+Sig=current_A float -m
+Sig=voltage_V float -m
+Sig=em_violation bit
+Sig=em_logging bit
+Sig=em_energy_w_hr float -m
+Sig=em_num_sensors unsigned 5 -m
+Sig=em_temp_sig_index unsigned 3 -m /max:1
+Sig=em_min_temp unsigned 8 -m /f:0.5
+Sig=em_max_temp unsigned 8 -m /f:0.5
+Sig=em_temp_0 unsigned 8 -m /f:0.5
+Sig=em_temp_1 unsigned 8 -m /f:0.5
+Sig=em_temp_2 unsigned 8 -m /f:0.5
+Sig=em_temp_3 unsigned 8 -m /f:0.5
+Sig=em_temp_4 unsigned 8 -m /f:0.5
 
 {SENDRECEIVE}
 
@@ -2008,7 +2022,6 @@ Sig=brake_temp_channel_2 16
 Sig=brake_temp_channel_3 32
 Sig=brake_temp_channel_4 48
 
-
 [FL_BRAKE_ROTOR_TEMP_CH5_CH8]
 ID=4C5h
 Len=8
@@ -2172,3 +2185,29 @@ ID=154h
 Len=4
 Sig=inverter_overload_percentage 0
 Sig=motor_overload_percentage 16
+
+[ENERGY_METER_MEAS]
+ID=10Dh
+Len=8
+Sig=current_A 0
+Sig=voltage_V 32
+
+[ENERGY_METER_STATUS]
+ID=40Dh
+Len=8
+Sig=em_violation 0
+Sig=em_logging 1
+Sig=em_energy_w_hr 8
+
+[ENERGY_METER_TEMP]
+ID=60Dh
+Len=8
+Sig=em_num_sensors 0
+Sig=em_temp_sig_index 5
+Sig=em_min_temp 8
+Sig=em_max_temp 16
+Sig=em_temp_0 24
+Sig=em_temp_1 32
+Sig=em_temp_2 40
+Sig=em_temp_3 48
+Sig=em_temp_4 56

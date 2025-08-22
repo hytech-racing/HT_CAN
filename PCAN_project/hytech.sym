@@ -2099,7 +2099,7 @@ Sig=brake_temp_sensor_ch_setting 48
 Sig=brake_temp_sensor_can_bitrate 56
 
 [AERO_PRESSURE_SENSOR_11]
-ID=610h
+ID=3F0h
 Len=8
 Sig=aero_channel_1 16
 Sig=aero_channel_2 32
@@ -2131,7 +2131,7 @@ Sig=aero_channel_3 48
 Sig=aero_channel_0 0
 
 [AERO_PRESSURE_SENSOR_12]
-ID=310h
+ID=3F4h
 Len=8
 Sig=aero_channel_4 0
 Sig=aero_channel_5 16

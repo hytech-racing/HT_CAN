@@ -3,7 +3,6 @@ import cantools
 import cantools.database
 base_db = cantools.database.load_file('PCAN_project/hytech.sym')
 base_db.add_dbc_file('imported_dbcs/SpeedBeam_bus1.dbc')
-base_db.add_dbc_file('imported_dbcs/TTPMS.dbc')
 
 
 

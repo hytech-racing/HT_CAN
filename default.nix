@@ -1,4 +1,4 @@
-{ pkgs, python312Packages, fetchPypi, python3 }:
+{ pkgs, python311Packages, fetchPypi, python3 }:
 
 pkgs.stdenv.mkDerivation rec {
   name = "ht_can_pkg";
@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation rec {
   src = ./PCAN_project;
 
   buildInputs = [
-    (python312Packages.cantools.overridePythonAttrs (old: {
+    (python311Packages.cantools.overridePythonAttrs (old: {
       src = fetchPypi {
         pname = "cantools";
         version = "39.4.4";

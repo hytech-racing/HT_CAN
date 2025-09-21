@@ -6,5 +6,7 @@ python311Packages.buildPythonApplication {
 
   propagatedBuildInputs = [ (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; })) python311Packages.protobuf python311Packages.requests ];
 
+  pyproject = true;
+  build-system = [ setuptools ]
   src = ./dbc_to_proto;
 }

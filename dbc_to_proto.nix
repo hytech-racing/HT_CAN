@@ -1,12 +1,12 @@
-{ lib, python311Packages }:
+{ lib, python312Packages }:
 
-python311Packages.buildPythonApplication {
+python312Packages.buildPythonApplication {
   pname = "py_dbc_proto_gen_pkg";
   version = "1.0.0";
 
-  propagatedBuildInputs = [ (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; })) python311Packages.protobuf python311Packages.requests ];
+  propagatedBuildInputs = [ (python312Packages.cantools.overridePythonAttrs (_: { doCheck = false; })) python312Packages.protobuf python312Packages.requests ];
 
   pyproject = true;
-  build-system = [ setuptools ];
+  build-system = [ python312Packages.setuptools ];
   src = ./dbc_to_proto;
 }

@@ -308,6 +308,10 @@ Sig=thermistor_acc2 unsigned 16 /u:"deg C" /f:0.005 // acculum cooling loop temp
 Sig=thermistor_motor_rl unsigned 16 /u:"deg C" /f:0.005 // Motor cooling loop temperature
 Sig=thermistor_motor_rr unsigned 16 /u:"deg C" /f:0.005 // Motor cooling loop temperature
 Sig=thermistor_pump unsigned 16 /u:"deg C" /f:0.005 // temp of the pump
+Sig=thermistor_0_deg_C unsigned 16 /u:"deg C" /f:0.005
+Sig=thermistor_1_deg_C unsigned 16 /u:"deg C" /f:0.005
+Sig=thermistor_2_deg_C unsigned 16 /u:"deg C" /f:0.005
+Sig=thermistor_3_deg_C unsigned 16 /u:"deg C" /f:0.005
 Sig=rl_load_cell unsigned 16
 Sig=rr_load_cell unsigned 16
 Sig=rl_shock_pot unsigned 16
@@ -1777,6 +1781,14 @@ Len=6
 Sig=thermistor_motor_rl 0
 Sig=thermistor_motor_rr 16
 Sig=thermistor_pump 32
+
+[REAR_THERMISTORS_DATA]
+ID=0EEh
+Len=8
+Sig=thermistor_0_deg_C 0
+Sig=thermistor_1_deg_C 16
+Sig=thermistor_2_deg_C 32
+Sig=thermistor_3_deg_C 48
 
 [STATE_OF_CHARGE]
 ID=41Eh

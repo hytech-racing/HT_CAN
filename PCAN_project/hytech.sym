@@ -1667,7 +1667,7 @@ Sig=LF_Tire_Temp_03 32
 Sig=LF_Tire_Temp_04 48
 
 [LF_IRTS_Tire_2]
-ID=4B1
+ID=4B1h
 Len=8
 Sig=LF_Tire_Temp_05 0
 Sig=LF_Tire_Temp_06 16
@@ -1675,7 +1675,7 @@ Sig=LF_Tire_Temp_07 32
 Sig=LF_Tire_Temp_08 48
 
 [LF_IRTS_Tire_3]
-ID=4B2
+ID=4B2h
 Len=8
 Sig=LF_Tire_Temp_09 0
 Sig=LF_Tire_Temp_10 16

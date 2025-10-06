@@ -1,4 +1,9 @@
-{ pkgs, python311Packages, fetchPypi, python3 }:
+{
+  pkgs,
+  python311Packages,
+  fetchPypi,
+  python3,
+}:
 
 pkgs.stdenv.mkDerivation rec {
   name = "ht_can_pkg";
@@ -14,6 +19,9 @@ pkgs.stdenv.mkDerivation rec {
       };
       doCheck = false;
     }))
+
+    python311Packages.mcap
+
   ]; # Python as a build dependency
 
   propagatedBuildInputs = buildInputs;

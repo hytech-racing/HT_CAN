@@ -19,7 +19,10 @@ base, _ = os.path.splitext(INFILE)
 OUTFILE = base + ".mcap"
 
 def parse_line(line: str) -> Optional[Tuple[float, int, bytes]]:
-    match = re.match(r"\(([\d\.]+)\)\s+\w+\s+([0-9A-Fa-f]+)#([0-9A-Fa-f]+)", line.strip())
+    match = re.match(
+        r"\(([\d\.]+)\)\s+\w+\s+([0-9A-Fa-f]+)\s+\[\d+\]\s+((?:[0-9A-Fa-f]{2}\s*)+)", 
+        line.strip()
+    )
     if not match:
         return None
     t = float(match.group(1))
@@ -64,6 +67,8 @@ def main():
                 continue
 
             for name, val in decoded.items():
+                if hasattr(val, "value"):
+                    val = val.value
                 topic = f"/can/{msg.name}/{name}"
 
                 if topic not in channels:

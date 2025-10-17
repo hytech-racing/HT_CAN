@@ -15,7 +15,7 @@ pkgs.stdenv.mkDerivation rec {
       doCheck = false;
     }))
 
-    python311Packages.mcap
+    (pkgs.callPackage ./mcap.nix { })
 
   ]; # Python as a build dependency
 

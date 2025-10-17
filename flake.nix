@@ -67,13 +67,7 @@
           }
         );
       };
-      my_overlays = [
-        mcap_overlay
-        ht_can_dbc_overlay
-        dbc_to_proto_overlay
-        proto_file_gen_overlay
-      ]
-      ++ nix-proto.lib.overlayToList nix_protos_overlays;
+      my_overlays = [ ht_can_dbc_overlay dbc_to_proto_overlay proto_file_gen_overlay ] ++ nix-proto.lib.overlayToList nix_protos_overlays;
       pkgs = import nixpkgs {
         overlays = my_overlays;
         inherit system;
@@ -109,8 +103,7 @@
         "aarch64-darwin" = makePackageSet arch64-darwin_pkgs;
         # Add more systems as needed
       };
-    in
-    {
+    in {
 
       overlays.default = nixpkgs.lib.composeManyExtensions my_overlays;
 
@@ -121,7 +114,7 @@
         packages = with x86_pkgs; [
           # Development Tools
           python311Packages.cantools
-          python311Packages.mcap
+          (callPackage ./mcap.nix { })
           # ht_can_pkg
         ];
       };
@@ -132,7 +125,7 @@
         packages = with arm_pkgs; [
           # Development Tools
           python311Packages.cantools
-          python311Packages.mcap
+          (callPackage ./mcap.nix { })
           # ht_can_pkg
         ];
 
@@ -144,11 +137,9 @@
         packages = with arch64-darwin_pkgs; [
           # Development Tools
           #https://discourse.nixos.org/t/overriding-docheck-doesnt-work-with-python-package/14674
-          (python311Packages.cantools.overridePythonAttrs (_: {
-            doCheck = false;
-          }))
-          python311Packages.mcap
-          # ht_can_pkg
+         (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
+         (callPackage ./mcap.nix { })          
+         # ht_can_pkg
         ];
 
       };
@@ -158,9 +149,7 @@
         name = "nix-devshell";
         packages = with x86-darwin_pkgs; [
           # Development Tools
-          (python311Packages.cantools.overridePythonAttrs (_: {
-            doCheck = false;
-          }))
+          (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
           python311Packages.mcap
 
           # ht_can_pkg

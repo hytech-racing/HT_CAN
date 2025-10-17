@@ -150,7 +150,7 @@
         packages = with x86-darwin_pkgs; [
           # Development Tools
           (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
-          python311Packages.mcap
+          (callPackage ./mcap.nix { })
 
           # ht_can_pkg
         ];

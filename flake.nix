@@ -8,19 +8,14 @@
     nix-proto.url = "github:notalltim/nix-proto";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      utils,
-      nix-proto,
-    }@inputs:
+  outputs = { self, nixpkgs, utils, nix-proto }@inputs:
     let
       makePackageSet = pkgs: {
         default = pkgs.ht_can_pkg;
         ht-proto-gen = pkgs.ht-proto-gen;
         py_dbc_proto_gen_pkg = pkgs.py_dbc_proto_gen_pkg;
         hytech_np_proto_cpp = pkgs.hytech_np_proto_cpp;
+        mcap_pkg = pkgs.callPackage ./mcap.nix { };
       };
       ht_can_dbc_overlay = final: prev: {
         ht_can_pkg = final.callPackage ./default.nix { }; # has the dbc file in it

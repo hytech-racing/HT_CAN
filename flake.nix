@@ -26,6 +26,9 @@
       proto_file_gen_overlay = final: prev: {
         ht-proto-gen = final.callPackage ./proto_gen.nix { };
       };
+      mcap_overlay = final: prev: {
+        mcap_pkg = final.callPackage ./mcap.nix { };
+      };
       nix_protos_overlays = nix-proto.generateOverlays' {
         hytech_np =
           { ht-proto-gen }:
@@ -36,38 +39,8 @@
             version = self.rev;
           };
       };
-      mcap_overlay = final: prev: {
-        python311Packages = prev.python311Packages.overrideScope (
-          pyFinal: pyPrev: {
-            mcap = pyFinal.buildPythonPackage rec {
-              pname = "mcap";
-              version = "1.3.0";
-              format = "pyproject";
 
-              src = pyFinal.fetchPypi {
-                inherit pname version;
-                hash = "sha256-Xw1YJro7hBhQjB2ZK62kxXRAc/Gz5taFV58KygOJ+y8=";
-              };
-
-              nativeBuildInputs = with pyFinal; [
-                setuptools
-                wheel
-                hatchling
-              ];
-
-              propagatedBuildInputs = with pyFinal; [
-                numpy
-                lz4
-                zstandard
-              ];
-
-              doCheck = false;
-              pythonImportsCheck = [ "mcap" ];
-            };
-          }
-        );
-      };
-      my_overlays = [ ht_can_dbc_overlay dbc_to_proto_overlay proto_file_gen_overlay ] ++ nix-proto.lib.overlayToList nix_protos_overlays;
+      my_overlays = [ ht_can_dbc_overlay dbc_to_proto_overlay proto_file_gen_overlay mcap_overlahy ] ++ nix-proto.lib.overlayToList nix_protos_overlays;
       pkgs = import nixpkgs {
         overlays = my_overlays;
         inherit system;
@@ -114,7 +87,7 @@
         packages = with x86_pkgs; [
           # Development Tools
           python311Packages.cantools
-          (callPackage ./mcap.nix { })
+          mcap_pkg
           # ht_can_pkg
         ];
       };
@@ -125,7 +98,7 @@
         packages = with arm_pkgs; [
           # Development Tools
           python311Packages.cantools
-          (callPackage ./mcap.nix { })
+          mcap_pkg
           # ht_can_pkg
         ];
 
@@ -138,7 +111,7 @@
           # Development Tools
           #https://discourse.nixos.org/t/overriding-docheck-doesnt-work-with-python-package/14674
          (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
-         (callPackage ./mcap.nix { })          
+         mcap_pkg          
          # ht_can_pkg
         ];
 
@@ -150,7 +123,7 @@
         packages = with x86-darwin_pkgs; [
           # Development Tools
           (python311Packages.cantools.overridePythonAttrs (_: { doCheck = false; }))
-          (callPackage ./mcap.nix { })
+          mcap_pkg
 
           # ht_can_pkg
         ];

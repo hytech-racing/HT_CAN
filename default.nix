@@ -14,6 +14,9 @@ pkgs.stdenv.mkDerivation rec {
       };
       doCheck = false;
     }))
+
+    (pkgs.callPackage ./mcap.nix { })
+
   ]; # Python as a build dependency
 
   propagatedBuildInputs = buildInputs;

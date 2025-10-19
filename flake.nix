@@ -40,7 +40,7 @@
           };
       };
 
-      my_overlays = [ ht_can_dbc_overlay dbc_to_proto_overlay proto_file_gen_overlay mcap_overlahy ] ++ nix-proto.lib.overlayToList nix_protos_overlays;
+      my_overlays = [ ht_can_dbc_overlay dbc_to_proto_overlay proto_file_gen_overlay mcap_overlay ] ++ nix-proto.lib.overlayToList nix_protos_overlays;
       pkgs = import nixpkgs {
         overlays = my_overlays;
         inherit system;

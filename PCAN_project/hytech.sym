@@ -663,6 +663,10 @@ Sig=db_speed_setpoint_too_latent bit
 Sig=db_torque_setpoint_too_latent bit
 Sig=db_latency_diff_too_high bit
 Sig=db_message_not_received bit
+Sig=db_telem_timing_fault bit
+Sig=db_aux_timing_fault bit
+Sig=telem_latency_millis unsigned 32
+Sig=aux_latency_millis unsigned 32
 
 {SENDRECEIVE}
 
@@ -2234,18 +2238,11 @@ Sig=em_temp_4 56
 [DRIVEBRAIN_LATENCY_TIMES]
 ID=501h
 Len=8
-Sig=db_torque_latency_millis 0
-Sig=db_speed_latency_millis 16
-Sig=db_latency_diff_millis 32
-
-[Symbol1]
-ID=000h
-Len=8
+Sig=telem_latency_millis 0
+Sig=aux_latency_millis 32
 
 [DRIVEBRAIN_LATENCY_STATUSES]
 ID=502h
 Len=8
-Sig=db_torque_setpoint_too_latent 0
-Sig=db_message_not_received 2
-Sig=db_speed_setpoint_too_latent 1
-Sig=db_latency_diff_too_high 3
+Sig=db_telem_timing_fault 0
+Sig=db_aux_timing_fault 1

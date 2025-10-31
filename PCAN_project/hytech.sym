@@ -731,8 +731,8 @@ Sig=charging_state 0
 ID=0D9h
 Len=6
 Sig=max_board_temp 0
-Sig=low_cell_temp 16
-Sig=high_cell_temp 32
+Sig=min_cell_temp 16
+Sig=max_cell_temp 32
 
 [BMS_VOLTAGES]
 ID=0D7h

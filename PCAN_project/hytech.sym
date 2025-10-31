@@ -690,36 +690,36 @@ Len=8
 Sig=total_charge 0
 Sig=total_discharge 32
 
-[BMS_DETAILED_TEMPS]
+[BMS_CHIP_TEMPS]
 ID=0DAh
 Len=7
-Sig=group_id 0
-Sig=ic_id 4
-Sig=thermistor_id_0 8
-Sig=thermistor_id_1 24
-Sig=thermistor_id_2 40
+Sig=thermistor_group_id 0
+Sig=chip_id 4
+Sig=thermistor_group_temp_0 8
+Sig=thermistor_group_temp_1 24
+Sig=thermistor_group_temp_2 40
 
-[BMS_DETAILED_VOLTAGES]
+[BMS_CELL_VOLTAGES]
 ID=0D8h
 Len=7
-Sig=voltage_group_id 0
+Sig=cell_group_id 0
 Sig=chip_id 4
 Sig=cell_group_voltage_0 8
 Sig=cell_group_voltage_1 24
 Sig=cell_group_voltage_2 40
 
-[BMS_ONBOARD_DETAILED_TEMPS]
+[BMS_ONBOARD_CURRENT_TEMP]
 ID=0D6h
 Len=3
-Sig=ic_id 0
+Sig=chip_id 0
 Sig=temp_0 8
 
 [BMS_ONBOARD_TEMPS]
 ID=0D5h
 Len=6
 Sig=max_board_temp 0
-Sig=low_cell_temp 16
-Sig=high_cell_temp 32
+Sig=min_cell_temp 16
+Sig=max_cell_temp 32
 
 [BMS_STATUS]
 ID=0DBh
@@ -738,8 +738,8 @@ Sig=high_cell_temp 32
 ID=0D7h
 Len=8
 Sig=average_voltage 0
-Sig=low_voltage 16
-Sig=high_voltage 32
+Sig=min_cell_voltage 16
+Sig=max_cell_voltage 32
 Sig=total_voltage 48
 
 [BRAKE_PRESSURE_SENSOR]

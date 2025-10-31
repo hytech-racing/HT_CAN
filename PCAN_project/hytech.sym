@@ -32,21 +32,20 @@ Enum=drivetrain_stateE(0="NOT_CONNECTED", 1="NOT_ENABLED_NO_HV_PRESENT", 2="NOT_
   3="INVERTERS_READY", 4="INVERTERS_HV_ENABLED", 5="ENABLED_DRIVE_MODE", 6="ERROR", 7="CLEARING_ERRORS")
 
 {SIGNALS}
-Sig=group_id unsigned 4
+Sig=thermistor_group_id unsigned 4
 Sig=total_charge unsigned 32 /u:Coulombs /f:0.0001 // UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage.
 Sig=total_discharge unsigned 32 /u:Coulombs /f:0.0001 // UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage.
-Sig=ic_id unsigned 4
-Sig=thermistor_id_0 signed 16 /f:0.01
-Sig=thermistor_id_1 signed 16 /f:0.01
-Sig=thermistor_id_2 signed 16 /f:0.01
-Sig=voltage_0 unsigned 16 /f:0.0001
-Sig=voltage_1 unsigned 16 /f:0.0001
-Sig=voltage_2 unsigned 16 /f:0.0001
+Sig=chip_id unsigned 4
+Sig=thermistor_group_temp_0 signed 16 /f:0.01
+Sig=thermistor_group_temp_1 signed 16 /f:0.01
+Sig=thermistor_group_temp_2 signed 16 /f:0.01
+Sig=cell_group_voltage_0 unsigned 16 /f:0.0001
+Sig=cell_group_voltage_1 unsigned 16 /f:0.0001
+Sig=cell_group_voltage_2 unsigned 16 /f:0.0001
 Sig=temp_0 signed 16 /u:"Deg C" /f:0.01
-Sig=temp_1 signed 16 /u:"Deg C" /f:0.01
 Sig=max_board_temp signed 16 /u:"Deg C" /f:0.01
-Sig=low_cell_temp signed 16 /u:"Deg C" /f:0.01
-Sig=high_cell_temp signed 16 /u:"Deg C" /f:0.01
+Sig=min_cell_temp signed 16 /u:"Deg C" /f:0.01
+Sig=max_cell_temp signed 16 /u:"Deg C" /f:0.01
 Sig=state unsigned 8
 Sig=overvoltage_error unsigned 1 /u:none // Whether or not the energy meter is reading an over-voltage error.
 Sig=undervoltage_error unsigned 1
@@ -61,8 +60,8 @@ Sig=current signed 16 /f:0.01
 Sig=shutdown_g_above_threshold_error unsigned 1
 Sig=shutdown_h_above_threshold_error unsigned 1
 Sig=average_voltage unsigned 16 /u:V /f:0.0001
-Sig=low_voltage unsigned 16 /f:0.0001
-Sig=high_voltage unsigned 16 /u:V /f:0.0001
+Sig=min_cell_voltage unsigned 16 /f:0.0001
+Sig=max_cell_voltage unsigned 16 /u:V /f:0.0001
 Sig=total_voltage unsigned 16 /f:0.01
 Sig=charger_enabled unsigned 1
 Sig=max_charging_voltage_high unsigned 8 // Unused for any PCAN stuff only for Elcon Charger

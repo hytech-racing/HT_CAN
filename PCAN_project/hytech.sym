@@ -710,10 +710,9 @@ Sig=voltage_2 40
 
 [BMS_ONBOARD_DETAILED_TEMPS]
 ID=0D6h
-Len=5
+Len=3
 Sig=ic_id 0
 Sig=temp_0 8
-Sig=temp_1 24
 
 [BMS_ONBOARD_TEMPS]
 ID=0D5h
@@ -724,20 +723,9 @@ Sig=high_cell_temp 32
 
 [BMS_STATUS]
 ID=0DBh
-Len=6
-Sig=state 0
-Sig=overvoltage_error 8
-Sig=undervoltage_error 9
-Sig=total_voltage_high_error 10
-Sig=discharge_overcurrent_error 11
-Sig=charge_overcurrent_error 12
-Sig=discharge_overtemp_error 13
-Sig=charge_overtemp_error 14
-Sig=undertemp_error 15
-Sig=overtemp_error 16
-Sig=current 24
-Sig=shutdown_g_above_threshold_error 40
-Sig=shutdown_h_above_threshold_error 41
+Len=1
+Sig=charging_state 0
+
 
 [BMS_TEMPS]
 ID=0D9h

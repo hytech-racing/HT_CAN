@@ -702,11 +702,11 @@ Sig=thermistor_id_2 40
 [BMS_DETAILED_VOLTAGES]
 ID=0D8h
 Len=7
-Sig=group_id 0
-Sig=ic_id 4
-Sig=voltage_0 8
-Sig=voltage_1 24
-Sig=voltage_2 40
+Sig=voltage_group_id 0
+Sig=chip_id 4
+Sig=cell_group_voltage_0 8
+Sig=cell_group_voltage_1 24
+Sig=cell_group_voltage_2 40
 
 [BMS_ONBOARD_DETAILED_TEMPS]
 ID=0D6h

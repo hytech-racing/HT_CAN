@@ -33,6 +33,7 @@ Enum=drivetrain_stateE(0="NOT_CONNECTED", 1="NOT_ENABLED_NO_HV_PRESENT", 2="NOT_
 
 {SIGNALS}
 Sig=thermistor_group_id unsigned 4
+Sig=cell_group_id unsigned 4
 Sig=total_charge unsigned 32 /u:Coulombs /f:0.0001 // UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage.
 Sig=total_discharge unsigned 32 /u:Coulombs /f:0.0001 // UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage.
 Sig=chip_id unsigned 4
@@ -46,7 +47,7 @@ Sig=temp_0 signed 16 /u:"Deg C" /f:0.01
 Sig=max_board_temp signed 16 /u:"Deg C" /f:0.01
 Sig=min_cell_temp signed 16 /u:"Deg C" /f:0.01
 Sig=max_cell_temp signed 16 /u:"Deg C" /f:0.01
-Sig=state unsigned 8
+Sig=charging_state unsigned 8
 Sig=overvoltage_error unsigned 1 /u:none // Whether or not the energy meter is reading an over-voltage error.
 Sig=undervoltage_error unsigned 1
 Sig=total_voltage_high_error unsigned 1

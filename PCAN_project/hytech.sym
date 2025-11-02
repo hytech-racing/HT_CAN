@@ -693,12 +693,11 @@ Sig=total_discharge 32
 
 [BMS_CHIP_TEMPS]
 ID=0DAh
-Len=9
+Len=5
 Sig=chip_id 0
+Sig=thermistor_group_id 4
 Sig=thermistor_cell_group_temp_0 8
 Sig=thermistor_cell_group_temp_1 24
-Sig=thermistor_cell_group_temp_2 40
-Sig=thermistor_cell_group_temp_3 56
 
 [BMS_CELL_VOLTAGES]
 ID=0D8h

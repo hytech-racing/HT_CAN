@@ -668,6 +668,11 @@ Sig=db_telem_timing_fault bit
 Sig=db_aux_timing_fault bit
 Sig=telem_latency_millis unsigned 32
 Sig=aux_latency_millis unsigned 32
+Sig=shdn_out_voltage float
+Sig=precharge_voltage float
+Sig=ts_out_voltage float
+Sig=pack_out_voltage float
+Sig=glv_voltage float
 
 {SENDRECEIVE}
 
@@ -725,7 +730,6 @@ Sig=max_cell_temp 32
 ID=0DBh
 Len=1
 Sig=charging_state 0
-
 
 [BMS_TEMPS]
 ID=0D9h
@@ -2234,3 +2238,20 @@ ID=502h
 Len=8
 Sig=db_telem_timing_fault 0
 Sig=db_aux_timing_fault 1
+
+[ADC_VOLTAGES_HV_1]
+ID=067h
+Len=8
+Sig=precharge_voltage 0
+
+[ADC_VOLTAGES_HV_2]
+ID=068h
+Len=8
+Sig=pack_out_voltage 0
+Sig=ts_out_voltage 32
+
+[ADC_VOLTAGES_LV]
+ID=069h
+Len=8
+Sig=shdn_out_voltage 32
+Sig=glv_voltage 0

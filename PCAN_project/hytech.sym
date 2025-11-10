@@ -48,7 +48,7 @@ Sig=temp_0 signed 16 /u:"Deg C" /f:0.01
 Sig=max_board_temp signed 16 /u:"Deg C" /f:0.01
 Sig=min_cell_temp signed 16 /u:"Deg C" /f:0.01
 Sig=max_cell_temp signed 16 /u:"Deg C" /f:0.01
-Sig=shdn_out_voltage_high unsigned 8
+Sig=shdn_out_voltage_state unsigned 8
 Sig=overvoltage_error unsigned 1 /u:none // Whether or not the energy meter is reading an over-voltage error.
 Sig=undervoltage_error unsigned 1
 Sig=total_voltage_high_error unsigned 1
@@ -729,7 +729,7 @@ Sig=max_cell_temp 32
 [BMS_STATUS]
 ID=0DBh
 Len=1
-Sig=shdn_out_voltage_high 0
+Sig=shdn_out_voltage_state 0
 
 [BMS_TEMPS]
 ID=0D9h

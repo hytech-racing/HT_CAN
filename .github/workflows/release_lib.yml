@@ -1,10 +1,8 @@
 name: Generate and Release
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
+  
 jobs:
   generate-dbc:  
     runs-on: ubuntu-latest

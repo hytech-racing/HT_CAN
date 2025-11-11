@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request: 
+    branches: 
+      - main 
 
 jobs:
   generate-dbc:  
@@ -149,6 +152,16 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: /dbc/hytech.dbc
           asset_name: hytech.dbc
+          asset_content_type: text/plain
+
+      - name: Upload hytech.proto
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: hytech.proto
+          asset_name: hytech.proto
           asset_content_type: text/plain
       
       - name: Download html artifact

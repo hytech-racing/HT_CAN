@@ -77,6 +77,12 @@ jobs:
           name: htmlfile
           path: ./docs/Release-${{github.run_number}}.html
 
+      - name: Upload proto artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: protofile
+          path: hytech.proto
+
   generate-and-release:
     needs: [generate-dbc, generate-proto]
     runs-on: ubuntu-latest
@@ -88,6 +94,12 @@ jobs:
         with:
           name: dbcfile
           path: /dbc
+
+      - name: Download proto artifact
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: protofile
+          path: /
 
       - name: generate code
         run: |

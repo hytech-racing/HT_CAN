@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request: 
+    branches: 
+      - main 
 
 jobs:
   generate-dbc:  
@@ -74,6 +77,12 @@ jobs:
           name: htmlfile
           path: ./docs/Release-${{github.run_number}}.html
 
+      - name: Upload proto artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: protofile
+          path: hytech.proto
+
   generate-and-release:
     needs: [generate-dbc, generate-proto]
     runs-on: ubuntu-latest
@@ -85,6 +94,12 @@ jobs:
         with:
           name: dbcfile
           path: /dbc
+
+      - name: Download proto artifact
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: protofile
+          path: /
 
       - name: generate code
         run: |
@@ -149,6 +164,16 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: /dbc/hytech.dbc
           asset_name: hytech.dbc
+          asset_content_type: text/plain
+
+      - name: Upload hytech.proto
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: hytech.proto
+          asset_name: hytech.proto
           asset_content_type: text/plain
       
       - name: Download html artifact

@@ -7,8 +7,7 @@ find_package(Protobuf REQUIRED CONFIG)
 file(MAKE_DIRECTORY ${PROTO_BINARY_DIR})
 
 add_library(${OBJECT_LIBRARY} OBJECT 
-    proto/hytech_can_msgs.proto
-    proto/base_msgs.proto
+    proto/hytech.proto
 )
 
 target_include_directories(${OBJECT_LIBRARY} 

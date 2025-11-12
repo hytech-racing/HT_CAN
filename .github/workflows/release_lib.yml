@@ -89,6 +89,9 @@ jobs:
     container:
       image: ghcr.io/rcmast3r/ccoderdbc:main
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 
+    
       - name: Download dbc artifact
         uses: actions/download-artifact@v4.1.8
         with:
@@ -116,6 +119,7 @@ jobs:
 
           mkdir -p /output
           cp hytech.proto /hytech_drivebrain_lib/proto
+          cp CMakeLists.txt /hytech_drivebrain_lib
           tar -czvf /output/drivebrain_can_lib.tar.gz /hytech_drivebrain_lib
 
       - name: Create Release

@@ -673,6 +673,7 @@ Sig=precharge_voltage float
 Sig=ts_out_voltage float
 Sig=pack_out_voltage float
 Sig=glv_voltage float
+Sig=flow_rate float
 
 {SENDRECEIVE}
 
@@ -2260,3 +2261,4 @@ Sig=glv_voltage 0
 ID=503h
 Len=8
 Sig=flow_rate 0
+

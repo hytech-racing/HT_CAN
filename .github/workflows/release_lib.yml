@@ -116,7 +116,7 @@ jobs:
 
           mkdir -p /output
           cp hytech.proto /hytech_drivebrain_lib/proto
-          cp /app/CMakeLists.txt /hytech_drivebrain_lib
+          cp CMakeLists.txt /hytech_drivebrain_lib
           tar -czvf /output/drivebrain_can_lib.tar.gz /hytech_drivebrain_lib
 
       - name: Create Release

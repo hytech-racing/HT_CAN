@@ -110,16 +110,12 @@ jobs:
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /hytech_can_lib
 
-      - name: Checkout code
-        uses: actions/checkout@v4 
-
       - name: generate drivebrain lib release
         run:  |
           mkdir -p /hytech_drivebrain_lib/proto
 
           mkdir -p /output
           cp hytech.proto /hytech_drivebrain_lib/proto
-          cp CMakeLists.txt /hytech_drivebrain_lib
           tar -czvf /output/drivebrain_can_lib.tar.gz /hytech_drivebrain_lib
 
       - name: Create Release

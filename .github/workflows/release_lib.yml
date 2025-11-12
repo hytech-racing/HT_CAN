@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request: 
+    branches: 
+      - main 
 
 jobs:
   generate-dbc:  
@@ -74,17 +77,32 @@ jobs:
           name: htmlfile
           path: ./docs/Release-${{github.run_number}}.html
 
+      - name: Upload proto artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: protofile
+          path: hytech.proto
+
   generate-and-release:
     needs: [generate-dbc, generate-proto]
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/rcmast3r/ccoderdbc:main
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 
+    
       - name: Download dbc artifact
         uses: actions/download-artifact@v4.1.8
         with:
           name: dbcfile
           path: /dbc
+
+      - name: Download proto artifact
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: protofile
+          path: .
 
       - name: generate code
         run: |
@@ -94,6 +112,15 @@ jobs:
           mkdir -p /output
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /hytech_can_lib
+
+      - name: generate drivebrain lib release
+        run:  |
+          mkdir -p /hytech_drivebrain_lib/proto
+
+          mkdir -p /output
+          cp hytech.proto /hytech_drivebrain_lib/proto
+          cp CMakeLists.txt /hytech_drivebrain_lib
+          tar -czvf /output/drivebrain_can_lib.tar.gz /hytech_drivebrain_lib
 
       - name: Create Release
         id: create_release
@@ -141,6 +168,16 @@ jobs:
           asset_name: can_lib.tar.gz
           asset_content_type: application/zip
 
+      - name: Upload drivebrain release asset
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: /output/drivebrain_can_lib.tar.gz
+          asset_name: drivebrain_can_lib.tar.gz
+          asset_content_type: application/zip
+
       - name: Upload hytech.dbc
         uses: actions/upload-release-asset@v1.0.2
         env:
@@ -149,6 +186,16 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: /dbc/hytech.dbc
           asset_name: hytech.dbc
+          asset_content_type: text/plain
+
+      - name: Upload hytech.proto
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: hytech.proto
+          asset_name: hytech.proto
           asset_content_type: text/plain
       
       - name: Download html artifact

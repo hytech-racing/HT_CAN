@@ -110,6 +110,16 @@ jobs:
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /hytech_can_lib
 
+      - name: generate drivebrain lib release
+        run:  |
+          mkdir -p /hytech_drivebrain_lib/proto
+          cd /app
+
+          mkdir -p /output
+          cp hytech.proto /hytech_drivebrain_lib/proto
+          cp CMakeLists.txt /hytech_drivebrain_lib
+          tar -czvf /output/drivebrain_can_lib.tar.gz /hytech_drivebrain_lib
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1.1.4
@@ -154,6 +164,16 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: /output/can_lib.tar.gz
           asset_name: can_lib.tar.gz
+          asset_content_type: application/zip
+
+      - name: Upload drivebrain release asset
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: /output/drivebrain_can_lib.tar.gz
+          asset_name: drivebrain_can_lib.tar.gz
           asset_content_type: application/zip
 
       - name: Upload hytech.dbc

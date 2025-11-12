@@ -2255,3 +2255,8 @@ ID=069h
 Len=8
 Sig=shdn_out_voltage 32
 Sig=glv_voltage 0
+
+[FLOWMETER_DATA]
+ID=503h
+Len=8
+Sig=flow_rate 0

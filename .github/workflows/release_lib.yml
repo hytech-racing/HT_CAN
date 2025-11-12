@@ -110,6 +110,9 @@ jobs:
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /hytech_can_lib
 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: generate drivebrain lib release
         run:  |
           mkdir -p /hytech_drivebrain_lib/proto
@@ -164,9 +167,6 @@ jobs:
           asset_path: /output/can_lib.tar.gz
           asset_name: can_lib.tar.gz
           asset_content_type: application/zip
-
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Upload drivebrain release asset
         uses: actions/upload-release-asset@v1.0.2

@@ -791,146 +791,20 @@ Sig=thermistor_motor_fl 0
 Sig=thermistor_motor_fr 16
 
 [INV1_CONTROL_INPUT]
-ID=097h
-Len=6
-Sig=speed_setpoint_rpm 0
-Sig=positive_torque_limit 16
-Sig=negative_torque_limit 32
-
-[INV1_CONTROL_PARAMETER]
-ID=103h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV1_CONTROL_WORD]
-ID=090h
-Len=2
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-
-[INV1_DYNAMICS]
-ID=072h
-Len=8
-Sig=actual_power_w 0
-Sig=actual_torque_nm 32
-Sig=actual_speed_rpm 48
-
-[INV1_FEEDBACK]
-ID=074h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV1_POWER]
-ID=073h
-Len=8
-Sig=active_power_w 0
-Sig=reactive_power_var 32
-
-[INV1_STATUS]
-ID=070h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=dc_bus_voltage 16
-Sig=diagnostic_number 32
-
-[INV1_TEMPS]
-ID=071h
-Len=6
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=igbt_temp 32
-
-[INV2_CONTROL_INPUT]
-ID=098h
-Len=6
-Sig=speed_setpoint_rpm 0
-Sig=positive_torque_limit 16
-Sig=negative_torque_limit 32
-
-[INV2_CONTROL_PARAMETER]
-ID=104h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV2_CONTROL_WORD]
-ID=091h
-Len=2
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-
-[INV2_DYNAMICS]
-ID=077h
-Len=8
-Sig=actual_power_w 0
-Sig=actual_torque_nm 32
-Sig=actual_speed_rpm 48
-
-[INV2_FEEDBACK]
-ID=079h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV2_POWER]
-ID=078h
-Len=8
-Sig=active_power_w 0
-Sig=reactive_power_var 32
-
-[INV2_STATUS]
-ID=075h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=dc_bus_voltage 16
-Sig=diagnostic_number 32
-
-[INV2_TEMPS]
-ID=076h
-Len=6
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=igbt_temp 32
-
-[INV3_CONTROL_INPUT]
 ID=099h
 Len=6
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
 
-[INV3_CONTROL_PARAMETER]
+[INV1_CONTROL_PARAMETER]
 ID=105h
 Len=8
 Sig=speed_control_kp 0
 Sig=speed_control_ki 16
 Sig=speed_control_kd 32
 
-[INV3_CONTROL_WORD]
+[INV1_CONTROL_WORD]
 ID=092h
 Len=2
 Sig=inverter_enable 8
@@ -938,27 +812,27 @@ Sig=hv_enable 9
 Sig=driver_enable 10
 Sig=remove_error 11
 
-[INV3_DYNAMICS]
+[INV1_DYNAMICS]
 ID=082h
 Len=8
 Sig=actual_power_w 0
 Sig=actual_torque_nm 32
 Sig=actual_speed_rpm 48
 
-[INV3_FEEDBACK]
+[INV1_FEEDBACK]
 ID=084h
 Len=8
 Sig=speed_control_kp 0
 Sig=speed_control_ki 16
 Sig=speed_control_kd 32
 
-[INV3_POWER]
+[INV1_POWER]
 ID=083h
 Len=8
 Sig=active_power_w 0
 Sig=reactive_power_var 32
 
-[INV3_STATUS]
+[INV1_STATUS]
 ID=080h
 Len=8
 Sig=system_ready 8
@@ -972,28 +846,30 @@ Sig=derating_on 15
 Sig=dc_bus_voltage 16
 Sig=diagnostic_number 32
 
-[INV3_TEMPS]
-ID=081h
+[INV1_TEMPS]
+ID=00000081h
+Type=Extended
 Len=6
 Sig=motor_temp 0
 Sig=inverter_temp 16
 Sig=igbt_temp 32
 
-[INV4_CONTROL_INPUT]
+[INV2_CONTROL_INPUT]
 ID=102h
 Len=6
 Sig=speed_setpoint_rpm 0
 Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
 
-[INV4_CONTROL_PARAMETER]
-ID=106h
+[INV2_CONTROL_PARAMETER]
+ID=00000106h
+Type=Extended
 Len=8
 Sig=speed_control_kp 0
 Sig=speed_control_ki 16
 Sig=speed_control_kd 32
 
-[INV4_CONTROL_WORD]
+[INV2_CONTROL_WORD]
 ID=093h
 Len=2
 Sig=inverter_enable 8
@@ -1001,27 +877,27 @@ Sig=hv_enable 9
 Sig=driver_enable 10
 Sig=remove_error 11
 
-[INV4_DYNAMICS]
+[INV2_DYNAMICS]
 ID=087h
 Len=8
 Sig=actual_power_w 0
 Sig=actual_torque_nm 32
 Sig=actual_speed_rpm 48
 
-[INV4_FEEDBACK]
+[INV2_FEEDBACK]
 ID=089h
 Len=8
 Sig=speed_control_kp 0
 Sig=speed_control_ki 16
 Sig=speed_control_kd 32
 
-[INV4_POWER]
+[INV2_POWER]
 ID=088h
 Len=8
 Sig=active_power_w 0
 Sig=reactive_power_var 32
 
-[INV4_STATUS]
+[INV2_STATUS]
 ID=085h
 Len=8
 Sig=system_ready 8
@@ -1035,8 +911,135 @@ Sig=derating_on 15
 Sig=dc_bus_voltage 16
 Sig=diagnostic_number 32
 
-[INV4_TEMPS]
+[INV2_TEMPS]
 ID=086h
+Len=6
+Sig=motor_temp 0
+Sig=inverter_temp 16
+Sig=igbt_temp 32
+
+[INV3_CONTROL_INPUT]
+ID=097h
+Len=6
+Sig=speed_setpoint_rpm 0
+Sig=positive_torque_limit 16
+Sig=negative_torque_limit 32
+
+[INV3_CONTROL_PARAMETER]
+ID=103h
+Len=8
+Sig=speed_control_kp 0
+Sig=speed_control_ki 16
+Sig=speed_control_kd 32
+
+[INV3_CONTROL_WORD]
+ID=090h
+Len=2
+Sig=inverter_enable 8
+Sig=hv_enable 9
+Sig=driver_enable 10
+Sig=remove_error 11
+
+[INV3_DYNAMICS]
+ID=072h
+Len=8
+Sig=actual_power_w 0
+Sig=actual_torque_nm 32
+Sig=actual_speed_rpm 48
+
+[INV3_FEEDBACK]
+ID=074h
+Len=8
+Sig=speed_control_kp 0
+Sig=speed_control_ki 16
+Sig=speed_control_kd 32
+
+[INV3_POWER]
+ID=00000073h
+Type=Extended
+Len=8
+Sig=active_power_w 0
+Sig=reactive_power_var 32
+
+[INV3_STATUS]
+ID=070h
+Len=8
+Sig=system_ready 8
+Sig=error 9
+Sig=warning 10
+Sig=quit_dc_on 11
+Sig=dc_on 12
+Sig=quit_inverter_on 13
+Sig=inverter_on 14
+Sig=derating_on 15
+Sig=dc_bus_voltage 16
+Sig=diagnostic_number 32
+
+[INV3_TEMPS]
+ID=071h
+Len=6
+Sig=motor_temp 0
+Sig=inverter_temp 16
+Sig=igbt_temp 32
+
+[INV4_CONTROL_INPUT]
+ID=098h
+Len=6
+Sig=speed_setpoint_rpm 0
+Sig=positive_torque_limit 16
+Sig=negative_torque_limit 32
+
+[INV4_CONTROL_PARAMETER]
+ID=104h
+Len=8
+Sig=speed_control_kp 0
+Sig=speed_control_ki 16
+Sig=speed_control_kd 32
+
+[INV4_CONTROL_WORD]
+ID=091h
+Len=2
+Sig=inverter_enable 8
+Sig=hv_enable 9
+Sig=driver_enable 10
+Sig=remove_error 11
+
+[INV4_DYNAMICS]
+ID=077h
+Len=8
+Sig=actual_power_w 0
+Sig=actual_torque_nm 32
+Sig=actual_speed_rpm 48
+
+[INV4_FEEDBACK]
+ID=079h
+Len=8
+Sig=speed_control_kp 0
+Sig=speed_control_ki 16
+Sig=speed_control_kd 32
+
+[INV4_POWER]
+ID=078h
+Len=8
+Sig=active_power_w 0
+Sig=reactive_power_var 32
+
+[INV4_STATUS]
+ID=075h
+Len=8
+Sig=system_ready 8
+Sig=error 9
+Sig=warning 10
+Sig=quit_dc_on 11
+Sig=dc_on 12
+Sig=quit_inverter_on 13
+Sig=inverter_on 14
+Sig=derating_on 15
+Sig=dc_bus_voltage 16
+Sig=diagnostic_number 32
+
+[INV4_TEMPS]
+ID=076h
 Len=6
 Sig=motor_temp 0
 Sig=inverter_temp 16
@@ -1457,25 +1460,25 @@ Sig=aero_channel_6 32
 Sig=aero_channel_7 48
 
 [INV1_OVERLOAD]
-ID=136h
+ID=14Ah
 Len=8
 Sig=inverter_overload_percentage 0
 Sig=motor_overload_percentage 16
 
 [INV2_OVERLOAD]
-ID=140h
+ID=154h
 Len=4
 Sig=inverter_overload_percentage 0
 Sig=motor_overload_percentage 16
 
 [INV3_OVERLOAD]
-ID=14Ah
+ID=136h
 Len=4
 Sig=inverter_overload_percentage 0
 Sig=motor_overload_percentage 16
 
 [INV4_OVERLOAD]
-ID=154h
+ID=140h
 Len=4
 Sig=inverter_overload_percentage 0
 Sig=motor_overload_percentage 16

@@ -677,67 +677,10 @@ Sig=flow_rate float
 
 {SENDRECEIVE}
 
-[ACU_SHUNT_MEASUREMENTS]
-ID=401h
-Len=6
-Sig=current_shunt_read 0
-Sig=pack_filtered_read 16
-Sig=ts_out_filtered_read 32
-
-[Attitude]
-ID=005h
-Len=6
-Sig=Height 0
-Sig=Pitch_angle 16
-Sig=Roll_angle 32
-
-[BMS_COULOMB_COUNTS]
-ID=0E2h // UNUSED message to send data on the BMS current draw.
-Len=8
-Sig=total_charge 0
-Sig=total_discharge 32
-
-[BMS_CHIP_TEMPS]
-ID=0DAh
-Len=5
-Sig=chip_id 0
-Sig=thermistor_group_id 4
-Sig=thermistor_cell_group_temp_0 8
-Sig=thermistor_cell_group_temp_1 24
-
-[BMS_CELL_VOLTAGES]
-ID=0D8h
-Len=7
-Sig=cell_group_id 0
-Sig=chip_id 4
-Sig=cell_group_voltage_0 8
-Sig=cell_group_voltage_1 24
-Sig=cell_group_voltage_2 40
-
-[BMS_ONBOARD_CURRENT_TEMP]
-ID=0D6h
-Len=3
-Sig=chip_id 0
-Sig=temp_0 8
-
-[BMS_ONBOARD_TEMPS]
-ID=0D5h
-Len=6
-Sig=max_board_temp 0
-Sig=min_cell_temp 16
-Sig=max_cell_temp 32
-
 [BMS_STATUS]
 ID=0DBh
 Len=1
 Sig=shdn_out_voltage_state 0
-
-[BMS_TEMPS]
-ID=0D9h
-Len=6
-Sig=max_board_temp 0
-Sig=min_cell_temp 16
-Sig=max_cell_temp 32
 
 [BMS_VOLTAGES]
 ID=0D7h
@@ -746,11 +689,6 @@ Sig=average_voltage 0
 Sig=min_cell_voltage 16
 Sig=max_cell_voltage 32
 Sig=total_voltage 48
-
-[BRAKE_PRESSURE_SENSOR]
-ID=0CBh
-Len=2
-Sig=brake_sensor_analog_read 0
 
 [CCU_STATUS]
 ID=0DDh
@@ -779,288 +717,12 @@ Sig=flags 32
 Sig=input_ac_voltage_high 40
 Sig=input_ac_voltage_low 48
 
-[CONTROLLER_BOOLEAN]
-ID=7ECh
-Len=8
-Sig=controller_use_launch 0
-Sig=controller_use_pid_tv 1
-Sig=controller_use_normal_force 2
-Sig=controller_use_pid_power_limit 3
-Sig=controller_use_power_limit 4
-Sig=controller_use_tcs 5
-Sig=controller_use_tcs_lim_yaw_pid 6
-Sig=controller_use_dec_yaw_pid_brake 7
-Sig=controller_use_discontin_brakes 8
-Sig=controller_use_no_regen_5kph 9
-Sig=controller_use_torque_bias 10
-Sig=controller_use_nl_tcs_gain_sche 11
-Sig=controller_use_rpm_tcs_gain_sche 12
-Sig=controller_use_nl_tcs_slipschedu 13
-
-[CONTROLLER_NORMAL_DIST]
-ID=7DBh
-Len=8
-Sig=controller_normal_percent_fl 0
-Sig=controller_normal_percent_fr 16
-Sig=controller_normal_percent_rl 32
-Sig=controller_normal_percent_rr 48
-
-[CONTROLLER_NORMAL_TORQUE]
-ID=7DCh
-Len=8
-Sig=controller_normal_torque_fl 0
-Sig=controller_normal_torque_fr 16
-Sig=controller_normal_torque_rl 32
-Sig=controller_normal_torque_rr 48
-
-[CONTROLLER_PID_TV_DATA]
-ID=4EFh
-Len=8
-Sig=controller_input 0
-Sig=controller_output 20
-
-[CONTROLLER_PID_TV_DELTA_DATA]
-ID=4F0h
-Len=8
-Sig=pid_tv_fl_delta 0
-Sig=pid_tv_fr_delta 10
-Sig=pid_tv_rl_delta 20
-Sig=pid_tv_rr_delta 30
-
-[CONTROLLER_PID_YAW]
-ID=7CDh
-Len=8
-Sig=vehm_kin_desired_yaw_rate_rad_s 0
-Sig=controller_yaw_rate_error 16
-Sig=controller_yaw_pid_output 32
-
-[CONTROLLER_PID_YAW_TORQUE]
-ID=7DAh
-Len=8
-Sig=controller_yaw_torque_fl 0
-Sig=controller_yaw_torque_fr 16
-Sig=controller_yaw_torque_rl 32
-Sig=controller_yaw_torque_rr 48
-
-[CONTROLLER_POWER_LIM]
-ID=7DEh
-Len=8
-Sig=controller_power_lim_status 0
-Sig=controller_power_lim_error 4
-Sig=controller_power_lim_torque_adj 20
-
-[CONTROLLER_POWER_LIM_CORNER_POW]
-ID=7EAh
-Len=8
-Sig=controller_power_lim_cornerp_fl 0
-Sig=controller_power_lim_cornerp_fr 16
-Sig=controller_power_lim_cornerp_rl 32
-Sig=controller_power_lim_cornerp_rr 48
-
-[CONTROLLER_POWER_LIM_TORQUE]
-ID=7EBh
-Len=8
-Sig=controller_power_lim_torque_fl 0
-Sig=controller_power_lim_torque_fr 16
-Sig=controller_power_lim_torque_rl 32
-Sig=controller_power_lim_torque_rr 48
-
-[CONTROLLER_REGEN_5KPH_STATUS]
-ID=7AEh
-Len=8
-Sig=controller_regen_5kph_status_fl 0
-Sig=controller_regen_5kph_status_fr 1
-Sig=controller_regen_5kph_status_rl 2
-Sig=controller_regen_5kph_status_rr 3
-
-[CONTROLLER_REGEN_5KPH_TORQUE]
-ID=7ADh
-Len=8
-Sig=controller_regen_5kph_torq_fl 0
-Sig=controller_regen_5kph_torq_fr 16
-Sig=controller_regen_5kph_torq_rl 32
-Sig=controller_regen_5kph_torq_rr 48
-
-[CONTROLLER_TCS_CONFIG]
-ID=7FBh
-Len=8
-Sig=controller_tcs_launch_dead_zone 0
-Sig=controller_tcs_launch_vel_thresh 8
-Sig=controller_tcs_vel_thresh 14
-Sig=controller_tcs_sl_nlperc_star_fr 22
-Sig=controller_tcs_sl_nlperc_end_fr 30
-Sig=controller_tcs_sl_nlperc_end_rr 38
-Sig=controller_tcs_sl_nlperc_star_rr 46
-
-[CONTROLLER_TCS_CONFIG_CONT]
-ID=7BCh
-Len=8
-Sig=controller_tcs_lauSL_start_front 0
-Sig=controller_tcs_lauSL_end_front 8
-Sig=controller_tcs_lauSL_start_rear 16
-Sig=controller_tcs_lauSL_end_rear 24
-Sig=controller_tcs_SL_start_front 32
-Sig=controller_tcs_SL_end_front 40
-Sig=controller_tcs_SL_start_rear 48
-Sig=controller_tcs_SL_end_rear 56
-
-[CONTROLLER_TCS_DIFF_CONFIG]
-ID=7BDh
-Len=8
-Sig=controller_tcs_gen_LRdiff_lowerB 0
-Sig=controller_tcs_gen_LRdiff_upperB 13
-Sig=controller_tcs_w_steer_lower_b 27
-Sig=controller_tcs_w_steer_upper_b 39
-Sig=controller_tcs_launch_LRdiff 51
-
-[CONTROLLER_TCS_NL_SCHE_CONFIG]
-ID=7CCh
-Len=8
-Sig=controller_tcs_endper_nl_front 0
-Sig=controller_tcs_endper_nl_rear 8
-Sig=controller_tcs_startper_nl_front 16
-Sig=controller_tcs_startper_nl_rear 24
-
-[CONTROLLER_TCS_PID_CONFIG]
-ID=7AFh
-Len=8
-Sig=controller_tcs_pid_p_fl 0
-Sig=controller_tcs_pid_p_fr 16
-Sig=controller_tcs_pid_p_rl 32
-Sig=controller_tcs_pid_p_rr 48
-
-[CONTROLLER_TCS_PID_INPUT]
-ID=7FEh
-Len=8
-Sig=controller_tcs_pid_input_fl 0
-Sig=controller_tcs_pid_input_fr 16
-Sig=controller_tcs_pid_input_rl 32
-Sig=controller_tcs_pid_input_rr 48
-
-[CONTROLLER_TCS_PID_OUTPUT]
-ID=7AAh
-Len=8
-Sig=controller_tcs_pid_output_fl 0
-Sig=controller_tcs_pid_output_fr 16
-Sig=controller_tcs_pid_output_rl 32
-Sig=controller_tcs_pid_output_rr 48
-
-[CONTROLLER_TCS_RPM_SCHE_CONFIG]
-ID=7BEh
-Len=8
-Sig=controller_tcs_lower_rpm_front 0
-Sig=controller_tcs_lower_rpm_rear 15
-Sig=controller_tcs_upper_rpm_front 30
-Sig=controller_tcs_upper_rpm_rear 45
-
-[CONTROLLER_TCS_SATURATION_CONFIG]
-ID=7BBh
-Len=8
-Sig=controller_tcs_saturation_front 0
-Sig=controller_tcs_saturation_rear 12
-
-[CONTROLLER_TCS_SLIP_TARGETS]
-ID=7BFh
-Len=8
-Sig=controller_tcs_slip_target_front 0
-Sig=controller_tcs_slip_target_rear 12
-
-[CONTROLLER_TCS_STATUS]
-ID=7FDh
-Len=8
-Sig=controller_tcs_status_fl 0
-Sig=controller_tcs_status_fr 2
-Sig=controller_tcs_status_rl 4
-Sig=controller_tcs_status_rr 6
-
-[CONTROLLER_TCS_TORQUE]
-ID=7FCh
-Len=8
-Sig=controller_tcs_torque_fl 0
-Sig=controller_tcs_torque_fr 16
-Sig=controller_tcs_torque_rl 32
-Sig=controller_tcs_torque_rr 48
-
-[CONTROLLER_TORQUE_BIAS]
-ID=7ACh
-Len=8
-Sig=controller_bias_torq_avg_front 0
-Sig=controller_bias_torq_avg_rear 16
-
-[CONTROLLER_TORQUE_SETUP]
-ID=7FAh
-Len=8
-Sig=controller_initial_torque_req 0
-Sig=controller_constrained_torq_req 16
-Sig=controller_regen_limit 32
-Sig=controller_torque_mode 44
-Sig=controller_max_yaw_nl_accel_perc 52
-Sig=controller_max_nl_brake_sc_front 56
-
-[CONTROLLER_YAW_PID_CONFIG]
-ID=7BAh
-Len=8
-Sig=controller_yaw_pid_p 0
-Sig=controller_yaw_pid_i 13
-Sig=controller_yaw_pid_d 23
-Sig=controller_yaw_pid_brakes_p 33
-Sig=controller_yaw_pid_brakes_i 44
-Sig=controller_yaw_pid_brakes_d 54
-
-[Configuration]
-ID=006h
-Len=6
-Sig=Height_Offset 0
-Sig=Sensor_Y_Location 8
-Sig=Sensor_X_Location 20
-Sig=Attitude_Filtering 32
-Sig=IMU_Filtering 35
-Sig=CAN_Termination_State_Bus_1 38
-Sig=CAN_Termination_State_Bus_2 39
-Sig=Velocity_Filtering 40
-
 [DASHBOARD_BUZZER_CONTROL]
 ID=7F1h
 Len=2
 Sig=dash_buzzer_flag 0
 Sig=in_pedal_calibration_state 1
 Sig=torque_limit_enum_value 8
-
-[DASHBOARD_MCU_STATE]
-ID=0EBh
-Len=6
-Sig=bots_led 0
-Sig=launch_control_led 2
-Sig=mode_led 4
-Sig=mechanical_brake_led 6
-Sig=cockpit_brb_led 8
-Sig=inertia_status_led 10
-Sig=start_status_led 12
-Sig=motor_controller_error_led 14
-Sig=imd_led 16
-Sig=ams_led 18
-Sig=drive_buzzer 20
-Sig=glv_led 24
-Sig=pack_charge_led 32
-Sig=dial_state 40
-
-[DASHBOARD_STATE]
-ID=0ECh
-Len=3
-Sig=start_button 0
-Sig=mark_button 1
-Sig=mode_button 2
-Sig=motor_controller_cycle_button 3
-Sig=launch_ctrl_button 4
-Sig=torque_mode_button 5
-Sig=led_dimmer_button 6
-Sig=left_shifter_button 7
-Sig=right_shifter_button 8
-Sig=shutdown_h_above_threshold 9
-Sig=ssok_above_threshold 10
-Sig=drive_buzzer 11
-Sig=tcu_recording_state 12
-Sig=dial_state 16
 
 [DASH_INPUT]
 ID=300h
@@ -1099,86 +761,6 @@ Sig=drivebrain_torque_fr 16
 Sig=drivebrain_torque_rl 32
 Sig=drivebrain_torque_rr 48
 
-[DRIVETRAIN_COMMAND]
-ID=12Fh
-Len=8
-Sig=drivetrain_traj_torque_lim_fl 0
-Sig=drivetrain_traj_torque_lim_fr 16
-Sig=drivetrain_traj_torque_lim_rl 32
-Sig=drivetrain_traj_torque_lim_rr 48
-
-[DRIVETRAIN_ERR_STATUS_TELEM]
-ID=201h
-Len=8
-Sig=mc1_diagnostic_number 0
-Sig=mc2_diagnostic_number 16
-Sig=mc3_diagnostic_number 32
-Sig=mc4_diagnostic_number 48
-
-[DRIVETRAIN_FILTER_OUT_TORQUE_TEL]
-ID=204h
-Len=8
-Sig=fl_motor_torque 0
-Sig=fr_motor_torque 16
-Sig=rl_motor_torque 32
-Sig=rr_motor_torque 48
-
-[DRIVETRAIN_RPMS_TELEM]
-ID=200h
-Len=8
-Sig=fr_motor_rpm 0
-Sig=fl_motor_rpm 16
-Sig=rr_motor_rpm 32
-Sig=rl_motor_rpm 48
-
-[DRIVETRAIN_STATUS_TELEM]
-ID=202h
-Len=8
-Sig=mc1_dc_on 0
-Sig=mc1_derating_on 1
-Sig=mc1_error 2
-Sig=mc1_inverter_on 3
-Sig=mc1_quit_dc 4
-Sig=mc1_quit_inverter_on 5
-Sig=mc1_system_ready 6
-Sig=mc1_warning 7
-Sig=mc2_dc_on 8
-Sig=mc2_derating_on 9
-Sig=mc2_error 10
-Sig=mc2_inverter_on 11
-Sig=mc2_quit_dc 12
-Sig=mc2_quit_inverter_on 13
-Sig=mc2_system_ready 14
-Sig=mc2_warning 15
-Sig=mc3_dc_on 16
-Sig=mc3_derating_on 17
-Sig=mc3_error 18
-Sig=mc3_inverter_on 19
-Sig=mc3_quit_dc 20
-Sig=mc3_quit_inverter_on 21
-Sig=mc3_system_ready 22
-Sig=mc3_warning 23
-Sig=mc4_dc_on 24
-Sig=mc4_derating_on 25
-Sig=mc4_error 26
-Sig=mc4_inverter_on 27
-Sig=mc4_quit_dc 28
-Sig=mc4_quit_inverter_on 29
-Sig=mc4_system_ready 30
-Sig=mc4_warning 31
-Sig=accel_implausible 32
-Sig=brake_implausible 33
-Sig=brake_percent 40
-Sig=accel_percent 48
-
-[DRIVETRAIN_TORQUE_TELEM]
-ID=203h
-Len=8
-Sig=fl_motor_torque 0
-Sig=fr_motor_torque 16
-Sig=rl_motor_torque 32
-Sig=rr_motor_torque 48
-
 [EM_MEASUREMENT]
 ID=100h // Contains the voltage and current readings from the Energy Meter. Sent by the AMS.
 Len=8
@@ -1207,16 +789,6 @@ ID=0F5h
 Len=8
 Sig=thermistor_motor_fl 0
 Sig=thermistor_motor_fr 16
-
-[IMU]
-ID=001h
-Len=8
-Sig=Accel_X 0
-Sig=Accel_Y 10
-Sig=Accel_Z 20
-Sig=Roll_Rate 30
-Sig=Yaw_Rate 41
-Sig=Pitch_Rate 52
 
 [INV1_CONTROL_INPUT]
 ID=097h
@@ -1662,84 +1234,6 @@ Sig=RR_TTPMS_RSSI 16
 Sig=RR_TTPMS_T 32
 Sig=RR_TTPMS_NODE_ID 48
 
-[MC1_ENERGY]
-ID=0B8h
-Len=8
-Sig=dc_bus_voltage 0
-Sig=motor_power 16
-Sig=feedback_torque 48
-
-[MCU_ANALOG_READINGS]
-ID=0CCh
-Len=8
-Sig=steering_1 0
-Sig=steering_2 16
-Sig=hall_effect_current 32
-Sig=glv_battery_voltage 48
-
-[MCU_ERROR_STATES]
-ID=101h // this message will have states internal to the MCU code
-Len=8
-Sig=torque_controller_mux_status 0
-
-[MCU_FRONT_POTS]
-ID=0C6h
-Len=4
-Sig=potentiometer_fl 0
-Sig=potentiometer_fr 16
-
-[MCU_LOAD_CELLS]
-ID=0C5h
-Len=4
-Sig=load_cell_fl 0
-Sig=load_cell_fr 16
-
-[MCU_PEDAL_RAW]
-ID=0CDh
-Len=8
-Sig=accel_1_raw 0
-Sig=accel_2_raw 12
-Sig=brake_1_raw 24
-Sig=brake_2_raw 36
-
-[MCU_STATUS]
-ID=0C3h
-Len=8
-Sig=imd_ok_high 0
-Sig=shutdown_b_above_threshold 1
-Sig=bms_ok_high 2
-Sig=shutdown_c_above_threshold 3
-Sig=bspd_ok_high 4
-Sig=shutdown_d_above_threshold 5
-Sig=software_ok_high 6
-Sig=shutdown_e_above_threshold 7
-Sig=mechanical_brake_active 8
-Sig=no_accel_implausibility 9
-Sig=no_brake_implausibility 10
-Sig=brake_pedal_active 11
-Sig=bspd_current_high 12
-Sig=bspd_brake_high 13
-Sig=no_accel_or_brake_implausibility 14
-Sig=drive_buzzer 15
-Sig=ecu_state 16
-Sig=inverter_error 19
-Sig=energy_meter_present 20
-Sig=software_ok 22
-Sig=launch_control_active 23
-Sig=pack_charge_critical 24
-Sig=drive_mode 28
-Sig=max_torque 32
-Sig=torque_mode 40
-Sig=distance_traveled_m 48
-
-[MCU_SUSPENSION]
-ID=0C8h
-Len=8
-Sig=potentiometer_fl 0
-Sig=potentiometer_fr 16
-Sig=load_cell_fl 32
-Sig=load_cell_fr 48
-
 [PEDALS_SYSTEM_DATA]
 ID=0C0h
 Len=5
@@ -1752,12 +1246,6 @@ Sig=brake_accel_implausibility 5
 Sig=implaus_exceeded_max_duration 6
 Sig=accel_pedal 8
 Sig=brake_pedal 24
-
-[PENTHOUSE_ACCUM_MSG]
-ID=0DFh
-Len=8
-Sig=hall_curr_ref 0
-Sig=hall_curr_signal 16
 
 [REAR_SUSPENSION]
 ID=0E4h
@@ -1803,82 +1291,6 @@ Len=6
 Sig=steering_analog_raw 0
 Sig=steering_digital_raw 16
 
-[Settings]
-ID=003h
-Len=6
-Sig=Broadcast_rate 0
-Sig=CAN_Termination_Setting_Bus_1 3
-Sig=CAN_Termination_Setting_Bus_2 4
-Sig=Height_Offset 5
-Sig=Sensor_X_Location 13
-Sig=Sensor_Y_Location 25
-Sig=Attitude_Filtering 37
-Sig=IMU_Filtering 40
-Sig=Velocity_Filtering 43
-
-[State]
-ID=002h
-Len=5
-Sig=Temperature_Internal 0
-Sig=Firmware_Version 8
-Sig=sensor_0_Validity 24
-Sig=sensor_1_Validity 26
-Sig=sensor_2_Validity 28
-Sig=sensor_3_Validity 30
-Sig=SpeedBeam_Health 32
-
-[TCMUX_STATUS_REPORT]
-ID=4F1h
-Len=8
-Sig=speed_above_thresh 0
-Sig=torque_delta_above_thresh 1
-Sig=tc_not_ready 2
-Sig=steering_system_has_err 3
-Sig=mode_intended 4
-Sig=mode_actual 12
-Sig=dash_dial_mode 20
-Sig=torque_mode 28
-Sig=torque_limit 36
-
-[TCU_DRIVER_MSG]
-ID=094h // TCU_DRIVER_MSG contains a signal that corresponds to a preset list of messages on the dashboard. It also includes two variables to customize the contents of the message with numerical values. It also includes the target lap time which is determined by the
-Len=8
-Sig=driver_message 0
-Sig=driver_msg_var_1 8
-Sig=driver_msg_var_2 24
-Sig=target_lap_time 40
-
-[TCU_LAP_TIMES]
-ID=095h // The TCU_LAP_TIMES message contains the best and previous lap times to the dashboard as calculated by the TCU or manually input by the pit crew. It also relays the current state of the TCU's clock to the dashboard so that it can run an approximate stopwatc
-Len=8
-Sig=best_lap_time 0
-Sig=prev_lap_time 24
-Sig=lap_clock_state 48
-
-[TCU_STATUS]
-ID=0E8h
-Len=3
-Sig=shutdown_status 0
-Sig=tcu_recording_state 16
-
-[TC_SIMPLE]
-ID=0C9h // MCU's simple torque controller
-Len=8
-Sig=torque_request 0
-Sig=front_torque_scale 16
-Sig=rear_torque_scale 24
-Sig=front_regen_scale 32
-Sig=rear_regen_scale 40
-Sig=accel_request_state 48
-
-[TC_SIMPLE_LAUNCH]
-ID=0CAh
-Len=8
-Sig=launch_control_state 0
-Sig=algo_active 2
-Sig=initial_launch_target 8
-Sig=speed_setpoint_rpm 24
-
 [VEHM_ALPHA]
 ID=7FFh
 Len=8
@@ -1892,136 +1304,12 @@ ID=7EFh
 Len=8
 Sig=vehm_beta_deg 0
 
-[VEHM_KIN_DES_YAW_RATE_RAD_S_MSG]
-ID=7CBh
-Len=8
-Sig=vehm_kin_desired_yaw_rate_rad_s 0
-
-[VEHM_LONG_CORNER_VEL]
-ID=7CEh
-Len=8
-Sig=vehm_long_corner_vel_fl 0
-Sig=vehm_long_corner_vel_fr 16
-Sig=vehm_long_corner_vel_rl 32
-Sig=vehm_long_corner_vel_rr 48
-
-[VEHM_SL]
-ID=7CFh
-Len=8
-Sig=vehm_sl_fl 0
-Sig=vehm_sl_fr 16
-Sig=vehm_sl_rl 32
-Sig=vehm_sl_rr 48
-
-[VEHM_WHEEL_LIN_VEL]
-ID=7ABh
-Len=8
-Sig=vehm_wheel_lin_vel_fl 0
-Sig=vehm_wheel_lin_vel_fr 16
-Sig=vehm_wheel_lin_vel_rl 32
-Sig=vehm_wheel_lin_vel_rr 48
-
-[VEHM_WHEEL_STEER_AVG_DEG_MSG]
-ID=7CAh
-Len=8
-Sig=vehm_wheel_steer_avg_deg 0
-
-[VN_ANGULAR_RATE]
-ID=0E3h
-Len=8
-Sig=angular_rate_x 0
-Sig=angular_rate_y 16
-Sig=angular_rate_z 32
-
-[VN_ECEF_POS_XY]
-ID=0E7h
-Len=8
-Sig=vn_ecef_pos_x 0
-Sig=vn_ecef_pos_y 32
-
-[VN_ECEF_POS_Z_MSG]
-ID=0E9h
-Len=8
-Sig=vn_ecef_pos_z 0
-
-[VN_GNSS_COMP_SIG_HEALTH]
-ID=0EAh
-Len=8
-Sig=num_sats_pvt_1 0
-Sig=num_sats_rtk_1 8
-Sig=highest_cn0_1 16
-Sig=num_sats_pvt_2 24
-Sig=num_sats_rtk_2 32
-Sig=highest_cn0_2 40
-Sig=num_com_sats_pvt 48
-Sig=num_com_sats_rtk 56
-
-[VN_GPS_TIME_MSG]
-ID=0E0h
-Len=8
-Sig=vn_gps_time 0
-
-[VN_LAT_LON]
-ID=0D4h
-Len=8
-Sig=vn_gps_lat 0
-Sig=vn_gps_lon 32
-
-[VN_LINEAR_ACCEL]
-ID=0D1h
-Len=8
-Sig=vn_lin_ins_accel_x 0
-Sig=vn_lin_ins_accel_y 16
-Sig=vn_lin_ins_accel_z 32
-
-[VN_LINEAR_ACCEL_UNCOMP]
-ID=0D2h
-Len=8
-Sig=vn_lin_uncomp_accel_x 0
-Sig=vn_lin_uncomp_accel_y 16
-Sig=vn_lin_uncomp_accel_z 32
-
-[VN_STATUS]
-ID=0E1h
-Len=8
-Sig=vn_gps_status 0
-
-[VN_VEL]
-ID=0D0h // Vehicle body velocity measured by VN-300
-Len=8
-Sig=vn_body_vel_x 0
-Sig=vn_body_vel_y 16
-Sig=vn_body_vel_z 32
-Sig=vn_vel_uncertainty 48
-
-[VN_YPR]
-ID=0D3h
-Len=8
-Sig=vn_yaw 0
-Sig=vn_pitch 16
-Sig=vn_roll 32
-
-[Velocities]
-ID=004h
-Len=8
-Sig=Velocity_x 0
-Sig=Velocity_y 12
-Sig=Velocity_z 22
-Sig=Velocity_x_CGCorrected 31
-Sig=Velocity_y_CGCorrected 43
-Sig=Velocity_z_CGCorrected 53
-
 [ACU_OK]
 ID=500h
 Len=1
 Sig=bms_ok 0
 Sig=imd_ok 1
 Sig=latch_ok 2
-
-[DRIVEBRAIN_STATE_DATA]
-ID=229h
-Len=1
-Sig=vn_gps_status 0
 
 [CAR_STATES]
 ID=207h
@@ -2103,16 +1391,6 @@ Sig=brake_temp_channel_13 0
 Sig=brake_temp_channel_14 16
 Sig=brake_temp_channel_15 32
 Sig=brake_temp_channel_16 48
-
-[BRAKE_ROTOR_SENSOR_COMMAND]
-ID=4C3h
-Len=8
-Sig=brake_temp_sensor_prog_const 0
-Sig=brake_temp_sensor_base_can_id 16
-Sig=brake_temp_sensor_emissivity 32
-Sig=brake_temp_sensor_sampling_freq 40
-Sig=brake_temp_sensor_ch_setting 48
-Sig=brake_temp_sensor_can_bitrate 56
 
 [AERO_PRESSURE_SENSOR_11]
 ID=3F0h
@@ -2240,25 +1518,7 @@ Len=8
 Sig=db_telem_timing_fault 0
 Sig=db_aux_timing_fault 1
 
-[ADC_VOLTAGES_HV_1]
-ID=067h
-Len=8
-Sig=precharge_voltage 0
-
-[ADC_VOLTAGES_HV_2]
-ID=068h
-Len=8
-Sig=pack_out_voltage 0
-Sig=ts_out_voltage 32
-
-[ADC_VOLTAGES_LV]
-ID=069h
-Len=8
-Sig=shdn_out_voltage 32
-Sig=glv_voltage 0
-
 [FLOWMETER_DATA]
 ID=503h
 Len=8
 Sig=flow_rate 0
-

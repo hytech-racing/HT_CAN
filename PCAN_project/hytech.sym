@@ -674,6 +674,8 @@ Sig=ts_out_voltage float
 Sig=pack_out_voltage float
 Sig=glv_voltage float
 Sig=flow_rate float
+Sig=brake_pressure_1 unsigned 16
+Sig=brake_pressure_2 unsigned 16
 
 {SENDRECEIVE}
 
@@ -1525,3 +1527,9 @@ Sig=db_aux_timing_fault 1
 ID=503h
 Len=8
 Sig=flow_rate 0
+
+[BRAKE_PRESSURE]
+ID=667h
+Len=8
+Sig=brake_pressure_1 0
+Sig=brake_pressure_2 16

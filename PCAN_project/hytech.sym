@@ -857,8 +857,7 @@ Sig=dc_bus_voltage 16
 Sig=diagnostic_number 32
 
 [INV1_TEMPS]
-ID=00000081h
-Type=Extended
+ID=081h
 Len=6
 Sig=motor_temp 0
 Sig=inverter_temp 16
@@ -965,8 +964,7 @@ Sig=speed_control_ki 16
 Sig=speed_control_kd 32
 
 [INV3_POWER]
-ID=00000073h
-Type=Extended
+ID=073h
 Len=8
 Sig=active_power_w 0
 Sig=reactive_power_var 32

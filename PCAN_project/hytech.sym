@@ -871,8 +871,7 @@ Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
 
 [INV2_CONTROL_PARAMETER]
-ID=00000106h
-Type=Extended
+ID=106h
 Len=8
 Sig=speed_control_kp 0
 Sig=speed_control_ki 16

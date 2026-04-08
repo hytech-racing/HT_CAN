@@ -27,7 +27,8 @@ Enum=SpeedBeam_HealthE(0="SENSOR_HEALTHY", 1="NON_MEASUREMENT_MODE", 2="DATA_OPT
 Enum=CAN_Termination_State_Bus_1E(0="CAN_BUS_UNTERMINATED_CAN1_STATUS", 1="CAN_BUS_TERMINATED_CAN1_STATUS")
 Enum=CAN_Termination_State_Bus_2E(0="CAN_BUS_UNTERMINATED_CAN2_STATUS", 1="CAN_BUS_TERMINATED_CAN2_STATUS")
 Enum=vehicle_stateE(0="TRACTIVE_SYSTEM_NOT_ACTIVE", 1="TRACTIVE_SYSTEM_ACTIVE", 2="WANTING_READY_TO_DRIVE",
-  3="READY_TO_DRIVE", 4="WANTING_RECALIBRATE_PEDALS", 5="RECALIBRATING_PEDALS")
+  3="READY_TO_DRIVE", 4="WANTING_RECALIBRATE_PEDALS", 5="RECALIBRATING_PEDALS", 6="WANTING_RECALIBRATE_STEERING",
+  7="RECALIBRATING_STEERING")
 Enum=drivetrain_stateE(0="NOT_CONNECTED", 1="NOT_ENABLED_NO_HV_PRESENT", 2="NOT_ENABLED_HV_PRESENT",
   3="INVERTERS_READY", 4="INVERTERS_HV_ENABLED", 5="ENABLED_DRIVE_MODE", 6="ERROR", 7="CLEARING_ERRORS")
 
@@ -684,6 +685,7 @@ Sig=steering_dtheta_exceeded_analog bit
 Sig=steering_dtheta_exceeded_digital bit
 Sig=steering_both_sensors_fail bit
 Sig=steering_interface_sensor_error bit
+Sig=in_steering_calibration_state bit // Input from VCR to tell VCF if steering can calibrate or not
 
 {SENDRECEIVE}
 
@@ -733,6 +735,7 @@ Len=2
 Sig=dash_buzzer_flag 0
 Sig=in_pedal_calibration_state 1
 Sig=torque_limit_enum_value 8
+Sig=in_steering_calibration_state 2
 
 [DASH_INPUT]
 ID=300h

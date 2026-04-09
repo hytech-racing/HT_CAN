@@ -736,12 +736,12 @@ ID=7F1h
 Len=2
 Sig=dash_buzzer_flag 0
 Sig=in_pedal_calibration_state 1
-Sig=torque_limit_enum_value 8
+Sig=torque_limit_enum_value 3
 Sig=in_steering_calibration_state 2
 
 [DASH_INPUT]
 ID=300h
-Len=2
+Len=3
 Sig=led_dimmer_button 0
 Sig=preset_button 1
 Sig=motor_controller_cycle_button 2
@@ -751,7 +751,7 @@ Sig=data_button_is_pressed 5
 Sig=left_shifter_button 6
 Sig=right_shifter_button 7
 Sig=dash_dial_mode 8
-Sig=dim_button 0
+Sig=dim_button 16
 
 [DRIVEBRAIN_DESIRED_TORQUE_INPUT]
 ID=0F3h

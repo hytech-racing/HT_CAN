@@ -317,8 +317,8 @@ Sig=thermistor_2_deg_C unsigned 16 /u:"deg C" /f:0.005
 Sig=thermistor_3_deg_C unsigned 16 /u:"deg C" /f:0.005
 Sig=rl_load_cell unsigned 16
 Sig=rr_load_cell unsigned 16
-Sig=rl_shock_pot unsigned 16
-Sig=rr_shock_pot unsigned 16
+Sig=rl_shock_pot unsigned 16 /f:0.01
+Sig=rr_shock_pot unsigned 16 /f:0.01
 Sig=shutdown_status unsigned 16
 Sig=vn_body_vel_x signed 16 /u:m/s /f:0.002
 Sig=vn_body_vel_y signed 16 /u:m/s /f:0.002
@@ -558,9 +558,9 @@ Sig=implaus_exceeded_max_duration bit // a pedal implausibility has been present
 Sig=accel_pedal unsigned 16 /f:1.5259E-005 // the scaled accelerator pedal value
 Sig=brake_pedal unsigned 16 /f:1.5259E-005 // the scaled brake pedal value between 0 and 1
 Sig=fl_load_cell unsigned 16
-Sig=fl_shock_pot unsigned 16
+Sig=fl_shock_pot unsigned 16 /u:mm /f:0.01
 Sig=fr_load_cell unsigned 16
-Sig=fr_shock_pot unsigned 16
+Sig=fr_shock_pot unsigned 16 /f:0.01
 Sig=inverter_enable unsigned 1
 Sig=hv_enable unsigned 1
 Sig=driver_enable unsigned 1
@@ -688,6 +688,8 @@ Sig=steering_both_sensors_fail bit
 Sig=steering_interface_sensor_error bit
 Sig=in_steering_calibration_state bit // Input from VCR to tell VCF if steering can calibrate or not
 Sig=dim_button bit // Dim button on dash
+Sig=steering_analog_clipped bit
+Sig=steering_digital_clipped bit
 
 {SENDRECEIVE}
 
@@ -877,8 +879,7 @@ Sig=positive_torque_limit 16
 Sig=negative_torque_limit 32
 
 [INV2_CONTROL_PARAMETER]
-ID=00000106h
-Type=Extended
+ID=106h
 Len=8
 Sig=speed_control_kp 0
 Sig=speed_control_ki 16
@@ -1315,6 +1316,8 @@ Sig=steering_dtheta_exceeded_digital 30
 Sig=steering_interface_sensor_error 31
 Sig=steering_output_steering_angle 32
 Sig=steering_sensor_disagreement 49
+Sig=steering_analog_clipped 50
+Sig=steering_digital_clipped 51
 
 [VEHM_ALPHA]
 ID=7FFh

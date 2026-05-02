@@ -688,8 +688,6 @@ Sig=steering_both_sensors_fail bit
 Sig=steering_interface_sensor_error bit
 Sig=in_steering_calibration_state bit // Input from VCR to tell VCF if steering can calibrate or not
 Sig=dim_button bit // Dim button on dash
-Sig=steering_analog_clipped bit
-Sig=steering_digital_clipped bit
 
 {SENDRECEIVE}
 
@@ -1316,8 +1314,6 @@ Sig=steering_dtheta_exceeded_digital 30
 Sig=steering_interface_sensor_error 31
 Sig=steering_output_steering_angle 32
 Sig=steering_sensor_disagreement 49
-Sig=steering_analog_clipped 50
-Sig=steering_digital_clipped 51
 
 [VEHM_ALPHA]
 ID=7FFh

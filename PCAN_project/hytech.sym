@@ -41,7 +41,7 @@ Sig=chip_id unsigned 4
 Sig=max_board_temp signed 16 /u:"Deg C" /f:0.01
 Sig=min_cell_temp signed 16 /u:"Deg C" /f:0.01
 Sig=max_cell_temp signed 16 /u:"Deg C" /f:0.01
-Sig=charging_requested unsigned 8
+Sig=acu_state unsigned 8
 Sig=overvoltage_error unsigned 1 /u:none // Whether or not the energy meter is reading an over-voltage error.
 Sig=undervoltage_error unsigned 1
 Sig=total_voltage_high_error unsigned 1
@@ -702,7 +702,7 @@ Sig=remaining_pack_wh unsigned 24 /u:Wh /f:0.01
 [BMS_STATUS]
 ID=0DBh
 Len=1
-Sig=charging_requested 0
+Sig=acu_state 0
 
 [BMS_VOLTAGES]
 ID=0D7h

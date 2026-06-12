@@ -695,7 +695,8 @@ Sig=thermistor_id_2 signed 16 /f:0.01
 Sig=lifetime_ah_throughput unsigned 16 /u:Ah /f:0.02
 Sig=SoH unsigned 8 /u:percent /f:0.5
 Sig=SoE unsigned 8 /u:percent /f:0.5
-Sig=remaining_pack_wh unsigned 24 /u:Wh /f:0.01
+Sig=remaining_pack_wh unsigned 16 /u:Wh /f:0.1
+Sig=V1 unsigned 16 /f:0.0001
 
 {SENDRECEIVE}
 
@@ -1585,3 +1586,4 @@ Sig=lifetime_ah_throughput 0
 Sig=SoH 16
 Sig=SoE 24
 Sig=remaining_pack_wh 32
+Sig=V1 48

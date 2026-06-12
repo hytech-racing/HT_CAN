@@ -255,9 +255,9 @@ Sig=RR_TTPMS_NODE_ID unsigned 16 -m
 Sig=current_shunt_read unsigned 16 /u:amps /f:0.291373985492 /o:-666 // The shunt in penthouse; Measures current that goes through the whole tractive system -- used for coulumb counting
 Sig=pack_filtered_read unsigned 16 /u:volts /f:0.16869351172632 // Filtered pack voltage
 Sig=ts_out_filtered_read unsigned 16 /u:volts /f:0.169047463702246 // Voltage across tractive system
-Sig=charge_percentage unsigned 16 -m /u:percent /f:0.01 // The charge in the accumulator, as a percentage.
+Sig=SoC unsigned 16 /u:percent /f:0.01 // The charge in the accumulator, as a percentage.
 Sig=min_cell_voltage_est unsigned 16 /u:volts /f:0.0001 // Lowest-cell-voltage estimate based on the state of charge, according to VOLTAGE_LOOKUP_TABLE. Ex: 87% SoC would display 3.798V.
-Sig=charge_coulombs unsigned 32 -m /u:Coulombs /f:0.0001 // The charge in the accumulator, in Coulombs
+Sig=charge_coulombs unsigned 32 /u:Coulombs /f:0.0001 // The charge in the accumulator, in Coulombs
 Sig=hall_curr_ref unsigned 16 /u:mV
 Sig=hall_curr_signal unsigned 16 /u:mV
 Sig=fr_motor_rpm signed 16
@@ -688,6 +688,10 @@ Sig=steering_both_sensors_fail bit
 Sig=steering_interface_sensor_error bit
 Sig=in_steering_calibration_state bit // Input from VCR to tell VCF if steering can calibrate or not
 Sig=dim_button bit // Dim button on dash
+Sig=lifetime_ah_throughput unsigned 16 /u:Ah /f:0.02
+Sig=SoH unsigned 8 /u:percent /f:0.5
+Sig=SoE unsigned 8 /u:percent /f:0.5
+Sig=remaining_pack_wh unsigned 24 /u:Wh /f:0.01
 
 {SENDRECEIVE}
 
@@ -1271,21 +1275,6 @@ Sig=rr_load_cell 16
 Sig=rl_shock_pot 32
 Sig=rr_shock_pot 48
 
-[SAB_THERMISTORS_1]
-ID=0E5h
-Len=8
-Sig=thermistor_inv1 0
-Sig=thermistor_inv2 16
-Sig=thermistor_acc1 32
-Sig=thermistor_acc2 48
-
-[SAB_THERMISTORS_2]
-ID=0E6h
-Len=6
-Sig=thermistor_motor_rl 0
-Sig=thermistor_motor_rr 16
-Sig=thermistor_pump 32
-
 [REAR_THERMISTORS_DATA]
 ID=0EEh
 Len=8
@@ -1297,7 +1286,7 @@ Sig=thermistor_3_deg_C 48
 [STATE_OF_CHARGE]
 ID=41Eh
 Len=8
-Sig=charge_percentage 0
+Sig=SoC 0
 Sig=min_cell_voltage_est 16
 Sig=charge_coulombs 32
 
@@ -1552,3 +1541,11 @@ ID=667h
 Len=8
 Sig=brake_pressure_1 0
 Sig=brake_pressure_2 16
+
+[STATE_OF_ENERGY]
+ID=41Dh
+Len=8
+Sig=lifetime_ah_throughput 0
+Sig=SoH 16
+Sig=SoE 24
+Sig=remaining_pack_wh 32

@@ -121,7 +121,6 @@ jobs:
           cp hytech.proto /hytech_drivebrain_lib/proto
           cp /dbc/hytech.dbc /hytech_drivebrain_lib/dbc/
           cp CMakeLists.txt /hytech_drivebrain_lib
-          cp hytech.dbc
           tar -czvf /output/drivebrain_can_lib.tar.gz /hytech_drivebrain_lib
 
       - name: Create Release

@@ -125,12 +125,6 @@ jobs:
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /hytech_can_lib
 
-      - name: download python protobuf artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: python_proto_lib
-          path: /output
-
       - name: generate drivebrain lib release
         run:  |
           mkdir -p /hytech_drivebrain_lib/proto
@@ -232,3 +226,19 @@ jobs:
           asset_path: /docs/Release-${{ github.run_number }}.html 
           asset_name: Release-${{ github.run_number }}.html
           asset_content_type: text/plain
+
+      - name: Download python protobuf artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: python_proto_lib
+          path: /output
+
+      - name: Upload python protobuf release asset
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: /output/python_proto_lib.tar.gz
+          asset_name: python_proto_lib.tar.gz
+          asset_content_type: application/zip

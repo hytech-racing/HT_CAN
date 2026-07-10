@@ -83,6 +83,18 @@ jobs:
           name: protofile
           path: hytech.proto
 
+      - name: Generate Python protobuf
+        run: |
+          mkdir -p python_can_lib
+          protoc --python_out=python_can_lib hytech.proto
+          tar -czvf python_proto_lib.tar.gz python_can_lib
+
+      - name: Upload python protobuf artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python_proto_lib
+          path: python_proto_lib.tar.gz
+
   generate-and-release:
     needs: [generate-dbc, generate-proto]
     runs-on: ubuntu-latest
@@ -113,12 +125,11 @@ jobs:
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /hytech_can_lib
 
-      - name: generate python protobuf library
-        run: |
-          mkdir -p /python_can_lib
-          python -m pip install protobuf==4.24.3
-          protoc --python_out=/python_can_lib hytech.proto
-          tar -czvf /output/python_proto_lib.tar.gz /python_can_lib
+      - name: download python protobuf artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: python_proto_lib
+          path: /output
 
       - name: generate drivebrain lib release
         run:  |
@@ -184,16 +195,6 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: /output/drivebrain_can_lib.tar.gz
           asset_name: drivebrain_can_lib.tar.gz
-          asset_content_type: application/zip
-
-      - name: Upload python protobuf release asset
-        uses: actions/upload-release-asset@v1.0.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /output/python_proto_lib.tar.gz
-          asset_name: python_proto_lib.tar.gz
           asset_content_type: application/zip
 
       - name: Upload hytech.dbc

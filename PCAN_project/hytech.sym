@@ -523,6 +523,7 @@ Sig=drivebrain_set_rpm_fl unsigned 16
 Sig=drivebrain_set_rpm_fr unsigned 16
 Sig=drivebrain_set_rpm_rl unsigned 16
 Sig=drivebrain_set_rpm_rr unsigned 16
+Sig=drivebrain_steering signed 16 /u:degrees /f:0.01
 Sig=system_ready unsigned 1
 Sig=error unsigned 1
 Sig=warning unsigned 1
@@ -817,6 +818,11 @@ Sig=drivebrain_torque_fl 0
 Sig=drivebrain_torque_fr 16
 Sig=drivebrain_torque_rl 32
 Sig=drivebrain_torque_rr 48
+
+[DRIVEBRAIN_STEERING_INPUT]
+ID=0F4h
+Len=2
+Sig=drivebrain_steering 0
 
 [EM_MEASUREMENT]
 ID=100h // Contains the voltage and current readings from the Energy Meter. Sent by the AMS.

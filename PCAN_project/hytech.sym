@@ -698,10 +698,10 @@ Sig=SoH unsigned 8 /u:percent /f:0.5
 Sig=SoE unsigned 8 /u:percent /f:0.5
 Sig=remaining_pack_wh unsigned 16 /u:Wh /f:0.1
 Sig=V1 unsigned 16 /f:0.0001
-Sig=fd_test_counter unsigned 32
-Sig=fd_test_byte8 unsigned 32 /o:8 /max:4294967295
-Sig=fd_test_byte32 unsigned 32 /o:16 /max:4294967295
-Sig=fd_test_byte60 unsigned 32 /o:24 /max:4294967295
+Sig=fd_test_counter unsigned 32 /max:4294967295
+Sig=fd_test_byte8 unsigned 32 /max:4294967295
+Sig=fd_test_byte32 unsigned 32 /max:4294967295
+Sig=fd_test_byte60 unsigned 32 /max:4294967295
 
 {SENDRECEIVE}
 
@@ -1602,3 +1602,7 @@ Sig=V1 48
 ID=7F2h
 Type=FDStandard
 Len=64
+Sig=fd_test_counter 0
+Sig=fd_test_byte8 64
+Sig=fd_test_byte32 256
+Sig=fd_test_byte60 480

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feat/canfd
   pull_request: 
     branches: 
       - main 
@@ -103,12 +104,21 @@ jobs:
   generate-and-release:
     needs: [generate-dbc, generate-proto]
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/rcmast3r/ccoderdbc:main
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 
-    
+        uses: actions/checkout@v4
+
+      - name: Build coderdbc
+        run: |
+          git clone --branch v3.1 --depth 1 https://github.com/astand/c-coderdbc.git /tmp/coderdbc
+          cmake -S /tmp/coderdbc/src -B /tmp/coderdbc/build
+          cmake --build /tmp/coderdbc/build -j
+
+      - name: Prepare output directories
+        run: |
+          sudo mkdir -p /dbc /output /hytech_can_lib /hytech_drivebrain_lib /docs
+          sudo chown -R "$(id -u):$(id -g)" /dbc /output /hytech_can_lib /hytech_drivebrain_lib /docs
+
       - name: Download dbc artifact
         uses: actions/download-artifact@v4.1.8
         with:
@@ -124,8 +134,7 @@ jobs:
       - name: generate code
         run: |
           mkdir -p /hytech_can_lib
-          cd /app
-          ./build/coderdbc -rw -dbc /dbc/hytech.dbc -out /hytech_can_lib -drvname hytech
+          /tmp/coderdbc/build/coderdbc -rw -dbc /dbc/hytech.dbc -out /hytech_can_lib -drvname hytech
           mkdir -p /output
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /hytech_can_lib

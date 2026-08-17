@@ -1359,8 +1359,8 @@ Sig=aero_channel_7 48
 [INV1_STATUS_GENERAL_ELEC]
 ID=401h
 Len=8
-Sig=erpm 32
-Sig=duty_cycle_percent 39
+Sig=erpm 0
+Sig=duty_cycle_percent 32
 Sig=input_voltage 48
 
 [ENERGY_METER_MEAS]

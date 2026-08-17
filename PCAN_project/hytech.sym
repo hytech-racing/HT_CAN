@@ -896,58 +896,58 @@ Sig=thermistor_motor_fr 16
 [INV1_STATUS_AC_CONFIG_CURRENT]
 ID=4A1h
 Len=8
-Sig=min_ac_current_apk 0
+Sig=min_ac_current_apk 32
 Sig=available_max_ac_current_apk 16
-Sig=max_ac_current_apk 32
-Sig=available_min_ac_current_apk 0
+Sig=max_ac_current_apk 0
+Sig=available_min_ac_current_apk 48
 
 [INV1_STATUS_GENERAL_CONTROL]
 ID=3E1h
 Len=8
-Sig=target_iq_apk 0
-Sig=control_mode 16
+Sig=target_iq_apk 8
+Sig=control_mode 0
 Sig=motor_position_deg 24
 Sig=is_motor_stationary 40
 
 [INV1_STATUS_ACTIVE_CURRENT]
 ID=421h
 Len=8
-Sig=active_ac_current_apk 0
+Sig=active_ac_current_apk 7
 Sig=active_dc_current_amp 16
 
 [INV1_STATUS_GENERAL_IO]
 ID=481h
 Len=8
-Sig=is_capacitor_temp_limit_active 15
-Sig=is_digital_output_3_active 14
-Sig=is_dc_current_limit_active 13
-Sig=is_digital_output_4_active 12
-Sig=brake_signal_percent 12
-Sig=is_drive_enabled 10
-Sig=is_digital_output_1_active 9
-Sig=is_digital_input_1_active 8
-Sig=throttle_signal_percent 16
-Sig=is_digital_output_2_active 39
-Sig=is_digital_input_2_active 0
-Sig=is_digital_input_3_active -1
-Sig=is_digital_input_4_active -1
-Sig=is_drive_enable_limit_active -1
-Sig=is_igbt_accel_temp_limit_active -1
-Sig=is_igbt_temp_limit_active -1
-Sig=is_input_voltage_limit_active -1
-Sig=is_motor_accel_temp_limit_active -1
-Sig=is_motor_temp_limit_active -1
-Sig=is_rpm_max_limit_active -1
-Sig=is_rpm_min_limit_active -1
-Sig=can_map_version 24
-Sig=is_power_limit_active -1
+Sig=is_capacitor_temp_limit_active 32
+Sig=is_digital_output_3_active 22
+Sig=is_dc_current_limit_active 33
+Sig=is_digital_output_4_active 23
+Sig=brake_signal_percent 8
+Sig=is_drive_enabled 24
+Sig=is_digital_output_1_active 20
+Sig=is_digital_input_1_active 16
+Sig=throttle_signal_percent 7
+Sig=is_digital_output_2_active 21
+Sig=is_digital_input_2_active 17
+Sig=is_digital_input_3_active 18
+Sig=is_digital_input_4_active 19
+Sig=is_drive_enable_limit_active 34
+Sig=is_igbt_accel_temp_limit_active 35
+Sig=is_igbt_temp_limit_active 36
+Sig=is_input_voltage_limit_active 37
+Sig=is_motor_accel_temp_limit_active 38
+Sig=is_motor_temp_limit_active 39
+Sig=is_rpm_max_limit_active 41
+Sig=is_rpm_min_limit_active 40
+Sig=can_map_version 56
+Sig=is_power_limit_active 42
 
 [INV1_STATUS_TEMP_AND_FAULT]
 ID=441h
 Len=8
-Sig=controller_temp_c 32
-Sig=motor_temp_c 0
-Sig=fault_code 16
+Sig=controller_temp_c 0
+Sig=motor_temp_c 16
+Sig=fault_code 32
 
 [LF_TTPMS_1]
 ID=424h
@@ -1359,9 +1359,9 @@ Sig=aero_channel_7 48
 [INV1_STATUS_GENERAL_ELEC]
 ID=401h
 Len=8
-Sig=erpm 0
-Sig=duty_cycle_percent 24
-Sig=input_voltage 40
+Sig=erpm 32
+Sig=duty_cycle_percent 39
+Sig=input_voltage 48
 
 [ENERGY_METER_MEAS]
 ID=10Dh
@@ -1428,8 +1428,8 @@ Len=8
 [INV1_STATUS_FOC_CURRENTS]
 ID=461h
 Len=8
-Sig=iq_apk 0
-Sig=id_apk 24
+Sig=iq_apk 32
+Sig=id_apk 7
 
 [INV1_STATUS_DC_CONFIG_CURRENT]
 ID=4C1h
@@ -1437,7 +1437,7 @@ Len=8
 Sig=max_dc_current_amp 0
 Sig=available_max_dc_current_amp 16
 Sig=min_dc_current_amp 32
-Sig=available_min_dc_current_amp 0
+Sig=available_min_dc_current_amp 48
 
 [INV1_SET_AC_CURRENT]
 ID=021h
@@ -1467,15 +1467,15 @@ Sig=target_ac_current_percent 0
 [INV1_SET_REL_AC_BRAKE_CURRENT]
 ID=0C1h
 Len=8
-Sig=target_ac_brake_current_percent 16
+Sig=target_ac_brake_current_percent 7
 
 [INV1_SET_DIGITAL_OUTPUTS]
 ID=0E1h
 Len=8
 Sig=is_digital_output_1_active 0
-Sig=is_digital_output_2_active -1
-Sig=is_digital_output_3_active -1
-Sig=is_digital_output_4_active -1
+Sig=is_digital_output_2_active 1
+Sig=is_digital_output_3_active 2
+Sig=is_digital_output_4_active 3
 
 [INV1_SET_MAX_AC_CURRENT]
 ID=101h
@@ -1485,7 +1485,7 @@ Sig=max_ac_current_apk 0
 [INV1_SET_MAX_AC_BRAKE_CURRENT]
 ID=121h
 Len=8
-Sig=max_ac_brake_current_apk 16
+Sig=max_ac_brake_current_apk 0
 
 [INV1_SET_MAX_DC_CURRENT]
 ID=141h
@@ -1501,63 +1501,3 @@ Sig=max_dc_brake_current_amp 0
 ID=181h
 Len=8
 Sig=is_drive_enabled 0
-
-[INV2_SET_AC_CURRENT]
-ID=022h
-Len=8
-Sig=target_ac_current_apk 0
-
-[INV3_SET_AC_CURRENT]
-ID=023h
-Len=8
-Sig=target_ac_current_apk 0
-
-[INV4_SET_AC_CURRENT]
-ID=024h
-Len=8
-Sig=target_ac_current_apk 0
-
-[INV2_SET_BRAKE_CURRENT]
-ID=042h
-Len=8
-Sig=target_brake_current_apk 0
-
-[INV3_SET_BRAKE_CURRENT]
-ID=043h
-Len=8
-Sig=target_brake_current_apk 0
-
-[INV4_SET_BRAKE_CURRENT]
-ID=044h
-Len=8
-Sig=target_brake_current_apk 0
-
-[INV2_SET_ERPM]
-ID=062h
-Len=8
-Sig=target_erpm 0
-
-[INV3_SET_ERPM]
-ID=063h
-Len=8
-Sig=target_erpm 0
-
-[INV4_SET_ERPM]
-ID=064h
-Len=8
-Sig=target_erpm 0
-
-[INV2_SET_MOTOR_POSITION]
-ID=082h
-Len=8
-Sig=target_motor_position_deg 0
-
-[INV3_SET_MOTOR_POSITION]
-ID=083h
-Len=8
-Sig=target_motor_position_deg 0
-
-[INV4_SET_MOTOR_POSITION]
-ID=084h
-Len=8
-Sig=target_motor_position_deg 0

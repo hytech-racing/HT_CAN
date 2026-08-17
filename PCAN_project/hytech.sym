@@ -1429,7 +1429,7 @@ Len=8
 ID=461h
 Len=8
 Sig=iq_apk 32
-Sig=id_apk 7
+Sig=id_apk 0
 
 [INV1_STATUS_DC_CONFIG_CURRENT]
 ID=4C1h

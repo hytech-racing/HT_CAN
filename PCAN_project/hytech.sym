@@ -77,7 +77,7 @@ Sig=voltage_gain unsigned 4 /u:none // This selects the "gain" mode for the EM v
 Sig=current_gain unsigned 4 /u:none // This selects the "gain" mode for the EM current measurements. The specific multipliers for each gain mode are configured with the EMD Tool.
 Sig=overpower_error unsigned 1 /u:none // Whether or not the Energy Meter is reading an over-power error.
 Sig=logging unsigned 1 /u:none // Whether or not the energy meter is currently logging data.
-Sig=dc_bus_voltage unsigned 16 /u:V
+Sig=throttle_signal_percent signed 8 -m /min:0 /max:100
 Sig=motor_power unsigned 32 // Made up units from AMK
 Sig=feedback_torque signed 16 /u:Mn // random made up AMK units
 Sig=steering_1 signed 16 // unrelated to current steering system 2026
@@ -357,7 +357,7 @@ Sig=accel_request_state unsigned 1 // The current state of the acceleration requ
 Sig=launch_control_state unsigned 2 // The current state of the launch controller (LAUNCH_NOT_READY, LAUNCH_READY, LAUNCHING)
 Sig=algo_active unsigned 1 // State of whether the launch algorithm has taken over control from the initial launch target
 Sig=initial_launch_target unsigned 16 /u:rpm // The initial launch speed target requested by the launch controller
-Sig=speed_setpoint_rpm signed 16 /u:rpm
+Sig=min_ac_current_apk signed 16 -m /f:0.1 /min:-850 /max:0
 Sig=vehm_alpha_deg_fl signed 16 /u:deg /f:0.001
 Sig=vehm_alpha_deg_fr signed 16 /u:deg /f:0.001
 Sig=vehm_alpha_deg_rl signed 16 /u:deg /f:0.001
@@ -524,18 +524,18 @@ Sig=drivebrain_set_rpm_fr unsigned 16
 Sig=drivebrain_set_rpm_rl unsigned 16
 Sig=drivebrain_set_rpm_rr unsigned 16
 Sig=drivebrain_steering signed 16 /u:degrees /f:0.01
-Sig=system_ready unsigned 1
-Sig=error unsigned 1
-Sig=warning unsigned 1
-Sig=quit_dc_on unsigned 1
-Sig=dc_on unsigned 1
-Sig=quit_inverter_on unsigned 1
-Sig=inverter_on unsigned 1
-Sig=derating_on unsigned 1
-Sig=diagnostic_number unsigned 16
+Sig=is_capacitor_temp_limit_active unsigned 1 -m
+Sig=is_digital_output_3_active unsigned 1 -m
+Sig=is_dc_current_limit_active unsigned 1 -m
+Sig=is_digital_output_4_active unsigned 1 -m
+Sig=brake_signal_percent signed 8 -m /min:0 /max:100
+Sig=is_drive_enabled unsigned 8 -m /max:1
+Sig=is_digital_output_1_active unsigned 1 -m
+Sig=is_digital_input_1_active unsigned 1 -m
+Sig=is_digital_output_2_active unsigned 1 -m
 Sig=motor_temp signed 16 /u:C /f:0.1
 Sig=inverter_temp signed 16 /u:C /f:0.1
-Sig=igbt_temp signed 16 /u:C /f:0.1
+Sig=controller_temp_c signed 16 -m /f:0.1 /min:-55 /max:200
 Sig=actual_power_w unsigned 32
 Sig=actual_torque_nm signed 16 /f:0.0097999999999549
 Sig=actual_speed_rpm signed 16
@@ -543,7 +543,7 @@ Sig=active_power_w signed 32
 Sig=reactive_power_var signed 32
 Sig=speed_control_kp unsigned 16
 Sig=speed_control_ki unsigned 16
-Sig=speed_control_kd unsigned 16
+Sig=target_iq_apk signed 16 -m /f:0.1 /min:-850 /max:850
 Sig=accel_pedal_active bit
 Sig=brake_accel_implausibility bit // brake and accel are pressed
 Sig=implaus_exceeded_max_duration bit // a pedal implausibility has been present for longer than allowed
@@ -557,8 +557,8 @@ Sig=inverter_enable unsigned 1
 Sig=hv_enable unsigned 1
 Sig=driver_enable unsigned 1
 Sig=remove_error unsigned 1
-Sig=positive_torque_limit signed 16 /u:Mn /f:0.0097999999999549 // Made up units from AMK
-Sig=negative_torque_limit signed 16 /u:Mn /f:0.0097999999999549 // AMK made up unit
+Sig=available_max_ac_current_apk signed 16 -m /f:0.1 /min:0 /max:850
+Sig=max_ac_current_apk signed 16 -m /f:0.1 /min:0 /max:850
 Sig=preset_button unsigned 1
 Sig=data_button_is_pressed unsigned 1
 Sig=dash_buzzer_flag bit
@@ -698,6 +698,46 @@ Sig=SoH unsigned 8 /u:percent /f:0.5
 Sig=SoE unsigned 8 /u:percent /f:0.5
 Sig=remaining_pack_wh unsigned 16 /u:Wh /f:0.1
 Sig=V1 unsigned 16 /f:0.0001
+Sig=control_mode unsigned 8 -m /max:7
+Sig=motor_position_deg unsigned 16 -m /f:0.1 /max:359
+Sig=is_motor_stationary unsigned 8 -m /max:1
+Sig=erpm signed 24 -m /min:-120000 /max:120000 // Electrical RPM
+Sig=duty_cycle_percent signed 16 -m /f:0.1 /min:-100 /max:100
+Sig=input_voltage signed 16 -m /min:0 /max:1000
+Sig=active_ac_current_apk signed 16 -m /f:0.1 /min:-850 /max:850
+Sig=active_dc_current_amp signed 16 -m /f:0.1 /min:-850 /max:850
+Sig=motor_temp_c signed 16 -m /f:0.1 /min:-55 /max:200
+Sig=fault_code unsigned 8 -m
+Sig=iq_apk signed 32 -m /f:0.01 /min:-850 /max:850
+Sig=id_apk signed 32 -m /f:0.01 /min:-850 /max:850
+Sig=is_digital_input_2_active unsigned 1 -m
+Sig=is_digital_input_3_active unsigned 1 -m
+Sig=is_digital_input_4_active unsigned 1 -m
+Sig=is_drive_enable_limit_active unsigned 1 -m
+Sig=is_igbt_accel_temp_limit_active unsigned 1 -m
+Sig=is_igbt_temp_limit_active unsigned 1 -m
+Sig=is_input_voltage_limit_active unsigned 1 -m
+Sig=is_motor_accel_temp_limit_active unsigned 1 -m
+Sig=is_motor_temp_limit_active unsigned 1 -m
+Sig=is_rpm_min_limit_active unsigned 1 -m
+Sig=is_rpm_max_limit_active unsigned 1 -m
+Sig=can_map_version unsigned 8 -m
+Sig=is_power_limit_active unsigned 1 -m
+Sig=available_min_ac_current_apk signed 16 -m /f:0.1 /min:-850 /max:0
+Sig=available_max_dc_current_amp signed 16 -m /f:0.1 /min:0 /max:850
+Sig=available_min_dc_current_amp signed 16 -m /f:0.1 /min:-850 /max:0
+Sig=max_dc_current_amp signed 16 -m /f:0.1 /min:0 /max:850
+Sig=min_dc_current_amp signed 16 -m /f:0.1 /min:-850 /max:0
+Sig=Signal1 unsigned 8
+Sig=target_ac_current_apk signed 16 -m /f:0.1 /min:-850 /max:850
+Sig=target_brake_current_apk signed 16 -m /f:0.1 /min:0 /max:850
+Sig=target_erpm signed 32 -m /min:-100000 /max:100000
+Sig=target_motor_position_deg signed 16 -m /f:0.1 /min:0 /max:359
+Sig=target_ac_current_percent signed 16 -m /f:0.1 /min:-100 /max:100 // rel = relative
+Sig=target_ac_brake_current_percent signed 16 /f:0.1 /min:0 /max:100
+Sig=max_ac_brake_current_apk signed 16 -m /f:0.1 /min:-850 /max:0
+Sig=max_dc_brake_current_amp signed 16 -m /f:0.1 /min:-850 /max:0
+Sig=Signal2 unsigned 8
 
 {SENDRECEIVE}
 
@@ -853,257 +893,61 @@ Len=8
 Sig=thermistor_motor_fl 0
 Sig=thermistor_motor_fr 16
 
-[INV1_CONTROL_INPUT]
-ID=099h
-Len=6
-Sig=speed_setpoint_rpm 0
-Sig=positive_torque_limit 16
-Sig=negative_torque_limit 32
-
-[INV1_CONTROL_PARAMETER]
-ID=105h
+[INV1_STATUS_AC_CONFIG_CURRENT]
+ID=4A1h
 Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
+Sig=min_ac_current_apk 32
+Sig=available_max_ac_current_apk 16
+Sig=max_ac_current_apk 0
+Sig=available_min_ac_current_apk 48
 
-[INV1_CONTROL_WORD]
-ID=092h
-Len=2
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-
-[INV1_DYNAMICS]
-ID=082h
+[INV1_STATUS_GENERAL_CONTROL]
+ID=3E1h
 Len=8
-Sig=actual_power_w 0
-Sig=actual_torque_nm 32
-Sig=actual_speed_rpm 48
+Sig=target_iq_apk 8
+Sig=control_mode 0
+Sig=motor_position_deg 24
+Sig=is_motor_stationary 40
 
-[INV1_FEEDBACK]
-ID=084h
+[INV1_STATUS_ACTIVE_CURRENT]
+ID=421h
 Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
+Sig=active_ac_current_apk 0
+Sig=active_dc_current_amp 16
 
-[INV1_POWER]
-ID=083h
+[INV1_STATUS_GENERAL_IO]
+ID=481h
 Len=8
-Sig=active_power_w 0
-Sig=reactive_power_var 32
+Sig=is_capacitor_temp_limit_active 32
+Sig=is_digital_output_3_active 22
+Sig=is_dc_current_limit_active 33
+Sig=is_digital_output_4_active 23
+Sig=brake_signal_percent 8
+Sig=is_drive_enabled 24
+Sig=is_digital_output_1_active 20
+Sig=is_digital_input_1_active 16
+Sig=throttle_signal_percent 0
+Sig=is_digital_output_2_active 21
+Sig=is_digital_input_2_active 17
+Sig=is_digital_input_3_active 18
+Sig=is_digital_input_4_active 19
+Sig=is_drive_enable_limit_active 34
+Sig=is_igbt_accel_temp_limit_active 35
+Sig=is_igbt_temp_limit_active 36
+Sig=is_input_voltage_limit_active 37
+Sig=is_motor_accel_temp_limit_active 38
+Sig=is_motor_temp_limit_active 39
+Sig=is_rpm_max_limit_active 41
+Sig=is_rpm_min_limit_active 40
+Sig=can_map_version 56
+Sig=is_power_limit_active 42
 
-[INV1_STATUS]
-ID=080h
+[INV1_STATUS_TEMP_AND_FAULT]
+ID=441h
 Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=dc_bus_voltage 16
-Sig=diagnostic_number 32
-
-[INV1_TEMPS]
-ID=081h
-Len=6
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=igbt_temp 32
-
-[INV2_CONTROL_INPUT]
-ID=102h
-Len=6
-Sig=speed_setpoint_rpm 0
-Sig=positive_torque_limit 16
-Sig=negative_torque_limit 32
-
-[INV2_CONTROL_PARAMETER]
-ID=106h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV2_CONTROL_WORD]
-ID=093h
-Len=2
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-
-[INV2_DYNAMICS]
-ID=087h
-Len=8
-Sig=actual_power_w 0
-Sig=actual_torque_nm 32
-Sig=actual_speed_rpm 48
-
-[INV2_FEEDBACK]
-ID=089h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV2_POWER]
-ID=088h
-Len=8
-Sig=active_power_w 0
-Sig=reactive_power_var 32
-
-[INV2_STATUS]
-ID=085h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=dc_bus_voltage 16
-Sig=diagnostic_number 32
-
-[INV2_TEMPS]
-ID=086h
-Len=6
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=igbt_temp 32
-
-[INV3_CONTROL_INPUT]
-ID=097h
-Len=6
-Sig=speed_setpoint_rpm 0
-Sig=positive_torque_limit 16
-Sig=negative_torque_limit 32
-
-[INV3_CONTROL_PARAMETER]
-ID=103h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV3_CONTROL_WORD]
-ID=090h
-Len=2
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-
-[INV3_DYNAMICS]
-ID=072h
-Len=8
-Sig=actual_power_w 0
-Sig=actual_torque_nm 32
-Sig=actual_speed_rpm 48
-
-[INV3_FEEDBACK]
-ID=074h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV3_POWER]
-ID=073h
-Len=8
-Sig=active_power_w 0
-Sig=reactive_power_var 32
-
-[INV3_STATUS]
-ID=070h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=dc_bus_voltage 16
-Sig=diagnostic_number 32
-
-[INV3_TEMPS]
-ID=071h
-Len=6
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=igbt_temp 32
-
-[INV4_CONTROL_INPUT]
-ID=098h
-Len=6
-Sig=speed_setpoint_rpm 0
-Sig=positive_torque_limit 16
-Sig=negative_torque_limit 32
-
-[INV4_CONTROL_PARAMETER]
-ID=104h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV4_CONTROL_WORD]
-ID=091h
-Len=2
-Sig=inverter_enable 8
-Sig=hv_enable 9
-Sig=driver_enable 10
-Sig=remove_error 11
-
-[INV4_DYNAMICS]
-ID=077h
-Len=8
-Sig=actual_power_w 0
-Sig=actual_torque_nm 32
-Sig=actual_speed_rpm 48
-
-[INV4_FEEDBACK]
-ID=079h
-Len=8
-Sig=speed_control_kp 0
-Sig=speed_control_ki 16
-Sig=speed_control_kd 32
-
-[INV4_POWER]
-ID=078h
-Len=8
-Sig=active_power_w 0
-Sig=reactive_power_var 32
-
-[INV4_STATUS]
-ID=075h
-Len=8
-Sig=system_ready 8
-Sig=error 9
-Sig=warning 10
-Sig=quit_dc_on 11
-Sig=dc_on 12
-Sig=quit_inverter_on 13
-Sig=inverter_on 14
-Sig=derating_on 15
-Sig=dc_bus_voltage 16
-Sig=diagnostic_number 32
-
-[INV4_TEMPS]
-ID=076h
-Len=6
-Sig=motor_temp 0
-Sig=inverter_temp 16
-Sig=igbt_temp 32
+Sig=controller_temp_c 0
+Sig=motor_temp_c 16
+Sig=fault_code 32
 
 [LF_TTPMS_1]
 ID=424h
@@ -1512,29 +1356,12 @@ Sig=aero_channel_5 16
 Sig=aero_channel_6 32
 Sig=aero_channel_7 48
 
-[INV1_OVERLOAD]
-ID=14Ah
+[INV1_STATUS_GENERAL_ELEC]
+ID=401h
 Len=8
-Sig=inverter_overload_percentage 0
-Sig=motor_overload_percentage 16
-
-[INV2_OVERLOAD]
-ID=154h
-Len=4
-Sig=inverter_overload_percentage 0
-Sig=motor_overload_percentage 16
-
-[INV3_OVERLOAD]
-ID=136h
-Len=4
-Sig=inverter_overload_percentage 0
-Sig=motor_overload_percentage 16
-
-[INV4_OVERLOAD]
-ID=140h
-Len=4
-Sig=inverter_overload_percentage 0
-Sig=motor_overload_percentage 16
+Sig=erpm 0
+Sig=duty_cycle_percent 32
+Sig=input_voltage 48
 
 [ENERGY_METER_MEAS]
 ID=10Dh
@@ -1593,3 +1420,84 @@ Sig=SoH 16
 Sig=SoE 24
 Sig=remaining_pack_wh 32
 Sig=V1 48
+
+[Symbol1]
+ID=000h
+Len=8
+
+[INV1_STATUS_FOC_CURRENTS]
+ID=461h
+Len=8
+Sig=iq_apk 32
+Sig=id_apk 0
+
+[INV1_STATUS_DC_CONFIG_CURRENT]
+ID=4C1h
+Len=8
+Sig=max_dc_current_amp 0
+Sig=available_max_dc_current_amp 16
+Sig=min_dc_current_amp 32
+Sig=available_min_dc_current_amp 48
+
+[INV1_SET_AC_CURRENT]
+ID=021h
+Len=8
+Sig=target_ac_current_apk 0
+
+[INV1_SET_BRAKE_CURRENT]
+ID=041h
+Len=8
+Sig=target_brake_current_apk 0
+
+[INV1_SET_ERPM]
+ID=061h
+Len=8
+Sig=target_erpm 0
+
+[INV1_SET_MOTOR_POSITION]
+ID=081h
+Len=8
+Sig=target_motor_position_deg 0
+
+[INV1_SET_REL_AC_CURRENT]
+ID=0A1h
+Len=8
+Sig=target_ac_current_percent 0
+
+[INV1_SET_REL_AC_BRAKE_CURRENT]
+ID=0C1h
+Len=8
+Sig=target_ac_brake_current_percent 7
+
+[INV1_SET_DIGITAL_OUTPUTS]
+ID=0E1h
+Len=8
+Sig=is_digital_output_1_active 0
+Sig=is_digital_output_2_active 1
+Sig=is_digital_output_3_active 2
+Sig=is_digital_output_4_active 3
+
+[INV1_SET_MAX_AC_CURRENT]
+ID=101h
+Len=8
+Sig=max_ac_current_apk 0
+
+[INV1_SET_MAX_AC_BRAKE_CURRENT]
+ID=121h
+Len=8
+Sig=max_ac_brake_current_apk 0
+
+[INV1_SET_MAX_DC_CURRENT]
+ID=141h
+Len=8
+Sig=max_dc_current_amp 0
+
+[INV1_SET_MAX_DC_BRAKE_CURRENT]
+ID=161h
+Len=8
+Sig=max_dc_brake_current_amp 0
+
+[INV1_SET_DRIVE_ENABLE]
+ID=181h
+Len=8
+Sig=is_drive_enabled 0

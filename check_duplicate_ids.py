@@ -5,7 +5,7 @@ import cantools
 import cantools.database
 
 base_db = cantools.database.load_file('PCAN_project/hytech.sym')
-new_db = cantools.database.load_file('PCAN_project/dti_hv500.dbc')
+new_db = cantools.database.load_file('imported_dbcs/hv500_can2_map_v25_SID.dbc')
 
 base_ids = {m.frame_id: m.name for m in base_db.messages}
 new_ids = {m.frame_id: m.name for m in new_db.messages}

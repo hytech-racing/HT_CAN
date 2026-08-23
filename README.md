@@ -28,7 +28,7 @@ From `hytech.sym`, the GitHub Actions workflow (`.github/workflows/...`) automat
 Some bus participants provide their own `.dbc` file rather than being defined natively in `hytech.sym`. These are merged into `hytech.sym` at build time, not committed as a merged file.
 
 - `PCAN_project/hytech.sym` in the repo should always stay in its **unmerged**, hand-authored state.
-- Imported vendor DBCs live alongside it (e.g. `PCAN_project/dti_hv500.dbc`).
+- Imported vendor DBCs live alongside it
 - On every push/PR, the `generate-dbc` CI job:
   1. **Checks for CAN ID collisions** (`check_no_duplicate_ids.py`) between `hytech.sym` and the imported DBC, failing the build if any message IDs overlap.
   2. **Merges** the imported DBC into a CI-local copy of `hytech.sym` (`merge_dti.py`).

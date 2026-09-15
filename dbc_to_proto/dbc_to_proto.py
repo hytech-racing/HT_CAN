@@ -13,7 +13,7 @@ class HyTechCANmsg:
         self.sender_name = ""
         self.packing_type = ""
         self.signals = [can.signal.Signal]
- 
+
 def create_field_name(name: str) -> str:
     replaced_text = name.replace(" ", "_")
     replaced_text = replaced_text.replace("(", "")
@@ -126,26 +126,24 @@ def append_proto_message_from_CAN_message(file, can_msg: can.message.Message, mc
     file.write("}\n\n")
     return file
 
-# load dbc file from the package location
+# Load a DBC file and write the generated schema to the requested output path.
+if len(sys.argv) != 3:
+    raise SystemExit("usage: dbc_to_proto.py <input.dbc> <output.proto>")
 
-if(len (sys.argv) > 1):
-    path_to_dbc = sys.argv[1]
-else:
-    path_to_dbc = os.environ.get('DBC_PATH')
-full_path = os.path.join(path_to_dbc, "hytech.dbc")
-db = cantools.database.load_file(full_path)
+dbc_file = sys.argv[1]
+proto_file_path = sys.argv[2]
+db = cantools.database.load_file(dbc_file)
 content = ""
-with open("hytech.proto", "w+") as proto_file:
+with open(proto_file_path, "w+") as proto_file:
     for msg in db.messages:
         mcomment = msg.comment
         proto_file = append_proto_message_from_CAN_message(proto_file, msg, mcomment)
     proto_file.seek(0)
     content = proto_file.read()
 
-with open("hytech.proto", "w+") as proto_file:  
+with open(proto_file_path, "w+") as proto_file:
     proto_file.write('syntax = "proto3";\n\n')
     proto_file.write('package hytech;\n\n')  
     for key in enum_definitions:
         proto_file.write(enum_definitions[key])
     proto_file.write(content)
- 

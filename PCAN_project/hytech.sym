@@ -700,9 +700,11 @@ Sig=remaining_pack_wh unsigned 16 /u:Wh /f:0.1
 Sig=V1 unsigned 16 /f:0.0001
 Sig=ebs_air_pressure_1 unsigned 8 /u:psi
 Sig=ebs_air_pressure_2 unsigned 8 /u:psi
-Sig=ebs_pressure_heartbeat_ok bit
+Sig=ebs_pressure_ok bit
 Sig=ebs_supervisor_ok bit
 Sig=ebs_engaged bit // brakes activated
+Sig=ebs_solenoid_1_on bit
+Sig=ebs_solenoid_2_on bit
 
 {SENDRECEIVE}
 
@@ -1605,5 +1607,7 @@ Len=8
 Sig=ebs_air_pressure_1 0
 Sig=ebs_air_pressure_2 8
 Sig=ebs_engaged 16
-Sig=ebs_pressure_heartbeat_ok 17
+Sig=ebs_pressure_ok 17
 Sig=ebs_supervisor_ok 18
+Sig=ebs_solenoid_1_on 19
+Sig=ebs_solenoid_2_on 20

@@ -32,6 +32,8 @@ Enum=vehicle_stateE(0="TRACTIVE_SYSTEM_NOT_ACTIVE", 1="TRACTIVE_SYSTEM_ACTIVE", 
   7="RECALIBRATING_STEERING")
 Enum=drivetrain_stateE(0="NOT_CONNECTED", 1="NOT_ENABLED_NO_HV_PRESENT", 2="NOT_ENABLED_HV_PRESENT",
   3="INVERTERS_READY", 4="INVERTERS_HV_ENABLED", 5="ENABLED_DRIVE_MODE", 6="ERROR", 7="CLEARING_ERRORS")
+Enum=driverless_stateE(0="OFF", 1="STARTUP_NO_TS", 2="STARTUP_TS_ACTIVE", 3="READY", 4="DRIVING", 5="EMERGENCY",
+  6="FINISHED")
 
 {SIGNALS}
 Sig=group_id unsigned 4
@@ -705,6 +707,9 @@ Sig=ebs_supervisor_ok bit
 Sig=ebs_engaged bit // brakes activated
 Sig=ebs_solenoid_1_on bit
 Sig=ebs_solenoid_2_on bit
+Sig=activate_ebs_solenoid_1 bit
+Sig=activate_ebs_solenoid_2 bit
+Sig=driverless_state driverless_stateE 3
 
 {SENDRECEIVE}
 
@@ -1611,3 +1616,10 @@ Sig=ebs_pressure_ok 17
 Sig=ebs_supervisor_ok 18
 Sig=ebs_solenoid_1_on 19
 Sig=ebs_solenoid_2_on 20
+
+[DRIVERLESS_SYSTEM_STATUS]
+ID=22Ah
+Len=8
+Sig=activate_ebs_solenoid_1 0
+Sig=activate_ebs_solenoid_2 1
+Sig=driverless_state 2

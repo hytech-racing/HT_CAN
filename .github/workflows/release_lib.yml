@@ -20,9 +20,47 @@ jobs:
       - name: Install cantools
         run: python -m pip install cantools==40.2.2
 
-      - name: Convert SYM to DBC
+      - name: Convert JSON to DBC
         run: |
-          cantools convert ${{ github.workspace }}/PCAN_project/hytech.sym hytech.dbc
+          cat << 'EOF' > build_dbc.py
+          import json, cantools
+          from cantools.database import can
+          
+          with open('signals.json', 'r') as f:
+              global_signals = json.load(f)
+          with open('messages.json', 'r') as f:
+              messages_data = json.load(f)
+          
+          db_messages = []
+          for msg in messages_data:
+              msg_signals = []
+              for sig_ref in msg['signals']:
+                  sig_prop = global_signals[sig_ref['name']]
+                  msg_signals.append(can.Signal(
+                      name=sig_ref['name'],
+                      start=sig_ref['start_bit'],
+                      length=sig_prop['length'],
+                      byte_order='big_endian' if sig_prop['is_big_endian'] else 'little_endian',
+                      is_signed=sig_prop['is_signed'],
+                      scale=sig_prop['scale'],
+                      offset=sig_prop['offset'],
+                      unit=sig_prop['unit'],
+                      comment=sig_prop.get('description', '')
+                  ))
+              
+              db_messages.append(can.Message(
+                  frame_id=int(msg['id'], 16),
+                  name=msg['name'],
+                  length=msg['dlc'],
+                  is_extended_frame=msg.get('is_extended', False),
+                  signals=msg_signals,
+                  comment=msg.get('description', '')
+              ))
+          
+          db = cantools.database.Database(messages=db_messages)
+          cantools.database.dump_file(db, 'hytech.dbc')
+          EOF
+          python build_dbc.py
 
       - name: Upload dbc artifact
         uses: actions/upload-artifact@v4

@@ -27,9 +27,9 @@ jobs:
           from cantools.database import can
           from cantools.database.conversion import BaseConversion
           
-          with open('signals.json', 'r') as f:
+          with open('json_lib/signals.json', 'r') as f:
               global_signals = json.load(f)
-          with open('messages.json', 'r') as f:
+          with open('json_lib/messages.json', 'r') as f:
               messages_data = json.load(f)
           
           db_messages = []

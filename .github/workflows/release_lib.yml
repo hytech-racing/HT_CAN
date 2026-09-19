@@ -27,8 +27,17 @@ jobs:
           from cantools.database import can
           from cantools.database.conversion import BaseConversion
           
+          # Load Enums and convert JSON string keys to integer keys for cantools
+          with open('json_lib/enums.json', 'r') as f:
+              raw_enums = json.load(f)
+              global_enums = {
+                  name: {int(k): v for k, v in choices.items()}
+                  for name, choices in raw_enums.items()
+              }
+              
           with open('json_lib/signals.json', 'r') as f:
               global_signals = json.load(f)
+              
           with open('json_lib/messages.json', 'r') as f:
               messages_data = json.load(f)
           
@@ -45,6 +54,10 @@ jobs:
                       is_float=sig_prop.get('is_float', False)
                   )
                   
+                  # Fetch enum choices if the signal references one
+                  enum_ref = sig_prop.get('enum')
+                  choices = global_enums.get(enum_ref) if enum_ref else None
+                  
                   msg_signals.append(can.Signal(
                       name=sig_ref['name'],
                       start=sig_ref['start_bit'],
@@ -52,7 +65,10 @@ jobs:
                       byte_order='big_endian' if sig_prop.get('is_big_endian', False) else 'little_endian',
                       is_signed=sig_prop.get('is_signed', False),
                       conversion=conv,
+                      minimum=sig_prop.get('min'),
+                      maximum=sig_prop.get('max'),
                       unit=sig_prop.get('unit', ''),
+                      choices=choices,
                       comment=sig_prop.get('description', '')
                   ))
               
@@ -75,7 +91,6 @@ jobs:
         with:
           name: dbcfile
           path: hytech.dbc
-
   generate-proto:
     needs: generate-dbc
     runs-on: ubuntu-latest

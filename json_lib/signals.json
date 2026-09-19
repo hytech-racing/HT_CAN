@@ -9,6 +9,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "total_charge": {
@@ -21,6 +22,7 @@
     "unit": "Coulombs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage."
   },
   "total_discharge": {
@@ -33,6 +35,7 @@
     "unit": "Coulombs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "UNUSED SIGNAL. See legacy AMS firmware (code-2024) for usage."
   },
   "chip_id": {
@@ -45,6 +48,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "max_board_temp": {
@@ -57,6 +61,7 @@
     "unit": "Deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "min_cell_temp": {
@@ -69,6 +74,7 @@
     "unit": "Deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "max_cell_temp": {
@@ -81,6 +87,7 @@
     "unit": "Deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "acu_state": {
@@ -93,6 +100,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "overvoltage_error": {
@@ -105,6 +113,7 @@
     "unit": "none",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Whether or not the energy meter is reading an over-voltage error."
   },
   "undervoltage_error": {
@@ -117,6 +126,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "total_voltage_high_error": {
@@ -129,6 +139,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "discharge_overcurrent_error": {
@@ -141,6 +152,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "charge_overcurrent_error": {
@@ -153,6 +165,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "discharge_overtemp_error": {
@@ -165,6 +178,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "charge_overtemp_error": {
@@ -177,6 +191,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "undertemp_error": {
@@ -189,6 +204,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "overtemp_error": {
@@ -201,6 +217,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "current": {
@@ -213,6 +230,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_g_above_threshold_error": {
@@ -225,6 +243,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_h_above_threshold_error": {
@@ -237,6 +256,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "average_cell_voltage": {
@@ -249,6 +269,7 @@
     "unit": "V",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "min_cell_voltage": {
@@ -261,6 +282,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "max_cell_voltage": {
@@ -273,6 +295,7 @@
     "unit": "V",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "total_voltage": {
@@ -285,6 +308,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "charger_enabled": {
@@ -297,6 +321,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "max_charging_voltage_high": {
@@ -309,6 +334,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Unused for any PCAN stuff only for Elcon Charger"
   },
   "max_charging_voltage_low": {
@@ -321,6 +347,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Unused for any PCAN stuff only for Elcon Charger"
   },
   "max_charging_current_high": {
@@ -333,6 +360,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Unused for any PCAN stuff only for Elcon Charger"
   },
   "max_charging_current_low": {
@@ -345,6 +373,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Unused for any PCAN stuff only for Elcon Charger"
   },
   "control": {
@@ -357,6 +386,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "output_dc_voltage_high": {
@@ -369,6 +399,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "output_dc_voltage_low": {
@@ -381,6 +412,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "output_current_high": {
@@ -393,6 +425,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "output_current_low": {
@@ -405,6 +438,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "flags": {
@@ -417,6 +451,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "input_ac_voltage_high": {
@@ -429,6 +464,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "input_ac_voltage_low": {
@@ -441,6 +477,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_current": {
@@ -453,6 +490,7 @@
     "unit": "Coulombs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The current draw, in amps, measured by the Energy Meter."
   },
   "em_voltage": {
@@ -465,6 +503,7 @@
     "unit": "Volts",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The voltage, in Volts, measured by the Energy Meter."
   },
   "voltage_gain": {
@@ -477,6 +516,7 @@
     "unit": "none",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "This selects the \"gain\" mode for the EM voltage measurements. The specific multipliers for each gain mode are configured with the EMD Tool."
   },
   "current_gain": {
@@ -489,6 +529,7 @@
     "unit": "none",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "This selects the \"gain\" mode for the EM current measurements. The specific multipliers for each gain mode are configured with the EMD Tool."
   },
   "overpower_error": {
@@ -501,6 +542,7 @@
     "unit": "none",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Whether or not the Energy Meter is reading an over-power error."
   },
   "logging": {
@@ -513,6 +555,7 @@
     "unit": "none",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Whether or not the energy meter is currently logging data."
   },
   "dc_bus_voltage": {
@@ -525,6 +568,7 @@
     "unit": "V",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "motor_power": {
@@ -537,6 +581,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Made up units from AMK"
   },
   "feedback_torque": {
@@ -549,6 +594,7 @@
     "unit": "Mn",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "random made up AMK units"
   },
   "steering_1": {
@@ -561,6 +607,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "unrelated to current steering system 2026"
   },
   "steering_2": {
@@ -573,6 +620,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "unrelated to current steering system 2026"
   },
   "hall_effect_current": {
@@ -585,6 +633,7 @@
     "unit": "N/A",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "glv_battery_voltage": {
@@ -597,6 +646,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "potentiometer_fl": {
@@ -609,6 +659,7 @@
     "unit": "lbs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "potentiometer_fr": {
@@ -621,6 +672,7 @@
     "unit": "lbs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "load_cell_fl": {
@@ -633,6 +685,7 @@
     "unit": "lbs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "load_cell_fr": {
@@ -645,6 +698,7 @@
     "unit": "lbs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_sensor_analog_read": {
@@ -657,6 +711,7 @@
     "unit": "psi",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "imd_ok_high": {
@@ -669,6 +724,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_b_above_threshold": {
@@ -681,6 +737,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "bms_ok_high": {
@@ -693,6 +750,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_c_above_threshold": {
@@ -705,6 +763,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "bspd_ok_high": {
@@ -717,6 +776,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_d_above_threshold": {
@@ -729,6 +789,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "software_ok_high": {
@@ -741,6 +802,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_e_above_threshold": {
@@ -753,6 +815,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mechanical_brake_active": {
@@ -765,6 +828,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "no_accel_implausibility": {
@@ -777,6 +841,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "no_brake_implausibility": {
@@ -789,6 +854,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_pedal_active": {
@@ -801,6 +867,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "bspd_current_high": {
@@ -813,6 +880,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "bspd_brake_high": {
@@ -825,6 +893,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "no_accel_or_brake_implausibility": {
@@ -837,6 +906,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drive_buzzer": {
@@ -849,6 +919,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ecu_state": {
@@ -861,6 +932,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "inverter_error": {
@@ -873,6 +945,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "energy_meter_present": {
@@ -885,6 +958,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "software_ok": {
@@ -897,6 +971,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "launch_control_active": {
@@ -909,6 +984,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "pack_charge_critical": {
@@ -921,6 +997,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drive_mode": {
@@ -933,6 +1010,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The current drive mode on the ECU irrespective of dial mapping"
   },
   "max_torque": {
@@ -945,6 +1023,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "torque_mode": {
@@ -957,6 +1036,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "torque mode"
   },
   "distance_traveled_m": {
@@ -969,6 +1049,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "start_button": {
@@ -981,6 +1062,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mark_button": {
@@ -993,6 +1075,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mode_button": {
@@ -1005,6 +1088,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "motor_controller_cycle_button": {
@@ -1017,6 +1101,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "launch_ctrl_button": {
@@ -1029,6 +1114,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "torque_mode_button": {
@@ -1041,6 +1127,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "led_dimmer_button": {
@@ -1053,6 +1140,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "left_shifter_button": {
@@ -1065,6 +1153,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "right_shifter_button": {
@@ -1077,6 +1166,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_h_above_threshold": {
@@ -1089,6 +1179,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ssok_above_threshold": {
@@ -1101,6 +1192,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "tcu_recording_state": {
@@ -1113,6 +1205,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The current state of TCU data recording (off, requested,on,saving)"
   },
   "dial_state": {
@@ -1125,6 +1218,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "dial_stateE",
     "description": ""
   },
   "bots_led": {
@@ -1137,6 +1231,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "launch_control_led": {
@@ -1149,6 +1244,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mode_led": {
@@ -1161,6 +1257,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mechanical_brake_led": {
@@ -1173,6 +1270,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "cockpit_brb_led": {
@@ -1185,6 +1283,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "inertia_status_led": {
@@ -1197,6 +1296,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "start_status_led": {
@@ -1209,6 +1309,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "motor_controller_error_led": {
@@ -1221,6 +1322,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "imd_led": {
@@ -1233,6 +1335,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ams_led": {
@@ -1245,6 +1348,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "glv_led": {
@@ -1257,6 +1361,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "glv led has a value from 0 to 255 representing a percentage that can be displayed on dashboard as a gradient between two colors"
   },
   "pack_charge_led": {
@@ -1269,6 +1374,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "pack charge led has a value from 0 to 255 representing a percentage that can be displayed on dashboard as a gradient between two colors"
   },
   "best_lap_time": {
@@ -1281,6 +1387,7 @@
     "unit": "ms",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "prev_lap_time": {
@@ -1293,6 +1400,7 @@
     "unit": "ms",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "lap_clock_state": {
@@ -1305,6 +1413,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "driver_message": {
@@ -1317,6 +1426,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "corresponds to a pre-set list of driver messages on the dashboard that the TCU can request to be displayed in event of comms failure"
   },
   "driver_msg_var_1": {
@@ -1329,6 +1439,7 @@
     "unit": "",
     "min": null,
     "max": 1.0,
+    "enum": null,
     "description": ""
   },
   "driver_msg_var_2": {
@@ -1341,6 +1452,7 @@
     "unit": "",
     "min": null,
     "max": 1.0,
+    "enum": null,
     "description": ""
   },
   "target_lap_time": {
@@ -1353,6 +1465,7 @@
     "unit": "ms",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "target lap time is the time determined by the pit crew that the driver should aim for. mostly useful for guiding the driver in endurance races."
   },
   "LF_TTPMS_SN": {
@@ -1365,6 +1478,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_BAT_V": {
@@ -1377,6 +1491,7 @@
     "unit": "mV",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_P": {
@@ -1389,6 +1504,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_P_GAUGE": {
@@ -1401,6 +1517,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T1": {
@@ -1413,6 +1530,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T2": {
@@ -1425,6 +1543,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T3": {
@@ -1437,6 +1556,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T4": {
@@ -1449,6 +1569,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T5": {
@@ -1461,6 +1582,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T6": {
@@ -1473,6 +1595,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T7": {
@@ -1485,6 +1608,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T8": {
@@ -1497,6 +1621,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T9": {
@@ -1509,6 +1634,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T10": {
@@ -1521,6 +1647,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T11": {
@@ -1533,6 +1660,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T12": {
@@ -1545,6 +1673,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T13": {
@@ -1557,6 +1686,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T14": {
@@ -1569,6 +1699,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T15": {
@@ -1581,6 +1712,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T16": {
@@ -1593,6 +1725,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_TC": {
@@ -1605,6 +1738,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_RSSI": {
@@ -1617,6 +1751,7 @@
     "unit": "dBm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_T": {
@@ -1629,6 +1764,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LF_TTPMS_NODE_ID": {
@@ -1641,6 +1777,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_SN": {
@@ -1653,6 +1790,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Serial Number"
   },
   "LR_TTPMS_BAT_V": {
@@ -1665,6 +1803,7 @@
     "unit": "mV",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_P": {
@@ -1677,6 +1816,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_P_GAUGE": {
@@ -1689,6 +1829,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T1": {
@@ -1701,6 +1842,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T2": {
@@ -1713,6 +1855,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T3": {
@@ -1725,6 +1868,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T4": {
@@ -1737,6 +1881,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T5": {
@@ -1749,6 +1894,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T6": {
@@ -1761,6 +1907,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T7": {
@@ -1773,6 +1920,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T8": {
@@ -1785,6 +1933,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T9": {
@@ -1797,6 +1946,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T10": {
@@ -1809,6 +1959,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T11": {
@@ -1821,6 +1972,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T12": {
@@ -1833,6 +1985,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T13": {
@@ -1845,6 +1998,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T14": {
@@ -1857,6 +2011,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T15": {
@@ -1869,6 +2024,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T16": {
@@ -1881,6 +2037,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_TC": {
@@ -1893,6 +2050,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_RSSI": {
@@ -1905,6 +2063,7 @@
     "unit": "dBm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_T": {
@@ -1917,6 +2076,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "LR_TTPMS_NODE_ID": {
@@ -1929,6 +2089,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_SN": {
@@ -1941,6 +2102,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_BAT_V": {
@@ -1953,6 +2115,7 @@
     "unit": "mV",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_P": {
@@ -1965,6 +2128,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_P_GAUGE": {
@@ -1977,6 +2141,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T1": {
@@ -1989,6 +2154,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T2": {
@@ -2001,6 +2167,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T3": {
@@ -2013,6 +2180,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T4": {
@@ -2025,6 +2193,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T5": {
@@ -2037,6 +2206,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T6": {
@@ -2049,6 +2219,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T7": {
@@ -2061,6 +2232,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T8": {
@@ -2073,6 +2245,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T9": {
@@ -2085,6 +2258,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T10": {
@@ -2097,6 +2271,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T11": {
@@ -2109,6 +2284,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T12": {
@@ -2121,6 +2297,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T13": {
@@ -2133,6 +2310,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T14": {
@@ -2145,6 +2323,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T15": {
@@ -2157,6 +2336,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T16": {
@@ -2169,6 +2349,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_TC": {
@@ -2181,6 +2362,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_RSSI": {
@@ -2193,6 +2375,7 @@
     "unit": "dBm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_T": {
@@ -2205,6 +2388,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RF_TTPMS_NODE_ID": {
@@ -2217,6 +2401,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_SN": {
@@ -2229,6 +2414,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_BAT_V": {
@@ -2241,6 +2427,7 @@
     "unit": "mV",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_P": {
@@ -2253,6 +2440,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_P_GAUGE": {
@@ -2265,6 +2453,7 @@
     "unit": "mbar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T1": {
@@ -2277,6 +2466,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T2": {
@@ -2289,6 +2479,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T3": {
@@ -2301,6 +2492,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T4": {
@@ -2313,6 +2505,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T5": {
@@ -2325,6 +2518,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T6": {
@@ -2337,6 +2531,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T7": {
@@ -2349,6 +2544,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T8": {
@@ -2361,6 +2557,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T9": {
@@ -2373,6 +2570,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T10": {
@@ -2385,6 +2583,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T11": {
@@ -2397,6 +2596,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T12": {
@@ -2409,6 +2609,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T13": {
@@ -2421,6 +2622,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T14": {
@@ -2433,6 +2635,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T15": {
@@ -2445,6 +2648,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T16": {
@@ -2457,6 +2661,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_TC": {
@@ -2469,6 +2674,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_RSSI": {
@@ -2481,6 +2687,7 @@
     "unit": "dBm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_T": {
@@ -2493,6 +2700,7 @@
     "unit": "\u00b0C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "RR_TTPMS_NODE_ID": {
@@ -2505,6 +2713,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "current_shunt_read": {
@@ -2517,6 +2726,7 @@
     "unit": "amps",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The shunt in penthouse; Measures current that goes through the whole tractive system -- used for coulumb counting"
   },
   "pack_filtered_read": {
@@ -2529,6 +2739,7 @@
     "unit": "volts",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Filtered pack voltage"
   },
   "ts_out_filtered_read": {
@@ -2541,6 +2752,7 @@
     "unit": "volts",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Voltage across tractive system"
   },
   "SoC": {
@@ -2553,6 +2765,7 @@
     "unit": "percent",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The charge in the accumulator, as a percentage."
   },
   "min_cell_voltage_est": {
@@ -2565,6 +2778,7 @@
     "unit": "volts",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Lowest-cell-voltage estimate based on the state of charge, according to VOLTAGE_LOOKUP_TABLE. Ex: 87% SoC would display 3.798V."
   },
   "charge_coulombs": {
@@ -2577,6 +2791,7 @@
     "unit": "Coulombs",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The charge in the accumulator, in Coulombs"
   },
   "hall_curr_ref": {
@@ -2589,6 +2804,7 @@
     "unit": "mV",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "hall_curr_signal": {
@@ -2601,6 +2817,7 @@
     "unit": "mV",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "fr_motor_rpm": {
@@ -2613,6 +2830,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "fl_motor_rpm": {
@@ -2625,6 +2843,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rr_motor_rpm": {
@@ -2637,6 +2856,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rl_motor_rpm": {
@@ -2649,6 +2869,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_diagnostic_number": {
@@ -2661,6 +2882,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_diagnostic_number": {
@@ -2673,6 +2895,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_diagnostic_number": {
@@ -2685,6 +2908,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_diagnostic_number": {
@@ -2697,6 +2921,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_dc_on": {
@@ -2709,6 +2934,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_derating_on": {
@@ -2721,6 +2947,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_error": {
@@ -2733,6 +2960,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_inverter_on": {
@@ -2745,6 +2973,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_quit_dc": {
@@ -2757,6 +2986,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_quit_inverter_on": {
@@ -2769,6 +2999,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_system_ready": {
@@ -2781,6 +3012,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc1_warning": {
@@ -2793,6 +3025,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_dc_on": {
@@ -2805,6 +3038,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_derating_on": {
@@ -2817,6 +3051,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_error": {
@@ -2829,6 +3064,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_inverter_on": {
@@ -2841,6 +3077,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_quit_dc": {
@@ -2853,6 +3090,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_quit_inverter_on": {
@@ -2865,6 +3103,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_system_ready": {
@@ -2877,6 +3116,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc2_warning": {
@@ -2889,6 +3129,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_dc_on": {
@@ -2901,6 +3142,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_derating_on": {
@@ -2913,6 +3155,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_error": {
@@ -2925,6 +3168,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_inverter_on": {
@@ -2937,6 +3181,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_quit_dc": {
@@ -2949,6 +3194,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_quit_inverter_on": {
@@ -2961,6 +3207,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_system_ready": {
@@ -2973,6 +3220,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc3_warning": {
@@ -2985,6 +3233,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_dc_on": {
@@ -2997,6 +3246,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_derating_on": {
@@ -3009,6 +3259,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_error": {
@@ -3021,6 +3272,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_inverter_on": {
@@ -3033,6 +3285,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_quit_dc": {
@@ -3045,6 +3298,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_quit_inverter_on": {
@@ -3057,6 +3311,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_system_ready": {
@@ -3069,6 +3324,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "mc4_warning": {
@@ -3081,6 +3337,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "accel_implausible": {
@@ -3093,6 +3350,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_implausible": {
@@ -3105,6 +3363,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_percent": {
@@ -3117,6 +3376,7 @@
     "unit": "",
     "min": null,
     "max": 100.0,
+    "enum": null,
     "description": ""
   },
   "accel_percent": {
@@ -3129,6 +3389,7 @@
     "unit": "",
     "min": null,
     "max": 100.0,
+    "enum": null,
     "description": ""
   },
   "thermistor_inv1": {
@@ -3141,6 +3402,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "inverter cooling loop temp"
   },
   "thermistor_inv2": {
@@ -3153,6 +3415,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "invertor cooling loop tmep"
   },
   "thermistor_acc1": {
@@ -3165,6 +3428,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "acculum cooling loop temp"
   },
   "thermistor_acc2": {
@@ -3177,6 +3441,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "acculum cooling loop temp"
   },
   "thermistor_motor_rl": {
@@ -3189,6 +3454,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Motor cooling loop temperature"
   },
   "thermistor_motor_rr": {
@@ -3201,6 +3467,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Motor cooling loop temperature"
   },
   "thermistor_pump": {
@@ -3213,6 +3480,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "temp of the pump"
   },
   "thermistor_0_deg_C": {
@@ -3225,6 +3493,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "thermistor_1_deg_C": {
@@ -3237,6 +3506,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "thermistor_2_deg_C": {
@@ -3249,6 +3519,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "thermistor_3_deg_C": {
@@ -3261,6 +3532,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rl_load_cell": {
@@ -3273,6 +3545,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rr_load_cell": {
@@ -3285,6 +3558,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rl_shock_pot": {
@@ -3297,6 +3571,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rr_shock_pot": {
@@ -3309,6 +3584,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shutdown_status": {
@@ -3321,6 +3597,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_body_vel_x": {
@@ -3333,6 +3610,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_body_vel_y": {
@@ -3345,6 +3623,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_body_vel_z": {
@@ -3357,6 +3636,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_vel_uncertainty": {
@@ -3369,6 +3649,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "how much error there might be"
   },
   "vn_lin_ins_accel_x": {
@@ -3381,6 +3662,7 @@
     "unit": "m/s^2",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "estimated acceleration of INS"
   },
   "vn_lin_ins_accel_y": {
@@ -3393,6 +3675,7 @@
     "unit": "m/s^2",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "estimated acceleration of INS"
   },
   "vn_lin_ins_accel_z": {
@@ -3405,6 +3688,7 @@
     "unit": "m/s^2",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "estimated acceleration of INS"
   },
   "vn_lin_uncomp_accel_x": {
@@ -3417,6 +3701,7 @@
     "unit": "m/s^2",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "IMU acceleration"
   },
   "vn_lin_uncomp_accel_y": {
@@ -3429,6 +3714,7 @@
     "unit": "m/s^2",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "IMU acceleration"
   },
   "vn_lin_uncomp_accel_z": {
@@ -3441,6 +3727,7 @@
     "unit": "m/s^2",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "IMU acceleration"
   },
   "vn_yaw": {
@@ -3453,6 +3740,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_pitch": {
@@ -3465,6 +3753,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_roll": {
@@ -3477,6 +3766,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_gps_lat": {
@@ -3489,6 +3779,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_gps_lon": {
@@ -3501,6 +3792,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_gps_time": {
@@ -3513,6 +3805,7 @@
     "unit": "ns",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "time since start of epoch 1980"
   },
   "vn_gps_status": {
@@ -3525,6 +3818,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "vn_gps_statusE",
     "description": "GPS fix status"
   },
   "fl_motor_torque": {
@@ -3537,6 +3831,7 @@
     "unit": "nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "fr_motor_torque": {
@@ -3549,6 +3844,7 @@
     "unit": "nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rl_motor_torque": {
@@ -3561,6 +3857,7 @@
     "unit": "nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "rr_motor_torque": {
@@ -3573,6 +3870,7 @@
     "unit": "nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "angular_rate_x": {
@@ -3585,6 +3883,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "angular_rate_y": {
@@ -3597,6 +3896,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "angular_rate_z": {
@@ -3609,6 +3909,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vn_ecef_pos_x": {
@@ -3621,6 +3922,7 @@
     "unit": "m",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "earth centered earth fixed"
   },
   "vn_ecef_pos_y": {
@@ -3633,6 +3935,7 @@
     "unit": "m",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "earth centered earth fixed"
   },
   "vn_ecef_pos_z": {
@@ -3645,6 +3948,7 @@
     "unit": "m",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "earth centered earth fixed"
   },
   "accel_1_raw": {
@@ -3657,6 +3961,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "accel_2_raw": {
@@ -3669,6 +3974,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_1_raw": {
@@ -3681,6 +3987,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_2_raw": {
@@ -3693,6 +4000,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_input": {
@@ -3705,6 +4013,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_output": {
@@ -3717,6 +4026,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "pid_tv_fl_delta": {
@@ -3729,6 +4039,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "pid_tv_fr_delta": {
@@ -3741,6 +4052,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "pid_tv_rl_delta": {
@@ -3753,6 +4065,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "pid_tv_rr_delta": {
@@ -3765,6 +4078,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "torque_request": {
@@ -3777,6 +4091,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The torque request calculated from the accelleration request and the maximum torque"
   },
   "front_torque_scale": {
@@ -3789,6 +4104,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the front/rear torque scaling"
   },
   "rear_torque_scale": {
@@ -3801,6 +4117,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the front/rear torque scaling"
   },
   "front_regen_scale": {
@@ -3813,6 +4130,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the front/rear torque scaling"
   },
   "rear_regen_scale": {
@@ -3825,6 +4143,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the front/rear torque scaling"
   },
   "accel_request_state": {
@@ -3837,6 +4156,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The current state of the acceleration request (0 = decelerating, 1 = accelerating)"
   },
   "launch_control_state": {
@@ -3849,6 +4169,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The current state of the launch controller (LAUNCH_NOT_READY, LAUNCH_READY, LAUNCHING)"
   },
   "algo_active": {
@@ -3861,6 +4182,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "State of whether the launch algorithm has taken over control from the initial launch target"
   },
   "initial_launch_target": {
@@ -3873,6 +4195,7 @@
     "unit": "rpm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "The initial launch speed target requested by the launch controller"
   },
   "speed_setpoint_rpm": {
@@ -3885,6 +4208,7 @@
     "unit": "rpm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_alpha_deg_fl": {
@@ -3897,6 +4221,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_alpha_deg_fr": {
@@ -3909,6 +4234,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_alpha_deg_rl": {
@@ -3921,6 +4247,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_alpha_deg_rr": {
@@ -3933,6 +4260,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_beta_deg": {
@@ -3945,6 +4273,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_long_corner_vel_fl": {
@@ -3957,6 +4286,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_long_corner_vel_fr": {
@@ -3969,6 +4299,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_long_corner_vel_rl": {
@@ -3981,6 +4312,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_long_corner_vel_rr": {
@@ -3993,6 +4325,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_sl_fl": {
@@ -4005,6 +4338,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_sl_fr": {
@@ -4017,6 +4351,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_sl_rl": {
@@ -4029,6 +4364,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_sl_rr": {
@@ -4041,6 +4377,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_wheel_steer_avg_deg": {
@@ -4053,6 +4390,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_kin_desired_yaw_rate_rad_s": {
@@ -4065,6 +4403,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_rate_error": {
@@ -4077,6 +4416,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_pid_output": {
@@ -4089,6 +4429,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_torque_fl": {
@@ -4101,6 +4442,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_torque_fr": {
@@ -4113,6 +4455,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_torque_rl": {
@@ -4125,6 +4468,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_torque_rr": {
@@ -4137,6 +4481,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_percent_fl": {
@@ -4149,6 +4494,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_percent_fr": {
@@ -4161,6 +4507,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_percent_rl": {
@@ -4173,6 +4520,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_percent_rr": {
@@ -4185,6 +4533,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_torque_fl": {
@@ -4197,6 +4546,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_torque_fr": {
@@ -4209,6 +4559,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_torque_rl": {
@@ -4221,6 +4572,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_normal_torque_rr": {
@@ -4233,6 +4585,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_status": {
@@ -4245,6 +4598,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_error": {
@@ -4257,6 +4611,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_torque_adj": {
@@ -4269,6 +4624,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_cornerp_fl": {
@@ -4281,6 +4637,7 @@
     "unit": "kW",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_cornerp_fr": {
@@ -4293,6 +4650,7 @@
     "unit": "kW",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_cornerp_rl": {
@@ -4305,6 +4663,7 @@
     "unit": "kW",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_cornerp_rr": {
@@ -4317,6 +4676,7 @@
     "unit": "kW",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_torque_fl": {
@@ -4329,6 +4689,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_torque_fr": {
@@ -4341,6 +4702,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_torque_rl": {
@@ -4353,6 +4715,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_power_lim_torque_rr": {
@@ -4365,6 +4728,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_launch": {
@@ -4377,6 +4741,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_pid_tv": {
@@ -4389,6 +4754,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_normal_force": {
@@ -4401,6 +4767,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_pid_power_limit": {
@@ -4413,6 +4780,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_power_limit": {
@@ -4425,6 +4793,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_tcs": {
@@ -4437,6 +4806,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_tcs_lim_yaw_pid": {
@@ -4449,6 +4819,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_dec_yaw_pid_brake": {
@@ -4461,6 +4832,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_discontin_brakes": {
@@ -4473,6 +4845,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_no_regen_5kph": {
@@ -4485,6 +4858,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_torque_bias": {
@@ -4497,6 +4871,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_nl_tcs_gain_sche": {
@@ -4509,6 +4884,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_rpm_tcs_gain_sche": {
@@ -4521,6 +4897,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_use_nl_tcs_slipschedu": {
@@ -4533,6 +4910,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_initial_torque_req": {
@@ -4545,6 +4923,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_constrained_torq_req": {
@@ -4557,6 +4936,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_limit": {
@@ -4569,6 +4949,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_torque_mode": {
@@ -4581,6 +4962,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_max_yaw_nl_accel_perc": {
@@ -4593,6 +4975,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_max_nl_brake_sc_front": {
@@ -4605,6 +4988,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_launch_dead_zone": {
@@ -4617,6 +5001,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_launch_vel_thresh": {
@@ -4629,6 +5014,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_vel_thresh": {
@@ -4641,6 +5027,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_sl_nlperc_star_fr": {
@@ -4653,6 +5040,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_sl_nlperc_end_fr": {
@@ -4665,6 +5053,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_sl_nlperc_end_rr": {
@@ -4677,6 +5066,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_sl_nlperc_star_rr": {
@@ -4689,6 +5079,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_torque_fl": {
@@ -4701,6 +5092,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_torque_fr": {
@@ -4713,6 +5105,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_torque_rl": {
@@ -4725,6 +5118,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_torque_rr": {
@@ -4737,6 +5131,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_status_fl": {
@@ -4749,6 +5144,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_status_fr": {
@@ -4761,6 +5157,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_status_rl": {
@@ -4773,6 +5170,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_status_rr": {
@@ -4785,6 +5183,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_input_fl": {
@@ -4797,6 +5196,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_input_fr": {
@@ -4809,6 +5209,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_input_rl": {
@@ -4821,6 +5222,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_input_rr": {
@@ -4833,6 +5235,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_output_fl": {
@@ -4845,6 +5248,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_output_fr": {
@@ -4857,6 +5261,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_output_rl": {
@@ -4869,6 +5274,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_output_rr": {
@@ -4881,6 +5287,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_wheel_lin_vel_fl": {
@@ -4893,6 +5300,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_wheel_lin_vel_fr": {
@@ -4905,6 +5313,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_wheel_lin_vel_rl": {
@@ -4917,6 +5326,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehm_wheel_lin_vel_rr": {
@@ -4929,6 +5339,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_bias_torq_avg_front": {
@@ -4941,6 +5352,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_bias_torq_avg_rear": {
@@ -4953,6 +5365,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_torq_fl": {
@@ -4965,6 +5378,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_torq_fr": {
@@ -4977,6 +5391,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_torq_rl": {
@@ -4989,6 +5404,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_torq_rr": {
@@ -5001,6 +5417,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_status_fl": {
@@ -5013,6 +5430,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_status_fr": {
@@ -5025,6 +5443,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_status_rl": {
@@ -5037,6 +5456,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_regen_5kph_status_rr": {
@@ -5049,6 +5469,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_pid_p": {
@@ -5061,6 +5482,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_pid_i": {
@@ -5073,6 +5495,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_pid_d": {
@@ -5085,6 +5508,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_pid_brakes_p": {
@@ -5097,6 +5521,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_pid_brakes_i": {
@@ -5109,6 +5534,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_yaw_pid_brakes_d": {
@@ -5121,6 +5547,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_p_fl": {
@@ -5133,6 +5560,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_p_fr": {
@@ -5145,6 +5573,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_p_rl": {
@@ -5157,6 +5586,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_pid_p_rr": {
@@ -5169,6 +5599,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "thermistor_motor_fl": {
@@ -5181,6 +5612,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Motor cooling loop temperature"
   },
   "thermistor_motor_fr": {
@@ -5193,6 +5625,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Motor cooling loop temperature"
   },
   "controller_tcs_saturation_front": {
@@ -5205,6 +5638,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_saturation_rear": {
@@ -5217,6 +5651,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_gen_LRdiff_lowerB": {
@@ -5229,6 +5664,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_gen_LRdiff_upperB": {
@@ -5241,6 +5677,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_w_steer_lower_b": {
@@ -5253,6 +5690,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_w_steer_upper_b": {
@@ -5265,6 +5703,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_launch_LRdiff": {
@@ -5277,6 +5716,7 @@
     "unit": "Nm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "torque_controller_mux_status": {
@@ -5289,6 +5729,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "torque_controller_mux_statusE",
     "description": ""
   },
   "steering_analog_raw": {
@@ -5301,6 +5742,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "raw measurement as measured by bottom steering analog sensor"
   },
   "steering_digital_raw": {
@@ -5313,6 +5755,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "raw measurement by digital steering encoder"
   },
   "controller_tcs_lower_rpm_front": {
@@ -5325,6 +5768,7 @@
     "unit": "RPM",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_lower_rpm_rear": {
@@ -5337,6 +5781,7 @@
     "unit": "RPM",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_upper_rpm_front": {
@@ -5349,6 +5794,7 @@
     "unit": "RPM",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_upper_rpm_rear": {
@@ -5361,6 +5807,7 @@
     "unit": "RPM",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_endper_nl_front": {
@@ -5373,6 +5820,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_endper_nl_rear": {
@@ -5385,6 +5833,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_startper_nl_front": {
@@ -5397,6 +5846,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_startper_nl_rear": {
@@ -5409,6 +5859,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_lauSL_start_front": {
@@ -5421,6 +5872,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_lauSL_end_front": {
@@ -5433,6 +5885,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_lauSL_start_rear": {
@@ -5445,6 +5898,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_lauSL_end_rear": {
@@ -5457,6 +5911,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_SL_start_front": {
@@ -5469,6 +5924,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_SL_end_front": {
@@ -5481,6 +5937,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_SL_start_rear": {
@@ -5493,6 +5950,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_SL_end_rear": {
@@ -5505,6 +5963,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_slip_target_front": {
@@ -5517,6 +5976,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "controller_tcs_slip_target_rear": {
@@ -5529,6 +5989,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "speed_above_thresh": {
@@ -5541,6 +6002,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Vehicle speed is above 5 m/s, TCMux does not allow driver to switch mode"
   },
   "torque_delta_above_thresh": {
@@ -5553,6 +6015,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Torque delta between old and new controllers is < 0.5Nm on every wheel"
   },
   "tc_not_ready": {
@@ -5565,6 +6028,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Selected TC not in ready state"
   },
   "steering_system_has_err": {
@@ -5577,6 +6041,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Unrelated to current steering system 2026"
   },
   "mode_intended": {
@@ -5589,6 +6054,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "TC mode selected by driver"
   },
   "mode_actual": {
@@ -5601,6 +6067,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "actual mode in tcmux"
   },
   "dash_dial_mode": {
@@ -5613,6 +6080,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Dashboard dial position"
   },
   "torque_limit": {
@@ -5625,6 +6093,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "AMK inverter torque limit in use"
   },
   "num_sats_pvt_1": {
@@ -5637,6 +6106,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "num of common satelites that are used in the PVT solution on receiver A"
   },
   "num_sats_rtk_1": {
@@ -5649,6 +6119,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "num of common satelites that are used in the RTK solution on receiver A"
   },
   "highest_cn0_1": {
@@ -5661,6 +6132,7 @@
     "unit": "dBHz",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Highest CN0 reported on receiver A"
   },
   "num_sats_pvt_2": {
@@ -5673,6 +6145,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "num of common satelites that are used in the PVT solution on receiver B"
   },
   "num_sats_rtk_2": {
@@ -5685,6 +6158,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "num of common satelites that are used in the RTK solution on receiver B"
   },
   "highest_cn0_2": {
@@ -5697,6 +6171,7 @@
     "unit": "dBHz",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Highest CN0 reported on receiver B"
   },
   "num_com_sats_pvt": {
@@ -5709,6 +6184,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "num of common satelites that are used in the PVT solution on both receivers"
   },
   "num_com_sats_rtk": {
@@ -5721,6 +6197,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "num of common satelites that are used in the RTK solution on both receivers"
   },
   "drivetrain_traj_torque_lim_fl": {
@@ -5733,6 +6210,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivetrain_traj_torque_lim_fr": {
@@ -5745,6 +6223,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivetrain_traj_torque_lim_rl": {
@@ -5757,6 +6236,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivetrain_traj_torque_lim_rr": {
@@ -5769,6 +6249,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_torque_fl": {
@@ -5781,6 +6262,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_torque_fr": {
@@ -5793,6 +6275,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_torque_rl": {
@@ -5805,6 +6288,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_torque_rr": {
@@ -5817,6 +6301,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_set_rpm_fl": {
@@ -5829,6 +6314,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_set_rpm_fr": {
@@ -5841,6 +6327,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_set_rpm_rl": {
@@ -5853,6 +6340,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_set_rpm_rr": {
@@ -5865,6 +6353,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_steering": {
@@ -5877,6 +6366,7 @@
     "unit": "degrees",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "system_ready": {
@@ -5889,6 +6379,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "error": {
@@ -5901,6 +6392,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "warning": {
@@ -5913,6 +6405,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "quit_dc_on": {
@@ -5925,6 +6418,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "dc_on": {
@@ -5937,6 +6431,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "quit_inverter_on": {
@@ -5949,6 +6444,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "inverter_on": {
@@ -5961,6 +6457,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "derating_on": {
@@ -5973,6 +6470,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "diagnostic_number": {
@@ -5985,6 +6483,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "motor_temp": {
@@ -5997,6 +6496,7 @@
     "unit": "C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "inverter_temp": {
@@ -6009,6 +6509,7 @@
     "unit": "C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "igbt_temp": {
@@ -6021,6 +6522,7 @@
     "unit": "C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "actual_power_w": {
@@ -6033,6 +6535,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "actual_torque_nm": {
@@ -6045,6 +6548,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "actual_speed_rpm": {
@@ -6057,6 +6561,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "active_power_w": {
@@ -6069,6 +6574,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "reactive_power_var": {
@@ -6081,6 +6587,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "speed_control_kp": {
@@ -6093,6 +6600,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "speed_control_ki": {
@@ -6105,6 +6613,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "speed_control_kd": {
@@ -6117,6 +6626,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "accel_pedal_active": {
@@ -6129,6 +6639,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_accel_implausibility": {
@@ -6141,6 +6652,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake and accel are pressed"
   },
   "implaus_exceeded_max_duration": {
@@ -6153,6 +6665,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "a pedal implausibility has been present for longer than allowed"
   },
   "accel_pedal": {
@@ -6165,6 +6678,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the scaled accelerator pedal value"
   },
   "brake_pedal": {
@@ -6177,6 +6691,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the scaled brake pedal value between 0 and 1"
   },
   "fl_load_cell": {
@@ -6189,6 +6704,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "fl_shock_pot": {
@@ -6201,6 +6717,7 @@
     "unit": "mm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "fr_load_cell": {
@@ -6213,6 +6730,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "fr_shock_pot": {
@@ -6225,6 +6743,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "inverter_enable": {
@@ -6237,6 +6756,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "hv_enable": {
@@ -6249,6 +6769,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "driver_enable": {
@@ -6261,6 +6782,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "remove_error": {
@@ -6273,6 +6795,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "positive_torque_limit": {
@@ -6285,6 +6808,7 @@
     "unit": "Mn",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Made up units from AMK"
   },
   "negative_torque_limit": {
@@ -6297,6 +6821,7 @@
     "unit": "Mn",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "AMK made up unit"
   },
   "preset_button": {
@@ -6309,6 +6834,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "data_button_is_pressed": {
@@ -6321,6 +6847,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "dash_buzzer_flag": {
@@ -6333,6 +6860,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "in_pedal_calibration_state": {
@@ -6345,6 +6873,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "torque_limit_enum_value": {
@@ -6357,6 +6886,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "Broadcast_rate": {
@@ -6369,6 +6899,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "Broadcast_rateE",
     "description": ""
   },
   "CAN_Termination_Setting_Bus_1": {
@@ -6381,6 +6912,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "CAN_Termination_Setting_Bus_1E",
     "description": ""
   },
   "CAN_Termination_Setting_Bus_2": {
@@ -6393,6 +6925,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "CAN_Termination_Setting_Bus_2E",
     "description": ""
   },
   "Height_Offset": {
@@ -6405,6 +6938,7 @@
     "unit": "cm",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "This value will be SUBTRACTED from the height.  So if you mount the sensor at 40cm, and you want that to read as 20cm, set this value to 20cm"
   },
   "Sensor_X_Location": {
@@ -6417,6 +6951,7 @@
     "unit": "m",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "This is the X position of the center of the sensor, with ISO signedness (positive is forward, negative is rearward) This is used to generate the CG_Corrected velocities"
   },
   "Sensor_Y_Location": {
@@ -6429,6 +6964,7 @@
     "unit": "m",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "This is the Y position of the center of the sensor, with ISO signedness (positive is left (driver side in US) negative is right (passenger) This is used to generate the CG_Corrected velocities"
   },
   "Attitude_Filtering": {
@@ -6441,6 +6977,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "Attitude_FilteringE",
     "description": ""
   },
   "IMU_Filtering": {
@@ -6453,6 +6990,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "IMU_FilteringE",
     "description": ""
   },
   "Velocity_Filtering": {
@@ -6465,6 +7003,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "Velocity_FilteringE",
     "description": ""
   },
   "Temperature_Internal": {
@@ -6477,6 +7016,7 @@
     "unit": "C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Measurement of the internal air temperature of the SpeedBeam sensor"
   },
   "Firmware_Version": {
@@ -6489,6 +7029,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "sensor_0_Validity": {
@@ -6501,6 +7042,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "sensor_0_ValidityE",
     "description": ""
   },
   "sensor_1_Validity": {
@@ -6513,6 +7055,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "sensor_1_ValidityE",
     "description": ""
   },
   "sensor_2_Validity": {
@@ -6525,6 +7068,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "sensor_2_ValidityE",
     "description": ""
   },
   "sensor_3_Validity": {
@@ -6537,6 +7081,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "sensor_3_ValidityE",
     "description": ""
   },
   "SpeedBeam_Health": {
@@ -6549,6 +7094,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "SpeedBeam_HealthE",
     "description": ""
   },
   "Accel_X": {
@@ -6561,6 +7107,7 @@
     "unit": "m/s2",
     "min": null,
     "max": 29.127,
+    "enum": null,
     "description": "Follows ISO Standard Sign Convention"
   },
   "Accel_Y": {
@@ -6573,6 +7120,7 @@
     "unit": "m/s2",
     "min": null,
     "max": 29.127,
+    "enum": null,
     "description": "Follows ISO Standard Sign Convention"
   },
   "Accel_Z": {
@@ -6585,6 +7133,7 @@
     "unit": "m/s2",
     "min": null,
     "max": 29.127,
+    "enum": null,
     "description": "Follows ISO Standard Sign Convention"
   },
   "Roll_Rate": {
@@ -6597,6 +7146,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Sign convention in ISO Standard"
   },
   "Yaw_Rate": {
@@ -6609,6 +7159,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "Pitch_Rate": {
@@ -6621,6 +7172,7 @@
     "unit": "rad/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Sign convention in ISO Standard"
   },
   "CAN_Termination_State_Bus_1": {
@@ -6633,6 +7185,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "CAN_Termination_State_Bus_1E",
     "description": ""
   },
   "CAN_Termination_State_Bus_2": {
@@ -6645,6 +7198,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "CAN_Termination_State_Bus_2E",
     "description": ""
   },
   "Height": {
@@ -6657,6 +7211,7 @@
     "unit": "cm",
     "min": null,
     "max": 71.645,
+    "enum": null,
     "description": "Height after adjusting for height offset"
   },
   "Pitch_angle": {
@@ -6669,6 +7224,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Sign convention in ISO Standard"
   },
   "Roll_angle": {
@@ -6681,6 +7237,7 @@
     "unit": "deg",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Sign convention in ISO Standard"
   },
   "Velocity_x": {
@@ -6693,6 +7250,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "ISO Standard Sign, Positive is Vehicle Moving Forward"
   },
   "Velocity_y": {
@@ -6705,6 +7263,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "ISO Standard Sign, Positive is Vehicle Turning Left"
   },
   "Velocity_z": {
@@ -6717,6 +7276,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "ISO Standard Sign, Positive is Vehicle Moving Up"
   },
   "Velocity_x_CGCorrected": {
@@ -6729,6 +7289,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "ISO Standard Sign, Positive is Vehicle Moving Forward"
   },
   "Velocity_y_CGCorrected": {
@@ -6741,6 +7302,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "ISO Standard Sign, Positive is Vehicle Turning Left"
   },
   "Velocity_z_CGCorrected": {
@@ -6753,6 +7315,7 @@
     "unit": "m/s",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "ISO Standard Sign, Positive is Vehicle Moving Up"
   },
   "bms_ok": {
@@ -6765,6 +7328,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "imd_ok": {
@@ -6777,6 +7341,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivebrain_in_control": {
@@ -6789,6 +7354,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "vehicle_state": {
@@ -6801,6 +7367,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "vehicle_stateE",
     "description": ""
   },
   "brake_temp_channel_1": {
@@ -6813,6 +7380,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_2": {
@@ -6825,6 +7393,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_3": {
@@ -6837,6 +7406,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_4": {
@@ -6849,6 +7419,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_5": {
@@ -6861,6 +7432,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_6": {
@@ -6873,6 +7445,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_7": {
@@ -6885,6 +7458,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_8": {
@@ -6897,6 +7471,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_9": {
@@ -6909,6 +7484,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_10": {
@@ -6921,6 +7497,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_11": {
@@ -6933,6 +7510,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_12": {
@@ -6945,6 +7523,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_13": {
@@ -6957,6 +7536,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_14": {
@@ -6969,6 +7549,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_15": {
@@ -6981,6 +7562,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_temp_channel_16": {
@@ -6993,6 +7575,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brake rotor temp sensor channel reading in degrees C"
   },
   "brake_rotor_sensor_temp": {
@@ -7005,6 +7588,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "temperature internal to the sensor degrees C"
   },
   "brake_temp_sensor_can_bitrate": {
@@ -7017,6 +7601,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "bitrate setting for CAN on the brake temp sensor. 1 = 1M, 2 = 500k, 3 = 250k, 4 = 100k"
   },
   "brake_temp_sensor_base_can_id": {
@@ -7029,6 +7614,7 @@
     "unit": "",
     "min": 1.0,
     "max": 2047.0,
+    "enum": null,
     "description": ""
   },
   "brake_temp_sensor_emissivity": {
@@ -7041,6 +7627,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "emissivity of the material (0 to 1)"
   },
   "brake_temp_sensor_prog_const": {
@@ -7053,6 +7640,7 @@
     "unit": "",
     "min": 30000.0,
     "max": 30000.0,
+    "enum": null,
     "description": "programming constant, should be set to 30000"
   },
   "brake_temp_sensor_sampling_freq": {
@@ -7065,6 +7653,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "1 = 1 hz, 2 = 2hz, 3 = 4hz, 4 = 8 hz, 5=16 hz, 6=32 hz, 7 = 64hz, 8 = 100hz"
   },
   "brake_temp_sensor_ch_setting": {
@@ -7077,6 +7666,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "40 = 4 Channels, 80 = 8 channels, 160 = 16 channels"
   },
   "aero_channel_1": {
@@ -7089,6 +7679,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aero_channel_2": {
@@ -7101,6 +7692,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aero_channel_4": {
@@ -7113,6 +7705,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aero_channel_3": {
@@ -7125,6 +7718,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aero_channel_5": {
@@ -7137,6 +7731,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aero_channel_6": {
@@ -7149,6 +7744,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aero_channel_7": {
@@ -7161,6 +7757,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aero_channel_0": {
@@ -7173,6 +7770,7 @@
     "unit": "uBar",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "inverter_overload_percentage": {
@@ -7185,6 +7783,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the current overload of the inverter according to the i2t calc"
   },
   "motor_overload_percentage": {
@@ -7197,6 +7796,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "the current overload of the motor according to the i2t calc"
   },
   "torque_setpoint_nm": {
@@ -7209,6 +7809,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "drivetrain_state": {
@@ -7221,6 +7822,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": "drivetrain_stateE",
     "description": ""
   },
   "latch_ok": {
@@ -7233,6 +7835,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "current_A": {
@@ -7245,6 +7848,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "voltage_V": {
@@ -7257,6 +7861,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_violation": {
@@ -7269,6 +7874,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_logging": {
@@ -7281,6 +7887,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_energy_w_hr": {
@@ -7293,6 +7900,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_num_sensors": {
@@ -7305,6 +7913,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_temp_sig_index": {
@@ -7317,6 +7926,7 @@
     "unit": "",
     "min": null,
     "max": 1.0,
+    "enum": null,
     "description": ""
   },
   "em_min_temp": {
@@ -7329,6 +7939,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_max_temp": {
@@ -7341,6 +7952,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_temp_0": {
@@ -7353,6 +7965,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_temp_1": {
@@ -7365,6 +7978,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_temp_2": {
@@ -7377,6 +7991,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_temp_3": {
@@ -7389,6 +8004,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "em_temp_4": {
@@ -7401,6 +8017,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_torque_latency_millis": {
@@ -7413,6 +8030,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_speed_latency_millis": {
@@ -7425,6 +8043,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_latency_diff_millis": {
@@ -7437,6 +8056,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_speed_setpoint_too_latent": {
@@ -7449,6 +8069,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_torque_setpoint_too_latent": {
@@ -7461,6 +8082,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_latency_diff_too_high": {
@@ -7473,6 +8095,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_message_not_received": {
@@ -7485,6 +8108,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_telem_timing_fault": {
@@ -7497,6 +8121,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "db_aux_timing_fault": {
@@ -7509,6 +8134,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "telem_latency_millis": {
@@ -7521,6 +8147,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "aux_latency_millis": {
@@ -7533,6 +8160,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "shdn_out_voltage": {
@@ -7545,6 +8173,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "precharge_voltage": {
@@ -7557,6 +8186,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ts_out_voltage": {
@@ -7569,6 +8199,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "pack_out_voltage": {
@@ -7581,6 +8212,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "glv_voltage": {
@@ -7593,6 +8225,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "flow_rate": {
@@ -7605,6 +8238,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_pressure_1": {
@@ -7617,6 +8251,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "brake_pressure_2": {
@@ -7629,6 +8264,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "steering_output_steering_angle": {
@@ -7641,6 +8277,7 @@
     "unit": "degrees",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "converted angle for best sensor"
   },
   "steering_digital_oor": {
@@ -7653,6 +8290,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "steering_analog_oor": {
@@ -7665,6 +8303,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "steering_sensor_disagreement": {
@@ -7677,6 +8316,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "steering_dtheta_exceeded_analog": {
@@ -7689,6 +8329,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "steering_dtheta_exceeded_digital": {
@@ -7701,6 +8342,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "steering_both_sensors_fail": {
@@ -7713,6 +8355,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "steering_interface_sensor_error": {
@@ -7725,6 +8368,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "in_steering_calibration_state": {
@@ -7737,6 +8381,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Input from VCR to tell VCF if steering can calibrate or not"
   },
   "dim_button": {
@@ -7749,6 +8394,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "Dim button on dash"
   },
   "average_temp": {
@@ -7761,6 +8407,7 @@
     "unit": "Deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "min_temp": {
@@ -7773,6 +8420,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "max_temp": {
@@ -7785,6 +8433,7 @@
     "unit": "deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ic_id": {
@@ -7797,6 +8446,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "temp_0": {
@@ -7809,6 +8459,7 @@
     "unit": "Deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "temp_1": {
@@ -7821,6 +8472,7 @@
     "unit": "Deg C",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "total_pack_voltage": {
@@ -7833,6 +8485,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "voltage_0": {
@@ -7845,6 +8498,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "voltage_1": {
@@ -7857,6 +8511,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "voltage_2": {
@@ -7869,6 +8524,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "thermistor_id_0": {
@@ -7881,6 +8537,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "thermistor_id_1": {
@@ -7893,6 +8550,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "thermistor_id_2": {
@@ -7905,6 +8563,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "lifetime_ah_throughput": {
@@ -7917,6 +8576,7 @@
     "unit": "Ah",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "SoH": {
@@ -7929,6 +8589,7 @@
     "unit": "percent",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "SoE": {
@@ -7941,6 +8602,7 @@
     "unit": "percent",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "remaining_pack_wh": {
@@ -7953,6 +8615,7 @@
     "unit": "Wh",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "V1": {
@@ -7965,6 +8628,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ebs_air_pressure_1": {
@@ -7977,6 +8641,7 @@
     "unit": "psi",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ebs_air_pressure_2": {
@@ -7989,6 +8654,7 @@
     "unit": "psi",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ebs_pressure_ok": {
@@ -8001,6 +8667,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ebs_supervisor_ok": {
@@ -8013,6 +8680,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ebs_engaged": {
@@ -8025,6 +8693,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": "brakes activated"
   },
   "ebs_solenoid_1_on": {
@@ -8037,6 +8706,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "ebs_solenoid_2_on": {
@@ -8049,6 +8719,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "activate_ebs_solenoid_1": {
@@ -8061,6 +8732,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "activate_ebs_solenoid_2": {
@@ -8073,6 +8745,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   },
   "driverless_state": {
@@ -8085,6 +8758,7 @@
     "unit": "",
     "min": null,
     "max": null,
+    "enum": null,
     "description": ""
   }
 }

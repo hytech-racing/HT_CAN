@@ -4,6 +4,7 @@ import shlex
 
 
 def parse_sym_to_json(sym_filepath):
+    enums_db = {}
     signals_db = {}
     messages_db = []
 
@@ -15,11 +16,32 @@ def parse_sym_to_json(sym_filepath):
         print("Error: '{SENDRECEIVE}' block not found in sym file.")
         return
 
-    # Split into definitions (top half) and message mappings (bottom half)
     signals_block, messages_block = content.split("{SENDRECEIVE}", 1)
 
-    # --- 2. Parse Signals ---
-    # Only search within the signals_block
+    # --- 2. Parse Enums ---
+    enum_matches = re.findall(r"^Enum=([^\(]+)\(([^)]+)\)", signals_block, re.MULTILINE)
+
+    for name, values_str in enum_matches:
+        name = name.strip()
+        values_str = values_str.split("//")[0].strip()
+
+        lexer = shlex.shlex(values_str, posix=True)
+        lexer.whitespace = " (),\n\r"
+        lexer.whitespace_split = True
+        tokens = list(lexer)
+
+        if not tokens:
+            continue
+
+        enum_dict = {}
+        for token in tokens:
+            if "=" in token:
+                key, val = token.split("=", 1)
+                enum_dict[int(key)] = val.replace('"', "")
+
+        enums_db[name] = enum_dict
+
+    # --- 3. Parse Signals ---
     signal_lines = re.findall(r"^Sig=(.+)$", signals_block, re.MULTILINE)
 
     for line in signal_lines:
@@ -48,6 +70,7 @@ def parse_sym_to_json(sym_filepath):
         unit = ""
         min_val = None
         max_val = None
+        enum_ref = None
 
         # Handle implicit lengths and types
         if type_str == "float":
@@ -83,6 +106,8 @@ def parse_sym_to_json(sym_filepath):
                 min_val = float(token[5:])
             elif token.startswith("/max:"):
                 max_val = float(token[5:])
+            elif token.startswith("/e:"):
+                enum_ref = token[3:]
 
         signals_db[name] = {
             "length": length,
@@ -94,11 +119,11 @@ def parse_sym_to_json(sym_filepath):
             "unit": unit,
             "min": min_val,
             "max": max_val,
+            "enum": enum_ref,
             "description": comment,
         }
 
-    # --- 3. Parse Messages ---
-    # Only search within the messages_block
+    # --- 4. Parse Messages ---
     message_blocks = re.split(r"\[(.*?)\]", messages_block)[1:]
 
     for i in range(0, len(message_blocks), 2):
@@ -144,14 +169,17 @@ def parse_sym_to_json(sym_filepath):
                 }
             )
 
-    # --- 4. Export to JSON ---
+    # --- 5. Export to JSON ---
+    with open("enums.json", "w") as f:
+        json.dump(enums_db, f, indent=2)
+
     with open("signals.json", "w") as f:
         json.dump(signals_db, f, indent=2)
 
     with open("messages.json", "w") as f:
         json.dump(messages_db, f, indent=2)
 
-    print("Successfully generated signals.json and messages.json")
+    print("Successfully generated enums.json, signals.json, and messages.json")
 
 
 if __name__ == "__main__":

@@ -61,11 +61,18 @@ jobs:
                   # Fetch enum choices if the signal references one
                   enum_ref = sig_prop.get('enum')
                   choices = global_enums.get(enum_ref) if enum_ref else None
-                  
+                
+                  # Strip .0 floats back to strict integers to prevent ccoderdbc from generating _ro conversions
+                  scale_val = sig_prop.get('scale', 1)
+                  offset_val = sig_prop.get('offset', 0)
+                
+                  clean_scale = int(scale_val) if isinstance(scale_val, float) and scale_val.is_integer() else scale_val
+                  clean_offset = int(offset_val) if isinstance(offset_val, float) and offset_val.is_integer() else offset_val
+                
                   # Generate the conversion object for scale, offset, and choices
                   conv = BaseConversion.factory(
-                      scale=sig_prop.get('scale', 1.0),
-                      offset=sig_prop.get('offset', 0.0),
+                      scale=clean_scale,
+                      offset=clean_offset,
                       choices=choices,
                       is_float=sig_prop.get('is_float', False)
                   )

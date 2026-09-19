@@ -25,10 +25,11 @@ jobs:
           cat << 'EOF' > build_dbc.py
           import json, cantools
           from cantools.database import can
+          from cantools.database.conversion import BaseConversion
           
-          with open('json_lib/signals.json', 'r') as f:
+          with open('signals.json', 'r') as f:
               global_signals = json.load(f)
-          with open('json_lib/messages.json', 'r') as f:
+          with open('messages.json', 'r') as f:
               messages_data = json.load(f)
           
           db_messages = []
@@ -36,20 +37,27 @@ jobs:
               msg_signals = []
               for sig_ref in msg['signals']:
                   sig_prop = global_signals[sig_ref['name']]
+                  
+                  # Generate the conversion object for scale and offset
+                  conv = BaseConversion.factory(
+                      scale=sig_prop.get('scale', 1.0),
+                      offset=sig_prop.get('offset', 0.0),
+                      is_float=sig_prop.get('is_float', False)
+                  )
+                  
                   msg_signals.append(can.Signal(
                       name=sig_ref['name'],
                       start=sig_ref['start_bit'],
                       length=sig_prop['length'],
-                      byte_order='big_endian' if sig_prop['is_big_endian'] else 'little_endian',
-                      is_signed=sig_prop['is_signed'],
-                      scale=sig_prop['scale'],
-                      offset=sig_prop['offset'],
-                      unit=sig_prop['unit'],
+                      byte_order='big_endian' if sig_prop.get('is_big_endian', False) else 'little_endian',
+                      is_signed=sig_prop.get('is_signed', False),
+                      conversion=conv,
+                      unit=sig_prop.get('unit', ''),
                       comment=sig_prop.get('description', '')
                   ))
               
               db_messages.append(can.Message(
-                  frame_id=int(msg['id'], 16),
+                  frame_id=int(msg['id'], 16) if isinstance(msg['id'], str) else msg['id'],
                   name=msg['name'],
                   length=msg['dlc'],
                   is_extended_frame=msg.get('is_extended', False),

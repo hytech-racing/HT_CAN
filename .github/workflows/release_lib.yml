@@ -46,6 +46,17 @@ jobs:
               msg_signals = []
               for sig_ref in msg['signals']:
                   sig_prop = global_signals[sig_ref['name']]
+                  pcan_start = sig_ref['start_bit']
+                  is_big_endian = sig_prop.get('is_big_endian', False)
+                  
+                  # Convert PCAN LSB start bit to DBC MSB start bit for Big Endian signals
+                  if is_big_endian:
+                      dbc_start = min(
+                          pcan_start + sig_prop['length'] - 1, 
+                          (pcan_start // 8) * 8 + 7
+                      )
+                  else:
+                      dbc_start = pcan_start
                   
                   # Fetch enum choices if the signal references one
                   enum_ref = sig_prop.get('enum')
@@ -61,9 +72,9 @@ jobs:
                   
                   msg_signals.append(can.Signal(
                       name=sig_ref['name'],
-                      start=sig_ref['start_bit'],
+                      start=dbc_start,
                       length=sig_prop['length'],
-                      byte_order='big_endian' if sig_prop.get('is_big_endian', False) else 'little_endian',
+                      byte_order='big_endian' if is_big_endian else 'little_endian',
                       is_signed=sig_prop.get('is_signed', False),
                       conversion=conv,
                       minimum=sig_prop.get('min'),

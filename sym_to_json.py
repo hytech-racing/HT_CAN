@@ -72,8 +72,10 @@ def parse_sym_to_json(sym_filepath):
         max_val = None
         enum_ref = None
 
-        # Handle implicit lengths and types
-        if type_str == "float":
+        # Cross-reference the type keyword with known enums
+        if type_str in enums_db:
+            enum_ref = type_str
+        elif type_str == "float":
             length = 32
             is_signed = True
             is_float = True
@@ -170,13 +172,13 @@ def parse_sym_to_json(sym_filepath):
             )
 
     # --- 5. Export to JSON ---
-    with open("enums.json", "w") as f:
+    with open("json_lib/enums.json", "w") as f:
         json.dump(enums_db, f, indent=2)
 
-    with open("signals.json", "w") as f:
+    with open("json_lib/signals.json", "w") as f:
         json.dump(signals_db, f, indent=2)
 
-    with open("messages.json", "w") as f:
+    with open("json_lib/messages.json", "w") as f:
         json.dump(messages_db, f, indent=2)
 
     print("Successfully generated enums.json, signals.json, and messages.json")

@@ -8758,7 +8758,7 @@
     "unit": "",
     "min": null,
     "max": null,
-    "enum": null,
+    "enum": "driverless_stateE",
     "description": ""
   }
 }

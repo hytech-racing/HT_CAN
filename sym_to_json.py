@@ -1,5 +1,6 @@
 import re
 import json
+import shlex
 
 
 def parse_sym_to_json(sym_filepath):
@@ -9,49 +10,96 @@ def parse_sym_to_json(sym_filepath):
     with open(sym_filepath, "r") as file:
         content = file.read()
 
-    # --- 1. Parse Signals ---
-    # Matches: Sig=name type length [-m] [/u:unit] [/f:factor] [/o:offset] [// comment]
-    signal_lines = re.findall(r"^Sig=(.+)$", content, re.MULTILINE)
+    # --- 1. Split the File ---
+    if "{SENDRECEIVE}" not in content:
+        print("Error: '{SENDRECEIVE}' block not found in sym file.")
+        return
+
+    # Split into definitions (top half) and message mappings (bottom half)
+    signals_block, messages_block = content.split("{SENDRECEIVE}", 1)
+
+    # --- 2. Parse Signals ---
+    # Only search within the signals_block
+    signal_lines = re.findall(r"^Sig=(.+)$", signals_block, re.MULTILINE)
 
     for line in signal_lines:
         parts = line.split("//")
-        sig_def = parts[0].strip().split()
+        sig_str = parts[0].strip()
         comment = parts[1].strip() if len(parts) > 1 else ""
 
-        name = sig_def[0]
-        sig_type = sig_def[1]
-        length = int(sig_def[2]) if len(sig_def) > 2 and sig_def[2].isdigit() else 1
+        try:
+            tokens = shlex.split(sig_str)
+        except ValueError:
+            tokens = sig_str.split()
 
-        is_big_endian = "-m" in sig_def
-        is_signed = "signed" in sig_type and "unsigned" not in sig_type
+        if not tokens:
+            continue
 
-        # Extract modifiers
+        name = tokens[0]
+        type_str = tokens[1] if len(tokens) > 1 else "unsigned"
+
+        # Initial defaults
+        length = 1
+        is_signed = False
+        is_float = False
+        is_big_endian = False
         scale = 1.0
         offset = 0.0
         unit = ""
+        min_val = None
+        max_val = None
 
-        for item in sig_def:
-            if item.startswith("/f:"):
-                scale = float(item[3:])
-            elif item.startswith("/o:"):
-                offset = float(item[3:])
-            elif item.startswith("/u:"):
-                unit = item[3:].replace('"', "")
+        # Handle implicit lengths and types
+        if type_str == "float":
+            length = 32
+            is_signed = True
+            is_float = True
+        elif type_str == "double":
+            length = 64
+            is_signed = True
+            is_float = True
+        elif type_str == "signed":
+            is_signed = True
+        elif type_str == "bit":
+            length = 1
+
+        # Check if the next token is an explicit length integer
+        idx = 2
+        if idx < len(tokens) and tokens[idx].isdigit():
+            length = int(tokens[idx])
+            idx += 1
+
+        # Parse remaining modifiers sequentially
+        for token in tokens[idx:]:
+            if token == "-m":
+                is_big_endian = True
+            elif token.startswith("/f:"):
+                scale = float(token[3:])
+            elif token.startswith("/o:"):
+                offset = float(token[3:])
+            elif token.startswith("/u:"):
+                unit = token[3:]
+            elif token.startswith("/min:"):
+                min_val = float(token[5:])
+            elif token.startswith("/max:"):
+                max_val = float(token[5:])
 
         signals_db[name] = {
             "length": length,
             "is_signed": is_signed,
+            "is_float": is_float,
             "is_big_endian": is_big_endian,
             "scale": scale,
             "offset": offset,
             "unit": unit,
+            "min": min_val,
+            "max": max_val,
             "description": comment,
         }
 
-    # --- 2. Parse Messages ---
-    # Splits the SENDRECEIVE block into individual message blocks
-    sendreceive_block = content.split("{SENDRECEIVE}")[-1]
-    message_blocks = re.split(r"\[(.*?)\]", sendreceive_block)[1:]
+    # --- 3. Parse Messages ---
+    # Only search within the messages_block
+    message_blocks = re.split(r"\[(.*?)\]", messages_block)[1:]
 
     for i in range(0, len(message_blocks), 2):
         msg_name = message_blocks[i].strip()
@@ -65,6 +113,9 @@ def parse_sym_to_json(sym_filepath):
 
         for line in msg_body:
             line = line.strip()
+            if not line:
+                continue
+
             if line.startswith("ID="):
                 id_part = line.split("//")
                 id_str = id_part[0].split("=")[1].strip().replace("h", "")
@@ -93,7 +144,7 @@ def parse_sym_to_json(sym_filepath):
                 }
             )
 
-    # --- 3. Export to JSON ---
+    # --- 4. Export to JSON ---
     with open("signals.json", "w") as f:
         json.dump(signals_db, f, indent=2)
 
@@ -103,5 +154,5 @@ def parse_sym_to_json(sym_filepath):
     print("Successfully generated signals.json and messages.json")
 
 
-# Run the parser
-parse_sym_to_json("PCAN_project/hytech.sym")
+if __name__ == "__main__":
+    parse_sym_to_json("PCAN_project/hytech.sym")

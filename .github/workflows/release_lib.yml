@@ -47,16 +47,17 @@ jobs:
               for sig_ref in msg['signals']:
                   sig_prop = global_signals[sig_ref['name']]
                   
-                  # Generate the conversion object for scale and offset
-                  conv = BaseConversion.factory(
-                      scale=sig_prop.get('scale', 1.0),
-                      offset=sig_prop.get('offset', 0.0),
-                      is_float=sig_prop.get('is_float', False)
-                  )
-                  
                   # Fetch enum choices if the signal references one
                   enum_ref = sig_prop.get('enum')
                   choices = global_enums.get(enum_ref) if enum_ref else None
+                  
+                  # Generate the conversion object for scale, offset, and choices
+                  conv = BaseConversion.factory(
+                      scale=sig_prop.get('scale', 1.0),
+                      offset=sig_prop.get('offset', 0.0),
+                      choices=choices,
+                      is_float=sig_prop.get('is_float', False)
+                  )
                   
                   msg_signals.append(can.Signal(
                       name=sig_ref['name'],
@@ -68,7 +69,6 @@ jobs:
                       minimum=sig_prop.get('min'),
                       maximum=sig_prop.get('max'),
                       unit=sig_prop.get('unit', ''),
-                      choices=choices,
                       comment=sig_prop.get('description', '')
                   ))
               
@@ -91,6 +91,7 @@ jobs:
         with:
           name: dbcfile
           path: hytech.dbc
+  
   generate-proto:
     needs: generate-dbc
     runs-on: ubuntu-latest

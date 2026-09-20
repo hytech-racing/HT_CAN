@@ -95,6 +95,7 @@ jobs:
                   name=msg['name'],
                   length=msg['dlc'],
                   is_extended_frame=msg.get('is_extended', False),
+                  senders=msg.get('senders', ['ECU']), # Defaults to 'ECU' if no sender is in the JSON
                   signals=msg_signals,
                   comment=msg.get('description', '')
               ))

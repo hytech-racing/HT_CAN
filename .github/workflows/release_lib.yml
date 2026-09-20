@@ -48,11 +48,13 @@ jobs:
                   sig_prop = global_signals[sig_ref['name']]
                   pcan_start = sig_ref['start_bit']
                   is_big_endian = sig_prop.get('is_big_endian', False)
+                  length = sig_prop['length']
+                  is_signed = sig_prop.get('is_signed', False)
                   
                   # Convert PCAN LSB start bit to DBC MSB start bit for Big Endian signals
                   if is_big_endian:
                       dbc_start = min(
-                          pcan_start + sig_prop['length'] - 1, 
+                          pcan_start + length - 1, 
                           (pcan_start // 8) * 8 + 7
                       )
                   else:
@@ -61,14 +63,25 @@ jobs:
                   # Fetch enum choices if the signal references one
                   enum_ref = sig_prop.get('enum')
                   choices = global_enums.get(enum_ref) if enum_ref else None
-                
+                  
                   # Strip .0 floats back to strict integers to prevent ccoderdbc from generating _ro conversions
                   scale_val = sig_prop.get('scale', 1)
                   offset_val = sig_prop.get('offset', 0)
-                
+                  
                   clean_scale = int(scale_val) if isinstance(scale_val, float) and scale_val.is_integer() else scale_val
                   clean_offset = int(offset_val) if isinstance(offset_val, float) and offset_val.is_integer() else offset_val
-                
+                  
+                  # Calculate theoretical min/max bounds based on bit length
+                  raw_min = -(2 ** (length - 1)) if is_signed else 0
+                  raw_max = (2 ** (length - 1)) - 1 if is_signed else (2 ** length) - 1
+                  
+                  calc_min = (raw_min * clean_scale) + clean_offset
+                  calc_max = (raw_max * clean_scale) + clean_offset
+                  
+                  # Use explicitly defined limits if they exist, otherwise use the calculated limits
+                  final_min = sig_prop.get('min') if sig_prop.get('min') is not None else calc_min
+                  final_max = sig_prop.get('max') if sig_prop.get('max') is not None else calc_max
+                  
                   # Generate the conversion object for scale, offset, and choices
                   conv = BaseConversion.factory(
                       scale=clean_scale,
@@ -80,12 +93,12 @@ jobs:
                   msg_signals.append(can.Signal(
                       name=sig_ref['name'],
                       start=dbc_start,
-                      length=sig_prop['length'],
+                      length=length,
                       byte_order='big_endian' if is_big_endian else 'little_endian',
-                      is_signed=sig_prop.get('is_signed', False),
+                      is_signed=is_signed,
                       conversion=conv,
-                      minimum=sig_prop.get('min'),
-                      maximum=sig_prop.get('max'),
+                      minimum=final_min,
+                      maximum=final_max,
                       unit=sig_prop.get('unit', ''),
                       comment=sig_prop.get('description', '')
                   ))
@@ -95,7 +108,6 @@ jobs:
                   name=msg['name'],
                   length=msg['dlc'],
                   is_extended_frame=msg.get('is_extended', False),
-                  senders=msg.get('senders', ['ECU']), # Defaults to 'ECU' if no sender is in the JSON
                   signals=msg_signals,
                   comment=msg.get('description', '')
               ))

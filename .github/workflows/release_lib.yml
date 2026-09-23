@@ -44,11 +44,25 @@ jobs:
           db_messages = []
           for msg in messages_data:
               msg_signals = []
+              current_bit = 0
+              max_bit = 0
+              
               for sig_ref in msg['signals']:
                   sig_prop = global_signals[sig_ref['name']]
-                  pcan_start = sig_ref['start_bit']
-                  is_big_endian = sig_prop.get('is_big_endian', False)
                   length = sig_prop['length']
+                  
+                  # Automatically calculate start bit sequentially if missing
+                  if 'start_bit' in sig_ref:
+                      pcan_start = sig_ref['start_bit']
+                  else:
+                      pcan_start = current_bit
+                      
+                  # Advance current_bit for the next signal and update max bounds
+                  current_bit = pcan_start + length
+                  if current_bit > max_bit:
+                      max_bit = current_bit
+                      
+                  is_big_endian = sig_prop.get('is_big_endian', False)
                   is_signed = sig_prop.get('is_signed', False)
                   
                   # Convert PCAN LSB start bit to DBC MSB start bit for Big Endian signals
@@ -103,17 +117,24 @@ jobs:
                       comment=sig_prop.get('description', '')
                   ))
               
+              # Automatically calculate DLC based on the highest bit used if missing
+              if 'dlc' in msg:
+                  calculated_dlc = msg['dlc']
+              else:
+                  calculated_dlc = (max_bit + 7) // 8
+              
               db_messages.append(can.Message(
                   frame_id=int(msg['id'], 16) if isinstance(msg['id'], str) else msg['id'],
                   name=msg['name'],
-                  length=msg['dlc'],
+                  length=calculated_dlc,
                   is_extended_frame=msg.get('is_extended', False),
+                  senders=msg.get('senders', ['ECU']),
                   signals=msg_signals,
                   comment=msg.get('description', '')
               ))
           
           db = cantools.database.Database(messages=db_messages)
-          cantools.database.dump_file(db, 'hytech.dbc')
+          cantools.database.dump_file(db, 'ht_can_lib.dbc')
           EOF
           python build_dbc.py
 
@@ -121,8 +142,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dbcfile
-          path: hytech.dbc
-  
+          path: ht_can_lib.dbc
   generate-proto:
     needs: generate-dbc
     runs-on: ubuntu-latest
@@ -146,7 +166,7 @@ jobs:
 
       - name: Convert DBC to PROTO
         run: |
-          python dbc_to_proto/dbc_to_proto.py dbc/ hytech.proto
+          python dbc_to_proto/dbc_to_proto.py dbc/ ht_can_lib.proto
 
       - name: Set up Protobuf tools and generate HTML file
         run: |
@@ -159,7 +179,7 @@ jobs:
 
           curl -o proto/nanopb/google/protobuf/descriptor.proto https://raw.githubusercontent.com/nanopb/nanopb/nanopb-0.4.9.1/generator/proto/google/protobuf/descriptor.proto
           curl -o proto/nanopb/nanopb.proto https://raw.githubusercontent.com/nanopb/nanopb/nanopb-0.4.9.1/generator/proto/nanopb.proto
-          protoc -I=./. -I=proto/nanopb --doc_out=./docs --doc_opt=html,Release-${{github.run_number}}.html hytech.proto
+          protoc -I=./. -I=proto/nanopb --doc_out=./docs --doc_opt=html,Release-${{github.run_number}}.html ht_can_lib.proto
 
       - name: Upload html artifact
         uses: actions/upload-artifact@v4
@@ -171,12 +191,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: protofile
-          path: hytech.proto
+          path: ht_can_lib.proto
 
       - name: Generate Python protobuf
         run: |
           mkdir -p python_can_lib
-          protoc --python_out=python_can_lib hytech.proto
+          protoc --python_out=python_can_lib ht_can_lib.proto
           tar -czvf python_proto_lib.tar.gz python_can_lib
 
       - name: Upload python protobuf artifact
@@ -214,22 +234,22 @@ jobs:
 
       - name: generate code
         run: |
-          mkdir -p /hytech_can_lib
+          mkdir -p /ht_can_lib.can_lib
           cd /app
-          ./build/coderdbc -rw -dbc /dbc/hytech.dbc -out /hytech_can_lib -drvname hytech
+          ./build/coderdbc -rw -dbc /dbc/ht_can_lib.dbc -out /ht_can_lib.can_lib -drvname hytech
           mkdir -p /output
-          echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /hytech_can_lib/library.json
-          tar -czvf /output/can_lib.tar.gz /hytech_can_lib
+          echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /ht_can_lib.can_lib/library.json
+          tar -czvf /output/can_lib.tar.gz /ht_can_lib.can_lib
 
       - name: generate drivebrain lib release
         run:  |
-          mkdir -p /hytech_drivebrain_lib/proto
-          mkdir -p /hytech_drivebrain_lib/dbc
+          mkdir -p /ht_can_lib.drivebrain_lib/proto
+          mkdir -p /ht_can_lib.drivebrain_lib/dbc
 
-          cp hytech.proto /hytech_drivebrain_lib/proto
-          cp /dbc/hytech.dbc /hytech_drivebrain_lib/dbc/
-          cp CMakeLists.txt /hytech_drivebrain_lib
-          tar -czvf /output/drivebrain_can_lib.tar.gz /hytech_drivebrain_lib
+          cp ht_can_lib.proto /ht_can_lib.drivebrain_lib/proto
+          cp /dbc/ht_can_lib.dbc /ht_can_lib.drivebrain_lib/dbc/
+          cp CMakeLists.txt /ht_can_lib.drivebrain_lib
+          tar -czvf /output/drivebrain_can_lib.tar.gz /ht_can_lib.drivebrain_lib
 
       - name: Create Release
         id: create_release
@@ -244,11 +264,11 @@ jobs:
 
       - name: Create Version Header
         run: |
-          mkdir -p /hytech_can_lib/inc
-          cat << EOF > /hytech_can_lib/inc/ht_can_version.h
+          mkdir -p /ht_can_lib.can_lib/inc
+          cat << EOF > /ht_can_lib.can_lib/inc/ht_can_version.h
           /**
            * @file ht_can_version.h
-           * @brief Auto-generated version header for HyTech CAN Library
+           * @brief Auto-generated version header for ht_can_lib.CAN Library
            * @details Generated by GitHub Actions (CI/CD) - Do not modify manually
            */
 
@@ -256,7 +276,7 @@ jobs:
           #define HT_CAN_VERSION_H
 
           /**
-           * @brief Version number of the HyTech CAN Library
+           * @brief Version number of the ht_can_lib.CAN Library
            * @details This is automatically updated with each GitHub Actions run
            */
           #define HT_CAN_LIB_VERSION ${{ github.run_number }}
@@ -265,7 +285,7 @@ jobs:
           EOF
 
           # Also update the tar archive to include the new file
-          tar -czvf /output/can_lib.tar.gz /hytech_can_lib
+          tar -czvf /output/can_lib.tar.gz /ht_can_lib.can_lib
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1.0.2
@@ -287,24 +307,24 @@ jobs:
           asset_name: drivebrain_can_lib.tar.gz
           asset_content_type: application/zip
 
-      - name: Upload hytech.dbc
+      - name: Upload ht_can_lib.dbc
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /dbc/hytech.dbc
-          asset_name: hytech.dbc
+          asset_path: /dbc/ht_can_lib.dbc
+          asset_name: ht_can_lib.dbc
           asset_content_type: text/plain
 
-      - name: Upload hytech.proto
+      - name: Upload ht_can_lib.proto
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: hytech.proto
-          asset_name: hytech.proto
+          asset_path: ht_can_lib.proto
+          asset_name: ht_can_lib.proto
           asset_content_type: text/plain
 
       - name: Download html artifact

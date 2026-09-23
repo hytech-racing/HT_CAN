@@ -118,4 +118,4 @@ for msg in messages_data:
     )
 
 db = cantools.database.Database(messages=db_messages)
-cantools.database.dump_file(db, "ht_can_lib.dbc")
+cantools.database.dump_file(db, "ht_can.dbc")

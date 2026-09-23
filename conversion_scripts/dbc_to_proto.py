@@ -137,17 +137,17 @@ if len(sys.argv) > 1:
     path_to_dbc = sys.argv[1]
 else:
     path_to_dbc = os.environ.get("DBC_PATH")
-full_path = os.path.join(path_to_dbc, "ht_can_lib.dbc")
+full_path = os.path.join(path_to_dbc, "ht_can.dbc")
 db = cantools.database.load_file(full_path)
 content = ""
-with open("ht_can_lib.proto", "w+") as proto_file:
+with open("ht_can.proto", "w+") as proto_file:
     for msg in db.messages:
         mcomment = msg.comment
         proto_file = append_proto_message_from_CAN_message(proto_file, msg, mcomment)
     proto_file.seek(0)
     content = proto_file.read()
 
-with open("ht_can_lib.proto", "w+") as proto_file:
+with open("ht_can.proto", "w+") as proto_file:
     proto_file.write('syntax = "proto3";\n\n')
     proto_file.write("package hytech;\n\n")
     for key in enum_definitions:

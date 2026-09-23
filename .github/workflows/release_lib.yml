@@ -167,7 +167,7 @@ jobs:
            * @brief Version number of the ht_can.CAN Library
            * @details This is automatically updated with each GitHub Actions run
            */
-          #define ht_can_VERSION ${{ github.run_number }}
+          #define HT_CAN_VERSION ${{ github.run_number }}
 
           #endif /* HT_CAN_VERSION_H */
           EOF

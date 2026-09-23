@@ -8,7 +8,7 @@ import sys
 enum_definitions = {}
 
 
-class ht_can_lib.ANmsg:
+class HyTechCANmsg:
     def __init__(self):
         self.can_id_name = ""
         self.can_id_hex = 0x0
@@ -149,8 +149,7 @@ with open("ht_can_lib.proto", "w+") as proto_file:
 
 with open("ht_can_lib.proto", "w+") as proto_file:
     proto_file.write('syntax = "proto3";\n\n')
-    proto_file.write("package ht_can_lib.\n\n")
+    proto_file.write("package hytech;\n\n")
     for key in enum_definitions:
         proto_file.write(enum_definitions[key])
     proto_file.write(content)
-

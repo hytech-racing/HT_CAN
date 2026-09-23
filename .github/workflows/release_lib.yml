@@ -236,7 +236,7 @@ jobs:
         run: |
           mkdir -p /ht_can_lib.can_lib
           cd /app
-          ./build/coderdbc -rw -dbc /dbc/ht_can_lib.dbc -out /ht_can_lib.can_lib -drvname hytech
+          ./build/coderdbc -rw -dbc /dbc/ht_can_lib.dbc -out /ht_can_lib.can_lib -drvname ht_can_lib
           mkdir -p /output
           echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /ht_can_lib.can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /ht_can_lib.can_lib

@@ -1,4 +1,4 @@
-import json, cantools
+import json, cantools, os
 from cantools.database import can
 from cantools.database.conversion import BaseConversion
 
@@ -117,5 +117,7 @@ for msg in messages_data:
         )
     )
 
-db = cantools.database.Database(messages=db_messages)
+release_number = os.getenv("RELEASE_NUMBER", "0")
+
+db = cantools.database.Database(messages=db_messages, version=release_number)
 cantools.database.dump_file(db, "ht_can.dbc")

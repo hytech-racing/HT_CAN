@@ -11,8 +11,8 @@ find_package(Protobuf REQUIRED CONFIG)
 
 file(MAKE_DIRECTORY ${PROTO_BINARY_DIR})
 
-add_library(${OBJECT_LIBRARY} OBJECT
-    proto/hytech.proto
+add_library(${OBJECT_LIBRARY} OBJECT 
+    proto/ht_can.proto
 )
 
 target_include_directories(${OBJECT_LIBRARY} 

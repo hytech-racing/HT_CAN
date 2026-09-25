@@ -1,0 +1,2826 @@
+[
+  {
+    "name": "BMS_STATUS",
+    "id": "0x0DB",
+    "is_extended": false,
+    "dlc": 1,
+    "description": "",
+    "signals": [
+      {
+        "name": "acu_state",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "BMS_VOLTAGES",
+    "id": "0x0D7",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "average_cell_voltage",
+        "start_bit": 0
+      },
+      {
+        "name": "min_cell_voltage",
+        "start_bit": 16
+      },
+      {
+        "name": "max_cell_voltage",
+        "start_bit": 32
+      },
+      {
+        "name": "total_pack_voltage",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "BMS_DETAILED_TEMPS",
+    "id": "0x0DA",
+    "is_extended": false,
+    "dlc": 7,
+    "description": "",
+    "signals": [
+      {
+        "name": "group_id",
+        "start_bit": 0
+      },
+      {
+        "name": "ic_id",
+        "start_bit": 4
+      },
+      {
+        "name": "thermistor_id_0",
+        "start_bit": 8
+      },
+      {
+        "name": "thermistor_id_1",
+        "start_bit": 24
+      },
+      {
+        "name": "thermistor_id_2",
+        "start_bit": 40
+      }
+    ]
+  },
+  {
+    "name": "BMS_DETAILED_VOLTAGES",
+    "id": "0x0D8",
+    "is_extended": false,
+    "dlc": 7,
+    "description": "",
+    "signals": [
+      {
+        "name": "group_id",
+        "start_bit": 0
+      },
+      {
+        "name": "ic_id",
+        "start_bit": 4
+      },
+      {
+        "name": "voltage_0",
+        "start_bit": 8
+      },
+      {
+        "name": "voltage_1",
+        "start_bit": 24
+      },
+      {
+        "name": "voltage_2",
+        "start_bit": 40
+      }
+    ]
+  },
+  {
+    "name": "BMS_BOARD_DETAILED_TEMPS",
+    "id": "0x0D6",
+    "is_extended": false,
+    "dlc": 5,
+    "description": "",
+    "signals": [
+      {
+        "name": "ic_id",
+        "start_bit": 0
+      },
+      {
+        "name": "temp_0",
+        "start_bit": 8
+      },
+      {
+        "name": "temp_1",
+        "start_bit": 24
+      }
+    ]
+  },
+  {
+    "name": "BMS_TEMPS",
+    "id": "0x0D9",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_board_temp",
+        "start_bit": 0
+      },
+      {
+        "name": "min_cell_temp",
+        "start_bit": 16
+      },
+      {
+        "name": "max_cell_temp",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "CCU_STATUS",
+    "id": "0x0DD",
+    "is_extended": false,
+    "dlc": 1,
+    "description": "",
+    "signals": [
+      {
+        "name": "charger_enabled",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "CHARGER_CONTROL",
+    "id": "0x1806E5F4",
+    "is_extended": true,
+    "dlc": 5,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_charging_voltage_high",
+        "start_bit": 0
+      },
+      {
+        "name": "max_charging_voltage_low",
+        "start_bit": 8
+      },
+      {
+        "name": "max_charging_current_high",
+        "start_bit": 16
+      },
+      {
+        "name": "max_charging_current_low",
+        "start_bit": 24
+      },
+      {
+        "name": "control",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "CHARGER_DATA",
+    "id": "0x18FF50E5",
+    "is_extended": true,
+    "dlc": 7,
+    "description": "",
+    "signals": [
+      {
+        "name": "output_dc_voltage_high",
+        "start_bit": 0
+      },
+      {
+        "name": "output_dc_voltage_low",
+        "start_bit": 8
+      },
+      {
+        "name": "output_current_high",
+        "start_bit": 16
+      },
+      {
+        "name": "output_current_low",
+        "start_bit": 24
+      },
+      {
+        "name": "flags",
+        "start_bit": 32
+      },
+      {
+        "name": "input_ac_voltage_high",
+        "start_bit": 40
+      },
+      {
+        "name": "input_ac_voltage_low",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "DASHBOARD_BUZZER_CONTROL",
+    "id": "0x7F1",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "",
+    "signals": [
+      {
+        "name": "dash_buzzer_flag",
+        "start_bit": 0
+      },
+      {
+        "name": "in_pedal_calibration_state",
+        "start_bit": 1
+      },
+      {
+        "name": "torque_limit_enum_value",
+        "start_bit": 3
+      },
+      {
+        "name": "in_steering_calibration_state",
+        "start_bit": 2
+      }
+    ]
+  },
+  {
+    "name": "DASH_INPUT",
+    "id": "0x300",
+    "is_extended": false,
+    "dlc": 3,
+    "description": "",
+    "signals": [
+      {
+        "name": "led_dimmer_button",
+        "start_bit": 0
+      },
+      {
+        "name": "preset_button",
+        "start_bit": 1
+      },
+      {
+        "name": "motor_controller_cycle_button",
+        "start_bit": 2
+      },
+      {
+        "name": "mode_button",
+        "start_bit": 3
+      },
+      {
+        "name": "start_button",
+        "start_bit": 4
+      },
+      {
+        "name": "data_button_is_pressed",
+        "start_bit": 5
+      },
+      {
+        "name": "left_shifter_button",
+        "start_bit": 6
+      },
+      {
+        "name": "right_shifter_button",
+        "start_bit": 7
+      },
+      {
+        "name": "dash_dial_mode",
+        "start_bit": 8
+      },
+      {
+        "name": "dim_button",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "DRIVEBRAIN_DESIRED_TORQUE_INPUT",
+    "id": "0x0F3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "drivebrain_torque_fl",
+        "start_bit": 0
+      },
+      {
+        "name": "drivebrain_torque_fr",
+        "start_bit": 16
+      },
+      {
+        "name": "drivebrain_torque_rl",
+        "start_bit": 32
+      },
+      {
+        "name": "drivebrain_torque_rr",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "DRIVEBRAIN_SPEED_SET_INPUT",
+    "id": "0x0F2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "drivebrain_set_rpm_fl",
+        "start_bit": 0
+      },
+      {
+        "name": "drivebrain_set_rpm_fr",
+        "start_bit": 16
+      },
+      {
+        "name": "drivebrain_set_rpm_rl",
+        "start_bit": 32
+      },
+      {
+        "name": "drivebrain_set_rpm_rr",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "DRIVEBRAIN_TORQUE_LIM_INPUT",
+    "id": "0x0F1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "drivebrain_torque_fl",
+        "start_bit": 0
+      },
+      {
+        "name": "drivebrain_torque_fr",
+        "start_bit": 16
+      },
+      {
+        "name": "drivebrain_torque_rl",
+        "start_bit": 32
+      },
+      {
+        "name": "drivebrain_torque_rr",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "DRIVEBRAIN_STEERING_INPUT",
+    "id": "0x0F4",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "",
+    "signals": [
+      {
+        "name": "drivebrain_steering",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "EM_MEASUREMENT",
+    "id": "0x100",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Contains the voltage and current readings from the Energy Meter. Sent by the AMS.",
+    "signals": [
+      {
+        "name": "em_current",
+        "start_bit": 0
+      },
+      {
+        "name": "em_voltage",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "EM_STATUS",
+    "id": "0x400",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "Forwarded directly from the Energy Meter with no modifications. See datasheet for more specifications.",
+    "signals": [
+      {
+        "name": "voltage_gain",
+        "start_bit": 0
+      },
+      {
+        "name": "current_gain",
+        "start_bit": 4
+      },
+      {
+        "name": "overvoltage_error",
+        "start_bit": 8
+      },
+      {
+        "name": "overpower_error",
+        "start_bit": 9
+      },
+      {
+        "name": "logging",
+        "start_bit": 10
+      }
+    ]
+  },
+  {
+    "name": "FRONT_SUSPENSION",
+    "id": "0x0ED",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "fl_load_cell",
+        "start_bit": 0
+      },
+      {
+        "name": "fl_shock_pot",
+        "start_bit": 16
+      },
+      {
+        "name": "fr_load_cell",
+        "start_bit": 32
+      },
+      {
+        "name": "fr_shock_pot",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FRONT_THERMISTORS",
+    "id": "0x0F5",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "thermistor_motor_fl",
+        "start_bit": 0
+      },
+      {
+        "name": "thermistor_motor_fr",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV1_CONTROL_INPUT",
+    "id": "0x099",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_setpoint_rpm",
+        "start_bit": 0
+      },
+      {
+        "name": "positive_torque_limit",
+        "start_bit": 16
+      },
+      {
+        "name": "negative_torque_limit",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV1_CONTROL_PARAMETER",
+    "id": "0x105",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV1_CONTROL_WORD",
+    "id": "0x092",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_enable",
+        "start_bit": 8
+      },
+      {
+        "name": "hv_enable",
+        "start_bit": 9
+      },
+      {
+        "name": "driver_enable",
+        "start_bit": 10
+      },
+      {
+        "name": "remove_error",
+        "start_bit": 11
+      }
+    ]
+  },
+  {
+    "name": "INV1_DYNAMICS",
+    "id": "0x082",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "actual_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "actual_torque_nm",
+        "start_bit": 32
+      },
+      {
+        "name": "actual_speed_rpm",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV1_FEEDBACK",
+    "id": "0x084",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV1_POWER",
+    "id": "0x083",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "reactive_power_var",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS",
+    "id": "0x080",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "system_ready",
+        "start_bit": 8
+      },
+      {
+        "name": "error",
+        "start_bit": 9
+      },
+      {
+        "name": "warning",
+        "start_bit": 10
+      },
+      {
+        "name": "quit_dc_on",
+        "start_bit": 11
+      },
+      {
+        "name": "dc_on",
+        "start_bit": 12
+      },
+      {
+        "name": "quit_inverter_on",
+        "start_bit": 13
+      },
+      {
+        "name": "inverter_on",
+        "start_bit": 14
+      },
+      {
+        "name": "derating_on",
+        "start_bit": 15
+      },
+      {
+        "name": "dc_bus_voltage",
+        "start_bit": 16
+      },
+      {
+        "name": "diagnostic_number",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV1_TEMPS",
+    "id": "0x081",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "motor_temp",
+        "start_bit": 0
+      },
+      {
+        "name": "inverter_temp",
+        "start_bit": 16
+      },
+      {
+        "name": "igbt_temp",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_CONTROL_INPUT",
+    "id": "0x102",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_setpoint_rpm",
+        "start_bit": 0
+      },
+      {
+        "name": "positive_torque_limit",
+        "start_bit": 16
+      },
+      {
+        "name": "negative_torque_limit",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_CONTROL_PARAMETER",
+    "id": "0x106",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_CONTROL_WORD",
+    "id": "0x093",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_enable",
+        "start_bit": 8
+      },
+      {
+        "name": "hv_enable",
+        "start_bit": 9
+      },
+      {
+        "name": "driver_enable",
+        "start_bit": 10
+      },
+      {
+        "name": "remove_error",
+        "start_bit": 11
+      }
+    ]
+  },
+  {
+    "name": "INV2_DYNAMICS",
+    "id": "0x087",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "actual_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "actual_torque_nm",
+        "start_bit": 32
+      },
+      {
+        "name": "actual_speed_rpm",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV2_FEEDBACK",
+    "id": "0x089",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_POWER",
+    "id": "0x088",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "reactive_power_var",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS",
+    "id": "0x085",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "system_ready",
+        "start_bit": 8
+      },
+      {
+        "name": "error",
+        "start_bit": 9
+      },
+      {
+        "name": "warning",
+        "start_bit": 10
+      },
+      {
+        "name": "quit_dc_on",
+        "start_bit": 11
+      },
+      {
+        "name": "dc_on",
+        "start_bit": 12
+      },
+      {
+        "name": "quit_inverter_on",
+        "start_bit": 13
+      },
+      {
+        "name": "inverter_on",
+        "start_bit": 14
+      },
+      {
+        "name": "derating_on",
+        "start_bit": 15
+      },
+      {
+        "name": "dc_bus_voltage",
+        "start_bit": 16
+      },
+      {
+        "name": "diagnostic_number",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_TEMPS",
+    "id": "0x086",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "motor_temp",
+        "start_bit": 0
+      },
+      {
+        "name": "inverter_temp",
+        "start_bit": 16
+      },
+      {
+        "name": "igbt_temp",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_CONTROL_INPUT",
+    "id": "0x097",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_setpoint_rpm",
+        "start_bit": 0
+      },
+      {
+        "name": "positive_torque_limit",
+        "start_bit": 16
+      },
+      {
+        "name": "negative_torque_limit",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_CONTROL_PARAMETER",
+    "id": "0x103",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_CONTROL_WORD",
+    "id": "0x090",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_enable",
+        "start_bit": 8
+      },
+      {
+        "name": "hv_enable",
+        "start_bit": 9
+      },
+      {
+        "name": "driver_enable",
+        "start_bit": 10
+      },
+      {
+        "name": "remove_error",
+        "start_bit": 11
+      }
+    ]
+  },
+  {
+    "name": "INV3_DYNAMICS",
+    "id": "0x072",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "actual_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "actual_torque_nm",
+        "start_bit": 32
+      },
+      {
+        "name": "actual_speed_rpm",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV3_FEEDBACK",
+    "id": "0x074",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_POWER",
+    "id": "0x073",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "reactive_power_var",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS",
+    "id": "0x070",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "system_ready",
+        "start_bit": 8
+      },
+      {
+        "name": "error",
+        "start_bit": 9
+      },
+      {
+        "name": "warning",
+        "start_bit": 10
+      },
+      {
+        "name": "quit_dc_on",
+        "start_bit": 11
+      },
+      {
+        "name": "dc_on",
+        "start_bit": 12
+      },
+      {
+        "name": "quit_inverter_on",
+        "start_bit": 13
+      },
+      {
+        "name": "inverter_on",
+        "start_bit": 14
+      },
+      {
+        "name": "derating_on",
+        "start_bit": 15
+      },
+      {
+        "name": "dc_bus_voltage",
+        "start_bit": 16
+      },
+      {
+        "name": "diagnostic_number",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_TEMPS",
+    "id": "0x071",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "motor_temp",
+        "start_bit": 0
+      },
+      {
+        "name": "inverter_temp",
+        "start_bit": 16
+      },
+      {
+        "name": "igbt_temp",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_CONTROL_INPUT",
+    "id": "0x098",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_setpoint_rpm",
+        "start_bit": 0
+      },
+      {
+        "name": "positive_torque_limit",
+        "start_bit": 16
+      },
+      {
+        "name": "negative_torque_limit",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_CONTROL_PARAMETER",
+    "id": "0x104",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_CONTROL_WORD",
+    "id": "0x091",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_enable",
+        "start_bit": 8
+      },
+      {
+        "name": "hv_enable",
+        "start_bit": 9
+      },
+      {
+        "name": "driver_enable",
+        "start_bit": 10
+      },
+      {
+        "name": "remove_error",
+        "start_bit": 11
+      }
+    ]
+  },
+  {
+    "name": "INV4_DYNAMICS",
+    "id": "0x077",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "actual_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "actual_torque_nm",
+        "start_bit": 32
+      },
+      {
+        "name": "actual_speed_rpm",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV4_FEEDBACK",
+    "id": "0x079",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "speed_control_kp",
+        "start_bit": 0
+      },
+      {
+        "name": "speed_control_ki",
+        "start_bit": 16
+      },
+      {
+        "name": "speed_control_kd",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_POWER",
+    "id": "0x078",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_power_w",
+        "start_bit": 0
+      },
+      {
+        "name": "reactive_power_var",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS",
+    "id": "0x075",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "system_ready",
+        "start_bit": 8
+      },
+      {
+        "name": "error",
+        "start_bit": 9
+      },
+      {
+        "name": "warning",
+        "start_bit": 10
+      },
+      {
+        "name": "quit_dc_on",
+        "start_bit": 11
+      },
+      {
+        "name": "dc_on",
+        "start_bit": 12
+      },
+      {
+        "name": "quit_inverter_on",
+        "start_bit": 13
+      },
+      {
+        "name": "inverter_on",
+        "start_bit": 14
+      },
+      {
+        "name": "derating_on",
+        "start_bit": 15
+      },
+      {
+        "name": "dc_bus_voltage",
+        "start_bit": 16
+      },
+      {
+        "name": "diagnostic_number",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_TEMPS",
+    "id": "0x076",
+    "is_extended": false,
+    "dlc": 6,
+    "description": "",
+    "signals": [
+      {
+        "name": "motor_temp",
+        "start_bit": 0
+      },
+      {
+        "name": "inverter_temp",
+        "start_bit": 16
+      },
+      {
+        "name": "igbt_temp",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "LF_TTPMS_1",
+    "id": "0x424",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LF_TTPMS_SN",
+        "start_bit": 0
+      },
+      {
+        "name": "LF_TTPMS_BAT_V",
+        "start_bit": 16
+      },
+      {
+        "name": "LF_TTPMS_P",
+        "start_bit": 32
+      },
+      {
+        "name": "LF_TTPMS_P_GAUGE",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LF_TTPMS_2",
+    "id": "0x425",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LF_TTPMS_T1",
+        "start_bit": 0
+      },
+      {
+        "name": "LF_TTPMS_T2",
+        "start_bit": 16
+      },
+      {
+        "name": "LF_TTPMS_T3",
+        "start_bit": 32
+      },
+      {
+        "name": "LF_TTPMS_T4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LF_TTPMS_3",
+    "id": "0x426",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LF_TTPMS_T5",
+        "start_bit": 0
+      },
+      {
+        "name": "LF_TTPMS_T6",
+        "start_bit": 16
+      },
+      {
+        "name": "LF_TTPMS_T7",
+        "start_bit": 32
+      },
+      {
+        "name": "LF_TTPMS_T8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LF_TTPMS_4",
+    "id": "0x427",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LF_TTPMS_T9",
+        "start_bit": 0
+      },
+      {
+        "name": "LF_TTPMS_T10",
+        "start_bit": 16
+      },
+      {
+        "name": "LF_TTPMS_T11",
+        "start_bit": 32
+      },
+      {
+        "name": "LF_TTPMS_T12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LF_TTPMS_5",
+    "id": "0x428",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LF_TTPMS_T13",
+        "start_bit": 0
+      },
+      {
+        "name": "LF_TTPMS_T14",
+        "start_bit": 16
+      },
+      {
+        "name": "LF_TTPMS_T15",
+        "start_bit": 32
+      },
+      {
+        "name": "LF_TTPMS_T16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LF_TTPMS_6",
+    "id": "0x429",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LF_TTPMS_TC",
+        "start_bit": 0
+      },
+      {
+        "name": "LF_TTPMS_RSSI",
+        "start_bit": 16
+      },
+      {
+        "name": "LF_TTPMS_T",
+        "start_bit": 32
+      },
+      {
+        "name": "LF_TTPMS_NODE_ID",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RF_TTPMS_1",
+    "id": "0x42A",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RF_TTPMS_SN",
+        "start_bit": 0
+      },
+      {
+        "name": "RF_TTPMS_BAT_V",
+        "start_bit": 16
+      },
+      {
+        "name": "RF_TTPMS_P",
+        "start_bit": 32
+      },
+      {
+        "name": "RF_TTPMS_P_GAUGE",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RF_TTPMS_2",
+    "id": "0x42B",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RF_TTPMS_T1",
+        "start_bit": 0
+      },
+      {
+        "name": "RF_TTPMS_T2",
+        "start_bit": 16
+      },
+      {
+        "name": "RF_TTPMS_T3",
+        "start_bit": 32
+      },
+      {
+        "name": "RF_TTPMS_T4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RF_TTPMS_3",
+    "id": "0x42C",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RF_TTPMS_T5",
+        "start_bit": 0
+      },
+      {
+        "name": "RF_TTPMS_T6",
+        "start_bit": 16
+      },
+      {
+        "name": "RF_TTPMS_T7",
+        "start_bit": 32
+      },
+      {
+        "name": "RF_TTPMS_T8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RF_TTPMS_4",
+    "id": "0x42D",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RF_TTPMS_T9",
+        "start_bit": 0
+      },
+      {
+        "name": "RF_TTPMS_T10",
+        "start_bit": 16
+      },
+      {
+        "name": "RF_TTPMS_T11",
+        "start_bit": 32
+      },
+      {
+        "name": "RF_TTPMS_T12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RF_TTPMS_5",
+    "id": "0x42E",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RF_TTPMS_T13",
+        "start_bit": 0
+      },
+      {
+        "name": "RF_TTPMS_T14",
+        "start_bit": 16
+      },
+      {
+        "name": "RF_TTPMS_T15",
+        "start_bit": 32
+      },
+      {
+        "name": "RF_TTPMS_T16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RF_TTPMS_6",
+    "id": "0x42F",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RF_TTPMS_TC",
+        "start_bit": 0
+      },
+      {
+        "name": "RF_TTPMS_RSSI",
+        "start_bit": 16
+      },
+      {
+        "name": "RF_TTPMS_T",
+        "start_bit": 32
+      },
+      {
+        "name": "RF_TTPMS_NODE_ID",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LR_TTPMS_1",
+    "id": "0x430",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LR_TTPMS_SN",
+        "start_bit": 0
+      },
+      {
+        "name": "LR_TTPMS_BAT_V",
+        "start_bit": 16
+      },
+      {
+        "name": "LR_TTPMS_P",
+        "start_bit": 32
+      },
+      {
+        "name": "LR_TTPMS_P_GAUGE",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LR_TTPMS_2",
+    "id": "0x431",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LR_TTPMS_T1",
+        "start_bit": 0
+      },
+      {
+        "name": "LR_TTPMS_T2",
+        "start_bit": 16
+      },
+      {
+        "name": "LR_TTPMS_T3",
+        "start_bit": 32
+      },
+      {
+        "name": "LR_TTPMS_T4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LR_TTPMS_3",
+    "id": "0x432",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LR_TTPMS_T5",
+        "start_bit": 0
+      },
+      {
+        "name": "LR_TTPMS_T6",
+        "start_bit": 16
+      },
+      {
+        "name": "LR_TTPMS_T7",
+        "start_bit": 32
+      },
+      {
+        "name": "LR_TTPMS_T8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LR_TTPMS_4",
+    "id": "0x433",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LR_TTPMS_T9",
+        "start_bit": 0
+      },
+      {
+        "name": "LR_TTPMS_T10",
+        "start_bit": 16
+      },
+      {
+        "name": "LR_TTPMS_T11",
+        "start_bit": 32
+      },
+      {
+        "name": "LR_TTPMS_T12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LR_TTPMS_5",
+    "id": "0x434",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LR_TTPMS_T13",
+        "start_bit": 0
+      },
+      {
+        "name": "LR_TTPMS_T14",
+        "start_bit": 16
+      },
+      {
+        "name": "LR_TTPMS_T15",
+        "start_bit": 32
+      },
+      {
+        "name": "LR_TTPMS_T16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "LR_TTPMS_6",
+    "id": "0x435",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "LR_TTPMS_TC",
+        "start_bit": 0
+      },
+      {
+        "name": "LR_TTPMS_RSSI",
+        "start_bit": 16
+      },
+      {
+        "name": "LR_TTPMS_T",
+        "start_bit": 32
+      },
+      {
+        "name": "LR_TTPMS_NODE_ID",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_TTPMS_1",
+    "id": "0x436",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RR_TTPMS_SN",
+        "start_bit": 0
+      },
+      {
+        "name": "RR_TTPMS_BAT_V",
+        "start_bit": 16
+      },
+      {
+        "name": "RR_TTPMS_P",
+        "start_bit": 32
+      },
+      {
+        "name": "RR_TTPMS_P_GAUGE",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_TTPMS_2",
+    "id": "0x437",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RR_TTPMS_T1",
+        "start_bit": 0
+      },
+      {
+        "name": "RR_TTPMS_T2",
+        "start_bit": 16
+      },
+      {
+        "name": "RR_TTPMS_T3",
+        "start_bit": 32
+      },
+      {
+        "name": "RR_TTPMS_T4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_TTPMS_3",
+    "id": "0x438",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RR_TTPMS_T5",
+        "start_bit": 0
+      },
+      {
+        "name": "RR_TTPMS_T6",
+        "start_bit": 16
+      },
+      {
+        "name": "RR_TTPMS_T7",
+        "start_bit": 32
+      },
+      {
+        "name": "RR_TTPMS_T8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_TTPMS_4",
+    "id": "0x439",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RR_TTPMS_T9",
+        "start_bit": 0
+      },
+      {
+        "name": "RR_TTPMS_T10",
+        "start_bit": 16
+      },
+      {
+        "name": "RR_TTPMS_T11",
+        "start_bit": 32
+      },
+      {
+        "name": "RR_TTPMS_T12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_TTPMS_5",
+    "id": "0x43A",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RR_TTPMS_T13",
+        "start_bit": 0
+      },
+      {
+        "name": "RR_TTPMS_T14",
+        "start_bit": 16
+      },
+      {
+        "name": "RR_TTPMS_T15",
+        "start_bit": 32
+      },
+      {
+        "name": "RR_TTPMS_T16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_TTPMS_6",
+    "id": "0x43B",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "RR_TTPMS_TC",
+        "start_bit": 0
+      },
+      {
+        "name": "RR_TTPMS_RSSI",
+        "start_bit": 16
+      },
+      {
+        "name": "RR_TTPMS_T",
+        "start_bit": 32
+      },
+      {
+        "name": "RR_TTPMS_NODE_ID",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "PEDALS_SYSTEM_DATA",
+    "id": "0x0C0",
+    "is_extended": false,
+    "dlc": 5,
+    "description": "",
+    "signals": [
+      {
+        "name": "accel_implausible",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_implausible",
+        "start_bit": 1
+      },
+      {
+        "name": "brake_pedal_active",
+        "start_bit": 2
+      },
+      {
+        "name": "accel_pedal_active",
+        "start_bit": 3
+      },
+      {
+        "name": "mechanical_brake_active",
+        "start_bit": 4
+      },
+      {
+        "name": "brake_accel_implausibility",
+        "start_bit": 5
+      },
+      {
+        "name": "implaus_exceeded_max_duration",
+        "start_bit": 6
+      },
+      {
+        "name": "accel_pedal",
+        "start_bit": 8
+      },
+      {
+        "name": "brake_pedal",
+        "start_bit": 24
+      }
+    ]
+  },
+  {
+    "name": "REAR_SUSPENSION",
+    "id": "0x0E4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "rl_load_cell",
+        "start_bit": 0
+      },
+      {
+        "name": "rr_load_cell",
+        "start_bit": 16
+      },
+      {
+        "name": "rl_shock_pot",
+        "start_bit": 32
+      },
+      {
+        "name": "rr_shock_pot",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "REAR_THERMISTORS_DATA",
+    "id": "0x0EE",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "thermistor_0_deg_C",
+        "start_bit": 0
+      },
+      {
+        "name": "thermistor_1_deg_C",
+        "start_bit": 16
+      },
+      {
+        "name": "thermistor_2_deg_C",
+        "start_bit": 32
+      },
+      {
+        "name": "thermistor_3_deg_C",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "STATE_OF_CHARGE",
+    "id": "0x41E",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "SoC",
+        "start_bit": 0
+      },
+      {
+        "name": "min_cell_voltage_est",
+        "start_bit": 16
+      },
+      {
+        "name": "charge_coulombs",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "STEERING_DATA",
+    "id": "0x41F",
+    "is_extended": false,
+    "dlc": 7,
+    "description": "Steering reading; system and sensor status",
+    "signals": [
+      {
+        "name": "steering_analog_oor",
+        "start_bit": 0
+      },
+      {
+        "name": "steering_analog_raw",
+        "start_bit": 1
+      },
+      {
+        "name": "steering_both_sensors_fail",
+        "start_bit": 13
+      },
+      {
+        "name": "steering_digital_oor",
+        "start_bit": 14
+      },
+      {
+        "name": "steering_digital_raw",
+        "start_bit": 15
+      },
+      {
+        "name": "steering_dtheta_exceeded_analog",
+        "start_bit": 29
+      },
+      {
+        "name": "steering_dtheta_exceeded_digital",
+        "start_bit": 30
+      },
+      {
+        "name": "steering_interface_sensor_error",
+        "start_bit": 31
+      },
+      {
+        "name": "steering_output_steering_angle",
+        "start_bit": 32
+      },
+      {
+        "name": "steering_sensor_disagreement",
+        "start_bit": 49
+      }
+    ]
+  },
+  {
+    "name": "VEHM_ALPHA",
+    "id": "0x7FF",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "vehm_alpha_deg_fl",
+        "start_bit": 0
+      },
+      {
+        "name": "vehm_alpha_deg_fr",
+        "start_bit": 16
+      },
+      {
+        "name": "vehm_alpha_deg_rl",
+        "start_bit": 32
+      },
+      {
+        "name": "vehm_alpha_deg_rr",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "VEHM_BETA",
+    "id": "0x7EF",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "vehm_beta_deg",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "ACU_OK",
+    "id": "0x500",
+    "is_extended": false,
+    "dlc": 1,
+    "description": "",
+    "signals": [
+      {
+        "name": "bms_ok",
+        "start_bit": 0
+      },
+      {
+        "name": "imd_ok",
+        "start_bit": 1
+      },
+      {
+        "name": "latch_ok",
+        "start_bit": 2
+      }
+    ]
+  },
+  {
+    "name": "CAR_STATES",
+    "id": "0x207",
+    "is_extended": false,
+    "dlc": 3,
+    "description": "",
+    "signals": [
+      {
+        "name": "vehicle_state",
+        "start_bit": 0
+      },
+      {
+        "name": "drivebrain_in_control",
+        "start_bit": 16
+      },
+      {
+        "name": "drivetrain_state",
+        "start_bit": 8
+      }
+    ]
+  },
+  {
+    "name": "FL_BRAKE_ROTOR_TEMP_CH1_CH4",
+    "id": "0x4C4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_1",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_2",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_3",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FL_BRAKE_ROTOR_TEMP_CH5_CH8",
+    "id": "0x4C5",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_5",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_6",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_7",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FL_BRAKE_ROTOR_TEMP_CH9_CH12",
+    "id": "0x4C6",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_9",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_10",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_11",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FL_BRAKE_ROTOR_SENSOR_TEMP",
+    "id": "0x4C8",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_rotor_sensor_temp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "FL_BRAKE_ROTOR_TEMP_CH13_CH16",
+    "id": "0x4C7",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_13",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_14",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_15",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FR_BRAKE_ROTOR_TEMP_CH1_CH4",
+    "id": "0x4C9",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_1",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_2",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_3",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FR_BRAKE_ROTOR_TEMP_CH5_CH8",
+    "id": "0x4CA",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_5",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_6",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_7",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FR_BRAKE_ROTOR_TEMP_CH9_CH12",
+    "id": "0x4CB",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_9",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_10",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_11",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FR_BRAKE_ROTOR_SENSOR_TEMP",
+    "id": "0x4CD",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_rotor_sensor_temp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "FR_BRAKE_ROTOR_TEMP_CH13_CH16",
+    "id": "0x4CC",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_temp_channel_13",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_temp_channel_14",
+        "start_bit": 16
+      },
+      {
+        "name": "brake_temp_channel_15",
+        "start_bit": 32
+      },
+      {
+        "name": "brake_temp_channel_16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_11",
+    "id": "0x3F0",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_1",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_2",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_3",
+        "start_bit": 48
+      },
+      {
+        "name": "aero_channel_0",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_31",
+    "id": "0x630",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_1",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_2",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_3",
+        "start_bit": 48
+      },
+      {
+        "name": "aero_channel_0",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_41",
+    "id": "0x640",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_1",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_2",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_3",
+        "start_bit": 48
+      },
+      {
+        "name": "aero_channel_0",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_21",
+    "id": "0x620",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_1",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_2",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_3",
+        "start_bit": 48
+      },
+      {
+        "name": "aero_channel_0",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_12",
+    "id": "0x3F4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_4",
+        "start_bit": 0
+      },
+      {
+        "name": "aero_channel_5",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_6",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_7",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_22",
+    "id": "0x320",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_4",
+        "start_bit": 0
+      },
+      {
+        "name": "aero_channel_5",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_6",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_7",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_32",
+    "id": "0x330",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_4",
+        "start_bit": 0
+      },
+      {
+        "name": "aero_channel_5",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_6",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_7",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "AERO_PRESSURE_SENSOR_42",
+    "id": "0x340",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "aero_channel_4",
+        "start_bit": 0
+      },
+      {
+        "name": "aero_channel_5",
+        "start_bit": 16
+      },
+      {
+        "name": "aero_channel_6",
+        "start_bit": 32
+      },
+      {
+        "name": "aero_channel_7",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV1_OVERLOAD",
+    "id": "0x14A",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_overload_percentage",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_overload_percentage",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV2_OVERLOAD",
+    "id": "0x154",
+    "is_extended": false,
+    "dlc": 4,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_overload_percentage",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_overload_percentage",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV3_OVERLOAD",
+    "id": "0x136",
+    "is_extended": false,
+    "dlc": 4,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_overload_percentage",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_overload_percentage",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV4_OVERLOAD",
+    "id": "0x140",
+    "is_extended": false,
+    "dlc": 4,
+    "description": "",
+    "signals": [
+      {
+        "name": "inverter_overload_percentage",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_overload_percentage",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "ENERGY_METER_MEAS",
+    "id": "0x10D",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "current_A",
+        "start_bit": 0
+      },
+      {
+        "name": "voltage_V",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "ENERGY_METER_STATUS",
+    "id": "0x40D",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "em_violation",
+        "start_bit": 0
+      },
+      {
+        "name": "em_logging",
+        "start_bit": 1
+      },
+      {
+        "name": "em_energy_w_hr",
+        "start_bit": 8
+      }
+    ]
+  },
+  {
+    "name": "ENERGY_METER_TEMP",
+    "id": "0x60D",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "em_num_sensors",
+        "start_bit": 0
+      },
+      {
+        "name": "em_temp_sig_index",
+        "start_bit": 5
+      },
+      {
+        "name": "em_min_temp",
+        "start_bit": 8
+      },
+      {
+        "name": "em_max_temp",
+        "start_bit": 16
+      },
+      {
+        "name": "em_temp_0",
+        "start_bit": 24
+      },
+      {
+        "name": "em_temp_1",
+        "start_bit": 32
+      },
+      {
+        "name": "em_temp_2",
+        "start_bit": 40
+      },
+      {
+        "name": "em_temp_3",
+        "start_bit": 48
+      },
+      {
+        "name": "em_temp_4",
+        "start_bit": 56
+      }
+    ]
+  },
+  {
+    "name": "DRIVEBRAIN_LATENCY_TIMES",
+    "id": "0x501",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "telem_latency_millis",
+        "start_bit": 0
+      },
+      {
+        "name": "aux_latency_millis",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "DRIVEBRAIN_LATENCY_STATUSES",
+    "id": "0x502",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "db_telem_timing_fault",
+        "start_bit": 0
+      },
+      {
+        "name": "db_aux_timing_fault",
+        "start_bit": 1
+      }
+    ]
+  },
+  {
+    "name": "FLOWMETER_DATA",
+    "id": "0x503",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "flow_rate",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "BRAKE_PRESSURE",
+    "id": "0x667",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "brake_pressure_1",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_pressure_2",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "STATE_OF_ENERGY",
+    "id": "0x41D",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "lifetime_ah_throughput",
+        "start_bit": 0
+      },
+      {
+        "name": "SoH",
+        "start_bit": 16
+      },
+      {
+        "name": "SoE",
+        "start_bit": 24
+      },
+      {
+        "name": "remaining_pack_wh",
+        "start_bit": 32
+      },
+      {
+        "name": "V1",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "EBS_DATA",
+    "id": "0x22B",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ebs_air_pressure_1",
+        "start_bit": 0
+      },
+      {
+        "name": "ebs_air_pressure_2",
+        "start_bit": 8
+      },
+      {
+        "name": "ebs_engaged",
+        "start_bit": 16
+      },
+      {
+        "name": "ebs_pressure_ok",
+        "start_bit": 17
+      },
+      {
+        "name": "ebs_supervisor_ok",
+        "start_bit": 18
+      },
+      {
+        "name": "ebs_solenoid_1_on",
+        "start_bit": 19
+      },
+      {
+        "name": "ebs_solenoid_2_on",
+        "start_bit": 20
+      }
+    ]
+  },
+  {
+    "name": "DRIVERLESS_SYSTEM_STATUS",
+    "id": "0x22A",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "activate_ebs_solenoid_1",
+        "start_bit": 0
+      },
+      {
+        "name": "activate_ebs_solenoid_2",
+        "start_bit": 1
+      },
+      {
+        "name": "driverless_state",
+        "start_bit": 2
+      }
+    ]
+  }
+]

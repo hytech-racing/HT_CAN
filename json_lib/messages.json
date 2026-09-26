@@ -2861,7 +2861,7 @@
     "description": "Status of the RSS",
     "signals": [
       {
-        "name": "emergency_stop_pressed_1",
+        "name": "emergency_stop_not_pressed_1",
         "start_bit": 0
       },
       {
@@ -2873,7 +2873,7 @@
         "start_bit": 2
       },
       {
-        "name": "emergency_stop_pressed_2",
+        "name": "emergency_stop_not_pressed_2",
         "start_bit": 31
       },
       {

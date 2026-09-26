@@ -2822,5 +2822,72 @@
         "start_bit": 2
       }
     ]
+  },
+  {
+    "name": "RSS_BOOT_UP",
+    "id": "0x711",
+    "is_extended": false,
+    "dlc": 1,
+    "description": "Msg sent by RSS on boot up",
+    "signals": [
+      {
+        "name": "rss_initialization",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "SET_OPERATING_MODE",
+    "id": "0x000",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "Msg sent to the RSS to set the operating mode",
+    "signals": [
+      {
+        "name": "requested_state",
+        "start_bit": 0
+      },
+      {
+        "name": "target_node",
+        "start_bit": 8
+      }
+    ]
+  },
+  {
+    "name": "RSS_STATUS",
+    "id": "0x191",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Status of the RSS",
+    "signals": [
+      {
+        "name": "emergency_stop_pressed_1",
+        "start_bit": 0
+      },
+      {
+        "name": "switch_k2_pressed",
+        "start_bit": 1
+      },
+      {
+        "name": "button_k3_pressed",
+        "start_bit": 2
+      },
+      {
+        "name": "emergency_stop_pressed_2",
+        "start_bit": 31
+      },
+      {
+        "name": "radio_link_quality",
+        "start_bit": 48
+      },
+      {
+        "name": "pre_alarm_warning",
+        "start_bit": 62
+      },
+      {
+        "name": "correct_mode_selected",
+        "start_bit": 63
+      }
+    ]
   }
 ]

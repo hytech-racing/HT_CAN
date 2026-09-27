@@ -2946,15 +2946,15 @@
       },
       {
         "name": "is_digital_input_2_active",
-        "start_bit": 18
+        "start_bit": 17
       },
       {
         "name": "is_digital_input_3_active",
-        "start_bit": 20
+        "start_bit": 18
       },
       {
         "name": "is_digital_input_4_active",
-        "start_bit": 21
+        "start_bit": 19
       },
       {
         "name": "is_digital_output_1_active",
@@ -3199,15 +3199,15 @@
       },
       {
         "name": "is_digital_input_2_active",
-        "start_bit": 18
+        "start_bit": 17
       },
       {
         "name": "is_digital_input_3_active",
-        "start_bit": 20
+        "start_bit": 18
       },
       {
         "name": "is_digital_input_4_active",
-        "start_bit": 21
+        "start_bit": 19
       },
       {
         "name": "is_digital_output_1_active",
@@ -3452,15 +3452,15 @@
       },
       {
         "name": "is_digital_input_2_active",
-        "start_bit": 18
+        "start_bit": 17
       },
       {
         "name": "is_digital_input_3_active",
-        "start_bit": 20
+        "start_bit": 18
       },
       {
         "name": "is_digital_input_4_active",
-        "start_bit": 21
+        "start_bit": 19
       },
       {
         "name": "is_digital_output_1_active",
@@ -3705,15 +3705,15 @@
       },
       {
         "name": "is_digital_input_2_active",
-        "start_bit": 18
+        "start_bit": 17
       },
       {
         "name": "is_digital_input_3_active",
-        "start_bit": 20
+        "start_bit": 18
       },
       {
         "name": "is_digital_input_4_active",
-        "start_bit": 21
+        "start_bit": 19
       },
       {
         "name": "is_digital_output_1_active",

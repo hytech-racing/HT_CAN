@@ -2822,5 +2822,1018 @@
         "start_bit": 2
       }
     ]
+  },
+
+  {
+    "name": "INV1_STATUS_GENERAL_CONTROL",
+    "id": "0x3E1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "control_mode",
+        "start_bit": 0
+      },
+      {
+        "name": "target_iq_apk",
+        "start_bit": 8
+      },
+      {
+        "name": "motor_position_deg",
+        "start_bit": 24
+      },
+      {
+        "name": "is_motor_stationary",
+        "start_bit": 40
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS_GENERAL_ELEC",
+    "id": "0x401",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "erpm",
+        "start_bit": 0
+      },
+      {
+        "name": "duty_cycle_percent",
+        "start_bit": 32
+      },
+      {
+        "name": "input_voltage",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS_ACTIVE_CURRENT",
+    "id": "0x421",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "active_dc_current_amp",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS_TEMP_AND_FAULT",
+    "id":"0x441",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "controller_temp_c",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_temp_c",
+        "start_bit": 16
+      },
+      {
+        "name": "fault_code",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS_FOC_CURRENTS",
+    "id": "0x461",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "id_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "iq_apk",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS_GENERAL_IO",
+    "id": "0x481",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "throttle_signal_percent",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_signal_percent",
+        "start_bit": 8
+      },
+      {
+        "name": "is_digital_input_1_active",
+        "start_bit": 16
+      },
+      {
+        "name": "is_digital_input_2_active",
+        "start_bit": 18
+      },
+      {
+        "name": "is_digital_input_3_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_input_4_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_1_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_output_2_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_3_active",
+        "start_bit": 22
+      },
+      {
+        "name": "is_digital_output_4_active",
+        "start_bit": 23
+      },
+      {
+        "name": "is_drive_enabled",
+        "start_bit": 24
+      },
+      {
+        "name": "is_capacitor_temp_limit_active",
+        "start_bit": 32
+      },
+      {
+        "name": "is_dc_current_limit_active",
+        "start_bit": 33
+      },
+      {
+        "name": "is_drive_enable_limit_active",
+        "start_bit": 34
+      },
+      {
+        "name": "is_igbt_accel_temp_limit_active",
+        "start_bit": 35
+      },
+      {
+        "name": "is_igbt_temp_limit_active",
+        "start_bit": 36
+      },
+      {
+        "name": "is_input_voltage_limit_active",
+        "start_bit": 37
+      },
+      {
+        "name": "is_motor_accel_temp_limit_active",
+        "start_bit": 38
+      },
+      {
+        "name": "is_motor_temp_limit_active",
+        "start_bit": 39
+      },
+      {
+        "name": "is_rpm_min_limit_active",
+        "start_bit": 40
+      },
+      {
+        "name": "is_rpm_max_limit_active",
+        "start_bit": 41
+      },
+      {
+        "name": "is_power_limit_active",
+        "start_bit": 42
+      },
+      {
+        "name": "can_map_version",
+        "start_bit": 56
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS_AC_CONFIG_CURRENT",
+    "id": "0x4A1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_ac_current_apk",
+        "start_bit": 16
+      },
+      {
+        "name": "min_ac_current_apk",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_ac_current_apk",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV1_STATUS_DC_CONFIG_CURRENT",
+    "id": "0x4C1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_dc_current_amp",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_dc_current_amp",
+        "start_bit": 16
+      },
+      {
+        "name": "min_dc_current_amp",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_dc_current_amp",
+        "start_bit": 48
+      }
+    ]
+  },
+
+  {
+    "name": "INV2_STATUS_GENERAL_CONTROL",
+    "id": "0x3E2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "control_mode",
+        "start_bit": 0
+      },
+      {
+        "name": "target_iq_apk",
+        "start_bit": 8
+      },
+      {
+        "name": "motor_position_deg",
+        "start_bit": 24
+      },
+      {
+        "name": "is_motor_stationary",
+        "start_bit": 40
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS_GENERAL_ELEC",
+    "id": "0x402",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "erpm",
+        "start_bit": 0
+      },
+      {
+        "name": "duty_cycle_percent",
+        "start_bit": 32
+      },
+      {
+        "name": "input_voltage",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS_ACTIVE_CURRENT",
+    "id": "0x422",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "active_dc_current_amp",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS_TEMP_AND_FAULT",
+    "id":"0x442",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "controller_temp_c",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_temp_c",
+        "start_bit": 16
+      },
+      {
+        "name": "fault_code",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS_FOC_CURRENTS",
+    "id": "0x462",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "id_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "iq_apk",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS_GENERAL_IO",
+    "id": "0x482",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "throttle_signal_percent",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_signal_percent",
+        "start_bit": 8
+      },
+      {
+        "name": "is_digital_input_1_active",
+        "start_bit": 16
+      },
+      {
+        "name": "is_digital_input_2_active",
+        "start_bit": 18
+      },
+      {
+        "name": "is_digital_input_3_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_input_4_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_1_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_output_2_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_3_active",
+        "start_bit": 22
+      },
+      {
+        "name": "is_digital_output_4_active",
+        "start_bit": 23
+      },
+      {
+        "name": "is_drive_enabled",
+        "start_bit": 24
+      },
+      {
+        "name": "is_capacitor_temp_limit_active",
+        "start_bit": 32
+      },
+      {
+        "name": "is_dc_current_limit_active",
+        "start_bit": 33
+      },
+      {
+        "name": "is_drive_enable_limit_active",
+        "start_bit": 34
+      },
+      {
+        "name": "is_igbt_accel_temp_limit_active",
+        "start_bit": 35
+      },
+      {
+        "name": "is_igbt_temp_limit_active",
+        "start_bit": 36
+      },
+      {
+        "name": "is_input_voltage_limit_active",
+        "start_bit": 37
+      },
+      {
+        "name": "is_motor_accel_temp_limit_active",
+        "start_bit": 38
+      },
+      {
+        "name": "is_motor_temp_limit_active",
+        "start_bit": 39
+      },
+      {
+        "name": "is_rpm_min_limit_active",
+        "start_bit": 40
+      },
+      {
+        "name": "is_rpm_max_limit_active",
+        "start_bit": 41
+      },
+      {
+        "name": "is_power_limit_active",
+        "start_bit": 42
+      },
+      {
+        "name": "can_map_version",
+        "start_bit": 56
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS_AC_CONFIG_CURRENT",
+    "id": "0x4A2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_ac_current_apk",
+        "start_bit": 16
+      },
+      {
+        "name": "min_ac_current_apk",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_ac_current_apk",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV2_STATUS_DC_CONFIG_CURRENT",
+    "id": "0x4C2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_dc_current_amp",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_dc_current_amp",
+        "start_bit": 16
+      },
+      {
+        "name": "min_dc_current_amp",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_dc_current_amp",
+        "start_bit": 48
+      }
+    ]
+  },
+
+  {
+    "name": "INV3_STATUS_GENERAL_CONTROL",
+    "id": "0x3E3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "control_mode",
+        "start_bit": 0
+      },
+      {
+        "name": "target_iq_apk",
+        "start_bit": 8
+      },
+      {
+        "name": "motor_position_deg",
+        "start_bit": 24
+      },
+      {
+        "name": "is_motor_stationary",
+        "start_bit": 40
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS_GENERAL_ELEC",
+    "id": "0x403",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "erpm",
+        "start_bit": 0
+      },
+      {
+        "name": "duty_cycle_percent",
+        "start_bit": 32
+      },
+      {
+        "name": "input_voltage",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS_ACTIVE_CURRENT",
+    "id": "0x423",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "active_dc_current_amp",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS_TEMP_AND_FAULT",
+    "id":"0x443",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "controller_temp_c",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_temp_c",
+        "start_bit": 16
+      },
+      {
+        "name": "fault_code",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS_FOC_CURRENTS",
+    "id": "0x463",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "id_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "iq_apk",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS_GENERAL_IO",
+    "id": "0x483",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "throttle_signal_percent",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_signal_percent",
+        "start_bit": 8
+      },
+      {
+        "name": "is_digital_input_1_active",
+        "start_bit": 16
+      },
+      {
+        "name": "is_digital_input_2_active",
+        "start_bit": 18
+      },
+      {
+        "name": "is_digital_input_3_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_input_4_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_1_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_output_2_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_3_active",
+        "start_bit": 22
+      },
+      {
+        "name": "is_digital_output_4_active",
+        "start_bit": 23
+      },
+      {
+        "name": "is_drive_enabled",
+        "start_bit": 24
+      },
+      {
+        "name": "is_capacitor_temp_limit_active",
+        "start_bit": 32
+      },
+      {
+        "name": "is_dc_current_limit_active",
+        "start_bit": 33
+      },
+      {
+        "name": "is_drive_enable_limit_active",
+        "start_bit": 34
+      },
+      {
+        "name": "is_igbt_accel_temp_limit_active",
+        "start_bit": 35
+      },
+      {
+        "name": "is_igbt_temp_limit_active",
+        "start_bit": 36
+      },
+      {
+        "name": "is_input_voltage_limit_active",
+        "start_bit": 37
+      },
+      {
+        "name": "is_motor_accel_temp_limit_active",
+        "start_bit": 38
+      },
+      {
+        "name": "is_motor_temp_limit_active",
+        "start_bit": 39
+      },
+      {
+        "name": "is_rpm_min_limit_active",
+        "start_bit": 40
+      },
+      {
+        "name": "is_rpm_max_limit_active",
+        "start_bit": 41
+      },
+      {
+        "name": "is_power_limit_active",
+        "start_bit": 42
+      },
+      {
+        "name": "can_map_version",
+        "start_bit": 56
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS_AC_CONFIG_CURRENT",
+    "id": "0x4A3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_ac_current_apk",
+        "start_bit": 16
+      },
+      {
+        "name": "min_ac_current_apk",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_ac_current_apk",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV3_STATUS_DC_CONFIG_CURRENT",
+    "id": "0x4C3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_dc_current_amp",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_dc_current_amp",
+        "start_bit": 16
+      },
+      {
+        "name": "min_dc_current_amp",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_dc_current_amp",
+        "start_bit": 48
+      }
+    ]
+  },
+
+  {
+    "name": "INV4_STATUS_GENERAL_CONTROL",
+    "id": "0x3E4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "control_mode",
+        "start_bit": 0
+      },
+      {
+        "name": "target_iq_apk",
+        "start_bit": 8
+      },
+      {
+        "name": "motor_position_deg",
+        "start_bit": 24
+      },
+      {
+        "name": "is_motor_stationary",
+        "start_bit": 40
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS_GENERAL_ELEC",
+    "id": "0x404",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "erpm",
+        "start_bit": 0
+      },
+      {
+        "name": "duty_cycle_percent",
+        "start_bit": 32
+      },
+      {
+        "name": "input_voltage",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS_ACTIVE_CURRENT",
+    "id": "0x424",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "active_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "active_dc_current_amp",
+        "start_bit": 16
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS_TEMP_AND_FAULT",
+    "id":"0x444",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "controller_temp_c",
+        "start_bit": 0
+      },
+      {
+        "name": "motor_temp_c",
+        "start_bit": 16
+      },
+      {
+        "name": "fault_code",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS_FOC_CURRENTS",
+    "id": "0x464",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "id_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "iq_apk",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS_GENERAL_IO",
+    "id": "0x484",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "throttle_signal_percent",
+        "start_bit": 0
+      },
+      {
+        "name": "brake_signal_percent",
+        "start_bit": 8
+      },
+      {
+        "name": "is_digital_input_1_active",
+        "start_bit": 16
+      },
+      {
+        "name": "is_digital_input_2_active",
+        "start_bit": 18
+      },
+      {
+        "name": "is_digital_input_3_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_input_4_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_1_active",
+        "start_bit": 20
+      },
+      {
+        "name": "is_digital_output_2_active",
+        "start_bit": 21
+      },
+      {
+        "name": "is_digital_output_3_active",
+        "start_bit": 22
+      },
+      {
+        "name": "is_digital_output_4_active",
+        "start_bit": 23
+      },
+      {
+        "name": "is_drive_enabled",
+        "start_bit": 24
+      },
+      {
+        "name": "is_capacitor_temp_limit_active",
+        "start_bit": 32
+      },
+      {
+        "name": "is_dc_current_limit_active",
+        "start_bit": 33
+      },
+      {
+        "name": "is_drive_enable_limit_active",
+        "start_bit": 34
+      },
+      {
+        "name": "is_igbt_accel_temp_limit_active",
+        "start_bit": 35
+      },
+      {
+        "name": "is_igbt_temp_limit_active",
+        "start_bit": 36
+      },
+      {
+        "name": "is_input_voltage_limit_active",
+        "start_bit": 37
+      },
+      {
+        "name": "is_motor_accel_temp_limit_active",
+        "start_bit": 38
+      },
+      {
+        "name": "is_motor_temp_limit_active",
+        "start_bit": 39
+      },
+      {
+        "name": "is_rpm_min_limit_active",
+        "start_bit": 40
+      },
+      {
+        "name": "is_rpm_max_limit_active",
+        "start_bit": 41
+      },
+      {
+        "name": "is_power_limit_active",
+        "start_bit": 42
+      },
+      {
+        "name": "can_map_version",
+        "start_bit": 56
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS_AC_CONFIG_CURRENT",
+    "id": "0x4A4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_ac_current_apk",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_ac_current_apk",
+        "start_bit": 16
+      },
+      {
+        "name": "min_ac_current_apk",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_ac_current_apk",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "INV4_STATUS_DC_CONFIG_CURRENT",
+    "id": "0x4C4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "max_dc_current_amp",
+        "start_bit": 0
+      },
+      {
+        "name": "available_max_dc_current_amp",
+        "start_bit": 16
+      },
+      {
+        "name": "min_dc_current_amp",
+        "start_bit": 32
+      },
+      {
+        "name": "available_min_dc_current_amp",
+        "start_bit": 48
+      }
+    ]
   }
+
 ]

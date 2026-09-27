@@ -281,6 +281,7 @@ jobs:
           else
             VERSION="${{ needs.generate-and-release.outputs.release_name }}"
           fi
+          VERSION=$(echo "$VERSION" | tr '[:upper:]' '[:lower:]')      
           conan remote add artifactory "$ARTIFACTORY_URL" --force
           conan remote login artifactory "$ARTIFACTORY_USERNAME" --password "$ARTIFACTORY_TOKEN"
           conan create . --build=missing --version="$VERSION"

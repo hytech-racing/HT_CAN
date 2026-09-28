@@ -3834,6 +3834,682 @@
         "start_bit": 48
       }
     ]
+  },
+
+  {
+    "name": "INV1_SET_AC_CURRENT",
+    "id": "0x21",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_BRAKE_CURRENT",
+    "id": "0x41",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_ERPM",
+    "id": "0x61",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_erpm",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_MOTOR_POSITION",
+    "id": "0x81",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_motor_position_deg",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_REL_AC_CURRENT",
+    "id": "0xA1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_REL_AC_BRAKE_CURRENT",
+    "id": "0xC1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_brake_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_DIGITAL_OUTPUTS",
+    "id": "0xE1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "set_digital_output_1",
+        "start_bit": 0
+      },
+      {
+        "name": "set_digital_output_2",
+        "start_bit": 1
+      },
+      {
+        "name": "set_digital_output_3",
+        "start_bit": 2
+      },
+      {
+        "name": "set_digital_output_4",
+        "start_bit": 3
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_MAX_AC_CURRENT",
+    "id": "0x101",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_MAX_AC_BRAKE_CURRENT",
+    "id": "0x121",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_MAX_DC_CURRENT",
+    "id": "0x141",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_MAX_DC_BRAKE_CURRENT",
+    "id": "0x161",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_brake_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV1_SET_DRIVE_ENABLE",
+    "id": "0x181",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "drive_enable_requested",
+        "start_bit": 0
+      }
+    ]
+  },
+
+  {
+    "name": "INV2_SET_AC_CURRENT",
+    "id": "0x22",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_BRAKE_CURRENT",
+    "id": "0x42",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_ERPM",
+    "id": "0x62",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_erpm",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_MOTOR_POSITION",
+    "id": "0x82",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_motor_position_deg",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_REL_AC_CURRENT",
+    "id": "0xA2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_REL_AC_BRAKE_CURRENT",
+    "id": "0xC2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_brake_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_DIGITAL_OUTPUTS",
+    "id": "0xE2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "set_digital_output_1",
+        "start_bit": 0
+      },
+      {
+        "name": "set_digital_output_2",
+        "start_bit": 1
+      },
+      {
+        "name": "set_digital_output_3",
+        "start_bit": 2
+      },
+      {
+        "name": "set_digital_output_4",
+        "start_bit": 3
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_MAX_AC_CURRENT",
+    "id": "0x102",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_MAX_AC_BRAKE_CURRENT",
+    "id": "0x122",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_MAX_DC_CURRENT",
+    "id": "0x142",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_MAX_DC_BRAKE_CURRENT",
+    "id": "0x162",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_brake_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV2_SET_DRIVE_ENABLE",
+    "id": "0x182",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "drive_enable_requested",
+        "start_bit": 0
+      }
+    ]
+  },
+
+  {
+    "name": "INV3_SET_AC_CURRENT",
+    "id": "0x23",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_BRAKE_CURRENT",
+    "id": "0x43",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_ERPM",
+    "id": "0x63",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_erpm",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_MOTOR_POSITION",
+    "id": "0x83",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_motor_position_deg",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_REL_AC_CURRENT",
+    "id": "0xA3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_REL_AC_BRAKE_CURRENT",
+    "id": "0xC3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_brake_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_DIGITAL_OUTPUTS",
+    "id": "0xE3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "set_digital_output_1",
+        "start_bit": 0
+      },
+      {
+        "name": "set_digital_output_2",
+        "start_bit": 1
+      },
+      {
+        "name": "set_digital_output_3",
+        "start_bit": 2
+      },
+      {
+        "name": "set_digital_output_4",
+        "start_bit": 3
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_MAX_AC_CURRENT",
+    "id": "0x103",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_MAX_AC_BRAKE_CURRENT",
+    "id": "0x123",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_MAX_DC_CURRENT",
+    "id": "0x143",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_MAX_DC_BRAKE_CURRENT",
+    "id": "0x163",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_brake_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV3_SET_DRIVE_ENABLE",
+    "id": "0x183",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "drive_enable_requested",
+        "start_bit": 0
+      }
+    ]
+  },
+
+  {
+    "name": "INV4_SET_AC_CURRENT",
+    "id": "0x24",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_BRAKE_CURRENT",
+    "id": "0x44",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_ERPM",
+    "id": "0x64",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_erpm",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_MOTOR_POSITION",
+    "id": "0x84",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_motor_position_deg",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_REL_AC_CURRENT",
+    "id": "0xA4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_REL_AC_BRAKE_CURRENT",
+    "id": "0xC4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_ac_brake_current_percent",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_DIGITAL_OUTPUTS",
+    "id": "0xE4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "set_digital_output_1",
+        "start_bit": 0
+      },
+      {
+        "name": "set_digital_output_2",
+        "start_bit": 1
+      },
+      {
+        "name": "set_digital_output_3",
+        "start_bit": 2
+      },
+      {
+        "name": "set_digital_output_4",
+        "start_bit": 3
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_MAX_AC_CURRENT",
+    "id": "0x104",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_MAX_AC_BRAKE_CURRENT",
+    "id": "0x124",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_ac_brake_current_apk",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_MAX_DC_CURRENT",
+    "id": "0x144",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_MAX_DC_BRAKE_CURRENT",
+    "id": "0x164",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "target_max_dc_brake_current_amp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "INV4_SET_DRIVE_ENABLE",
+    "id": "0x184",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "drive_enable_requested",
+        "start_bit": 0
+      }
+    ]
   }
 
 ]

@@ -8761,6 +8761,19 @@
     "enum": "driverless_stateE",
     "description": ""
   },
+  "driverless_mission": {
+    "length": 3,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1.0,
+    "offset": 0.0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": "driverless_missionE",
+    "description": ""
+  },
   "rss_initialization": {
     "length": 8,
     "is_signed": false,

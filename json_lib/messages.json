@@ -2824,6 +2824,19 @@
     ]
   },
   {
+    "name":"FDC_DRIVERLESS_MISSION",
+    "id": "0x22C",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "driverless_mission",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
     "name": "RSS_BOOT_UP",
     "id": "0x711",
     "is_extended": false,

@@ -124,5 +124,13 @@
     "4": "DRIVING",
     "5": "EMERGENCY",
     "6": "FINISHED"
+  },
+  "driverless_missionE": {
+    "0": "INSPECTION",
+    "1": "MANUAL_MODE", 
+    "2": "EBS_TEST",
+    "3": "ACCEL",
+    "4": "SKIDPAD",
+    "5": "AUTOX"
   }
 }

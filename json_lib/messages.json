@@ -2823,7 +2823,7 @@
       },
       {
         "name": "driverless_state",
-        "start_bit": 2
+        "start_bit": 3
       }
     ]
   },

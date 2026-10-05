@@ -2803,7 +2803,7 @@
     ]
   },
   {
-    "name": "DRIVERLESS_SYSTEM_STATUS",
+    "name": "DRIVERLESS_STATUS_AND_STARTUP",
     "id": "0x22A",
     "is_extended": false,
     "dlc": 8,
@@ -2816,6 +2816,10 @@
       {
         "name": "activate_ebs_solenoid_2",
         "start_bit": 1
+      },
+      {
+        "name": "continue_toggle_supervisor",
+        "start_bit": 2
       },
       {
         "name": "driverless_state",

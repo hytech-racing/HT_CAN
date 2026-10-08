@@ -28,6 +28,12 @@ jobs:
         run: |
           python conversion_scripts/json_to_dbc.py
 
+      - name: Merge imported DBCs into release DBC
+        run: |
+          mkdir -p merged
+          python conversion_scripts/merge_dbcs.py ht_can.dbc imported_dbcs/*.dbc -o merged/ht_can.dbc
+          mv merged/ht_can.dbc ht_can.dbc
+
       - name: Upload dbc artifact
         uses: actions/upload-artifact@v4
         with:

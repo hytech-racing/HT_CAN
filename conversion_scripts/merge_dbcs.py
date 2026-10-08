@@ -1,6 +1,6 @@
-"""Merge two DBCs, giving the second file priority on CAN IDs.
+"""Merge a generated DBC with protected imported DBCs.
 
-Usage: python conversion_scripts/merge_dbcs.py FIRST.dbc SECOND.dbc -o merged.dbc
+Usage: python conversion_scripts/merge_dbcs.py FIRST.dbc IMPORTED.dbc [...] -o merged.dbc
 """
 
 import argparse
@@ -21,27 +21,46 @@ def next_free_id(start, used, extended):
     raise ValueError(f"No free {'extended' if extended else 'standard'} CAN IDs")
 
 
-def merge(first_path, second_path):
+def merge(first_path, second_paths):
     first = cantools.database.load_file(first_path, strict=True)
-    second = cantools.database.load_file(second_path, strict=True)
+    imports = [(path, cantools.database.load_file(path, strict=True)) for path in second_paths]
     first = copy.deepcopy(first)
 
-    used = {(m.is_extended_frame, m.frame_id) for m in first.messages + second.messages}
-    second_ids = {(m.is_extended_frame, m.frame_id): m.name for m in second.messages}
-    second_names = {m.name for m in second.messages}
-    all_names = {m.name for m in first.messages + second.messages}
+    protected_ids = {}
+    protected_names = {}
+    for path, database in imports:
+        for msg in database.messages:
+            key = (msg.is_extended_frame, msg.frame_id)
+            if key in protected_ids:
+                other_path, other_name = protected_ids[key]
+                raise ValueError(
+                    f"Imported DBC conflict: {other_name} in {other_path} and "
+                    f"{msg.name} in {path} both use {msg.frame_id:#x}"
+                )
+            if msg.name in protected_names:
+                raise ValueError(
+                    f"Imported DBC message name {msg.name} occurs in both "
+                    f"{protected_names[msg.name]} and {path}"
+                )
+            protected_ids[key] = (path, msg.name)
+            protected_names[msg.name] = path
+
+    imported_messages = [msg for _, database in imports for msg in database.messages]
+    used = {(m.is_extended_frame, m.frame_id) for m in first.messages + imported_messages}
+    all_names = {m.name for m in first.messages + imported_messages}
 
     for msg in first.messages:
         key = (msg.is_extended_frame, msg.frame_id)
-        if key in second_ids:
+        if key in protected_ids:
             old_id = msg.frame_id
             msg.frame_id = next_free_id(old_id, used, msg.is_extended_frame)
             used.add((msg.is_extended_frame, msg.frame_id))
+            second_path, protected_name = protected_ids[key]
             print(
                 f"WARNING: {msg.name} in {first_path} moved from {old_id:#x} "
-                f"to {msg.frame_id:#x}; {second_ids[key]} in {second_path} keeps {old_id:#x}"
+                f"to {msg.frame_id:#x}; {protected_name} in {second_path} keeps {old_id:#x}"
             )
-        if msg.name in second_names:
+        if msg.name in protected_names:
             old_name = msg.name
             suffix = 1
             while f"{old_name}_from_first_{suffix}" in all_names:
@@ -52,21 +71,31 @@ def merge(first_path, second_path):
 
     nodes = list(first.nodes)
     node_names = {node.name for node in nodes}
-    for node in second.nodes:
-        if node.name not in node_names:
-            nodes.append(node)
-            node_names.add(node.name)
+    for _, database in imports:
+        for node in database.nodes:
+            if node.name not in node_names:
+                nodes.append(node)
+                node_names.add(node.name)
 
     dbc_specifics = copy.deepcopy(first.dbc)
-    for name, definition in second.dbc.attribute_definitions.items():
-        if name in dbc_specifics.attribute_definitions and dbc_specifics.attribute_definitions[name] != definition:
-            raise ValueError(f"Conflicting DBC attribute definition: {name}")
-        dbc_specifics.attribute_definitions[name] = definition
+    for _, database in imports:
+        for name, definition in database.dbc.attribute_definitions.items():
+            if name in dbc_specifics.attribute_definitions and dbc_specifics.attribute_definitions[name] != definition:
+                raise ValueError(f"Conflicting DBC attribute definition: {name}")
+            dbc_specifics.attribute_definitions[name] = definition
+
+    buses = list(first.buses)
+    bus_names = {bus.name for bus in buses}
+    for _, database in imports:
+        for bus in database.buses:
+            if bus.name not in bus_names:
+                buses.append(bus)
+                bus_names.add(bus.name)
 
     return can.Database(
-        messages=first.messages + second.messages,
+        messages=first.messages + imported_messages,
         nodes=nodes,
-        buses=first.buses + [bus for bus in second.buses if bus.name not in {b.name for b in first.buses}],
+        buses=buses,
         version=first.version,
         dbc_specifics=dbc_specifics,
         strict=True,
@@ -77,10 +106,10 @@ def merge(first_path, second_path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("first", type=Path, help="DBC whose conflicting IDs may move")
-    parser.add_argument("second", type=Path, help="DBC whose IDs remain unchanged")
+    parser.add_argument("second", type=Path, nargs="+", help="imported DBCs whose IDs remain unchanged")
     parser.add_argument("-o", "--output", type=Path, default=Path("merged.dbc"))
     args = parser.parse_args()
-    if args.output.resolve() in {args.first.resolve(), args.second.resolve()}:
+    if args.output.resolve() in {args.first.resolve(), *(path.resolve() for path in args.second)}:
         parser.error("output must differ from both input files")
 
     merged = merge(args.first, args.second)

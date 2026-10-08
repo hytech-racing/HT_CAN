@@ -16,6 +16,21 @@ with open("json_lib/signals.json", "r") as f:
 with open("json_lib/messages.json", "r") as f:
     messages_data = json.load(f)
 
+# A DBC decoder cannot distinguish two messages with the same arbitration ID.
+seen_ids = {}
+seen_names = set()
+for msg in messages_data:
+    frame_id = int(msg["id"], 0) if isinstance(msg["id"], str) else msg["id"]
+    key = (msg.get("is_extended", False), frame_id)
+    if key in seen_ids:
+        raise ValueError(
+            f"CAN ID {frame_id:#x} is shared by {seen_ids[key]} and {msg['name']}"
+        )
+    if msg["name"] in seen_names:
+        raise ValueError(f"Duplicate message name: {msg['name']}")
+    seen_ids[key] = msg["name"]
+    seen_names.add(msg["name"])
+
 db_messages = []
 for msg in messages_data:
     msg_signals = []

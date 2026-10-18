@@ -126,6 +126,18 @@ for msg in messages_data:
     else:
         calculated_dlc = (max_bit + 7) // 8
 
+    valid_fd_lengths = [0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 20, 24, 32, 48, 64]
+    if msg.get("is_fd", False) and calculated_dlc not in valid_fd_lengths:
+        raise ValueError(
+            f"Invalid DLC {calculated_dlc} for FD message {msg['name']}. "
+            f"Valid lengths are: {valid_fd_lengths}"
+        )
+    elif calculated_dlc > 8:
+        raise ValueError(
+            f"Invalid DLC {calculated_dlc} for non-FD message {msg['name']}. "
+            f"Valid lengths are 0-8."
+        )
+    
     db_messages.append(
         can.Message(
             frame_id=int(msg["id"], 16) if isinstance(msg["id"], str) else msg["id"],

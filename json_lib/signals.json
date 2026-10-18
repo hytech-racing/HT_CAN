@@ -8903,5 +8903,57 @@
     "max": 1,
     "enum": null,
     "description": "Correct mode selected"
+  },
+  "fd_test_counter": {
+    "length": 32,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1,
+    "offset": 0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": null,
+    "description": "CAN FD test signal"
+  },
+    "fd_test_byte8": {
+    "length": 32,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1,
+    "offset": 0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": null,
+    "description": "CAN FD test signal"
+  },
+    "fd_test_byte32": {
+    "length": 32,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1,
+    "offset": 0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": null,
+    "description": "CAN FD test signal"
+  },
+    "fd_test_byte60": {
+    "length": 32,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1,
+    "offset": 0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": null,
+    "description": "CAN FD test signal"
   }
 }

@@ -40,7 +40,6 @@ for msg in messages_data:
     msg_signals = []
     current_bit = 0
     max_bit = 0
-    is_fd = msg.get("is_fd", False)
 
     for sig_ref in msg["signals"]:
         sig_prop = global_signals[sig_ref["name"]]
@@ -131,7 +130,7 @@ for msg in messages_data:
         if calculated_dlc not in valid_fd_lengths:
             raise ValueError(
                 f"Invalid DLC {calculated_dlc} for FD message {msg['name']}. "
-                f"Valid lengths are: {valid_fd_lengths}"
+                f"Valid lengths are: {sorted(valid_fd_lengths)}"
             )
     elif calculated_dlc > 8:
         raise ValueError(

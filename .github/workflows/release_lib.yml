@@ -144,7 +144,7 @@ jobs:
           mkdir -p /ht_can.can_lib
           /tmp/coderdbc/build/coderdbc -rw -dbc /dbc/ht_can.dbc -out /ht_can.can_lib -drvname ht_can
           mkdir -p /output
-          echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /ht_can.can_lib/library.json
+          echo -e "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /ht_can.can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /ht_can.can_lib
 
       - name: generate drivebrain lib release

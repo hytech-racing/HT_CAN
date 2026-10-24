@@ -2828,7 +2828,7 @@
     ]
   },
   {
-    "name":"FDC_DRIVERLESS_MISSION",
+    "name": "FDC_DRIVERLESS_MISSION",
     "id": "0x22C",
     "is_extended": false,
     "dlc": 8,
@@ -2878,7 +2878,7 @@
     "description": "Status of the RSS",
     "signals": [
       {
-        "name": "emergency_stop_not_pressed_1",
+        "name": "emergency_stop_pressed_1",
         "start_bit": 0
       },
       {
@@ -2890,7 +2890,7 @@
         "start_bit": 2
       },
       {
-        "name": "emergency_stop_not_pressed_2",
+        "name": "emergency_stop_pressed_2",
         "start_bit": 31
       },
       {

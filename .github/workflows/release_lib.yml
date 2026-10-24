@@ -106,11 +106,20 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release_name: ${{ steps.release_name.outputs.name }}
-    container:
-      image: ghcr.io/rcmast3r/ccoderdbc:main
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Build coderdbc
+        run: |
+          git clone --branch v3.1 --depth 1 https://github.com/astand/c-coderdbc.git /tmp/coderdbc
+          cmake -S /tmp/coderdbc/src -B /tmp/coderdbc/build
+          cmake --build /tmp/coderdbc/build -j
+          
+      - name: Prepare output directories
+        run: |
+          sudo mkdir -p /dbc /output /ht_can.can_lib /ht_can.drivebrain_lib /docs
+          sudo chown -R "$(id -u):$(id -g)" /dbc /output /ht_can.can_lib /ht_can.drivebrain_lib /docs
 
       - name: Set release name
         id: release_name
@@ -133,10 +142,9 @@ jobs:
       - name: generate code
         run: |
           mkdir -p /ht_can.can_lib
-          cd /app
-          ./build/coderdbc -rw -dbc /dbc/ht_can.dbc -out /ht_can.can_lib -drvname ht_can
+          /tmp/coderdbc/build/coderdbc -rw -dbc /dbc/ht_can.dbc -out /ht_can.can_lib -drvname ht_can
           mkdir -p /output
-          echo "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /ht_can.can_lib/library.json
+          echo -e "{\n\"name\": \"can_lib\",\n\"version\": \"1.0.0\",\n\"build\": {\n\t\"flags\": [\n\t\t\"-Iinc\",\n\t\t\"-Ilib\",\n\t\t\"-Iconf\"\n\t]\n}\n}" >> /ht_can.can_lib/library.json
           tar -czvf /output/can_lib.tar.gz /ht_can.can_lib
 
       - name: generate drivebrain lib release

@@ -1,6 +1,10 @@
 import json, cantools, os
 from cantools.database import can
 from cantools.database.conversion import BaseConversion
+from cantools.database.can.formats.dbc_specifics import DbcSpecifics
+from cantools.database.can.attribute import Attribute
+from cantools.database.can.attribute_definition import AttributeDefinition
+
 
 # Load Enums and convert JSON string keys to integer keys for cantools
 with open("json_lib/enums.json", "r") as f:
@@ -54,6 +58,7 @@ for msg in messages_data:
 
         is_big_endian = sig_prop.get("is_big_endian", False)
         is_signed = sig_prop.get("is_signed", False)
+        
 
         # Convert PCAN LSB start bit to DBC MSB start bit for Big Endian signals
         if is_big_endian:
@@ -120,12 +125,26 @@ for msg in messages_data:
     else:
         calculated_dlc = (max_bit + 7) // 8
 
+    valid_fd_lengths = {0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 20, 24, 32, 48, 64}
+    if msg.get("is_fd", False):  
+        if calculated_dlc not in valid_fd_lengths:
+            raise ValueError(
+                f"Invalid DLC {calculated_dlc} for FD message {msg['name']}. "
+                f"Valid lengths are: {sorted(valid_fd_lengths)}"
+            )
+    elif calculated_dlc > 8:
+        raise ValueError(
+            f"Invalid DLC {calculated_dlc} for non-FD message {msg['name']}. "
+            f"Valid lengths are 0-8."
+        )
+    
     db_messages.append(
         can.Message(
             frame_id=int(msg["id"], 16) if isinstance(msg["id"], str) else msg["id"],
             name=msg["name"],
             length=calculated_dlc,
             is_extended_frame=msg.get("is_extended", False),
+            is_fd=msg.get("is_fd", False),
             senders=msg.get("senders", ["ECU"]),
             signals=msg_signals,
             comment=msg.get("description", ""),
@@ -134,5 +153,14 @@ for msg in messages_data:
 
 release_number = os.getenv("RELEASE_NUMBER", "0")
 
-db = cantools.database.Database(messages=db_messages, version=release_number)
+# cantools only puts FD flags when  bus is declared FD
+dbc = DbcSpecifics()
+if any(m.is_fd for m in db_messages):
+    bus_type = AttributeDefinition("BusType", default_value="", kind=None, type_name="STRING")
+    dbc.attribute_definitions["BusType"] = bus_type
+    dbc.attributes["BusType"] = Attribute("CAN FD", bus_type)
+
+db = cantools.database.Database(
+    messages=db_messages, version=release_number, dbc_specifics=dbc
+)
 cantools.database.dump_file(db, "ht_can.dbc")

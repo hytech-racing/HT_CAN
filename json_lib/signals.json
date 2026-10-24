@@ -8748,6 +8748,19 @@
     "enum": null,
     "description": ""
   },
+  "continue_toggle_supervisor": {
+    "length": 1,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1.0,
+    "offset": 0.0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": null,
+    "description": ""
+  },
   "driverless_state": {
     "length": 3,
     "is_signed": false,

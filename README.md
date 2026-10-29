@@ -1,5 +1,3 @@
-# HT CAN description
-This repository contains the CAN network description file, the nix flake that supports the TCU/data_acq as well as the github action for automated CAN library creation.
+# HT_CAN
 
-# how to update the TCU to a newer CAN library.
-
+HyTech's CAN network definition. Every push builds a release with the generated CAN library that the firmware uses.

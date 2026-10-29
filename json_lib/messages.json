@@ -467,31 +467,6 @@
     ]
   },
   {
-    "name": "LF_TTPMS_1",
-    "id": "0x424",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "LF_TTPMS_SN",
-        "start_bit": 0
-      },
-      {
-        "name": "LF_TTPMS_BAT_V",
-        "start_bit": 16
-      },
-      {
-        "name": "LF_TTPMS_P",
-        "start_bit": 32
-      },
-      {
-        "name": "LF_TTPMS_P_GAUGE",
-        "start_bit": 48
-      }
-    ]
-  },
-  {
     "name": "LF_TTPMS_2",
     "id": "0x425",
     "is_extended": false,
@@ -1112,31 +1087,6 @@
     ]
   },
   {
-    "name": "REAR_SUSPENSION",
-    "id": "0x0E4",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "rl_load_cell",
-        "start_bit": 0
-      },
-      {
-        "name": "rr_load_cell",
-        "start_bit": 16
-      },
-      {
-        "name": "rl_shock_pot",
-        "start_bit": 32
-      },
-      {
-        "name": "rr_shock_pot",
-        "start_bit": 48
-      }
-    ]
-  },
-  {
     "name": "REAR_THERMISTORS_DATA",
     "id": "0x0EE",
     "is_extended": false,
@@ -1308,31 +1258,6 @@
       {
         "name": "drivetrain_state",
         "start_bit": 8
-      }
-    ]
-  },
-  {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH1_CH4",
-    "id": "0x4C4",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "brake_temp_channel_1",
-        "start_bit": 0
-      },
-      {
-        "name": "brake_temp_channel_2",
-        "start_bit": 16
-      },
-      {
-        "name": "brake_temp_channel_3",
-        "start_bit": 32
-      },
-      {
-        "name": "brake_temp_channel_4",
-        "start_bit": 48
       }
     ]
   },

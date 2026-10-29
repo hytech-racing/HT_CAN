@@ -467,790 +467,6 @@
     ]
   },
   {
-    "name": "INV1_CONTROL_INPUT",
-    "id": "0x099",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_setpoint_rpm",
-        "start_bit": 0
-      },
-      {
-        "name": "positive_torque_limit",
-        "start_bit": 16
-      },
-      {
-        "name": "negative_torque_limit",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV1_CONTROL_PARAMETER",
-    "id": "0x105",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV1_CONTROL_WORD",
-    "id": "0x092",
-    "is_extended": false,
-    "dlc": 2,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_enable",
-        "start_bit": 8
-      },
-      {
-        "name": "hv_enable",
-        "start_bit": 9
-      },
-      {
-        "name": "driver_enable",
-        "start_bit": 10
-      },
-      {
-        "name": "remove_error",
-        "start_bit": 11
-      }
-    ]
-  },
-  {
-    "name": "INV1_DYNAMICS",
-    "id": "0x082",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "actual_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "actual_torque_nm",
-        "start_bit": 32
-      },
-      {
-        "name": "actual_speed_rpm",
-        "start_bit": 48
-      }
-    ]
-  },
-  {
-    "name": "INV1_FEEDBACK",
-    "id": "0x084",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV1_POWER",
-    "id": "0x083",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "active_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "reactive_power_var",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV1_STATUS",
-    "id": "0x080",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "system_ready",
-        "start_bit": 8
-      },
-      {
-        "name": "error",
-        "start_bit": 9
-      },
-      {
-        "name": "warning",
-        "start_bit": 10
-      },
-      {
-        "name": "quit_dc_on",
-        "start_bit": 11
-      },
-      {
-        "name": "dc_on",
-        "start_bit": 12
-      },
-      {
-        "name": "quit_inverter_on",
-        "start_bit": 13
-      },
-      {
-        "name": "inverter_on",
-        "start_bit": 14
-      },
-      {
-        "name": "derating_on",
-        "start_bit": 15
-      },
-      {
-        "name": "dc_bus_voltage",
-        "start_bit": 16
-      },
-      {
-        "name": "diagnostic_number",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV1_TEMPS",
-    "id": "0x081",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "motor_temp",
-        "start_bit": 0
-      },
-      {
-        "name": "inverter_temp",
-        "start_bit": 16
-      },
-      {
-        "name": "igbt_temp",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV2_CONTROL_INPUT",
-    "id": "0x102",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_setpoint_rpm",
-        "start_bit": 0
-      },
-      {
-        "name": "positive_torque_limit",
-        "start_bit": 16
-      },
-      {
-        "name": "negative_torque_limit",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV2_CONTROL_PARAMETER",
-    "id": "0x106",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV2_CONTROL_WORD",
-    "id": "0x093",
-    "is_extended": false,
-    "dlc": 2,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_enable",
-        "start_bit": 8
-      },
-      {
-        "name": "hv_enable",
-        "start_bit": 9
-      },
-      {
-        "name": "driver_enable",
-        "start_bit": 10
-      },
-      {
-        "name": "remove_error",
-        "start_bit": 11
-      }
-    ]
-  },
-  {
-    "name": "INV2_DYNAMICS",
-    "id": "0x087",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "actual_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "actual_torque_nm",
-        "start_bit": 32
-      },
-      {
-        "name": "actual_speed_rpm",
-        "start_bit": 48
-      }
-    ]
-  },
-  {
-    "name": "INV2_FEEDBACK",
-    "id": "0x089",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV2_POWER",
-    "id": "0x088",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "active_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "reactive_power_var",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV2_STATUS",
-    "id": "0x085",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "system_ready",
-        "start_bit": 8
-      },
-      {
-        "name": "error",
-        "start_bit": 9
-      },
-      {
-        "name": "warning",
-        "start_bit": 10
-      },
-      {
-        "name": "quit_dc_on",
-        "start_bit": 11
-      },
-      {
-        "name": "dc_on",
-        "start_bit": 12
-      },
-      {
-        "name": "quit_inverter_on",
-        "start_bit": 13
-      },
-      {
-        "name": "inverter_on",
-        "start_bit": 14
-      },
-      {
-        "name": "derating_on",
-        "start_bit": 15
-      },
-      {
-        "name": "dc_bus_voltage",
-        "start_bit": 16
-      },
-      {
-        "name": "diagnostic_number",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV2_TEMPS",
-    "id": "0x086",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "motor_temp",
-        "start_bit": 0
-      },
-      {
-        "name": "inverter_temp",
-        "start_bit": 16
-      },
-      {
-        "name": "igbt_temp",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV3_CONTROL_INPUT",
-    "id": "0x097",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_setpoint_rpm",
-        "start_bit": 0
-      },
-      {
-        "name": "positive_torque_limit",
-        "start_bit": 16
-      },
-      {
-        "name": "negative_torque_limit",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV3_CONTROL_PARAMETER",
-    "id": "0x103",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV3_CONTROL_WORD",
-    "id": "0x090",
-    "is_extended": false,
-    "dlc": 2,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_enable",
-        "start_bit": 8
-      },
-      {
-        "name": "hv_enable",
-        "start_bit": 9
-      },
-      {
-        "name": "driver_enable",
-        "start_bit": 10
-      },
-      {
-        "name": "remove_error",
-        "start_bit": 11
-      }
-    ]
-  },
-  {
-    "name": "INV3_DYNAMICS",
-    "id": "0x072",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "actual_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "actual_torque_nm",
-        "start_bit": 32
-      },
-      {
-        "name": "actual_speed_rpm",
-        "start_bit": 48
-      }
-    ]
-  },
-  {
-    "name": "INV3_FEEDBACK",
-    "id": "0x074",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV3_POWER",
-    "id": "0x073",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "active_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "reactive_power_var",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV3_STATUS",
-    "id": "0x070",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "system_ready",
-        "start_bit": 8
-      },
-      {
-        "name": "error",
-        "start_bit": 9
-      },
-      {
-        "name": "warning",
-        "start_bit": 10
-      },
-      {
-        "name": "quit_dc_on",
-        "start_bit": 11
-      },
-      {
-        "name": "dc_on",
-        "start_bit": 12
-      },
-      {
-        "name": "quit_inverter_on",
-        "start_bit": 13
-      },
-      {
-        "name": "inverter_on",
-        "start_bit": 14
-      },
-      {
-        "name": "derating_on",
-        "start_bit": 15
-      },
-      {
-        "name": "dc_bus_voltage",
-        "start_bit": 16
-      },
-      {
-        "name": "diagnostic_number",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV3_TEMPS",
-    "id": "0x071",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "motor_temp",
-        "start_bit": 0
-      },
-      {
-        "name": "inverter_temp",
-        "start_bit": 16
-      },
-      {
-        "name": "igbt_temp",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV4_CONTROL_INPUT",
-    "id": "0x098",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_setpoint_rpm",
-        "start_bit": 0
-      },
-      {
-        "name": "positive_torque_limit",
-        "start_bit": 16
-      },
-      {
-        "name": "negative_torque_limit",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV4_CONTROL_PARAMETER",
-    "id": "0x104",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV4_CONTROL_WORD",
-    "id": "0x091",
-    "is_extended": false,
-    "dlc": 2,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_enable",
-        "start_bit": 8
-      },
-      {
-        "name": "hv_enable",
-        "start_bit": 9
-      },
-      {
-        "name": "driver_enable",
-        "start_bit": 10
-      },
-      {
-        "name": "remove_error",
-        "start_bit": 11
-      }
-    ]
-  },
-  {
-    "name": "INV4_DYNAMICS",
-    "id": "0x077",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "actual_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "actual_torque_nm",
-        "start_bit": 32
-      },
-      {
-        "name": "actual_speed_rpm",
-        "start_bit": 48
-      }
-    ]
-  },
-  {
-    "name": "INV4_FEEDBACK",
-    "id": "0x079",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "speed_control_kp",
-        "start_bit": 0
-      },
-      {
-        "name": "speed_control_ki",
-        "start_bit": 16
-      },
-      {
-        "name": "speed_control_kd",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV4_POWER",
-    "id": "0x078",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "active_power_w",
-        "start_bit": 0
-      },
-      {
-        "name": "reactive_power_var",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV4_STATUS",
-    "id": "0x075",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "system_ready",
-        "start_bit": 8
-      },
-      {
-        "name": "error",
-        "start_bit": 9
-      },
-      {
-        "name": "warning",
-        "start_bit": 10
-      },
-      {
-        "name": "quit_dc_on",
-        "start_bit": 11
-      },
-      {
-        "name": "dc_on",
-        "start_bit": 12
-      },
-      {
-        "name": "quit_inverter_on",
-        "start_bit": 13
-      },
-      {
-        "name": "inverter_on",
-        "start_bit": 14
-      },
-      {
-        "name": "derating_on",
-        "start_bit": 15
-      },
-      {
-        "name": "dc_bus_voltage",
-        "start_bit": 16
-      },
-      {
-        "name": "diagnostic_number",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
-    "name": "INV4_TEMPS",
-    "id": "0x076",
-    "is_extended": false,
-    "dlc": 6,
-    "description": "",
-    "signals": [
-      {
-        "name": "motor_temp",
-        "start_bit": 0
-      },
-      {
-        "name": "inverter_temp",
-        "start_bit": 16
-      },
-      {
-        "name": "igbt_temp",
-        "start_bit": 32
-      }
-    ]
-  },
-  {
     "name": "LF_TTPMS_1",
     "id": "0x424",
     "is_extended": false,
@@ -2522,74 +1738,6 @@
     ]
   },
   {
-    "name": "INV1_OVERLOAD",
-    "id": "0x14A",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_overload_percentage",
-        "start_bit": 0
-      },
-      {
-        "name": "motor_overload_percentage",
-        "start_bit": 16
-      }
-    ]
-  },
-  {
-    "name": "INV2_OVERLOAD",
-    "id": "0x154",
-    "is_extended": false,
-    "dlc": 4,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_overload_percentage",
-        "start_bit": 0
-      },
-      {
-        "name": "motor_overload_percentage",
-        "start_bit": 16
-      }
-    ]
-  },
-  {
-    "name": "INV3_OVERLOAD",
-    "id": "0x136",
-    "is_extended": false,
-    "dlc": 4,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_overload_percentage",
-        "start_bit": 0
-      },
-      {
-        "name": "motor_overload_percentage",
-        "start_bit": 16
-      }
-    ]
-  },
-  {
-    "name": "INV4_OVERLOAD",
-    "id": "0x140",
-    "is_extended": false,
-    "dlc": 4,
-    "description": "",
-    "signals": [
-      {
-        "name": "inverter_overload_percentage",
-        "start_bit": 0
-      },
-      {
-        "name": "motor_overload_percentage",
-        "start_bit": 16
-      }
-    ]
-  },
-  {
     "name": "ENERGY_METER_MEAS",
     "id": "0x10D",
     "is_extended": false,
@@ -2803,7 +1951,7 @@
     ]
   },
   {
-    "name": "DRIVERLESS_SYSTEM_STATUS",
+    "name": "DRIVERLESS_STATUS_AND_STARTUP",
     "id": "0x22A",
     "is_extended": false,
     "dlc": 8,
@@ -2818,12 +1966,95 @@
         "start_bit": 1
       },
       {
-        "name": "driverless_state",
+        "name": "continue_toggle_supervisor",
         "start_bit": 2
+      },
+      {
+        "name": "driverless_state",
+        "start_bit": 3
       }
     ]
   },
-
+  {
+    "name": "FDC_DRIVERLESS_MISSION",
+    "id": "0x22C",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "driverless_mission",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "RSS_BOOT_UP",
+    "id": "0x711",
+    "is_extended": false,
+    "dlc": 1,
+    "description": "Msg sent by RSS on boot up",
+    "signals": [
+      {
+        "name": "rss_initialization",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
+    "name": "SET_OPERATING_MODE",
+    "id": "0x000",
+    "is_extended": false,
+    "dlc": 2,
+    "description": "Msg sent to the RSS to set the operating mode",
+    "signals": [
+      {
+        "name": "requested_state",
+        "start_bit": 0
+      },
+      {
+        "name": "target_node",
+        "start_bit": 8
+      }
+    ]
+  },
+  {
+    "name": "RSS_STATUS",
+    "id": "0x191",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Status of the RSS",
+    "signals": [
+      {
+        "name": "emergency_stop_pressed_1",
+        "start_bit": 0
+      },
+      {
+        "name": "switch_k2_pressed",
+        "start_bit": 1
+      },
+      {
+        "name": "button_k3_pressed",
+        "start_bit": 2
+      },
+      {
+        "name": "emergency_stop_pressed_2",
+        "start_bit": 31
+      },
+      {
+        "name": "radio_link_quality",
+        "start_bit": 48
+      },
+      {
+        "name": "pre_alarm_warning",
+        "start_bit": 62
+      },
+      {
+        "name": "correct_mode_selected",
+        "start_bit": 63
+      }
+    ]
+  },
   {
     "name": "INV1_STATUS_GENERAL_CONTROL",
     "id": "0x3E1",
@@ -2889,7 +2120,7 @@
   },
   {
     "name": "INV1_STATUS_TEMP_AND_FAULT",
-    "id":"0x441",
+    "id": "0x441",
     "is_extended": false,
     "dlc": 8,
     "description": "",
@@ -3076,7 +2307,6 @@
       }
     ]
   },
-
   {
     "name": "INV2_STATUS_GENERAL_CONTROL",
     "id": "0x3E2",
@@ -3142,7 +2372,7 @@
   },
   {
     "name": "INV2_STATUS_TEMP_AND_FAULT",
-    "id":"0x442",
+    "id": "0x442",
     "is_extended": false,
     "dlc": 8,
     "description": "",
@@ -3329,7 +2559,6 @@
       }
     ]
   },
-
   {
     "name": "INV3_STATUS_GENERAL_CONTROL",
     "id": "0x3E3",
@@ -3395,7 +2624,7 @@
   },
   {
     "name": "INV3_STATUS_TEMP_AND_FAULT",
-    "id":"0x443",
+    "id": "0x443",
     "is_extended": false,
     "dlc": 8,
     "description": "",
@@ -3582,7 +2811,6 @@
       }
     ]
   },
-
   {
     "name": "INV4_STATUS_GENERAL_CONTROL",
     "id": "0x3E4",
@@ -3648,7 +2876,7 @@
   },
   {
     "name": "INV4_STATUS_TEMP_AND_FAULT",
-    "id":"0x444",
+    "id": "0x444",
     "is_extended": false,
     "dlc": 8,
     "description": "",
@@ -3835,7 +3063,6 @@
       }
     ]
   },
-
   {
     "name": "INV1_SET_AC_CURRENT",
     "id": "0x21",
@@ -4004,7 +3231,6 @@
       }
     ]
   },
-
   {
     "name": "INV2_SET_AC_CURRENT",
     "id": "0x22",
@@ -4173,7 +3399,6 @@
       }
     ]
   },
-
   {
     "name": "INV3_SET_AC_CURRENT",
     "id": "0x23",
@@ -4342,7 +3567,6 @@
       }
     ]
   },
-
   {
     "name": "INV4_SET_AC_CURRENT",
     "id": "0x24",
@@ -4511,5 +3735,4 @@
       }
     ]
   }
-
 ]

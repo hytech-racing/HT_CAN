@@ -24,8 +24,36 @@ def merge_dbc_to_json(dbc_filepath):
     # Load the external DBC file using cantools
     ext_db = cantools.database.load_file(dbc_filepath)
 
-    # Track existing message names to avoid duplicate collisions
+    # Reject conflicts before changing any of the source JSON files. CAN IDs are
+    # unique within their standard/extended frame namespace, regardless of name.
     existing_msg_names = {msg["name"] for msg in messages_db}
+    existing_msg_ids = {}
+    for msg in messages_db:
+        frame_id = int(msg["id"], 0) if isinstance(msg["id"], str) else msg["id"]
+        existing_msg_ids[(msg.get("is_extended", False), frame_id)] = msg["name"]
+    conflicts = []
+    incoming_names = set()
+    incoming_ids = set()
+    incoming_signals = set()
+    for msg in ext_db.messages:
+        key = (msg.is_extended_frame, msg.frame_id)
+        if msg.name in existing_msg_names or msg.name in incoming_names:
+            conflicts.append(f"message name {msg.name} already exists")
+        if key in existing_msg_ids:
+            conflicts.append(
+                f"CAN ID {msg.frame_id:#x} ({'extended' if msg.is_extended_frame else 'standard'}) "
+                f"is used by {existing_msg_ids[key]} and {msg.name}"
+            )
+        elif key in incoming_ids:
+            conflicts.append(f"CAN ID {msg.frame_id:#x} occurs twice in the import")
+        incoming_names.add(msg.name)
+        incoming_ids.add(key)
+        for sig in msg.signals:
+            if sig.name in signals_db or sig.name in incoming_signals:
+                conflicts.append(f"signal name {sig.name} already exists")
+            incoming_signals.add(sig.name)
+    if conflicts:
+        raise ValueError("Cannot merge DBC:\n" + "\n".join(conflicts))
 
     for msg in ext_db.messages:
         msg_signals = []

@@ -2906,5 +2906,32 @@
         "start_bit": 63
       }
     ]
+  },
+  {
+    "name": "FD_TEST",
+    "id": "0x7F2",
+    "is_extended": false,
+    "is_fd": true,
+    "dlc": 64,
+    "description": "Test message for FD",
+    "signals": [
+      {
+        "name": "fd_test_counter",
+        "start_bit": 0
+      },
+      {
+        "name": "fd_test_byte8",
+        "start_bit": 64
+      },
+      {
+        "name": "fd_test_byte32",
+        "start_bit": 256
+      },
+      {
+        "name": "fd_test_byte60",
+        "start_bit": 480
+      }
+    ]
+
   }
 ]

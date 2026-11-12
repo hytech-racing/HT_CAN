@@ -8993,7 +8993,7 @@
     "min": -2048,
     "max": 2047,
     "enum": null,
-    "description": "Force on the front lower fore ackerman arm"
+    "description": "Force on the rear lower fore ackerman arm"
   },
   "F_LowerAftAA_R": {
     "length": 12,
@@ -9006,7 +9006,7 @@
     "min": -2048,
     "max": 2047,
     "enum": null,
-    "description": "Force on the front lower aft ackerman arm"
+    "description": "Force on the rear lower aft ackerman arm"
   },
   "F_UpperForeAA_R": {
     "length": 12,
@@ -9019,7 +9019,7 @@
     "min": -2048,
     "max": 2047,
     "enum": null,
-    "description": "Force on the front upper fore ackerman arm"
+    "description": "Force on the rear upper fore ackerman arm"
   },
   "F_UpperAftAA_R": {
     "length": 12,
@@ -9032,7 +9032,7 @@
     "min": -2048,
     "max": 2047,
     "enum": null,
-    "description": "Force on the front upper aft ackerman arm"
+    "description": "Force on the rear upper aft ackerman arm"
   },
   "F_ToeRod_R": {
     "length": 12,
@@ -9045,6 +9045,6 @@
     "min": -2048,
     "max": 2047,
     "enum": null,
-    "description": "Force on the front toe rod"
+    "description": "Force on the rear toe rod"
   }
 }

@@ -2906,5 +2906,63 @@
         "start_bit": 63
       }
     ]
+  },
+  {
+    "name": "STRAIN_GAUGES_FRONT",
+    "id": "0x4D2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Front strain gauge measurements",
+    "signals": [
+      {
+        "name": "F_LowerForeAA_F",
+        "start_bit": 0
+      },
+      {
+        "name": "F_LowerAftAA_F",
+        "start_bit": 12
+      },
+      {
+        "name": "F_UpperForeAA_F",
+        "start_bit": 24
+      },
+      {
+        "name": "F_UpperAftAA_F",
+        "start_bit": 36
+      },
+      {
+        "name": "F_ToeRod_F",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "STRAIN_GAUGES_REAR",
+    "id": "0x4D3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Rear strain gauge measurements",
+    "signals": [
+      {
+        "name": "F_LowerForeAA_R",
+        "start_bit": 0
+      },
+      {
+        "name": "F_LowerAftAA_R",
+        "start_bit": 12
+      },
+      {
+        "name": "F_UpperForeAA_R",
+        "start_bit": 24
+      },
+      {
+        "name": "F_UpperAftAA_R",
+        "start_bit": 36
+      },
+      {
+        "name": "F_ToeRod_R",
+        "start_bit": 48
+      }
+    ]
   }
 ]

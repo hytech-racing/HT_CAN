@@ -1401,151 +1401,151 @@
     ]
   },
   {
-    "name": "RF_TTPMS_1",
+    "name": "FR_TTPMS_1",
     "id": "0x42A",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_SN",
+        "name": "FR_TTPMS_SN",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_BAT_V",
+        "name": "FR_TTPMS_BAT_V",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_P",
+        "name": "FR_TTPMS_P",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_P_GAUGE",
+        "name": "FR_TTPMS_P_GAUGE",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_2",
+    "name": "FR_TTPMS_2",
     "id": "0x42B",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T1",
+        "name": "FR_TTPMS_T1",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T2",
+        "name": "FR_TTPMS_T2",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T3",
+        "name": "FR_TTPMS_T3",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T4",
+        "name": "FR_TTPMS_T4",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_3",
+    "name": "FR_TTPMS_3",
     "id": "0x42C",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T5",
+        "name": "FR_TTPMS_T5",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T6",
+        "name": "FR_TTPMS_T6",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T7",
+        "name": "FR_TTPMS_T7",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T8",
+        "name": "FR_TTPMS_T8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_4",
+    "name": "FR_TTPMS_4",
     "id": "0x42D",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T9",
+        "name": "FR_TTPMS_T9",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T10",
+        "name": "FR_TTPMS_T10",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T11",
+        "name": "FR_TTPMS_T11",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T12",
+        "name": "FR_TTPMS_T12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_5",
+    "name": "FR_TTPMS_5",
     "id": "0x42E",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T13",
+        "name": "FR_TTPMS_T13",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T14",
+        "name": "FR_TTPMS_T14",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T15",
+        "name": "FR_TTPMS_T15",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T16",
+        "name": "FR_TTPMS_T16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_6",
+    "name": "FR_TTPMS_6",
     "id": "0x42F",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_TC",
+        "name": "FR_TTPMS_TC",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_RSSI",
+        "name": "FR_TTPMS_RSSI",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T",
+        "name": "FR_TTPMS_T",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_NODE_ID",
+        "name": "FR_TTPMS_NODE_ID",
         "start_bit": 48
       }
     ]

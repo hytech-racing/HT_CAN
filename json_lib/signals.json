@@ -1780,7 +1780,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_SN": {
+  "RL_TTPMS_SN": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1793,7 +1793,7 @@
     "enum": null,
     "description": "Serial Number"
   },
-  "LR_TTPMS_BAT_V": {
+  "RL_TTPMS_BAT_V": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1806,7 +1806,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_P": {
+  "RL_TTPMS_P": {
     "length": 16,
     "is_signed": true,
     "is_float": false,
@@ -1819,7 +1819,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_P_GAUGE": {
+  "RL_TTPMS_P_GAUGE": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1832,7 +1832,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T1": {
+  "RL_TTPMS_T1": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1845,7 +1845,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T2": {
+  "RL_TTPMS_T2": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1858,7 +1858,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T3": {
+  "RL_TTPMS_T3": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1871,7 +1871,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T4": {
+  "RL_TTPMS_T4": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1884,7 +1884,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T5": {
+  "RL_TTPMS_T5": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1897,7 +1897,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T6": {
+  "RL_TTPMS_T6": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1910,7 +1910,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T7": {
+  "RL_TTPMS_T7": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1923,7 +1923,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T8": {
+  "RL_TTPMS_T8": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1936,7 +1936,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T9": {
+  "RL_TTPMS_T9": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1949,7 +1949,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T10": {
+  "RL_TTPMS_T10": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1962,7 +1962,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T11": {
+  "RL_TTPMS_T11": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1975,7 +1975,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T12": {
+  "RL_TTPMS_T12": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -1988,7 +1988,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T13": {
+  "RL_TTPMS_T13": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -2001,7 +2001,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T14": {
+  "RL_TTPMS_T14": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -2014,7 +2014,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T15": {
+  "RL_TTPMS_T15": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -2027,7 +2027,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T16": {
+  "RL_TTPMS_T16": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -2040,7 +2040,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_TC": {
+  "RL_TTPMS_TC": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -2053,7 +2053,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_RSSI": {
+  "RL_TTPMS_RSSI": {
     "length": 16,
     "is_signed": true,
     "is_float": false,
@@ -2066,7 +2066,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_T": {
+  "RL_TTPMS_T": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -2079,7 +2079,7 @@
     "enum": null,
     "description": ""
   },
-  "LR_TTPMS_NODE_ID": {
+  "RL_TTPMS_NODE_ID": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -5654,7 +5654,7 @@
     "enum": null,
     "description": ""
   },
-  "controller_tcs_gen_LRdiff_lowerB": {
+  "controller_tcs_gen_RLdiff_lowerB": {
     "length": 13,
     "is_signed": false,
     "is_float": false,
@@ -5667,7 +5667,7 @@
     "enum": null,
     "description": ""
   },
-  "controller_tcs_gen_LRdiff_upperB": {
+  "controller_tcs_gen_RLdiff_upperB": {
     "length": 14,
     "is_signed": false,
     "is_float": false,
@@ -5706,7 +5706,7 @@
     "enum": null,
     "description": ""
   },
-  "controller_tcs_launch_LRdiff": {
+  "controller_tcs_launch_RLdiff": {
     "length": 13,
     "is_signed": false,
     "is_float": false,

@@ -7370,7 +7370,7 @@
     "enum": "vehicle_stateE",
     "description": ""
   },
-  "brake_temp_channel_1": {
+  "ir_temp_channel_1": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7381,9 +7381,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_2": {
+  "ir_temp_channel_2": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7394,9 +7394,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_3": {
+  "ir_temp_channel_3": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7407,9 +7407,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_4": {
+  "ir_temp_channel_4": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7420,9 +7420,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_5": {
+  "ir_temp_channel_5": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7433,9 +7433,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_6": {
+  "ir_temp_channel_6": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7446,9 +7446,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_7": {
+  "ir_temp_channel_7": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7459,9 +7459,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_8": {
+  "ir_temp_channel_8": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7472,9 +7472,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_9": {
+  "ir_temp_channel_9": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7485,9 +7485,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_10": {
+  "ir_temp_channel_10": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7498,9 +7498,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_11": {
+  "ir_temp_channel_11": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7511,9 +7511,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_12": {
+  "ir_temp_channel_12": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7524,9 +7524,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_13": {
+  "ir_temp_channel_13": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7537,9 +7537,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_14": {
+  "ir_temp_channel_14": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7550,9 +7550,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_15": {
+  "ir_temp_channel_15": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7563,9 +7563,9 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
-  "brake_temp_channel_16": {
+  "ir_temp_channel_16": {
     "length": 16,
     "is_signed": false,
     "is_float": false,
@@ -7576,7 +7576,7 @@
     "min": null,
     "max": null,
     "enum": null,
-    "description": "brake rotor temp sensor channel reading in degrees C"
+    "description": "IR temp sensor channel reading in degrees C"
   },
   "brake_rotor_sensor_temp": {
     "length": 16,

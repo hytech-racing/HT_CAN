@@ -2096,228 +2096,415 @@
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH1_CH4",
+    "name": "FL_IR_TEMP_CH1_CH4",
     "id": "0x4C4",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_1",
+        "name": "ir_temp_channel_1",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_2",
+        "name": "ir_temp_channel_2",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_3",
+        "name": "ir_temp_channel_3",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_4",
+        "name": "ir_temp_channel_4",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH5_CH8",
+    "name": "FL_IR_TEMP_CH5_CH8",
     "id": "0x4C5",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_5",
+        "name": "ir_temp_channel_5",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_6",
+        "name": "ir_temp_channel_6",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_7",
+        "name": "ir_temp_channel_7",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_8",
+        "name": "ir_temp_channel_8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH9_CH12",
+    "name": "FL_IR_TEMP_CH9_CH12",
     "id": "0x4C6",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_9",
+        "name": "ir_temp_channel_9",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_10",
+        "name": "ir_temp_channel_10",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_11",
+        "name": "ir_temp_channel_11",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_12",
+        "name": "ir_temp_channel_12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_SENSOR_TEMP",
-    "id": "0x4C8",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "brake_rotor_sensor_temp",
-        "start_bit": 0
-      }
-    ]
-  },
-  {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH13_CH16",
+    "name": "FL_IR_TEMP_CH13_CH16",
     "id": "0x4C7",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_13",
+        "name": "ir_temp_channel_13",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_14",
+        "name": "ir_temp_channel_14",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_15",
+        "name": "ir_temp_channel_15",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_16",
+        "name": "ir_temp_channel_16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH1_CH4",
+    "name": "FR_IR_TEMP_CH1_CH4",
+    "id": "0x4C8",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_1",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_2",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_3",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FR_IR_TEMP_CH5_CH8",
     "id": "0x4C9",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_1",
+        "name": "ir_temp_channel_5",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_2",
+        "name": "ir_temp_channel_6",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_3",
+        "name": "ir_temp_channel_7",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_4",
+        "name": "ir_temp_channel_8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH5_CH8",
+    "name": "FR_IR_TEMP_CH9_CH12",
     "id": "0x4CA",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_5",
+        "name": "ir_temp_channel_9",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_6",
+        "name": "ir_temp_channel_10",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_7",
+        "name": "ir_temp_channel_11",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_8",
+        "name": "ir_temp_channel_12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH9_CH12",
+    "name": "FR_IR_TEMP_CH13_CH16",
     "id": "0x4CB",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_9",
+        "name": "ir_temp_channel_13",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_10",
+        "name": "ir_temp_channel_14",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_11",
+        "name": "ir_temp_channel_15",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_12",
+        "name": "ir_temp_channel_16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_SENSOR_TEMP",
-    "id": "0x4CD",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "brake_rotor_sensor_temp",
-        "start_bit": 0
-      }
-    ]
-  },
-  {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH13_CH16",
+    "name": "RL_IR_TEMP_CH1_CH4",
     "id": "0x4CC",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_13",
+        "name": "ir_temp_channel_1",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_14",
+        "name": "ir_temp_channel_2",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_15",
+        "name": "ir_temp_channel_3",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_16",
+        "name": "ir_temp_channel_4",
         "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RL_IR_TEMP_CH5_CH8",
+    "id": "0x4CD",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_5",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_6",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_7",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RL_IR_TEMP_CH9_CH12",
+    "id": "0x4CE",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_9",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_10",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_11",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RL_IR_TEMP_CH13_CH16",
+    "id": "0x4CF",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_13",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_14",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_15",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH1_CH4",
+    "id": "0x4D0",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_1",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_2",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_3",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH5_CH8",
+    "id": "0x4D1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_5",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_6",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_7",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH9_CH12",
+    "id": "0x4D2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_9",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_10",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_11",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH13_CH16",
+    "id": "0x4D3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_13",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_14",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_15",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_SENSOR_TEMP",
+    "id": "0x4D4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Izze IRTS-V3 brake sensor (datasheet Rev.D) internal package temperature. Keep below 85 deg C",
+    "signals": [
+      {
+        "name": "ir_temp_sensor_temp",
+        "start_bit": 0
       }
     ]
   },
@@ -2909,7 +3096,7 @@
   },
   {
     "name": "STRAIN_GAUGES_FRONT",
-    "id": "0x4D2",
+    "id": "0x4D8",
     "is_extended": false,
     "dlc": 8,
     "description": "Front strain gauge measurements",
@@ -2938,7 +3125,7 @@
   },
   {
     "name": "STRAIN_GAUGES_REAR",
-    "id": "0x4D3",
+    "id": "0x4D9",
     "is_extended": false,
     "dlc": 8,
     "description": "Rear strain gauge measurements",

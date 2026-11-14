@@ -2496,6 +2496,19 @@
     ]
   },
   {
+    "name": "RR_IR_TEMP_SENSOR_TEMP",
+    "id": "0x4D4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Izze IRTS-V3 brake sensor (datasheet Rev.D) internal package temperature. Keep below 85 deg C",
+    "signals": [
+      {
+        "name": "ir_temp_sensor_temp",
+        "start_bit": 0
+      }
+    ]
+  },
+  {
     "name": "AERO_PRESSURE_SENSOR_11",
     "id": "0x3F0",
     "is_extended": false,

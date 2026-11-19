@@ -1251,451 +1251,451 @@
     ]
   },
   {
-    "name": "LF_TTPMS_1",
+    "name": "FL_TTPMS_1",
     "id": "0x424",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LF_TTPMS_SN",
+        "name": "FL_TTPMS_SN",
         "start_bit": 0
       },
       {
-        "name": "LF_TTPMS_BAT_V",
+        "name": "FL_TTPMS_BAT_V",
         "start_bit": 16
       },
       {
-        "name": "LF_TTPMS_P",
+        "name": "FL_TTPMS_P",
         "start_bit": 32
       },
       {
-        "name": "LF_TTPMS_P_GAUGE",
+        "name": "FL_TTPMS_P_GAUGE",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LF_TTPMS_2",
+    "name": "FL_TTPMS_2",
     "id": "0x425",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LF_TTPMS_T1",
+        "name": "FL_TTPMS_T1",
         "start_bit": 0
       },
       {
-        "name": "LF_TTPMS_T2",
+        "name": "FL_TTPMS_T2",
         "start_bit": 16
       },
       {
-        "name": "LF_TTPMS_T3",
+        "name": "FL_TTPMS_T3",
         "start_bit": 32
       },
       {
-        "name": "LF_TTPMS_T4",
+        "name": "FL_TTPMS_T4",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LF_TTPMS_3",
+    "name": "FL_TTPMS_3",
     "id": "0x426",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LF_TTPMS_T5",
+        "name": "FL_TTPMS_T5",
         "start_bit": 0
       },
       {
-        "name": "LF_TTPMS_T6",
+        "name": "FL_TTPMS_T6",
         "start_bit": 16
       },
       {
-        "name": "LF_TTPMS_T7",
+        "name": "FL_TTPMS_T7",
         "start_bit": 32
       },
       {
-        "name": "LF_TTPMS_T8",
+        "name": "FL_TTPMS_T8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LF_TTPMS_4",
+    "name": "FL_TTPMS_4",
     "id": "0x427",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LF_TTPMS_T9",
+        "name": "FL_TTPMS_T9",
         "start_bit": 0
       },
       {
-        "name": "LF_TTPMS_T10",
+        "name": "FL_TTPMS_T10",
         "start_bit": 16
       },
       {
-        "name": "LF_TTPMS_T11",
+        "name": "FL_TTPMS_T11",
         "start_bit": 32
       },
       {
-        "name": "LF_TTPMS_T12",
+        "name": "FL_TTPMS_T12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LF_TTPMS_5",
+    "name": "FL_TTPMS_5",
     "id": "0x428",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LF_TTPMS_T13",
+        "name": "FL_TTPMS_T13",
         "start_bit": 0
       },
       {
-        "name": "LF_TTPMS_T14",
+        "name": "FL_TTPMS_T14",
         "start_bit": 16
       },
       {
-        "name": "LF_TTPMS_T15",
+        "name": "FL_TTPMS_T15",
         "start_bit": 32
       },
       {
-        "name": "LF_TTPMS_T16",
+        "name": "FL_TTPMS_T16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LF_TTPMS_6",
+    "name": "FL_TTPMS_6",
     "id": "0x429",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LF_TTPMS_TC",
+        "name": "FL_TTPMS_TC",
         "start_bit": 0
       },
       {
-        "name": "LF_TTPMS_RSSI",
+        "name": "FL_TTPMS_RSSI",
         "start_bit": 16
       },
       {
-        "name": "LF_TTPMS_T",
+        "name": "FL_TTPMS_T",
         "start_bit": 32
       },
       {
-        "name": "LF_TTPMS_NODE_ID",
+        "name": "FL_TTPMS_NODE_ID",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_1",
+    "name": "FR_TTPMS_1",
     "id": "0x42A",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_SN",
+        "name": "FR_TTPMS_SN",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_BAT_V",
+        "name": "FR_TTPMS_BAT_V",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_P",
+        "name": "FR_TTPMS_P",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_P_GAUGE",
+        "name": "FR_TTPMS_P_GAUGE",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_2",
+    "name": "FR_TTPMS_2",
     "id": "0x42B",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T1",
+        "name": "FR_TTPMS_T1",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T2",
+        "name": "FR_TTPMS_T2",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T3",
+        "name": "FR_TTPMS_T3",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T4",
+        "name": "FR_TTPMS_T4",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_3",
+    "name": "FR_TTPMS_3",
     "id": "0x42C",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T5",
+        "name": "FR_TTPMS_T5",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T6",
+        "name": "FR_TTPMS_T6",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T7",
+        "name": "FR_TTPMS_T7",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T8",
+        "name": "FR_TTPMS_T8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_4",
+    "name": "FR_TTPMS_4",
     "id": "0x42D",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T9",
+        "name": "FR_TTPMS_T9",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T10",
+        "name": "FR_TTPMS_T10",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T11",
+        "name": "FR_TTPMS_T11",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T12",
+        "name": "FR_TTPMS_T12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_5",
+    "name": "FR_TTPMS_5",
     "id": "0x42E",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_T13",
+        "name": "FR_TTPMS_T13",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_T14",
+        "name": "FR_TTPMS_T14",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T15",
+        "name": "FR_TTPMS_T15",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_T16",
+        "name": "FR_TTPMS_T16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "RF_TTPMS_6",
+    "name": "FR_TTPMS_6",
     "id": "0x42F",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "RF_TTPMS_TC",
+        "name": "FR_TTPMS_TC",
         "start_bit": 0
       },
       {
-        "name": "RF_TTPMS_RSSI",
+        "name": "FR_TTPMS_RSSI",
         "start_bit": 16
       },
       {
-        "name": "RF_TTPMS_T",
+        "name": "FR_TTPMS_T",
         "start_bit": 32
       },
       {
-        "name": "RF_TTPMS_NODE_ID",
+        "name": "FR_TTPMS_NODE_ID",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LR_TTPMS_1",
+    "name": "RL_TTPMS_1",
     "id": "0x430",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LR_TTPMS_SN",
+        "name": "RL_TTPMS_SN",
         "start_bit": 0
       },
       {
-        "name": "LR_TTPMS_BAT_V",
+        "name": "RL_TTPMS_BAT_V",
         "start_bit": 16
       },
       {
-        "name": "LR_TTPMS_P",
+        "name": "RL_TTPMS_P",
         "start_bit": 32
       },
       {
-        "name": "LR_TTPMS_P_GAUGE",
+        "name": "RL_TTPMS_P_GAUGE",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LR_TTPMS_2",
+    "name": "RL_TTPMS_2",
     "id": "0x431",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LR_TTPMS_T1",
+        "name": "RL_TTPMS_T1",
         "start_bit": 0
       },
       {
-        "name": "LR_TTPMS_T2",
+        "name": "RL_TTPMS_T2",
         "start_bit": 16
       },
       {
-        "name": "LR_TTPMS_T3",
+        "name": "RL_TTPMS_T3",
         "start_bit": 32
       },
       {
-        "name": "LR_TTPMS_T4",
+        "name": "RL_TTPMS_T4",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LR_TTPMS_3",
+    "name": "RL_TTPMS_3",
     "id": "0x432",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LR_TTPMS_T5",
+        "name": "RL_TTPMS_T5",
         "start_bit": 0
       },
       {
-        "name": "LR_TTPMS_T6",
+        "name": "RL_TTPMS_T6",
         "start_bit": 16
       },
       {
-        "name": "LR_TTPMS_T7",
+        "name": "RL_TTPMS_T7",
         "start_bit": 32
       },
       {
-        "name": "LR_TTPMS_T8",
+        "name": "RL_TTPMS_T8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LR_TTPMS_4",
+    "name": "RL_TTPMS_4",
     "id": "0x433",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LR_TTPMS_T9",
+        "name": "RL_TTPMS_T9",
         "start_bit": 0
       },
       {
-        "name": "LR_TTPMS_T10",
+        "name": "RL_TTPMS_T10",
         "start_bit": 16
       },
       {
-        "name": "LR_TTPMS_T11",
+        "name": "RL_TTPMS_T11",
         "start_bit": 32
       },
       {
-        "name": "LR_TTPMS_T12",
+        "name": "RL_TTPMS_T12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LR_TTPMS_5",
+    "name": "RL_TTPMS_5",
     "id": "0x434",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LR_TTPMS_T13",
+        "name": "RL_TTPMS_T13",
         "start_bit": 0
       },
       {
-        "name": "LR_TTPMS_T14",
+        "name": "RL_TTPMS_T14",
         "start_bit": 16
       },
       {
-        "name": "LR_TTPMS_T15",
+        "name": "RL_TTPMS_T15",
         "start_bit": 32
       },
       {
-        "name": "LR_TTPMS_T16",
+        "name": "RL_TTPMS_T16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "LR_TTPMS_6",
+    "name": "RL_TTPMS_6",
     "id": "0x435",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "LR_TTPMS_TC",
+        "name": "RL_TTPMS_TC",
         "start_bit": 0
       },
       {
-        "name": "LR_TTPMS_RSSI",
+        "name": "RL_TTPMS_RSSI",
         "start_bit": 16
       },
       {
-        "name": "LR_TTPMS_T",
+        "name": "RL_TTPMS_T",
         "start_bit": 32
       },
       {
-        "name": "LR_TTPMS_NODE_ID",
+        "name": "RL_TTPMS_NODE_ID",
         "start_bit": 48
       }
     ]
@@ -2096,228 +2096,415 @@
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH1_CH4",
+    "name": "FL_IR_TEMP_CH1_CH4",
     "id": "0x4C4",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_1",
+        "name": "ir_temp_channel_1",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_2",
+        "name": "ir_temp_channel_2",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_3",
+        "name": "ir_temp_channel_3",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_4",
+        "name": "ir_temp_channel_4",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH5_CH8",
+    "name": "FL_IR_TEMP_CH5_CH8",
     "id": "0x4C5",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_5",
+        "name": "ir_temp_channel_5",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_6",
+        "name": "ir_temp_channel_6",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_7",
+        "name": "ir_temp_channel_7",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_8",
+        "name": "ir_temp_channel_8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH9_CH12",
+    "name": "FL_IR_TEMP_CH9_CH12",
     "id": "0x4C6",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_9",
+        "name": "ir_temp_channel_9",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_10",
+        "name": "ir_temp_channel_10",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_11",
+        "name": "ir_temp_channel_11",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_12",
+        "name": "ir_temp_channel_12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FL_BRAKE_ROTOR_SENSOR_TEMP",
-    "id": "0x4C8",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "brake_rotor_sensor_temp",
-        "start_bit": 0
-      }
-    ]
-  },
-  {
-    "name": "FL_BRAKE_ROTOR_TEMP_CH13_CH16",
+    "name": "FL_IR_TEMP_CH13_CH16",
     "id": "0x4C7",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_13",
+        "name": "ir_temp_channel_13",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_14",
+        "name": "ir_temp_channel_14",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_15",
+        "name": "ir_temp_channel_15",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_16",
+        "name": "ir_temp_channel_16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH1_CH4",
+    "name": "FR_IR_TEMP_CH1_CH4",
+    "id": "0x4C8",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_1",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_2",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_3",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "FR_IR_TEMP_CH5_CH8",
     "id": "0x4C9",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_1",
+        "name": "ir_temp_channel_5",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_2",
+        "name": "ir_temp_channel_6",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_3",
+        "name": "ir_temp_channel_7",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_4",
+        "name": "ir_temp_channel_8",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH5_CH8",
+    "name": "FR_IR_TEMP_CH9_CH12",
     "id": "0x4CA",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_5",
+        "name": "ir_temp_channel_9",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_6",
+        "name": "ir_temp_channel_10",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_7",
+        "name": "ir_temp_channel_11",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_8",
+        "name": "ir_temp_channel_12",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH9_CH12",
+    "name": "FR_IR_TEMP_CH13_CH16",
     "id": "0x4CB",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_9",
+        "name": "ir_temp_channel_13",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_10",
+        "name": "ir_temp_channel_14",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_11",
+        "name": "ir_temp_channel_15",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_12",
+        "name": "ir_temp_channel_16",
         "start_bit": 48
       }
     ]
   },
   {
-    "name": "FR_BRAKE_ROTOR_SENSOR_TEMP",
-    "id": "0x4CD",
-    "is_extended": false,
-    "dlc": 8,
-    "description": "",
-    "signals": [
-      {
-        "name": "brake_rotor_sensor_temp",
-        "start_bit": 0
-      }
-    ]
-  },
-  {
-    "name": "FR_BRAKE_ROTOR_TEMP_CH13_CH16",
+    "name": "RL_IR_TEMP_CH1_CH4",
     "id": "0x4CC",
     "is_extended": false,
     "dlc": 8,
     "description": "",
     "signals": [
       {
-        "name": "brake_temp_channel_13",
+        "name": "ir_temp_channel_1",
         "start_bit": 0
       },
       {
-        "name": "brake_temp_channel_14",
+        "name": "ir_temp_channel_2",
         "start_bit": 16
       },
       {
-        "name": "brake_temp_channel_15",
+        "name": "ir_temp_channel_3",
         "start_bit": 32
       },
       {
-        "name": "brake_temp_channel_16",
+        "name": "ir_temp_channel_4",
         "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RL_IR_TEMP_CH5_CH8",
+    "id": "0x4CD",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_5",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_6",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_7",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RL_IR_TEMP_CH9_CH12",
+    "id": "0x4CE",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_9",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_10",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_11",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RL_IR_TEMP_CH13_CH16",
+    "id": "0x4CF",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_13",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_14",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_15",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH1_CH4",
+    "id": "0x4D0",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_1",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_2",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_3",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_4",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH5_CH8",
+    "id": "0x4D1",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_5",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_6",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_7",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_8",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH9_CH12",
+    "id": "0x4D2",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_9",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_10",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_11",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_12",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_CH13_CH16",
+    "id": "0x4D3",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "",
+    "signals": [
+      {
+        "name": "ir_temp_channel_13",
+        "start_bit": 0
+      },
+      {
+        "name": "ir_temp_channel_14",
+        "start_bit": 16
+      },
+      {
+        "name": "ir_temp_channel_15",
+        "start_bit": 32
+      },
+      {
+        "name": "ir_temp_channel_16",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "RR_IR_TEMP_SENSOR_TEMP",
+    "id": "0x4D4",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Izze IRTS-V3 brake sensor (datasheet Rev.D) internal package temperature. Keep below 85 deg C",
+    "signals": [
+      {
+        "name": "ir_temp_sensor_temp",
+        "start_bit": 0
       }
     ]
   },
@@ -2803,7 +2990,7 @@
     ]
   },
   {
-    "name": "DRIVERLESS_SYSTEM_STATUS",
+    "name": "DRIVERLESS_STATUS_AND_STARTUP",
     "id": "0x22A",
     "is_extended": false,
     "dlc": 8,
@@ -2818,13 +3005,17 @@
         "start_bit": 1
       },
       {
-        "name": "driverless_state",
+        "name": "continue_toggle_supervisor",
         "start_bit": 2
+      },
+      {
+        "name": "driverless_state",
+        "start_bit": 3
       }
     ]
   },
   {
-    "name":"FDC_DRIVERLESS_MISSION",
+    "name": "FDC_DRIVERLESS_MISSION",
     "id": "0x22C",
     "is_extended": false,
     "dlc": 8,
@@ -2874,7 +3065,7 @@
     "description": "Status of the RSS",
     "signals": [
       {
-        "name": "emergency_stop_not_pressed_1",
+        "name": "emergency_stop_pressed_1",
         "start_bit": 0
       },
       {
@@ -2886,7 +3077,7 @@
         "start_bit": 2
       },
       {
-        "name": "emergency_stop_not_pressed_2",
+        "name": "emergency_stop_pressed_2",
         "start_bit": 31
       },
       {
@@ -2928,6 +3119,63 @@
         "start_bit": 480
       }
     ]
-
+  },
+  {
+    "name": "STRAIN_GAUGES_FRONT",
+    "id": "0x4D8",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Front strain gauge measurements",
+    "signals": [
+      {
+        "name": "F_LowerForeAA_F",
+        "start_bit": 0
+      },
+      {
+        "name": "F_LowerAftAA_F",
+        "start_bit": 12
+      },
+      {
+        "name": "F_UpperForeAA_F",
+        "start_bit": 24
+      },
+      {
+        "name": "F_UpperAftAA_F",
+        "start_bit": 36
+      },
+      {
+        "name": "F_ToeRod_F",
+        "start_bit": 48
+      }
+    ]
+  },
+  {
+    "name": "STRAIN_GAUGES_REAR",
+    "id": "0x4D9",
+    "is_extended": false,
+    "dlc": 8,
+    "description": "Rear strain gauge measurements",
+    "signals": [
+      {
+        "name": "F_LowerForeAA_R",
+        "start_bit": 0
+      },
+      {
+        "name": "F_LowerAftAA_R",
+        "start_bit": 12
+      },
+      {
+        "name": "F_UpperForeAA_R",
+        "start_bit": 24
+      },
+      {
+        "name": "F_UpperAftAA_R",
+        "start_bit": 36
+      },
+      {
+        "name": "F_ToeRod_R",
+        "start_bit": 48
+      }
+    ]
   }
 ]

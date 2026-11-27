@@ -3151,5 +3151,90 @@
         "start_bit": 48
       }
     ]
+  },
+  {
+    "name": "VCR_FW_VERSION",
+    "id": "0x6F0",
+    "is_extended": false,
+    "dlc": 5,
+    "description": "VCR firmware git version, sent at 1 Hz",
+    "signals": [
+      {
+        "name": "fw_git_hash",
+        "start_bit": 0
+      },
+      {
+        "name": "fw_on_main_or_master",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "VCF_FW_VERSION",
+    "id": "0x6F1",
+    "is_extended": false,
+    "dlc": 5,
+    "description": "VCF firmware git version, sent at 1 Hz",
+    "signals": [
+      {
+        "name": "fw_git_hash",
+        "start_bit": 0
+      },
+      {
+        "name": "fw_on_main_or_master",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "ACU_FW_VERSION",
+    "id": "0x6F2",
+    "is_extended": false,
+    "dlc": 5,
+    "description": "ACU firmware git version, sent at 1 Hz",
+    "signals": [
+      {
+        "name": "fw_git_hash",
+        "start_bit": 0
+      },
+      {
+        "name": "fw_on_main_or_master",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "RDC_FW_VERSION",
+    "id": "0x6F3",
+    "is_extended": false,
+    "dlc": 5,
+    "description": "RDC firmware git version, sent at 1 Hz",
+    "signals": [
+      {
+        "name": "fw_git_hash",
+        "start_bit": 0
+      },
+      {
+        "name": "fw_on_main_or_master",
+        "start_bit": 32
+      }
+    ]
+  },
+  {
+    "name": "PDB_FW_VERSION",
+    "id": "0x6F4",
+    "is_extended": false,
+    "dlc": 5,
+    "description": "PDB firmware git version, sent at 1 Hz",
+    "signals": [
+      {
+        "name": "fw_git_hash",
+        "start_bit": 0
+      },
+      {
+        "name": "fw_on_main_or_master",
+        "start_bit": 32
+      }
+    ]
   }
 ]

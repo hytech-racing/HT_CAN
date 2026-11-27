@@ -8968,5 +8968,31 @@
     "max": 4095,
     "enum": null,
     "description": "Force on the rear toe rod"
+  },
+  "fw_git_hash": {
+    "length": 32,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1.0,
+    "offset": 0.0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": null,
+    "description": "Short git hash of the running firmware (display as hex)"
+  },
+  "fw_on_main_or_master": {
+    "length": 1,
+    "is_signed": false,
+    "is_float": false,
+    "is_big_endian": false,
+    "scale": 1.0,
+    "offset": 0.0,
+    "unit": "",
+    "min": null,
+    "max": null,
+    "enum": null,
+    "description": "1 if the firmware was built from main or master"
   }
 }
